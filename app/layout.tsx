@@ -1,18 +1,18 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
-import { LanguageProvider } from "@/lib/language-context"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
+import { LanguageProvider } from "@/lib/language-context";
 
 const _inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-inter",
-})
+});
 
 export const metadata: Metadata = {
-  title: "Your Name - Fullstack Software Engineer & Mobile Developer",
+  title: "Adeline Lefebvre - Fullstack Software Engineer & Mobile Developer",
   description:
     "Portfolio of a Fullstack Software Engineer and Mobile App Developer specializing in Next.js, Vue.js, Node.js, TypeScript, and Flutter. Creating impactful tech solutions in CSR and GreenTech.",
   generator: "v0.app",
@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="dark">
@@ -47,5 +47,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
