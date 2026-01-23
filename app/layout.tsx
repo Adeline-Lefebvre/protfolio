@@ -12,20 +12,30 @@ const _inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Adeline Lefebvre - Fullstack Software Engineer & Mobile Developer",
+  title: "Adeline Lefebvre | Fullstack Web & Mobile Developer",
   description:
-    "Portfolio of a Fullstack Software Engineer and Mobile App Developer specializing in Next.js, Vue.js, Node.js, TypeScript, and Flutter. Creating impactful tech solutions in CSR and GreenTech.",
-  generator: "v0.app",
+    "Fullstack Software Engineer specializing in Next.js, Flutter, and Node.js. Building impactful tech solutions for CSR and GreenTech projects. Based in Valencia, available worldwide.",
+  keywords: [
+    "Adeline Lefebvre",
+    "Fullstack Developer",
+    "Mobile App Developer",
+    "Flutter Expert",
+    "GreenTech",
+    "Next.js Developer",
+  ],
+  authors: [{ name: "Adeline Lefebvre" }],
+  creator: "Adeline Lefebvre",
+  openGraph: {
+    title: "Adeline Lefebvre | Fullstack Web & Mobile Developer",
+    description:
+      "Building tech solutions from scratch with a focus on impact and sustainability. Expert in Next.js & Flutter.",
+    url: "https://adelinelefebvre.com",
+    siteName: "Adeline Lefebvre Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
       {
         url: "/icon.svg",
         type: "image/svg+xml",
