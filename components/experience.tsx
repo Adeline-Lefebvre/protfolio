@@ -6,11 +6,24 @@ import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 
 const skills = {
-  frontend: ["Next.js", "Vue.js", "React", "TypeScript", "Tailwind CSS"],
-  backend: ["Node.js", "Express", "REST APIs", "GraphQL"],
-  mobile: ["Flutter", "Dart", "Mobile UI/UX"],
-  tools: ["Git", "Docker", "CI/CD", "Vercel", "Firebase"],
-  focus: ["Multilingual Apps", "AR Applications", "EdTech", "GreenTech", "CSR"],
+  frontend: ["Next.js", "React", "Vue.js", "TypeScript", "Tailwind CSS"],
+  backend: ["Node.js", "GraphQL", "REST APIs", "PostgreSQL", "MongoDB"],
+  mobile: ["Flutter", "Dart", "React Native", "Expo", "Mobile UI/UX"],
+  tools: [
+    "Git",
+    "GCP",
+    "Kubernetes",
+    "CI/CD (CircleCI)",
+    "Stripe",
+    "SEO & Google Ads",
+  ],
+  focus: [
+    "GreenTech & CSR",
+    "EdTech",
+    "AR Applications",
+    "Product Management",
+    "Multilingual Apps",
+  ],
 };
 
 export function Experience() {

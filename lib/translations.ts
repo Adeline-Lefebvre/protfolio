@@ -34,24 +34,29 @@ export const translations = {
       viewProject: "View Project",
       code: "Code",
       project1: {
-        title: "Multilingual E-Commerce Platform",
+        title: "Fullstack EdTech Mobile App",
         description:
-          "A fullstack e-commerce solution supporting multiple languages and currencies. Built with Next.js, TypeScript, and integrated payment systems.",
+          "Designed and developed a Flutter app (iOS/Android) with a Node.js backend. Features user authentication, data management, and In-App Purchases.",
       },
       project2: {
-        title: "AR Learning Application",
+        title: "Desert Leaves - Green Foundation",
         description:
-          "An augmented reality mobile app for interactive learning experiences. Developed with Flutter and integrated AR capabilities for educational content.",
+          "Multilingual website with Headless CMS, Stripe integration, and SEO optimization for a global reforestation initiative.",
       },
       project3: {
-        title: "GreenTech Dashboard",
+        title: "AR Mystery Experience",
         description:
-          "A sustainability tracking dashboard for CSR initiatives. Features real-time data visualization and impact metrics using Vue.js and Node.js.",
+          "Marker-based augmented reality game developed during a tech residency. Real-time 3D interactions and non-linear storytelling via A-Frame.",
       },
       project4: {
-        title: "Educational Mobile App",
+        title: "Cubyn - E-commerce Logistics",
         description:
-          "A cross-platform educational application with gamified learning modules. Built with Flutter for iOS and Android with offline-first architecture.",
+          "Scale-up experience in a microservices environment (80+ services). Built reliable backend systems using Node.js, GCP, and Kubernetes.",
+      },
+      project5: {
+        title: "HappyCaw - Mobile Certification",
+        description:
+          "Mobile application built with React Native to achieve my official Computer Developer certification.",
       },
     },
     contact: {
@@ -97,24 +102,29 @@ export const translations = {
       viewProject: "Voir le Projet",
       code: "Code",
       project1: {
-        title: "Plateforme E-Commerce Multilingue",
+        title: "Application Mobile EdTech Fullstack",
         description:
-          "Une solution e-commerce fullstack supportant plusieurs langues et devises. Développée avec Next.js, TypeScript et des systèmes de paiement intégrés.",
+          "Conception et développement d'une application Flutter (iOS/Android) avec backend Node.js. Gestion complète des comptes, authentification et achats in-app.",
       },
       project2: {
-        title: "Application d'Apprentissage en RA",
+        title: "Desert Leaves - Fondation Écologique",
         description:
-          "Une application mobile en réalité augmentée pour des expériences d'apprentissage interactives. Développée avec Flutter et des capacités AR pour du contenu éducatif.",
+          "Site multilingue haute performance avec CMS Headless, système de dons (Stripe) et optimisation SEO pour la reforestation des zones arides.",
       },
       project3: {
-        title: "Tableau de Bord GreenTech",
+        title: "Expérience RA : Jeu de Mystère",
         description:
-          "Un tableau de bord de suivi de durabilité pour les initiatives RSE. Avec visualisation de données en temps réel et métriques d'impact utilisant Vue.js et Node.js.",
+          "Jeu en réalité augmentée par marqueurs développé en résidence tech. Interactions 3D temps réel et narration non-linéaire avec A-Frame.",
       },
       project4: {
-        title: "Application Mobile Éducative",
+        title: "Cubyn - Logistique E-commerce",
         description:
-          "Une application éducative multiplateforme avec modules d'apprentissage gamifiés. Développée avec Flutter pour iOS et Android avec une architecture offline-first.",
+          "Contribution à une architecture de 80+ microservices. Optimisation des flux logistiques européens avec Node.js, Kubernetes et RabbitMQ.",
+      },
+      project5: {
+        title: "HappyCaw - Certification Mobile",
+        description:
+          "Application mobile développée avec React Native dans le cadre de ma certification de développeuse informatique.",
       },
     },
     contact: {
@@ -160,24 +170,29 @@ export const translations = {
       viewProject: "Ver Proyecto",
       code: "Código",
       project1: {
-        title: "Plataforma de E-Commerce Multilingüe",
+        title: "App Móvil EdTech Fullstack",
         description:
-          "Una solución de e-commerce fullstack que soporta múltiples idiomas y monedas. Construida con Next.js, TypeScript y sistemas de pago integrados.",
+          "Diseño y desarrollo de una aplicación Flutter (iOS/Android) con backend en Node.js. Gestión de cuentas, autenticación y compras in-app.",
       },
       project2: {
-        title: "Aplicación de Aprendizaje con RA",
+        title: "Desert Leaves - Fundación Ecológica",
         description:
-          "Una aplicación móvil de realidad aumentada para experiencias de aprendizaje interactivas. Desarrollada con Flutter e integración de capacidades AR para contenido educativo.",
+          "Sitio web multilingüe de alto rendimiento con CMS Headless, sistema de donaciones (Stripe) y optimización SEO para la reforestación.",
       },
       project3: {
-        title: "Panel GreenTech",
+        title: "Experiencia RA: Juego de Misterio",
         description:
-          "Un panel de seguimiento de sostenibilidad para iniciativas de RSC. Con visualización de datos en tiempo real y métricas de impacto usando Vue.js y Node.js.",
+          "Juego de realidad aumentada desarrollado en residencia tech. Interacciones 3D en tiempo real y narrativa interactiva con A-Frame.",
       },
       project4: {
-        title: "Aplicación Móvil Educativa",
+        title: "Cubyn - Logística E-commerce",
         description:
-          "Una aplicación educativa multiplataforma con módulos de aprendizaje gamificados. Construida con Flutter para iOS y Android con arquitectura offline-first.",
+          "Contribución a una arquitectura de más de 80 microservicios. Optimización de flujos logísticos con Node.js, Kubernetes y RabbitMQ.",
+      },
+      project5: {
+        title: "HappyCaw - Certificación Móvil",
+        description:
+          "Aplicación móvil desarrollada con React Native como parte de mi certificación oficial de desarrolladora informática.",
       },
     },
     contact: {
