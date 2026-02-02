@@ -1,37 +1,56 @@
-"use client"
+"use client";
 
-import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
-import type { Language } from "./translations"
+import {
+  createContext,
+  useContext,
+  useState,
+  type ReactNode,
+} from "react";
+import { useRouter, usePathname } from "next/navigation";
+import type { Language } from "./translations";
+import Cookies from "js-cookie";
 
 interface LanguageContextType {
-  language: Language
-  setLanguage: (lang: Language) => void
+  language: Language;
+  setLanguage: (lang: Language) => void;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("en")
-
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem("language") as Language | null
-    if (savedLanguage && ["en", "fr", "es"].includes(savedLanguage)) {
-      setLanguageState(savedLanguage)
-    }
-  }, [])
+export function LanguageProvider({
+  children,
+  initialLocale,
+}: {
+  children: ReactNode;
+  initialLocale: Language;
+}) {
+  const [language] = useState<Language>(initialLocale);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang)
-    localStorage.setItem("language", lang)
-  }
+    // Set cookie for middleware
+    Cookies.set("NEXT_LOCALE", lang, { expires: 365 });
 
-  return <LanguageContext.Provider value={{ language, setLanguage }}>{children}</LanguageContext.Provider>
+    // Redirect to new locale
+    const segments = pathname.split("/");
+    segments[1] = lang;
+    router.push(segments.join("/"));
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
 }
 
 export function useLanguage() {
-  const context = useContext(LanguageContext)
+  const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider")
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
-  return context
+  return context;
 }

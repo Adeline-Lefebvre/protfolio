@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-import { LanguageProvider } from "@/lib/language-context";
+import { StructuredData } from "@/components/structured-data";
+import { HtmlLang } from "@/components/html-lang";
 
 const _inter = Inter({
   subsets: ["latin"],
@@ -12,27 +13,19 @@ const _inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Adeline Lefebvre | Fullstack Web & Mobile Developer",
-  description:
-    "Fullstack Software Engineer specializing in Next.js, Flutter, and Node.js. Building impactful tech solutions for CSR and GreenTech projects. Based in Valencia, available worldwide.",
-  keywords: [
-    "Adeline Lefebvre",
-    "Fullstack Developer",
-    "Mobile App Developer",
-    "Flutter Expert",
-    "GreenTech",
-    "Next.js Developer",
-  ],
+  metadataBase: new URL("https://adelinelefebvre.com"),
   authors: [{ name: "Adeline Lefebvre" }],
   creator: "Adeline Lefebvre",
-  openGraph: {
-    title: "Adeline Lefebvre | Fullstack Web & Mobile Developer",
-    description:
-      "Building tech solutions from scratch with a focus on impact and sustainability. Expert in Next.js & Flutter.",
-    url: "https://adelinelefebvre.com",
-    siteName: "Adeline Lefebvre Portfolio",
-    locale: "en_US",
-    type: "website",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: [
@@ -51,6 +44,9 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+  verification: {
+    google: "your-google-verification-code",
+  },
 };
 
 export default function RootLayout({
@@ -61,7 +57,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`font-sans antialiased`}>
-        <LanguageProvider>{children}</LanguageProvider>
+        <HtmlLang />
+        <StructuredData />
+        {children}
         <Analytics />
       </body>
     </html>
