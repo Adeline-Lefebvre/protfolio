@@ -45,7 +45,7 @@ function AdaptiveVideoPlayer({
   return (
     <div
       className={`
-        relative mx-auto overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl
+        relative mx-auto overflow-hidden bg-slate-900 shadow-2xl
         ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125 rounded-xl"}
       `}
       style={aspectRatio ? { aspectRatio: aspectRatio.toString() } : undefined}
@@ -132,7 +132,7 @@ export function Projects() {
 
               {project.images && (
                 <div className="px-4 pt-4">
-                  <div className="relative mx-auto w-full aspect-16/8 overflow-hidden rounded-xl border border-slate-500 bg-slate-800 shadow-2xl">
+                  <div className="relative mx-auto w-full aspect-16/8 overflow-hidden rounded-xl bg-slate-800 shadow-2xl">
                     <Carousel
                       className="w-full h-full"
                       plugins={[
