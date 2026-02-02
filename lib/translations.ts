@@ -87,7 +87,7 @@ export const translations = {
       paragraph2:
         "Aujourd'hui, je suis <span class='font-semibold text-primary'>développeuse Fullstack & Mobile</span>, déterminée à jeter des ponts entre technologie et nature. De mon expérience en <span class='font-semibold text-accent'>RSE</span> chez <span class='font-semibold text-primary'>Deloitte</span> à la création d'un site de reforestation pour l'ONG <span class='font-semibold text-primary'>Desert Leaves</span> ou d'une application éducative sur les plantes médicinales, la durabilité est au cœur de ma démarche.",
       paragraph3:
-        "J'aime aussi explorer comment la tech peut servir les écosystèmes locaux. Lors d'une résidence à <span class='font-semibold text-primary'>Anceu Coliving</span>, j'ai développé un projet de <span class='font-semibold text-accent'>Réalité Augmentée</span> pour dynamiser les zones rurales en apportant l'innovation numérique au cœur des campagnes.",
+        "J’aime aussi explorer la manière dont la tech peut servir les écosystèmes locaux. Lors d'une résidence à <span class='font-semibold text-primary'>Anceu Coliving</span>, j'ai développé un projet de <span class='font-semibold text-accent'>Réalité Augmentée</span> pour dynamiser les zones rurales en apportant l'innovation numérique au cœur des campagnes.",
     },
     skills: {
       title: "Compétences & Expertise",
