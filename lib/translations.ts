@@ -17,7 +17,7 @@ export const translations = {
       paragraph1:
         "I didn't start in tech, but I definitely found my home here. My journey began in <span class='font-semibold text-primary'>product and entrepreneurship</span>, which gave me a <span class='italic'>'founder’s mindset'</span>: I love solving real problems.",
       paragraph2:
-        "Today, I’m a <span class='font-semibold text-primary'>Fullstack & Mobile Developer</span> focused on bridging the gap between technology and nature. From my <span class='font-semibold text-accent'>CSR</span> background at <span class='font-semibold text-primary'>Deloitte</span> to building a reforestation site for the NGO <span class='font-semibold text-primary'>Desert Leaves</span> or an educational app about medicinal plants, I care deeply about sustainability.",
+        "Today, I’m a <span class='font-semibold text-primary'>Fullstack Web & Mobile Developer</span> focused on bridging the gap between technology and nature. From my <span class='font-semibold text-accent'>CSR</span> background at <span class='font-semibold text-primary'>Deloitte</span> to building a reforestation site for the NGO <span class='font-semibold text-primary'>Desert Leaves</span> or an educational app about medicinal plants, I care deeply about sustainability.",
       paragraph3:
         "I also enjoy exploring how tech can serve local ecosystems. During a residency at <span class='font-semibold text-primary'>Anceu Coliving</span>, I developed an <span class='font-semibold text-accent'>Augmented Reality</span> project to help revitalize rural areas by bringing digital innovation to countryside communities.",
     },
@@ -85,7 +85,7 @@ export const translations = {
       paragraph1:
         "Je n'ai pas commencé dans la tech, mais j'y ai définitivement trouvé ma place. Mon parcours a débuté dans le <span class='font-semibold text-primary'>produit et l'entrepreneuriat</span>, ce qui m'a forgé un <span class='italic'>'founder’s mindset'</span> : j'aime résoudre des problèmes concrets.",
       paragraph2:
-        "Aujourd'hui, je suis <span class='font-semibold text-primary'>développeuse Fullstack & Mobile</span>, déterminée à jeter des ponts entre technologie et nature. De mon expérience en <span class='font-semibold text-accent'>RSE</span> chez <span class='font-semibold text-primary'>Deloitte</span> à la création d'un site de reforestation pour l'ONG <span class='font-semibold text-primary'>Desert Leaves</span> ou d'une application éducative sur les plantes médicinales, la durabilité est au cœur de ma démarche.",
+        "Aujourd'hui, je suis <span class='font-semibold text-primary'>développeuse Fullstack Web & Mobile</span>, déterminée à jeter des ponts entre technologie et nature. De mon expérience en <span class='font-semibold text-accent'>RSE</span> chez <span class='font-semibold text-primary'>Deloitte</span> à la création d'un site de reforestation pour l'ONG <span class='font-semibold text-primary'>Desert Leaves</span> ou d'une application éducative sur les plantes médicinales, la durabilité est au cœur de ma démarche.",
       paragraph3:
         "J’aime aussi explorer la manière dont la tech peut servir les écosystèmes locaux. Lors d'une résidence à <span class='font-semibold text-primary'>Anceu Coliving</span>, j'ai développé un projet de <span class='font-semibold text-accent'>Réalité Augmentée</span> pour dynamiser les zones rurales en apportant l'innovation numérique au cœur des campagnes.",
     },
@@ -153,7 +153,7 @@ export const translations = {
       paragraph1:
         "No empecé en el sector tecnológico, pero sin duda he encontrado mi hogar aquí. Mi trayectoria comenzó en <span class='font-semibold text-primary'>producto y emprendimiento</span>, lo que me dio una <span class='italic'>'mentalidad de fundadora'</span>: me encanta resolver problemas reales.",
       paragraph2:
-        "Hoy soy <span class='font-semibold text-primary'>desarrolladora Fullstack y Mobile</span>, enfocada en cerrar la brecha entre la tecnología y la naturaleza. Desde mi experiencia en <span class='font-semibold text-accent'>RSC</span> en <span class='font-semibold text-primary'>Deloitte</span> hasta la creación de un sitio de reforestación para la ONG <span class='font-semibold text-primary'>Desert Leaves</span> o una app educativa sobre plantas medicinales, me comprometo profundamente con la sostenibilidad.",
+        "Hoy soy <span class='font-semibold text-primary'>desarrolladora Fullstack Web y Mobile</span>, enfocada en cerrar la brecha entre la tecnología y la naturaleza. Desde mi experiencia en <span class='font-semibold text-accent'>RSC</span> en <span class='font-semibold text-primary'>Deloitte</span> hasta la creación de un sitio de reforestación para la ONG <span class='font-semibold text-primary'>Desert Leaves</span> o una app educativa sobre plantas medicinales, me comprometo profundamente con la sostenibilidad.",
       paragraph3:
         "También disfruto explorando cómo la tecnología puede servir a los ecosistemas locales. Durante una residencia en <span class='font-semibold text-primary'>Anceu Coliving</span>, desarrollé un proyecto de <span class='font-semibold text-accent'>Realidad Aumentada</span> para ayudar a revitalizar zonas rurales, llevando la innovación digital a las comunidades del campo.",
     },
