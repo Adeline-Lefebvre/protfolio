@@ -9,6 +9,63 @@ import { getTranslations } from "@/lib/translations";
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useRef, useEffect, useState } from "react";
+
+function AdaptiveVideoPlayer({
+  src,
+  layout,
+}: {
+  src: string;
+  layout?: string;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [aspectRatio, setAspectRatio] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleLoadedMetadata = () => {
+      const ratio = video.videoWidth / video.videoHeight;
+      setAspectRatio(ratio);
+      setIsLoading(false);
+    };
+
+    // Si les métadonnées sont déjà chargées (vidéo en cache)
+    if (video.readyState >= 1) {
+      handleLoadedMetadata();
+    }
+
+    video.addEventListener("loadedmetadata", handleLoadedMetadata);
+    return () =>
+      video.removeEventListener("loadedmetadata", handleLoadedMetadata);
+  }, []);
+
+  return (
+    <div
+      className={`
+        relative mx-auto overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl
+        ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125 rounded-xl"}
+      `}
+      style={aspectRatio ? { aspectRatio: aspectRatio.toString() } : undefined}
+    >
+      {isLoading && (
+        <div className="absolute inset-0 animate-pulse bg-slate-800" />
+      )}
+      <video
+        ref={videoRef}
+        src={src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        className="h-full w-full object-contain"
+      />
+    </div>
+  );
+}
 
 export function Projects() {
   const { language } = useLanguage();
@@ -19,15 +76,9 @@ export function Projects() {
       title: t.projects.project1.title,
       description: t.projects.project1.description,
       tags: ["Flutter", "Node.js", "MongoDB", "IAP"],
-      gif: "/demo-app.gif",
+      video: "bulbus.mp4",
+      layout: "mobile",
       link: "https://apps.apple.com/fr/app/bulbus/id6742380845",
-    },
-    {
-      title: t.projects.project2.title,
-      description: t.projects.project2.description,
-      tags: ["Next.js", "TypeScript", "Prismic", "Stripe"],
-      images: ["dl-1.jpg", "dl-2.jpg", "dl-3.jpg", "dl-4.jpg", "dl-5.jpg"],
-      link: "https://www.desertleaves.org",
     },
     {
       title: t.projects.project3.title,
@@ -38,10 +89,17 @@ export function Projects() {
       link: "https://anceu-pepstery.web.app/",
     },
     {
+      title: t.projects.project2.title,
+      description: t.projects.project2.description,
+      tags: ["Next.js", "TypeScript", "Prismic", "Stripe"],
+      images: ["dl-1.jpg", "dl-2.jpg", "dl-3.jpg", "dl-4.jpg", "dl-5.jpg"],
+      link: "https://www.desertleaves.org",
+    },
+    {
       title: t.projects.project4.title,
       description: t.projects.project4.description,
       tags: ["Node.js", "Vue.js", "Kubernetes", "GCP"],
-      video: "cubyn-plus-legal-compliance.mov",
+      video: "cubyn-plus-legal-compliance.mp4",
       link: "https://www.ecommerce-nation.fr/livraison-cubyn/",
     },
     {
@@ -65,37 +123,10 @@ export function Projects() {
             <div>
               {project.video && (
                 <div className="px-4 pt-4 flex justify-center">
-                  <div
-                    className={`
-        relative mx-auto overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl
-        ${
-          project.layout === "mobile"
-            ? "w-65 aspect-[9/19.5] rounded-[2.5rem]" // Look Smartphone
-            : "w-full aspect-16/8 rounded-xl" // Look Desktop
-        }
-      `}
-                  >
-                    {/* Encoche adaptative */}
-                    <div
-                      className={`
-        absolute left-1/2 -translate-x-1/2 bg-primary/20 z-10
-        ${
-          project.layout === "mobile"
-            ? "top-2 w-16 h-4 rounded-2xl"
-            : "top-0 w-20 h-1.5 rounded-b-md"
-        }
-      `}
-                    ></div>
-
-                    <video
-                      src={project.video}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="h-full w-full object-cover object-top"
-                    />
-                  </div>
+                  <AdaptiveVideoPlayer
+                    src={project.video}
+                    layout={project.layout}
+                  />
                 </div>
               )}
 
@@ -130,18 +161,6 @@ export function Projects() {
                       </CarouselContent>
                     </Carousel>
                   </div>
-                </div>
-              )}
-
-              {project.gif && (
-                <div className="relative mx-auto w-50 h-107.5 overflow-hidden rounded-3xl border border-slate-500 bg-slate-800 shadow-xl">
-                  <Image
-                    src={project.gif}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                    unoptimized
-                  />
                 </div>
               )}
             </div>
