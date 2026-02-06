@@ -9,7 +9,11 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="mx-auto max-w-6xl px-6 py-16 md:px-12 lg:px-16">
+      <main
+        role="main"
+        aria-label="Portfolio content"
+        className="mx-auto max-w-6xl px-6 py-16 md:px-12 lg:px-16"
+      >
         <Hero />
         <About />
         <Experience />

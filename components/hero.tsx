@@ -28,7 +28,7 @@ export function Hero() {
         <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-full border-4 border-primary/20 bg-primary/20 md:h-56 md:w-56">
           <Image
             src="/profile-photo.jpg"
-            alt="Profile photo"
+            alt="Adeline Lefebvre, Fullstack Software Engineer"
             fill
             className="object-cover"
             priority

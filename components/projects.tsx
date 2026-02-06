@@ -14,17 +14,40 @@ import { useRef, useEffect, useState } from "react";
 function AdaptiveVideoPlayer({
   src,
   layout,
+  title,
 }: {
   src: string;
   layout?: string;
+  title: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [aspectRatio, setAspectRatio] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Lazy load videos when they come into view
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "100px" }
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video || !isVisible) return;
 
     const handleLoadedMetadata = () => {
       const ratio = video.videoWidth / video.videoHeight;
@@ -32,7 +55,6 @@ function AdaptiveVideoPlayer({
       setIsLoading(false);
     };
 
-    // Si les métadonnées sont déjà chargées (vidéo en cache)
     if (video.readyState >= 1) {
       handleLoadedMetadata();
     }
@@ -40,29 +62,33 @@ function AdaptiveVideoPlayer({
     video.addEventListener("loadedmetadata", handleLoadedMetadata);
     return () =>
       video.removeEventListener("loadedmetadata", handleLoadedMetadata);
-  }, []);
+  }, [isVisible]);
 
   return (
     <div
+      ref={containerRef}
       className={`
         relative mx-auto overflow-hidden bg-slate-900 shadow-2xl
         ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125 rounded-xl"}
       `}
-      style={aspectRatio ? { aspectRatio: aspectRatio.toString() } : undefined}
+      style={aspectRatio ? { aspectRatio: aspectRatio.toString() } : { minHeight: layout === "mobile" ? "400px" : "250px" }}
     >
-      {isLoading && (
+      {(isLoading || !isVisible) && (
         <div className="absolute inset-0 animate-pulse bg-slate-800" />
       )}
-      <video
-        ref={videoRef}
-        src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        className="h-full w-full object-contain"
-      />
+      {isVisible && (
+        <video
+          ref={videoRef}
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-label={`Demo video for ${title}`}
+          className="h-full w-full object-contain"
+        />
+      )}
     </div>
   );
 }
@@ -78,7 +104,7 @@ export function Projects() {
       tags: ["Flutter", "Node.js", "MongoDB", "IAP"],
       video: "bulbus.mp4",
       layout: "mobile",
-      link: "https://apps.apple.com/fr/app/bulbus/id6742380845",
+      link: "https://bulbus-app.com",
     },
     {
       title: t.projects.project3.title,
@@ -126,6 +152,7 @@ export function Projects() {
                   <AdaptiveVideoPlayer
                     src={project.video}
                     layout={project.layout}
+                    title={project.title}
                   />
                 </div>
               )}
@@ -151,7 +178,7 @@ export function Projects() {
                             <div className="relative aspect-16/10">
                               <Image
                                 src={img}
-                                alt={`${project.title} ${index}`}
+                                alt={`${project.title} - Screenshot ${index + 1}`}
                                 fill
                                 className="object-contain object-top"
                               />
@@ -186,8 +213,9 @@ export function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`${t.projects.viewProject}: ${project.title} (opens in new tab)`}
                     >
-                      <ExternalLink className="mr-2 h-4 w-4" />
+                      <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
                       {t.projects.viewProject}
                     </a>
                   </Button>
