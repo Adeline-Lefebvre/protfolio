@@ -4,6 +4,10 @@ export const translations = {
   en: {
     nav: {
       portfolio: "Portfolio",
+      about: "About",
+      skills: "Skills",
+      projects: "Projects",
+      contact: "Contact",
     },
     hero: {
       greeting: "Hello, I'm",
@@ -11,6 +15,9 @@ export const translations = {
       title: "Fullstack Software Engineer & Mobile App Developer",
       description:
         "Building tech solutions from scratch with a foundation in product and entrepreneurship. Specializing in Next.js, Vue.js, Node.js, TypeScript, and Flutter to deliver impactful fullstack projects in multilingual websites, AR applications, and educational mobile apps.",
+      availableBadge: "Available for freelance",
+      cta: "Let's discuss your project",
+      downloadCV: "Download CV",
     },
     about: {
       title: "About Me",
@@ -60,9 +67,9 @@ export const translations = {
       },
     },
     contact: {
-      title: "Let's Connect",
+      title: "Let's Work Together",
       description:
-        "I'm always interested in hearing about new opportunities, collaborations, and projects—especially those focused on sustainability and social impact. Feel free to reach out!",
+        "Currently available for freelance missions and collaborations worldwide. Whether you need a fullstack web app, a mobile application, or a technical audit — I'd love to hear about your project.",
       email: "Email Me",
       linkedin: "LinkedIn",
       github: "GitHub",
@@ -72,6 +79,10 @@ export const translations = {
   fr: {
     nav: {
       portfolio: "Portfolio",
+      about: "À propos",
+      skills: "Compétences",
+      projects: "Projets",
+      contact: "Contact",
     },
     hero: {
       greeting: "Bonjour, je suis",
@@ -79,6 +90,9 @@ export const translations = {
       title: "Développeuse informatique Fullstack Web & Mobile",
       description:
         "Je conçois des solutions techniques de A à Z en m'appuyant sur une solide base en Produit et Entrepreneuriat. Spécialisée en Next.js, Vue.js, Node.js, TypeScript et Flutter, je réalise des projets fullstack à fort impact : sites multilingues, applications de réalité augmentée (AR) et apps mobiles éducatives.",
+      availableBadge: "Disponible en freelance",
+      cta: "Discutons de votre projet",
+      downloadCV: "Télécharger mon CV",
     },
     about: {
       title: "À propos",
@@ -128,9 +142,9 @@ export const translations = {
       },
     },
     contact: {
-      title: "Contactez-moi",
+      title: "Travaillons Ensemble",
       description:
-        "Je suis toujours intéressée par les nouvelles opportunités, collaborations et projets—en particulier ceux axés sur la durabilité et l'impact social. N'hésitez pas à me contacter !",
+        "Actuellement disponible pour des missions freelance et collaborations dans le monde entier. Que vous ayez besoin d'une application web fullstack, d'une app mobile ou d'un audit technique — parlons de votre projet.",
       email: "M'envoyer un email",
       linkedin: "LinkedIn",
       github: "GitHub",
@@ -140,6 +154,10 @@ export const translations = {
   es: {
     nav: {
       portfolio: "Portafolio",
+      about: "Sobre mí",
+      skills: "Habilidades",
+      projects: "Proyectos",
+      contact: "Contacto",
     },
     hero: {
       greeting: "Hola, soy",
@@ -147,6 +165,9 @@ export const translations = {
       title: "Ingeniera de Software Fullstack y Desarrolladora Mobile",
       description:
         "Desarrollo soluciones tecnológicas desde cero con una base sólida en producto y emprendimiento. Especializada en Next.js, Vue.js, Node.js, TypeScript y Flutter para entregar proyectos de alto impacto, desde sitios web multilingües hasta aplicaciones de realidad aumentada (AR) y apps móviles educativas.",
+      availableBadge: "Disponible para freelance",
+      cta: "Hablemos de tu proyecto",
+      downloadCV: "Descargar CV",
     },
     about: {
       title: "Sobre mí",
@@ -196,9 +217,9 @@ export const translations = {
       },
     },
     contact: {
-      title: "Conectemos",
+      title: "Trabajemos Juntos",
       description:
-        "Siempre estoy interesado en escuchar sobre nuevas oportunidades, colaboraciones y proyectos, especialmente aquellos enfocados en sostenibilidad e impacto social. ¡No dudes en contactarme!",
+        "Actualmente disponible para misiones freelance y colaboraciones en todo el mundo. Ya sea que necesites una aplicación web fullstack, una app móvil o una auditoría técnica — me encantaría conocer tu proyecto.",
       email: "Envíame un Email",
       linkedin: "LinkedIn",
       github: "GitHub",

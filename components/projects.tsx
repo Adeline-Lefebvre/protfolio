@@ -99,6 +99,20 @@ export function Projects() {
 
   const projects = [
     {
+      title: t.projects.project2.title,
+      description: t.projects.project2.description,
+      tags: ["Next.js", "TypeScript", "Prismic", "Stripe"],
+      images: ["/dl-1.jpg", "/dl-2.jpg", "/dl-3.jpg", "/dl-4.jpg", "/dl-5.jpg"],
+      link: "https://www.desertleaves.org",
+    },
+    {
+      title: t.projects.project4.title,
+      description: t.projects.project4.description,
+      tags: ["Node.js", "Vue.js", "Kubernetes", "GCP"],
+      video: "cubyn-plus-legal-compliance.mp4",
+      link: "https://www.ecommerce-nation.fr/livraison-cubyn/",
+    },
+    {
       title: t.projects.project1.title,
       description: t.projects.project1.description,
       tags: ["Flutter", "Node.js", "MongoDB", "IAP"],
@@ -113,20 +127,6 @@ export function Projects() {
       video: "pepstery.mp4",
       layout: "mobile",
       link: "https://anceu-pepstery.web.app/",
-    },
-    {
-      title: t.projects.project2.title,
-      description: t.projects.project2.description,
-      tags: ["Next.js", "TypeScript", "Prismic", "Stripe"],
-      images: ["dl-1.jpg", "dl-2.jpg", "dl-3.jpg", "dl-4.jpg", "dl-5.jpg"],
-      link: "https://www.desertleaves.org",
-    },
-    {
-      title: t.projects.project4.title,
-      description: t.projects.project4.description,
-      tags: ["Node.js", "Vue.js", "Kubernetes", "GCP"],
-      video: "cubyn-plus-legal-compliance.mp4",
-      link: "https://www.ecommerce-nation.fr/livraison-cubyn/",
     },
     {
       title: t.projects.project5.title,
@@ -145,7 +145,7 @@ export function Projects() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.title} className="flex flex-col overflow-hidden">
+          <Card key={project.title} className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
             <div>
               {project.video && (
                 <div className="px-4 pt-4 flex justify-center">

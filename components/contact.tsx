@@ -1,7 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Mail, Linkedin, Github, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, Phone, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
@@ -17,6 +17,15 @@ export function Contact() {
       </h2>
       <Card className="p-8">
         <div className="space-y-6">
+          <div className="flex items-center gap-2">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+            </span>
+            <span className="text-sm font-medium text-green-600 dark:text-green-400">
+              {t.hero.availableBadge}
+            </span>
+          </div>
           <p className="text-lg leading-relaxed text-muted-foreground">
             {t.contact.description}
           </p>
@@ -59,6 +68,12 @@ export function Contact() {
               >
                 <Github className="mr-2 h-4 w-4" />
                 {t.contact.github}
+              </a>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="/CV.pdf" download>
+                <Download className="mr-2 h-4 w-4" />
+                {t.hero.downloadCV}
               </a>
             </Button>
           </div>

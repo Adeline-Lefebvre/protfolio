@@ -11,12 +11,32 @@ export function Navigation() {
   const { language } = useLanguage();
   const t = getTranslations(language);
 
+  const navLinks = [
+    { href: "#about", label: t.nav.about },
+    { href: "#experience", label: t.nav.skills },
+    { href: "#projects", label: t.nav.projects },
+    { href: "#contact", label: t.nav.contact },
+  ];
+
   return (
     <nav className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-12 lg:px-16">
-        <a href="#" className="text-lg font-semibold tracking-tight">
-          {t.nav.portfolio}
-        </a>
+        <div className="flex items-center gap-8">
+          <a href="#" className="text-lg font-semibold tracking-tight">
+            {t.nav.portfolio}
+          </a>
+          <div className="hidden items-center gap-1 md:flex">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
         <div className="flex items-center gap-2">
           <LanguageSelector />
           <ThemeToggle />
