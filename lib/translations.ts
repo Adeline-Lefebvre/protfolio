@@ -22,11 +22,13 @@ export const translations = {
     about: {
       title: "About Me",
       paragraph1:
-        "I didn't start in tech, but I definitely found my home here. My journey began in <span class='font-semibold text-primary'>product and entrepreneurship</span>, which gave me a <span class='italic'>'founder’s mindset'</span>: I love solving real problems.",
+        "I didn't start in tech, but I found my home here. My journey from <span class='font-semibold text-primary'>product and entrepreneurship</span> gave me a <span class='italic'>founder's mindset</span>: I love solving real problems and shipping solutions that users actually love.",
       paragraph2:
-        "Today, I’m a <span class='font-semibold text-primary'>Fullstack Web & Mobile Developer</span> focused on bridging the gap between technology and nature. From my <span class='font-semibold text-accent'>CSR</span> background at <span class='font-semibold text-primary'>Deloitte</span> to building a reforestation site for the NGO <span class='font-semibold text-primary'>Desert Leaves</span> or an educational app about medicinal plants, I care deeply about sustainability.",
+        "Today, I'm a <span class='font-semibold text-primary'>Fullstack Developer</span> specializing in <span class='font-semibold text-accent'>React, Next.js, Node.js, and Flutter</span> — focused on bridging technology and sustainability. From building a reforestation platform for <span class='font-semibold text-primary'>Desert Leaves</span> to creating an educational app about medicinal plants (<span class='font-semibold text-accent'>30+ paying users, 4.8/5 rating</span>), I care deeply about building tech that matters.",
       paragraph3:
-        "I also enjoy exploring how tech can serve local ecosystems. During a residency at <span class='font-semibold text-primary'>Anceu Coliving</span>, I developed an <span class='font-semibold text-accent'>Augmented Reality</span> project to help revitalize rural areas by bringing digital innovation to countryside communities.",
+        "I bring <span class='font-semibold text-accent'>full-stack expertise</span> with a proven track record of products in production serving real users across 6 countries. My background in product (<span class='font-semibold text-primary'>Station F</span>) means I don't just code: I understand business needs, prioritize impact, and execute fast.",
+      paragraph4:
+        "Currently <span class='font-semibold text-primary'>available for freelance missions</span> across Europe: web development (React, Next.js), mobile apps (Flutter), full-stack projects (Node.js + React), and AI integration (OpenAI, Claude API).",
     },
     skills: {
       title: "Skills & Expertise",
@@ -97,11 +99,13 @@ export const translations = {
     about: {
       title: "À propos",
       paragraph1:
-        "Je n'ai pas commencé dans la tech, mais j'y ai définitivement trouvé ma place. Mon parcours a débuté dans le <span class='font-semibold text-primary'>produit et l'entrepreneuriat</span>, ce qui m'a forgé un <span class='italic'>'founder’s mindset'</span> : j'aime résoudre des problèmes concrets.",
+        "Je n'ai pas commencé dans la tech, mais j'y ai trouvé ma place. Mon parcours en <span class='font-semibold text-primary'>produit et entrepreneuriat</span> m'a forgé un <span class='italic'>founder's mindset</span> : j'aime résoudre de vrais problèmes et livrer des solutions que les utilisateurs adorent vraiment.",
       paragraph2:
-        "Aujourd'hui, je suis <span class='font-semibold text-primary'>développeuse Fullstack Web & Mobile</span>, déterminée à jeter des ponts entre technologie et nature. De mon expérience en <span class='font-semibold text-accent'>RSE</span> chez <span class='font-semibold text-primary'>Deloitte</span> à la création d'un site de reforestation pour l'ONG <span class='font-semibold text-primary'>Desert Leaves</span> ou d'une application éducative sur les plantes médicinales, la durabilité est au cœur de ma démarche.",
+        "Aujourd'hui, je suis <span class='font-semibold text-primary'>développeuse Fullstack</span> spécialisée en <span class='font-semibold text-accent'>React, Next.js, Node.js et Flutter</span> — déterminée à jeter des ponts entre technologie et durabilité. De la création d'une plateforme de reforestation pour <span class='font-semibold text-primary'>Desert Leaves</span> à une application éducative sur les plantes médicinales (<span class='font-semibold text-accent'>30+ utilisateurs payants, note 4.8/5</span>), je bâtis de la tech qui a du sens.",
       paragraph3:
-        "J’aime aussi explorer la manière dont la tech peut servir les écosystèmes locaux. Lors d'une résidence à <span class='font-semibold text-primary'>Anceu Coliving</span>, j'ai développé un projet de <span class='font-semibold text-accent'>Réalité Augmentée</span> pour dynamiser les zones rurales en apportant l'innovation numérique au cœur des campagnes.",
+        "J'apporte une <span class='font-semibold text-accent'>expertise full-stack</span> avec des produits en production servant de vrais utilisateurs dans 6 pays. Mon expérience produit (<span class='font-semibold text-primary'>Station F</span>) fait que je ne code pas seulement : je comprends les enjeux business, priorise l'impact et exécute vite.",
+      paragraph4:
+        "Actuellement <span class='font-semibold text-primary'>disponible pour missions freelance</span> en Europe : développement web (React, Next.js), applications mobiles (Flutter), projets full-stack (Node.js + React), et intégration IA (OpenAI, Claude API).",
     },
     skills: {
       title: "Compétences & Expertise",
@@ -172,11 +176,13 @@ export const translations = {
     about: {
       title: "Sobre mí",
       paragraph1:
-        "No empecé en el sector tecnológico, pero sin duda he encontrado mi hogar aquí. Mi trayectoria comenzó en <span class='font-semibold text-primary'>producto y emprendimiento</span>, lo que me dio una <span class='italic'>'mentalidad de fundadora'</span>: me encanta resolver problemas reales.",
+        "No empecé en tecnología, pero encontré mi hogar aquí. Mi trayectoria en <span class='font-semibold text-primary'>producto y emprendimiento</span> me dio una <span class='italic'>mentalidad de fundadora</span>: me encanta resolver problemas reales y entregar soluciones que los usuarios realmente aman.",
       paragraph2:
-        "Hoy soy <span class='font-semibold text-primary'>desarrolladora Fullstack Web y Mobile</span>, enfocada en cerrar la brecha entre la tecnología y la naturaleza. Desde mi experiencia en <span class='font-semibold text-accent'>RSC</span> en <span class='font-semibold text-primary'>Deloitte</span> hasta la creación de un sitio de reforestación para la ONG <span class='font-semibold text-primary'>Desert Leaves</span> o una app educativa sobre plantas medicinales, me comprometo profundamente con la sostenibilidad.",
+        "Hoy soy <span class='font-semibold text-primary'>desarrolladora Fullstack</span> especializada en <span class='font-semibold text-accent'>React, Next.js, Node.js y Flutter</span> — enfocada en conectar tecnología y sostenibilidad. Desde crear una plataforma de reforestación para <span class='font-semibold text-primary'>Desert Leaves</span> hasta una app educativa sobre plantas medicinales (<span class='font-semibold text-accent'>30+ usuarios de pago, valoración 4.8/5</span>), construyo tecnología que importa.",
       paragraph3:
-        "También disfruto explorando cómo la tecnología puede servir a los ecosistemas locales. Durante una residencia en <span class='font-semibold text-primary'>Anceu Coliving</span>, desarrollé un proyecto de <span class='font-semibold text-accent'>Realidad Aumentada</span> para ayudar a revitalizar zonas rurales, llevando la innovación digital a las comunidades del campo.",
+        "Aporto <span class='font-semibold text-accent'>experiencia full-stack</span> con productos en producción sirviendo usuarios reales en 6 países. Mi experiencia en producto (<span class='font-semibold text-primary'>Station F</span>) significa que no solo codifico: entiendo necesidades de negocio, priorizo impacto y ejecuto rápido.",
+      paragraph4:
+        "Actualmente <span class='font-semibold text-primary'>disponible para misiones freelance</span> en Europa: desarrollo web (React, Next.js), apps móviles (Flutter), proyectos full-stack (Node.js + React), e integración IA (OpenAI, Claude API).",
     },
     skills: {
       title: "Habilidades & Experiencia",

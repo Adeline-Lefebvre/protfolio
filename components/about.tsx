@@ -17,7 +17,7 @@ export function About() {
         <div className="space-y-6 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
           <div dangerouslySetInnerHTML={{ __html: t.about.paragraph1 }} />
           <div dangerouslySetInnerHTML={{ __html: t.about.paragraph2 }} />
-          <div dangerouslySetInnerHTML={{ __html: t.about.paragraph3 }} />
+          <div dangerouslySetInnerHTML={{ __html: t.about.paragraph34 }} />
         </div>
       </Card>
     </section>
