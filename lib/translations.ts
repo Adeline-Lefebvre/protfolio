@@ -24,7 +24,7 @@ export const translations = {
       paragraph1:
         "I didn't start in tech, but I found my home here. My journey from <span class='font-semibold text-primary'>product and entrepreneurship</span> gave me a <span class='italic'>founder's mindset</span>: I love solving real problems and shipping solutions that users actually love.",
       paragraph2:
-        "Today, I'm a <span class='font-semibold text-primary'>Fullstack Developer</span> specializing in <span class='font-semibold text-accent'>React, Next.js, Node.js, and Flutter</span>,  focused on bridging technology and sustainability. From building a reforestation platform for <span class='font-semibold text-primary'>Desert Leaves</span> to creating an educational app about medicinal plants (<span class='font-semibold text-accent'>30+ paying users, 4.8/5 rating</span>), I care deeply about building tech that matters.",
+        "Today, I'm a <span class='font-semibold text-primary'>Fullstack Developer</span> specializing in <span class='font-semibold text-accent'>React, Next.js, Node.js, and Flutter</span>,  focused on bridging technology and sustainability. From building a reforestation platform for <span class='font-semibold text-primary'>Desert Leaves</span> to creating an educational app about medicinal plants, I care deeply about building tech that matters.",
       paragraph3:
         "I bring <span class='font-semibold text-accent'>full-stack expertise</span> with a proven track record of products in production serving real users across 6 countries. My background in product (<span class='font-semibold text-primary'>Station F</span>) means I don't just code: I understand business needs, prioritize impact, and execute fast.",
       paragraph4:
@@ -101,7 +101,7 @@ export const translations = {
       paragraph1:
         "Je n'ai pas commencé dans la tech, mais j'y ai trouvé ma place. Mon parcours en <span class='font-semibold text-primary'>produit et entrepreneuriat</span> m'a forgé un <span class='italic'>founder's mindset</span> : j'aime résoudre de vrais problèmes et livrer des solutions que les utilisateurs adorent vraiment.",
       paragraph2:
-        "Aujourd'hui, je suis <span class='font-semibold text-primary'>développeuse Fullstack</span> spécialisée en <span class='font-semibold text-accent'>React, Next.js, Node.js et Flutter</span>,  déterminée à jeter des ponts entre technologie et durabilité. De la création d'une plateforme de reforestation pour <span class='font-semibold text-primary'>Desert Leaves</span> à une application éducative sur les plantes médicinales (<span class='font-semibold text-accent'>30+ utilisateurs payants, note 4.8/5</span>), je bâtis de la tech qui a du sens.",
+        "Aujourd'hui, je suis <span class='font-semibold text-primary'>développeuse Fullstack</span> spécialisée en <span class='font-semibold text-accent'>React, Next.js, Node.js et Flutter</span>,  déterminée à jeter des ponts entre technologie et durabilité. De la création d'une plateforme de reforestation pour <span class='font-semibold text-primary'>Desert Leaves</span> à une application éducative sur les plantes médicinales, je bâtis de la tech qui a du sens.",
       paragraph3:
         "J'apporte une <span class='font-semibold text-accent'>expertise full-stack</span> avec des produits en production servant de vrais utilisateurs dans 6 pays. Mon expérience produit (<span class='font-semibold text-primary'>Station F</span>) fait que je ne code pas seulement : je comprends les enjeux business, priorise l'impact et exécute vite.",
       paragraph4:
@@ -178,7 +178,7 @@ export const translations = {
       paragraph1:
         "No empecé en tecnología, pero encontré mi hogar aquí. Mi trayectoria en <span class='font-semibold text-primary'>producto y emprendimiento</span> me dio una <span class='italic'>mentalidad de fundadora</span>: me encanta resolver problemas reales y entregar soluciones que los usuarios realmente aman.",
       paragraph2:
-        "Hoy soy <span class='font-semibold text-primary'>desarrolladora Fullstack</span> especializada en <span class='font-semibold text-accent'>React, Next.js, Node.js y Flutter</span>,  enfocada en conectar tecnología y sostenibilidad. Desde crear una plataforma de reforestación para <span class='font-semibold text-primary'>Desert Leaves</span> hasta una app educativa sobre plantas medicinales (<span class='font-semibold text-accent'>30+ usuarios de pago, valoración 4.8/5</span>), construyo tecnología que importa.",
+        "Hoy soy <span class='font-semibold text-primary'>desarrolladora Fullstack</span> especializada en <span class='font-semibold text-accent'>React, Next.js, Node.js y Flutter</span>,  enfocada en conectar tecnología y sostenibilidad. Desde crear una plataforma de reforestación para <span class='font-semibold text-primary'>Desert Leaves</span> hasta una app educativa sobre plantas medicinales, construyo tecnología que importa.",
       paragraph3:
         "Aporto <span class='font-semibold text-accent'>experiencia full-stack</span> con productos en producción sirviendo usuarios reales en 6 países. Mi experiencia en producto (<span class='font-semibold text-primary'>Station F</span>) significa que no solo codifico: entiendo necesidades de negocio, priorizo impacto y ejecuto rápido.",
       paragraph4:
