@@ -27,7 +27,7 @@ export function Navigation() {
           >
             {t.nav.portfolio}
           </a>
-          <div className="hidden items-center gap-1 md:flex">
+          <div className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
