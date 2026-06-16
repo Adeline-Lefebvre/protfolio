@@ -2,7 +2,6 @@
 
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "./theme-toggle";
 import { LanguageSelector } from "./language-selector";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
@@ -12,9 +11,9 @@ export function Navigation() {
   const t = getTranslations(language);
 
   const navLinks = [
-    { href: "#about", label: t.nav.about },
-    { href: "#experience", label: t.nav.skills },
+    { href: "#services", label: t.nav.services },
     { href: "#projects", label: t.nav.projects },
+    { href: "#about", label: t.nav.about },
     { href: "#contact", label: t.nav.contact },
   ];
 
@@ -39,7 +38,6 @@ export function Navigation() {
         </div>
         <div className="flex items-center gap-2">
           <LanguageSelector />
-          <ThemeToggle />
           <Button variant="ghost" size="icon" asChild>
             <a
               href="https://github.com/Adeline-Lefebvre"

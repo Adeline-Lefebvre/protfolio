@@ -38,11 +38,14 @@ export function Hero() {
           <div className="flex flex-wrap gap-3 pt-2">
             <Button asChild size="lg">
               <a href="#contact">
-                {t.hero.cta}
+                {t.hero.ctaPrimary}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
+              <a href="#projects">{t.hero.ctaProjects}</a>
+            </Button>
+            <Button variant="ghost" size="lg" asChild>
               <a href="/CV.pdf" download>
                 <Download className="mr-2 h-4 w-4" />
                 {t.hero.downloadCV}

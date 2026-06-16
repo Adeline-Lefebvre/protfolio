@@ -47,7 +47,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/og-image.jpg",
+          url: "/og-image.png",
           width: 1200,
           height: 630,
           alt: "Adeline Lefebvre - Fullstack Developer",
@@ -59,7 +59,7 @@ export async function generateMetadata({
       title: metadata.openGraph.title,
       description: metadata.openGraph.description,
       creator: "@adelinelefebvre",
-      images: ["/og-image.jpg"],
+      images: ["/og-image.png"],
     },
   };
 }

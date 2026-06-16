@@ -99,41 +99,51 @@ export function Projects() {
 
   const projects = [
     {
-      title: t.projects.project2.title,
-      description: t.projects.project2.description,
-      tags: ["Next.js", "TypeScript", "Prismic", "Stripe"],
+      title: t.projects.rootyne.title,
+      description: t.projects.rootyne.description,
+      tags: ["Next.js", "Claude API", "Mistral", "Firebase"],
+      images: [
+        "/rootyne-1.jpg",
+        "/rootyne-2.jpg",
+        "/rootyne-3.jpg",
+        "/rootyne-4.jpg",
+      ],
+      link: "https://www.rootyne.health/fr",
+    },
+    {
+      title: t.projects.desertLeaves.title,
+      description: t.projects.desertLeaves.description,
+      tags: ["Next.js", "Prismic", "Stripe", "SEO"],
       images: ["/dl-1.jpg", "/dl-2.jpg", "/dl-3.jpg", "/dl-4.jpg", "/dl-5.jpg"],
       link: "https://www.desertleaves.org",
     },
     {
-      title: t.projects.project4.title,
-      description: t.projects.project4.description,
-      tags: ["Node.js", "Vue.js", "Kubernetes", "GCP"],
-      video: "cubyn-plus-legal-compliance.webm",
-      link: "https://www.ecommerce-nation.fr/livraison-cubyn/",
+      title: t.projects.lime.title,
+      description: t.projects.lime.description,
+      tags: ["Craft CMS", "PHP", "Twig", "SEO"],
+      video: "lime.webm",
+      link: "https://limesearch.nl",
     },
     {
-      title: t.projects.project1.title,
-      description: t.projects.project1.description,
+      title: t.projects.bulbus.title,
+      description: t.projects.bulbus.description,
       tags: ["Flutter", "Node.js", "MongoDB", "IAP"],
       video: "bulbus.webm",
       layout: "mobile",
       link: "https://bulbus-app.com",
     },
     {
-      title: t.projects.project3.title,
-      description: t.projects.project3.description,
-      tags: ["A-Frame", "MindAR", "Pusher.js", "3D"],
-      video: "pepstery.webm",
-      layout: "mobile",
-      link: "https://anceu-pepstery.web.app/",
+      title: t.projects.sds.title,
+      description: t.projects.sds.description,
+      tags: ["Next.js", "next-intl", "Tailwind CSS", "SEO"],
+      images: ["/sds.jpg"],
+      link: "https://www.sds-lingo.cz",
     },
     {
-      title: t.projects.project5.title,
-      description: t.projects.project5.description,
-      video: "happyCow.webm",
-      layout: "mobile",
-      tags: ["React Native", "JavaScript", "Mobile"],
+      title: t.projects.c55.title,
+      description: t.projects.c55.description,
+      tags: ["WordPress", "Elementor Pro", "Custom JS", "CSS"],
+      video: "c55.webm",
     },
   ];
 
@@ -224,6 +234,57 @@ export function Projects() {
             </div>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-16">
+        <h3 className="mb-6 text-xl font-semibold text-muted-foreground">
+          {t.projects.moreTitle}
+        </h3>
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
+            <div className="px-4 pt-4 flex justify-center">
+              <AdaptiveVideoPlayer
+                src="pepstery.webm"
+                layout="mobile"
+                title={t.projects.pepstery.title}
+              />
+            </div>
+            <div className="flex flex-1 flex-col p-6">
+              <h4 className="mb-2 text-lg font-semibold">
+                {t.projects.pepstery.title}
+              </h4>
+              <p className="mb-4 text-muted-foreground leading-relaxed">
+                {t.projects.pepstery.description}
+              </p>
+              <div className="mb-4 flex flex-wrap gap-2">
+                {["A-Frame", "MindAR", "Pusher.js", "3D"].map((tag) => (
+                  <Badge key={tag} variant="outline" className="text-xs">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+              <div className="mt-auto flex gap-2">
+                <Button size="sm" asChild>
+                  <a
+                    href="https://anceu-pepstery.web.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${t.projects.viewProject}: ${t.projects.pepstery.title} (opens in new tab)`}
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
+                    {t.projects.viewProject}
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="flex items-center p-6">
+            <p className="text-muted-foreground leading-relaxed">
+              {t.projects.cubynNote}
+            </p>
+          </Card>
+        </div>
       </div>
     </section>
   );

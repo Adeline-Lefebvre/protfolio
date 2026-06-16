@@ -1,7 +1,9 @@
 import { Hero } from "@/components/hero";
-import { About } from "@/components/about";
-import { Experience } from "@/components/experience";
+import { TrustBar } from "@/components/trust-bar";
+import { Services } from "@/components/services";
 import { Projects } from "@/components/projects";
+import { About } from "@/components/about";
+import { Testimonial } from "@/components/testimonial";
 import { Contact } from "@/components/contact";
 import { Navigation } from "@/components/navigation";
 import { AnimatedSection } from "@/components/animated-section";
@@ -18,13 +20,19 @@ export default function Home() {
       >
         <Hero />
         <AnimatedSection>
-          <About />
+          <TrustBar />
         </AnimatedSection>
         <AnimatedSection>
-          <Experience />
+          <Services />
         </AnimatedSection>
         <AnimatedSection>
           <Projects />
+        </AnimatedSection>
+        <AnimatedSection>
+          <About />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Testimonial />
         </AnimatedSection>
         <AnimatedSection>
           <Contact />
