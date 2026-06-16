@@ -279,11 +279,11 @@ export function Projects() {
             </div>
           </Card>
 
-          <Card className="flex items-center p-6">
-            <p className="text-muted-foreground leading-relaxed">
+          <div className="flex items-center">
+            <p className="border-l-2 border-primary/30 pl-5 text-muted-foreground leading-relaxed">
               {t.projects.cubynNote}
             </p>
-          </Card>
+          </div>
         </div>
       </div>
     </section>
