@@ -191,6 +191,7 @@ export function Projects() {
                                 src={img}
                                 alt={`${project.title} - Screenshot ${index + 1}`}
                                 fill
+                                sizes="(min-width: 768px) 50vw, 100vw"
                                 className="object-contain object-top"
                               />
                             </div>

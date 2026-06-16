@@ -62,6 +62,7 @@ export function Hero() {
               src="/profile-photo.jpg"
               alt="Adeline Lefebvre, Fullstack Software Engineer"
               fill
+              sizes="(min-width: 768px) 224px, 160px"
               className="object-cover"
               priority
             />

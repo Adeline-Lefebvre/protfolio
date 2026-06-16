@@ -8,13 +8,13 @@ const translations = {
     backHome: "Back to Home",
   },
   fr: {
-    title: "Page Non Trouvee",
-    description: "Desolee, la page que vous recherchez n'existe pas ou a ete deplacee.",
-    backHome: "Retour a l'accueil",
+    title: "Page non trouvée",
+    description: "Désolée, la page que vous recherchez n'existe pas ou a été déplacée.",
+    backHome: "Retour à l'accueil",
   },
   es: {
-    title: "Pagina No Encontrada",
-    description: "Lo sentimos, la pagina que buscas no existe o ha sido movida.",
+    title: "Página no encontrada",
+    description: "Lo sentimos, la página que buscas no existe o ha sido movida.",
     backHome: "Volver al inicio",
   },
 };
