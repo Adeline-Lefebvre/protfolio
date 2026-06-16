@@ -2,23 +2,28 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Adeline Lefebvre - Fullstack Developer",
+    name: "Adeline Lefebvre - Freelance Fullstack Developer",
     short_name: "A. Lefebvre",
     description:
-      "Fullstack Software Engineer specializing in Next.js, Flutter, and Node.js",
+      "Freelance fullstack developer: Next.js apps with AI, custom WordPress & Craft CMS sites, and long-term maintenance.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0a0a0a",
-    theme_color: "#0a0a0a",
+    background_color: "#fbf7f0",
+    theme_color: "#d97757",
     icons: [
       {
-        src: "/icon-light.png",
+        src: "/icon.svg",
         sizes: "any",
+        type: "image/svg+xml",
+      },
+      {
+        src: "/icon-light.png",
+        sizes: "32x32",
         type: "image/png",
       },
       {
         src: "/apple-icon.png",
-        sizes: "any",
+        sizes: "180x180",
         type: "image/png",
       },
     ],

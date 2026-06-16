@@ -44,9 +44,6 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
 };
 
 export default function RootLayout({
