@@ -12,8 +12,8 @@ export function Hero() {
 
   return (
     <section className="mb-24 pt-8 md:pt-12">
-      <div className="flex flex-col-reverse items-start gap-8 md:flex-row md:items-center md:justify-between">
-        <div className="space-y-6">
+      <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
+        <div className="w-full min-w-0 space-y-6 md:w-auto">
           <div className="space-y-2">
             <div className="mb-4 flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">
@@ -26,7 +26,7 @@ export function Hero() {
             </div>
             <p className="text-sm text-muted-foreground">{t.hero.greeting}</p>
             <h1 className="text-balance">
-              <span className="block text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+              <span className="block text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
                 {t.hero.name}
               </span>
               <span className="mt-4 block font-sans text-2xl font-medium text-muted-foreground md:text-3xl">
@@ -55,7 +55,7 @@ export function Hero() {
             </Button>
           </div>
         </div>
-        <div className="relative h-40 w-40 shrink-0 md:h-56 md:w-56">
+        <div className="relative h-40 w-40 shrink-0 self-center md:h-56 md:w-56 md:self-auto">
           <div className="absolute -inset-0.5 rounded-full bg-linear-to-br from-primary/40 via-primary/20 to-accent/30 blur-[2px]" />
           <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-primary/20">
             <Image

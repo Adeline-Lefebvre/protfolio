@@ -91,6 +91,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
   /* Adding font weight utilities for Inter SemiBold/Bold titles and Regular body */
   h1,
