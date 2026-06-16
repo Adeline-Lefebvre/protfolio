@@ -25,13 +25,15 @@ export function Hero() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground">{t.hero.greeting}</p>
-            <h1 className="text-5xl font-bold tracking-tight text-balance md:text-6xl lg:text-7xl">
-              {t.hero.name}
+            <h1 className="text-balance">
+              <span className="block text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+                {t.hero.name}
+              </span>
+              <span className="mt-4 block text-2xl font-medium text-muted-foreground md:text-3xl">
+                {t.hero.title}
+              </span>
             </h1>
           </div>
-          <h2 className="text-2xl font-medium text-muted-foreground text-balance md:text-3xl">
-            {t.hero.title}
-          </h2>
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t.hero.description}
           </p>
