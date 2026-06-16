@@ -8,7 +8,7 @@ import { getTranslations } from "@/lib/translations";
 // equilibre optique (les logos larges sont plus fins, les compacts plus hauts).
 const logos = [
   { name: "LIME Search", src: "/logo-lime.png", ratio: 8.78, h: 18 },
-  { name: "Desert Leaves", src: "/logo-desertleaves.png", ratio: 2.0, h: 38 },
+  { name: "Desert Leaves", src: "/logo-desertleaves.png", ratio: 2.0, h: 48 },
   { name: "Code Create", src: "/logo-codecreate.png", ratio: 1.88, h: 40 },
   { name: "Club Fifty Five", src: "/logo-clubfiftyfive.svg", ratio: 0.86, h: 46 },
 ];
