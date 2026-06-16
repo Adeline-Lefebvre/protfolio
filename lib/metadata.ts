@@ -2,7 +2,7 @@ import type { Language } from "./translations";
 
 export const siteMetadata = {
   en: {
-    title: "Adeline Lefebvre | Freelance Fullstack Developer — Next.js, AI, WordPress",
+    title: "Adeline Lefebvre | Freelance Fullstack Developer (Next.js, AI, WordPress)",
     description:
       "Freelance fullstack developer. I build Next.js apps with AI (Claude, Mistral), custom websites (WordPress, Craft CMS) and maintain them long-term. Product mindset, remote across Europe.",
     keywords: [
@@ -23,7 +23,7 @@ export const siteMetadata = {
     },
   },
   fr: {
-    title: "Adeline Lefebvre | Développeuse Fullstack Freelance — Next.js, IA, WordPress",
+    title: "Adeline Lefebvre | Développeuse Fullstack Freelance (Next.js, IA, WordPress)",
     description:
       "Développeuse fullstack freelance. Je conçois des apps Next.js avec IA (Claude, Mistral), des sites sur-mesure (WordPress, Craft CMS) et j'en assure la maintenance. Vision produit, remote en Europe.",
     keywords: [
@@ -44,7 +44,7 @@ export const siteMetadata = {
     },
   },
   es: {
-    title: "Adeline Lefebvre | Desarrolladora Fullstack Freelance — Next.js, IA, WordPress",
+    title: "Adeline Lefebvre | Desarrolladora Fullstack Freelance (Next.js, IA, WordPress)",
     description:
       "Desarrolladora fullstack freelance. Creo apps Next.js con IA (Claude, Mistral), sitios a medida (WordPress, Craft CMS) y me encargo de su mantenimiento. Mentalidad de producto, remoto en Europa.",
     keywords: [

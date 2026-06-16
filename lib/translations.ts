@@ -12,7 +12,7 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       name: "Adeline Lefebvre",
-      title: "Fullstack Developer — from custom sites to AI apps",
+      title: "Fullstack developer, from custom sites to AI apps",
       description:
         "I turn a business need into a product that ships. With a product background (Station F) and a dual fullstack & CMS skill set, I build Next.js apps with AI (Claude, Mistral), custom websites (WordPress, Craft CMS), and maintain them for the long run.",
       availableBadge: "Available for freelance",
@@ -25,7 +25,7 @@ export const translations = {
     },
     services: {
       title: "What I do",
-      subtitle: "Three ways to work together — from build to long-term care.",
+      subtitle: "Three ways to work together, from build to long-term care.",
       ai: {
         title: "AI apps & integrations",
         description:
@@ -67,37 +67,37 @@ export const translations = {
       cubynNote:
         "Before freelancing: Software Engineer at Cubyn (80+ microservices, Kubernetes/GCP) and Klox (React/Node SaaS platform).",
       rootyne: {
-        title: "Rootyne — AI Health Platform",
+        title: "Rootyne, AI health platform",
         description:
           "Personalized blood-test analysis. AI extraction pipeline (Claude + Mistral) with an anonymization layer, a biologist review dashboard, and encrypted HDS-compliant infrastructure. Built from scratch.",
       },
       desertLeaves: {
-        title: "Desert Leaves — Environmental NGO",
+        title: "Desert Leaves, environmental NGO",
         description:
           "A complete platform built from scratch for a reforestation foundation: Next.js + headless Prismic CMS, Stripe donations (one-time & recurring), multilingual SEO.",
       },
       lime: {
-        title: "LIME Search — Finance Recruitment",
+        title: "LIME Search, finance recruitment",
         description:
           "Multilingual recruitment platform in Craft CMS. Custom Twig/PHP components the client can edit, technical SEO, plus ongoing maintenance and new features.",
       },
       bulbus: {
-        title: "Bulbus — Educational Mobile App",
+        title: "Bulbus, educational mobile app",
         description:
           "Cross-platform Flutter app for herbalism students. 150+ plants, timed mock exams, in-app purchases. Live on iOS & Android with 37 paying users.",
       },
       sds: {
-        title: "SDS Lingo — Multilingual Website",
+        title: "SDS Lingo, multilingual website",
         description:
           "Next.js site (EN/FR/CS) for a technical translation company. Full i18n, a quote form with file upload, multilingual SEO (hreflang) and optimized Core Web Vitals.",
       },
       c55: {
-        title: "Club Fifty Five — Creative Agency",
+        title: "Club Fifty Five, creative agency",
         description:
           "Premium showcase site for a Dutch talent agency, delivered white-label. Custom widgets (animated marquee), Theme Builder, advanced forms, responsive across 5 breakpoints.",
       },
       pepstery: {
-        title: "Pepstery — Augmented Reality Game",
+        title: "Pepstery, augmented reality game",
         description:
           "Marker-based AR game built during a tech residency: 3D character generation, real-time interactions (Pusher), non-linear storytelling (A-Frame, MindAR).",
       },
@@ -107,9 +107,9 @@ export const translations = {
       paragraph1:
         "My path started in <strong class='font-semibold text-primary'>product and entrepreneurship</strong> (Station F, business school). I kept that <em class='italic'>founder's mindset</em>: I start from the business need, not the tech.",
       paragraph2:
-        "Today I'm a <strong class='font-semibold text-primary'>fullstack developer</strong>. I've shipped real products in production serving real users across <strong class='font-semibold text-accent'>6 countries</strong> — from Rootyne (a health platform powered by Claude + Mistral) to Bulbus (a mobile app with 37 paying users).",
+        "Today I'm a <strong class='font-semibold text-primary'>fullstack developer</strong>. I've shipped real products in production serving real users across <strong class='font-semibold text-accent'>6 countries</strong>: from Rootyne (a health platform powered by Claude + Mistral) to Bulbus (a mobile app with 37 paying users).",
       paragraph3:
-        "My <strong class='font-semibold text-primary'>dual skill set</strong> — fullstack (Next.js, React, Node) <em class='italic'>and</em> CMS (custom WordPress, Craft, headless) — lets me adapt to very different projects, from SaaS built from scratch to long-term maintenance.",
+        "My <strong class='font-semibold text-primary'>dual skill set</strong> covers fullstack (Next.js, React, Node) <em class='italic'>and</em> CMS (custom WordPress, Craft, headless), so I adapt to very different projects, from SaaS built from scratch to long-term maintenance.",
       paragraph4:
         "I believe in <strong class='font-semibold text-accent'>lasting partnerships</strong>: clear communication, reliable delivery, and real care for business impact. <strong class='font-semibold text-primary'>Available for new collaborations</strong> across Europe.",
     },
@@ -118,7 +118,7 @@ export const translations = {
       quote:
         "I've seen Adeline's work and I recommend her with my eyes closed. She's a serious, autonomous developer with a great technical vision. You can trust her to deliver your SaaS or web projects!",
       author: "Romain Quellec",
-      role: "CTO — Freelance (Malt)",
+      role: "CTO, freelance (Malt)",
     },
     contact: {
       title: "Let's work together",
@@ -141,7 +141,7 @@ export const translations = {
     hero: {
       greeting: "Bonjour, je suis",
       name: "Adeline Lefebvre",
-      title: "Développeuse Fullstack — du site sur-mesure à l'app IA",
+      title: "Développeuse Fullstack, du site sur-mesure à l'app IA",
       description:
         "Je transforme un besoin business en produit qui tourne. Background produit (Station F) et double compétence fullstack & CMS : je conçois des apps Next.js avec IA (Claude, Mistral), des sites sur-mesure (WordPress, Craft CMS) et j'en assure la maintenance dans la durée.",
       availableBadge: "Disponible en freelance",
@@ -196,37 +196,37 @@ export const translations = {
       cubynNote:
         "Avant le freelance : Software Engineer chez Cubyn (architecture 80+ microservices, Kubernetes/GCP) et Klox (plateforme SaaS React/Node).",
       rootyne: {
-        title: "Rootyne — Plateforme santé IA",
+        title: "Rootyne, plateforme santé IA",
         description:
           "Analyse de bilans sanguins personnalisée. Pipeline d'extraction IA (Claude + Mistral) avec couche d'anonymisation, dashboard biologiste de validation, infrastructure HDS chiffrée. Conçue from scratch.",
       },
       desertLeaves: {
-        title: "Desert Leaves — Fondation environnementale",
+        title: "Desert Leaves, fondation environnementale",
         description:
           "Plateforme complète développée from scratch pour une ONG de reforestation : Next.js + CMS headless Prismic, dons Stripe (ponctuels & récurrents), SEO multilingue.",
       },
       lime: {
-        title: "LIME Search — Recrutement finance",
+        title: "LIME Search, recrutement finance",
         description:
           "Plateforme de recrutement multilingue en Craft CMS. Composants Twig/PHP sur-mesure éditables par le client, SEO technique, maintenance et nouvelles features en continu.",
       },
       bulbus: {
-        title: "Bulbus — App mobile éducative",
+        title: "Bulbus, app mobile éducative",
         description:
           "App cross-platform (Flutter) pour étudiants en herboristerie. 150+ plantes, examens chronométrés, achats in-app. Live sur iOS & Android, 37 utilisateurs payants.",
       },
       sds: {
-        title: "SDS Lingo — Site multilingue",
+        title: "SDS Lingo, site multilingue",
         description:
           "Site Next.js (EN/FR/CS) pour une société de traduction technique. i18n complet, formulaire de devis avec upload, SEO multilingue (hreflang) et Core Web Vitals optimisés.",
       },
       c55: {
-        title: "Club Fifty Five — Agence créative",
+        title: "Club Fifty Five, agence créative",
         description:
           "Site vitrine premium d'une agence de talents néerlandaise, en white-label. Widgets custom (marquee animé), Theme Builder, formulaires avancés, responsive sur 5 breakpoints.",
       },
       pepstery: {
-        title: "Pepstery — Jeu en réalité augmentée",
+        title: "Pepstery, jeu en réalité augmentée",
         description:
           "Jeu AR par marqueurs développé en résidence tech : génération de personnages 3D, interactions temps réel (Pusher), narration non-linéaire (A-Frame, MindAR).",
       },
@@ -236,9 +236,9 @@ export const translations = {
       paragraph1:
         "Mon parcours a commencé dans le <strong class='font-semibold text-primary'>produit et l'entrepreneuriat</strong> (Station F, école de commerce). J'en ai gardé une <em class='italic'>mentalité de fondatrice</em> : je pars du besoin business, pas de la techno.",
       paragraph2:
-        "Aujourd'hui, je suis <strong class='font-semibold text-primary'>développeuse fullstack</strong>. J'ai shippé des produits réels en production qui servent de vrais utilisateurs dans <strong class='font-semibold text-accent'>6 pays</strong> — de Rootyne (plateforme santé avec IA Claude + Mistral) à Bulbus (app mobile, 37 utilisateurs payants).",
+        "Aujourd'hui, je suis <strong class='font-semibold text-primary'>développeuse fullstack</strong>. J'ai shippé des produits réels en production qui servent de vrais utilisateurs dans <strong class='font-semibold text-accent'>6 pays</strong> : de Rootyne (plateforme santé avec IA Claude + Mistral) à Bulbus (app mobile, 37 utilisateurs payants).",
       paragraph3:
-        "Ma <strong class='font-semibold text-primary'>double compétence</strong> — fullstack (Next.js, React, Node) <em class='italic'>et</em> CMS (WordPress custom, Craft, headless) — me permet de m'adapter à des projets très variés, du SaaS from scratch à la maintenance long terme.",
+        "Ma <strong class='font-semibold text-primary'>double compétence</strong> couvre le fullstack (Next.js, React, Node) <em class='italic'>et</em> le CMS (WordPress custom, Craft, headless), ce qui me permet de m'adapter à des projets très variés, du SaaS from scratch à la maintenance long terme.",
       paragraph4:
         "Je crois aux <strong class='font-semibold text-accent'>partenariats durables</strong> : communication claire, livraison fiable, et un vrai souci de l'impact business. <strong class='font-semibold text-primary'>Disponible pour de nouvelles collaborations</strong> en Europe.",
     },
@@ -247,7 +247,7 @@ export const translations = {
       quote:
         "J'ai eu l'occasion de voir le travail d'Adeline et je la recommande les yeux fermés. C'est une développeuse sérieuse, autonome et dotée d'une super vision technique. Vous pouvez lui faire confiance pour mener à bien vos projets SaaS ou web !",
       author: "Romain Quellec",
-      role: "Directeur technique — Freelance (Malt)",
+      role: "Directeur technique, freelance (Malt)",
     },
     contact: {
       title: "Travaillons ensemble",
@@ -270,7 +270,7 @@ export const translations = {
     hero: {
       greeting: "Hola, soy",
       name: "Adeline Lefebvre",
-      title: "Desarrolladora Fullstack — del sitio a medida a la app con IA",
+      title: "Desarrolladora Fullstack, del sitio a medida a la app con IA",
       description:
         "Transformo una necesidad de negocio en un producto que funciona. Con base en producto (Station F) y doble competencia fullstack y CMS: creo apps Next.js con IA (Claude, Mistral), sitios a medida (WordPress, Craft CMS) y me encargo de su mantenimiento a largo plazo.",
       availableBadge: "Disponible para freelance",
@@ -325,37 +325,37 @@ export const translations = {
       cubynNote:
         "Antes del freelance: Software Engineer en Cubyn (arquitectura de 80+ microservicios, Kubernetes/GCP) y Klox (plataforma SaaS React/Node).",
       rootyne: {
-        title: "Rootyne — Plataforma de salud con IA",
+        title: "Rootyne, plataforma de salud con IA",
         description:
           "Análisis personalizado de análisis de sangre. Pipeline de extracción con IA (Claude + Mistral) con capa de anonimización, dashboard de validación para biólogos e infraestructura HDS cifrada. Creada desde cero.",
       },
       desertLeaves: {
-        title: "Desert Leaves — ONG ambiental",
+        title: "Desert Leaves, ONG ambiental",
         description:
           "Plataforma completa desarrollada desde cero para una fundación de reforestación: Next.js + CMS headless Prismic, donaciones Stripe (puntuales y recurrentes), SEO multilingüe.",
       },
       lime: {
-        title: "LIME Search — Reclutamiento financiero",
+        title: "LIME Search, reclutamiento financiero",
         description:
           "Plataforma de reclutamiento multilingüe en Craft CMS. Componentes Twig/PHP a medida editables por el cliente, SEO técnico, mantenimiento y nuevas funciones continuas.",
       },
       bulbus: {
-        title: "Bulbus — App móvil educativa",
+        title: "Bulbus, app móvil educativa",
         description:
           "App multiplataforma (Flutter) para estudiantes de herboristería. 150+ plantas, exámenes cronometrados, compras in-app. En vivo en iOS y Android, 37 usuarios de pago.",
       },
       sds: {
-        title: "SDS Lingo — Sitio multilingüe",
+        title: "SDS Lingo, sitio multilingüe",
         description:
           "Sitio Next.js (EN/FR/CS) para una empresa de traducción técnica. i18n completo, formulario de presupuesto con subida de archivos, SEO multilingüe (hreflang) y Core Web Vitals optimizados.",
       },
       c55: {
-        title: "Club Fifty Five — Agencia creativa",
+        title: "Club Fifty Five, agencia creativa",
         description:
           "Sitio de presentación premium de una agencia de talentos neerlandesa, en marca blanca. Widgets custom (marquee animado), Theme Builder, formularios avanzados, responsive en 5 breakpoints.",
       },
       pepstery: {
-        title: "Pepstery — Juego de realidad aumentada",
+        title: "Pepstery, juego de realidad aumentada",
         description:
           "Juego de RA por marcadores desarrollado en una residencia tech: generación de personajes 3D, interacciones en tiempo real (Pusher), narrativa no lineal (A-Frame, MindAR).",
       },
@@ -365,9 +365,9 @@ export const translations = {
       paragraph1:
         "Mi camino comenzó en el <strong class='font-semibold text-primary'>producto y el emprendimiento</strong> (Station F, escuela de negocios). Conservé esa <em class='italic'>mentalidad de fundadora</em>: parto de la necesidad de negocio, no de la tecnología.",
       paragraph2:
-        "Hoy soy <strong class='font-semibold text-primary'>desarrolladora fullstack</strong>. He lanzado productos reales en producción que sirven a usuarios reales en <strong class='font-semibold text-accent'>6 países</strong> — desde Rootyne (plataforma de salud con IA Claude + Mistral) hasta Bulbus (app móvil, 37 usuarios de pago).",
+        "Hoy soy <strong class='font-semibold text-primary'>desarrolladora fullstack</strong>. He lanzado productos reales en producción que sirven a usuarios reales en <strong class='font-semibold text-accent'>6 países</strong>: desde Rootyne (plataforma de salud con IA Claude + Mistral) hasta Bulbus (app móvil, 37 usuarios de pago).",
       paragraph3:
-        "Mi <strong class='font-semibold text-primary'>doble competencia</strong> — fullstack (Next.js, React, Node) <em class='italic'>y</em> CMS (WordPress custom, Craft, headless) — me permite adaptarme a proyectos muy distintos, del SaaS desde cero al mantenimiento a largo plazo.",
+        "Mi <strong class='font-semibold text-primary'>doble competencia</strong> abarca el fullstack (Next.js, React, Node) <em class='italic'>y</em> el CMS (WordPress custom, Craft, headless), lo que me permite adaptarme a proyectos muy distintos, del SaaS desde cero al mantenimiento a largo plazo.",
       paragraph4:
         "Creo en las <strong class='font-semibold text-accent'>colaboraciones duraderas</strong>: comunicación clara, entrega fiable y un cuidado real por el impacto de negocio. <strong class='font-semibold text-primary'>Disponible para nuevas colaboraciones</strong> en Europa.",
     },
@@ -376,7 +376,7 @@ export const translations = {
       quote:
         "He podido ver el trabajo de Adeline y la recomiendo con los ojos cerrados. Es una desarrolladora seria, autónoma y con una gran visión técnica. ¡Puedes confiar en ella para llevar a buen puerto tus proyectos SaaS o web!",
       author: "Romain Quellec",
-      role: "Director técnico — Freelance (Malt)",
+      role: "Director técnico, freelance (Malt)",
     },
     contact: {
       title: "Trabajemos juntos",
