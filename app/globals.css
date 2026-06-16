@@ -9,7 +9,7 @@
   --card-foreground: #2a2a28;
   --popover: #ffffff;
   --popover-foreground: #2a2a28;
-  --primary: #d97757; /* Terracotta - boutons, liens, CTA */
+  --primary: #be5638; /* Terracotta profond - boutons, liens, CTA (WCAG AA) */
   --primary-foreground: #ffffff;
   --secondary: #f2ead9; /* Sable clair - surfaces secondaires */
   --secondary-foreground: #2a2a28;
@@ -23,8 +23,8 @@
   --destructive-foreground: #ffffff;
   --border: #e8dfcd; /* Bordure chaude */
   --input: #e8dfcd;
-  --ring: #d97757;
-  --chart-1: #d97757;
+  --ring: #be5638;
+  --chart-1: #be5638;
   --chart-2: #e8a03d;
   --chart-3: #2f4a3c;
   --chart-4: #6b6256;
