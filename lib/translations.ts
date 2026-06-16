@@ -112,6 +112,8 @@ export const translations = {
         "My <strong class='font-semibold text-primary'>dual skill set</strong> covers fullstack (Next.js, React, Node) <em class='italic'>and</em> CMS (custom WordPress, Craft, headless), so I adapt to very different projects, from SaaS built from scratch to long-term maintenance.",
       paragraph4:
         "I believe in <strong class='font-semibold text-accent'>lasting partnerships</strong>: clear communication, reliable delivery, and real care for business impact. <strong class='font-semibold text-primary'>Available for new collaborations</strong> across Europe.",
+      personal:
+        "Off-screen, I'm training in herbalism (that's where my app Bulbus came from) and constantly tinkering with new AI tools. I like building things that mean something.",
     },
     testimonial: {
       title: "What people say",
@@ -251,6 +253,8 @@ export const translations = {
         "Ma <strong class='font-semibold text-primary'>double compétence</strong> couvre le fullstack (Next.js, React, Node) <em class='italic'>et</em> le CMS (WordPress custom, Craft, headless), ce qui me permet de m'adapter à des projets très variés, du SaaS from scratch à la maintenance long terme.",
       paragraph4:
         "Je crois aux <strong class='font-semibold text-accent'>partenariats durables</strong> : communication claire, livraison fiable, et un vrai souci de l'impact business. <strong class='font-semibold text-primary'>Disponible pour de nouvelles collaborations</strong> en Europe.",
+      personal:
+        "Hors écran, je me forme à l'herboristerie (c'est de là qu'est née mon app Bulbus) et je teste en continu de nouveaux outils IA. J'aime construire des choses qui ont du sens.",
     },
     testimonial: {
       title: "Ce qu'on dit de moi",
@@ -390,6 +394,8 @@ export const translations = {
         "Mi <strong class='font-semibold text-primary'>doble competencia</strong> abarca el fullstack (Next.js, React, Node) <em class='italic'>y</em> el CMS (WordPress custom, Craft, headless), lo que me permite adaptarme a proyectos muy distintos, del SaaS desde cero al mantenimiento a largo plazo.",
       paragraph4:
         "Creo en las <strong class='font-semibold text-accent'>colaboraciones duraderas</strong>: comunicación clara, entrega fiable y un cuidado real por el impacto de negocio. <strong class='font-semibold text-primary'>Disponible para nuevas colaboraciones</strong> en Europa.",
+      personal:
+        "Fuera de la pantalla, me formo en herboristería (de ahí nació mi app Bulbus) y experimento sin parar con nuevas herramientas de IA. Me gusta construir cosas que tienen sentido.",
     },
     testimonial: {
       title: "Lo que dicen de mí",

@@ -1,15 +1,23 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { StructuredData } from "@/components/structured-data";
 import { HtmlLang } from "@/components/html-lang";
 
-const _inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-fraunces",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -55,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body className={`font-sans antialiased`}>
         <HtmlLang />
         <StructuredData />

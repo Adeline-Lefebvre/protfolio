@@ -29,7 +29,7 @@ export function Hero() {
               <span className="block text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
                 {t.hero.name}
               </span>
-              <span className="mt-4 block text-2xl font-medium text-muted-foreground md:text-3xl">
+              <span className="mt-4 block font-sans text-2xl font-medium text-muted-foreground md:text-3xl">
                 {t.hero.title}
               </span>
             </h1>
