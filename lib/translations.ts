@@ -115,10 +115,20 @@ export const translations = {
     },
     testimonial: {
       title: "What people say",
-      quote:
-        "I've seen Adeline's work and I recommend her with my eyes closed. She's a serious, autonomous developer with a great technical vision. You can trust her to deliver your SaaS or web projects!",
-      author: "Romain Quellec",
-      role: "CTO, freelance (Malt)",
+      items: [
+        {
+          quote:
+            "I've seen Adeline's work and I recommend her with my eyes closed. She's a serious, autonomous developer with a great technical vision. You can trust her to deliver your SaaS or web projects!",
+          author: "Romain Quellec",
+          role: "CTO, former manager of Adeline",
+        },
+        {
+          quote:
+            "Her motivation and her commitment were greatly appreciated by our team, as were her responsiveness and her positive attitude. Adeline adapts easily to many situations. I highly recommend her project-management skills.",
+          author: "Manon Duhem",
+          role: "CSR Manager, Deloitte Luxembourg",
+        },
+      ],
     },
     contact: {
       title: "Let's work together",
@@ -244,10 +254,20 @@ export const translations = {
     },
     testimonial: {
       title: "Ce qu'on dit de moi",
-      quote:
-        "J'ai eu l'occasion de voir le travail d'Adeline et je la recommande les yeux fermés. C'est une développeuse sérieuse, autonome et dotée d'une super vision technique. Vous pouvez lui faire confiance pour mener à bien vos projets SaaS ou web !",
-      author: "Romain Quellec",
-      role: "Directeur technique, freelance (Malt)",
+      items: [
+        {
+          quote:
+            "J'ai eu l'occasion de voir le travail d'Adeline et je la recommande les yeux fermés. C'est une développeuse sérieuse, autonome et dotée d'une super vision technique. Vous pouvez lui faire confiance pour mener à bien vos projets SaaS ou web !",
+          author: "Romain Quellec",
+          role: "Directeur technique, ancien manager d'Adeline",
+        },
+        {
+          quote:
+            "Sa motivation et son implication ont été très appréciées par notre équipe, tout comme sa réactivité et sa bonne volonté. Adeline s'adapte facilement à de nombreuses situations. Je recommande vivement ses compétences en gestion de projets.",
+          author: "Manon Duhem",
+          role: "Responsable RSE, Deloitte Luxembourg",
+        },
+      ],
     },
     contact: {
       title: "Travaillons ensemble",
@@ -373,10 +393,20 @@ export const translations = {
     },
     testimonial: {
       title: "Lo que dicen de mí",
-      quote:
-        "He podido ver el trabajo de Adeline y la recomiendo con los ojos cerrados. Es una desarrolladora seria, autónoma y con una gran visión técnica. ¡Puedes confiar en ella para llevar a buen puerto tus proyectos SaaS o web!",
-      author: "Romain Quellec",
-      role: "Director técnico, freelance (Malt)",
+      items: [
+        {
+          quote:
+            "He podido ver el trabajo de Adeline y la recomiendo con los ojos cerrados. Es una desarrolladora seria, autónoma y con una gran visión técnica. ¡Puedes confiar en ella para llevar a buen puerto tus proyectos SaaS o web!",
+          author: "Romain Quellec",
+          role: "Director técnico, exmanager de Adeline",
+        },
+        {
+          quote:
+            "Su motivación y su implicación fueron muy apreciadas por nuestro equipo, al igual que su capacidad de reacción y su buena disposición. Adeline se adapta con facilidad a muchas situaciones. Recomiendo encarecidamente sus competencias en gestión de proyectos.",
+          author: "Manon Duhem",
+          role: "Responsable de RSC, Deloitte Luxembourg",
+        },
+      ],
     },
     contact: {
       title: "Trabajemos juntos",
