@@ -144,6 +144,7 @@ export function Projects() {
       description: t.projects.c55.description,
       tags: ["WordPress", "Elementor Pro", "Custom JS", "CSS"],
       video: "c55.webm",
+      link: "https://clubfiftyfive.co",
     },
   ];
 
