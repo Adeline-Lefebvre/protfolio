@@ -14,7 +14,7 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Fullstack developer, from custom sites to AI apps",
       description:
-        "I turn a business need into a product that ships. With a product background (Station F) and a dual fullstack & CMS skill set, I build Next.js apps with AI (Claude, Mistral), custom websites (WordPress, Craft CMS), and maintain them for the long run.",
+        "From the business need to production, I build web products that last. Product background (Station F) and a dual fullstack & CMS skill set: Next.js apps with AI (Claude, Mistral), custom websites (WordPress, Craft CMS), and long-term maintenance.",
       availableBadge: "Available for freelance",
       ctaPrimary: "Let's talk about your project",
       ctaProjects: "See my work",
@@ -143,7 +143,7 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Développeuse Fullstack, du site sur-mesure à l'app IA",
       description:
-        "Je transforme un besoin business en produit qui tourne. Background produit (Station F) et double compétence fullstack & CMS : je conçois des apps Next.js avec IA (Claude, Mistral), des sites sur-mesure (WordPress, Craft CMS) et j'en assure la maintenance dans la durée.",
+        "Du besoin métier à la mise en production, je crée des produits web qui durent. Background produit (Station F) et double compétence fullstack & CMS : apps Next.js avec IA (Claude, Mistral), sites sur-mesure (WordPress, Craft CMS) et maintenance au long cours.",
       availableBadge: "Disponible en freelance",
       ctaPrimary: "Discutons de votre projet",
       ctaProjects: "Voir mes projets",
@@ -272,7 +272,7 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Desarrolladora Fullstack, del sitio a medida a la app con IA",
       description:
-        "Transformo una necesidad de negocio en un producto que funciona. Con base en producto (Station F) y doble competencia fullstack y CMS: creo apps Next.js con IA (Claude, Mistral), sitios a medida (WordPress, Craft CMS) y me encargo de su mantenimiento a largo plazo.",
+        "De la necesidad de negocio a la puesta en producción, creo productos web que perduran. Base en producto (Station F) y doble competencia fullstack y CMS: apps Next.js con IA (Claude, Mistral), sitios a medida (WordPress, Craft CMS) y mantenimiento a largo plazo.",
       availableBadge: "Disponible para freelance",
       ctaPrimary: "Hablemos de tu proyecto",
       ctaProjects: "Ver mis proyectos",
