@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#FBF7F0; --sand:#F4ECDD; --ink:#2A2A28; --muted:#6B6256;
+    --terra:#BE5638; --pine:#2F4A3C; --amber:#C98A2E; --line:#E5DCC9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  @page{ size:A4; margin:0; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:'Inter',-apple-system,sans-serif; color:var(--ink); font-size:10.2px; line-height:1.5; }
+  .page{ width:210mm; height:297mm; background:#fff; display:grid; grid-template-columns:62mm 1fr; overflow:hidden; position:relative; }
+  .page + .page{ page-break-before:always; }
+
+  /* Sidebar */
+  .side{ background:var(--sand); padding:14mm 9mm; }
+  .side .photo{ width:34mm; height:34mm; border-radius:50%; object-fit:cover; border:3px solid #fff; box-shadow:0 0 0 2px var(--terra); display:block; margin:0 auto 7mm; }
+  .side h3{ font-family:'Inter'; font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--terra); margin:7mm 0 2.4mm; }
+  .side .block:first-of-type h3{ margin-top:0; }
+  .side p, .side li{ color:var(--muted); font-size:10px; line-height:1.55; }
+  .side .row{ color:var(--ink); }
+  .side a{ color:var(--muted); text-decoration:none; word-break:break-word; }
+  .skillgroup{ margin-bottom:3.2mm; }
+  .skillgroup .lab{ font-weight:700; color:var(--pine); font-size:9.6px; }
+  .skillgroup .val{ color:var(--muted); font-size:9.6px; }
+  .contact div{ margin-bottom:1.6mm; color:var(--ink); font-size:9.8px; }
+
+  /* Main */
+  .main{ padding:14mm 12mm 12mm; }
+  .name{ font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:31px; letter-spacing:-.5px; color:var(--ink); line-height:1; }
+  .role{ font-weight:700; font-size:12px; color:var(--terra); margin-top:2.5mm; }
+  .role span{ color:var(--ink); font-weight:600; }
+  .techline{ color:var(--muted); font-size:10px; margin-top:1.2mm; }
+  .headrule{ height:2.4px; width:100%; background:linear-gradient(90deg,var(--terra),var(--amber) 55%,transparent); margin:5mm 0 4mm; border-radius:2px; }
+
+  h2.sec{ font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:13.5px; color:var(--pine); margin:5mm 0 2.6mm; letter-spacing:-.2px; }
+  h2.sec:first-child{ margin-top:0; }
+
+  .profile{ font-size:10.4px; color:var(--ink); line-height:1.6; }
+
+  .job{ margin-bottom:3.1mm; }
+  .job .top{ display:flex; justify-content:space-between; align-items:baseline; gap:6px; }
+  .job .ti{ font-weight:700; font-size:10.6px; color:var(--ink); }
+  .job .ti b{ color:var(--terra); }
+  .job .date{ font-size:8.8px; color:var(--muted); white-space:nowrap; }
+  .job .desc{ font-size:9.8px; color:var(--muted); line-height:1.5; margin-top:.6mm; }
+  .job ul{ margin:.8mm 0 0 0; list-style:none; }
+  .job ul li{ font-size:9.6px; color:var(--muted); line-height:1.45; padding-left:9px; position:relative; margin-bottom:.5mm; }
+  .job ul li::before{ content:""; position:absolute; left:0; top:5.5px; width:3.5px; height:3.5px; border-radius:50%; background:var(--terra); }
+  .job ul li b{ color:var(--ink); font-weight:600; }
+  strong.k{ color:var(--ink); font-weight:600; }
+
+  .edu div{ display:flex; gap:8px; font-size:9.8px; margin-bottom:1.4mm; }
+  .edu .yr{ color:var(--terra); font-weight:700; width:30px; flex:none; }
+  .links a{ display:block; color:var(--terra); font-size:9.8px; text-decoration:none; margin-bottom:1mm; }
+  .pers{ font-size:9.6px; color:var(--muted); font-style:italic; line-height:1.5; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+  <aside class="side">
+    <img class="photo" src="../public/profile-photo.jpg" alt="Adeline Lefebvre" />
+    <div class="block contact">
+      <h3>Contact</h3>
+      <div>adeline.lefe@gmail.com</div>
+      <div>+33 6 16 04 40 51</div>
+      <div><a href="https://adelinelefebvre.com">adelinelefebvre.com</a></div>
+      <div><a href="https://www.linkedin.com/in/adeline-lefebvre-600b46aa/">linkedin.com/in/adelinelefebvre</a></div>
+      <div><a href="https://github.com/Adeline-Lefebvre">github.com/Adeline-Lefebvre</a></div>
+    </div>
+    <div class="block">
+      <h3>Location</h3>
+      <p class="row">Remote · Europe<br/><span style="color:var(--muted)">France-based · digital nomad</span></p>
+    </div>
+    <div class="block">
+      <h3>Availability</h3>
+      <p class="row">Open to new missions — one-off projects &amp; long-term maintenance.</p>
+    </div>
+    <div class="block">
+      <h3>Languages</h3>
+      <p>French — native<br/>English — bilingual<br/>Spanish — professional</p>
+    </div>
+    <div class="block">
+      <h3>Tech Stack</h3>
+      <div class="skillgroup"><span class="lab">Frontend</span><br/><span class="val">Next.js · React · TypeScript · Tailwind CSS</span></div>
+      <div class="skillgroup"><span class="lab">Backend</span><br/><span class="val">Node.js · PHP · GraphQL · PostgreSQL · MongoDB</span></div>
+      <div class="skillgroup"><span class="lab">CMS</span><br/><span class="val">WordPress · Elementor Pro · Craft CMS · Prismic</span></div>
+      <div class="skillgroup"><span class="lab">AI</span><br/><span class="val">Claude (Anthropic) · Mistral · OpenAI</span></div>
+      <div class="skillgroup"><span class="lab">Tools</span><br/><span class="val">Stripe · Firebase · Git · GCP · Figma</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="name">Adeline Lefebvre</div>
+    <div class="role">Freelance Fullstack Developer · <span>From custom sites to AI apps</span></div>
+    <div class="techline">Next.js · React · TypeScript · WordPress · Craft CMS · AI (Claude, Mistral)</div>
+    <div class="headrule"></div>
+
+    <h2 class="sec">Profile</h2>
+    <p class="profile">I turn business needs into products that ship — from custom websites (WordPress, Craft CMS) to AI-powered apps (Next.js, Claude, Mistral) — and maintain them long-term. Product background (Station F) with a track record of products in production serving real users across 6 countries.</p>
+
+    <h2 class="sec">Experience</h2>
+
+    <div class="job">
+      <div class="top"><span class="ti">Freelance Fullstack Developer</span><span class="date">Jan 2026 — Present</span></div>
+      <div class="desc">Custom web development &amp; long-term maintenance for agencies and businesses across Europe.</div>
+      <ul>
+        <li><b>LIME Search (NL)</b> — Craft CMS recruitment platform: custom Twig/PHP components, technical SEO, ongoing maintenance &amp; new features.</li>
+        <li><b>Club Fifty Five / Code Create (NL)</b> — white-label WordPress / Elementor Pro: custom widgets &amp; CSS/JS, Theme Builder, advanced forms.</li>
+        <li><b>SDS Lingo (CZ)</b> — multilingual Next.js site (EN/FR/CS): full i18n, quote form, multilingual SEO.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="ti">Rootyne · <b>Founder &amp; Developer</b></span><span class="date">Jan 2026 — Present</span></div>
+      <div class="desc">AI health platform: personalized blood-test analysis. Full-stack <strong class="k">Next.js + Firebase + GraphQL</strong>. AI extraction pipeline (<strong class="k">Claude + Mistral</strong>) with an anonymization layer, biologist validation dashboard, HDS-compliant encrypted infrastructure, Stripe payments.</div>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="ti">Bulbus · <b>Founder &amp; Developer</b></span><span class="date">Feb 2025 — Present</span></div>
+      <div class="desc">Cross-platform <strong class="k">Flutter</strong> app for herbalism students. 150+ plants, timed mock exams, in-app purchases. Live on iOS &amp; Android with 37 paying users; in B2B talks with herbalism schools.</div>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="ti">Desert Leaves (ES) · Software Engineer</span><span class="date">Mar 2025 — Nov 2025</span></div>
+      <div class="desc">Erasmus for Young Entrepreneurs. Built a multilingual platform from scratch for a reforestation NGO: <strong class="k">Next.js</strong> + headless <strong class="k">Prismic</strong> CMS, Stripe donations, transactional email, multilingual SEO, Google Workspace migration &amp; Google Ads.</div>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="ti">Rural Hackers (ES) · AR Software Engineer</span><span class="date">Aug 2024 — Sep 2024</span></div>
+      <div class="desc">Tech residency. Marker-based augmented-reality mystery game: <strong class="k">A-Frame, MindAR</strong>, 3D character generation, real-time interactions (Pusher), non-linear storytelling.</div>
+    </div>
+  </main>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <aside class="side">
+    <div class="block">
+      <h3>Adeline Lefebvre</h3>
+      <p class="row" style="color:var(--terra);font-weight:600;font-size:10px;">Freelance Fullstack Developer</p>
+    </div>
+    <div class="block contact">
+      <h3>Contact</h3>
+      <div>adeline.lefe@gmail.com</div>
+      <div>+33 6 16 04 40 51</div>
+      <div><a href="https://adelinelefebvre.com">adelinelefebvre.com</a></div>
+    </div>
+    <div class="block">
+      <h3>Strengths</h3>
+      <p>Product mindset · clear communication · reliable delivery · long-term partnerships.</p>
+    </div>
+    <div class="block">
+      <h3>Domains</h3>
+      <p>AI integrations · Headless &amp; custom CMS · SaaS &amp; dashboards · Multilingual sites · Mobile apps.</p>
+    </div>
+    <div class="block">
+      <h3>Beyond Code</h3>
+      <p class="pers">Training in herbalism (the spark behind Bulbus) and constantly tinkering with new AI tools.</p>
+      <p style="margin-top:2mm;">Hiking · Music · Sailing</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="name" style="font-size:24px;">Experience <span style="font-size:12px;color:var(--muted);font-family:'Inter';font-weight:500;">(continued)</span></div>
+    <div class="headrule"></div>
+
+    <div class="job">
+      <div class="top"><span class="ti">Cubyn · Software Engineer</span><span class="date">May 2022 — Sep 2023</span></div>
+      <div class="desc">E-commerce logistics scale-up. Contributed to a large-scale <strong class="k">microservices architecture (80+ services)</strong> on <strong class="k">Kubernetes / GCP</strong>. Backend in <strong class="k">Node.js / TypeScript</strong> (MySQL, RabbitMQ, Elasticsearch), frontend in Vue.js, CI/CD on CircleCI, testing with Jest.</div>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="ti">Klox · Software Engineer</span><span class="date">Sep 2021 — Mar 2022</span></div>
+      <div class="desc">Fullstack <strong class="k">SaaS platform</strong>: <strong class="k">React / Next.js</strong> frontend, Node.js backend, <strong class="k">GraphQL</strong> (Apollo) with TypeORM/PostgreSQL. Integrated HubSpot, Stripe, Pennylane, Google Cloud. Built user &amp; admin dashboards; contributed to architecture and code reviews.</div>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="ti">Station F · Entrepreneur &amp; Product Designer</span><span class="date">Oct 2020 — Apr 2021</span></div>
+      <div class="desc">Pépite Île-de-France acceleration. Early-stage marketplace for French artisans: market research, product requirements, <strong class="k">UX/UI</strong> prototypes (<strong class="k">Figma</strong>), lean product methodology. This is where my passion for development began.</div>
+    </div>
+
+    <h2 class="sec">Education</h2>
+    <div class="edu">
+      <div><span class="yr">2021</span><span>Web &amp; Mobile JavaScript Developer Training · <strong class="k">Le Réacteur</strong> (Paris bootcamp)</span></div>
+      <div><span class="yr">2019</span><span>Master in Management, Grande École Program · <strong class="k">Audencia Business School</strong></span></div>
+      <div><span class="yr">2019</span><span>University Exchange · Jiangxi University of Finance &amp; Economics (China)</span></div>
+    </div>
+
+    <h2 class="sec">Portfolio &amp; Projects</h2>
+    <div class="links">
+      <a href="https://adelinelefebvre.com">adelinelefebvre.com — full portfolio</a>
+      <a href="https://www.rootyne.health/fr">rootyne.health — AI health platform</a>
+      <a href="https://bulbus-app.com">bulbus-app.com — educational mobile app</a>
+      <a href="https://limesearch.nl">limesearch.nl — Craft CMS recruitment platform</a>
+      <a href="https://www.desertleaves.org">desertleaves.org — environmental NGO platform</a>
+      <a href="https://www.sds-lingo.cz">sds-lingo.cz — multilingual Next.js site</a>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
