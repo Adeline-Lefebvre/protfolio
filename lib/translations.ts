@@ -107,7 +107,7 @@ export const translations = {
       paragraph1:
         "My path started in <strong class='font-semibold text-primary'>product and entrepreneurship</strong> (Station F, business school). I kept that <em class='italic'>founder's mindset</em>: I start from the business need, not the tech.",
       paragraph2:
-        "Today I'm a <strong class='font-semibold text-primary'>fullstack developer</strong>. I've shipped real products in production serving real users across <strong class='font-semibold text-accent'>6 countries</strong>: from Rootyne (a health platform powered by Claude + Mistral) to Bulbus (a mobile app with 37 paying users).",
+        "Today I'm a <strong class='font-semibold text-primary'>fullstack developer</strong>. I've shipped products to production, used by real people across <strong class='font-semibold text-accent'>6 countries</strong>: from Rootyne (a health platform powered by Claude + Mistral) to Bulbus (a mobile app with 37 paying users).",
       paragraph3:
         "My <strong class='font-semibold text-primary'>dual skill set</strong> covers fullstack (Next.js, React, Node) <em class='italic'>and</em> CMS (custom WordPress, Craft, headless), so I adapt to very different projects, from SaaS built from scratch to long-term maintenance.",
       paragraph4:
@@ -120,7 +120,7 @@ export const translations = {
       items: [
         {
           quote:
-            "I've seen Adeline's work and I recommend her with my eyes closed. She's a serious, autonomous developer with a great technical vision. You can trust her to deliver your SaaS or web projects!",
+            "I've seen Adeline's work and I recommend her without hesitation. She's a serious, autonomous developer with a great technical vision. You can trust her to deliver your SaaS or web projects!",
           author: "Romain Quellec",
           role: "CTO, former manager of Adeline",
         },
@@ -153,7 +153,7 @@ export const translations = {
     hero: {
       greeting: "Bonjour, je suis",
       name: "Adeline Lefebvre",
-      title: "Développeuse Fullstack, du site sur-mesure à l'app IA",
+      title: "Développeuse fullstack, du site sur-mesure à l'app IA",
       description:
         "Du besoin métier à la mise en production, je crée des produits web qui durent. Background produit (Station F) et double compétence fullstack & CMS : apps Next.js avec IA (Claude, Mistral), sites sur-mesure (WordPress, Craft CMS) et maintenance au long cours.",
       availableBadge: "Disponible en freelance",
@@ -166,7 +166,7 @@ export const translations = {
     },
     services: {
       title: "Ce que je fais",
-      subtitle: "Trois façons de travailler ensemble, du build au long terme.",
+      subtitle: "Trois façons de travailler ensemble, de la création au suivi dans la durée.",
       ai: {
         title: "Apps & intégrations IA",
         description:
@@ -181,9 +181,9 @@ export const translations = {
       cms: {
         title: "Sites & CMS sur-mesure",
         description:
-          "Des sites qui vont au-delà des thèmes : développement custom, headless, multilingue.",
+          "Des sites qui vont au-delà des thèmes : développement sur-mesure, headless, multilingue.",
         items: [
-          "WordPress / Elementor Pro custom",
+          "WordPress / Elementor Pro sur-mesure",
           "Craft CMS, Prismic (headless)",
           "Sites multilingues & SEO technique",
           "Intégrations API",
@@ -195,7 +195,7 @@ export const translations = {
           "Un partenariat long terme : je fais vivre et évoluer votre site, en toute fiabilité.",
         items: [
           "Maintenance WordPress / Craft / Next.js",
-          "Nouvelles features & optimisations",
+          "Nouvelles fonctionnalités & optimisations",
           "Performance & SEO",
           "Support direct, communication claire",
         ],
@@ -210,32 +210,32 @@ export const translations = {
       rootyne: {
         title: "Rootyne, plateforme santé IA",
         description:
-          "Analyse de bilans sanguins personnalisée. Pipeline d'extraction IA (Claude + Mistral) avec couche d'anonymisation, dashboard biologiste de validation, infrastructure HDS chiffrée. Conçue from scratch.",
+          "Analyse de bilans sanguins personnalisée. Pipeline d'extraction IA (Claude + Mistral) avec couche d'anonymisation, dashboard biologiste de validation, infrastructure HDS chiffrée. Conçue de A à Z.",
       },
       desertLeaves: {
         title: "Desert Leaves, fondation environnementale",
         description:
-          "Plateforme complète développée from scratch pour une ONG de reforestation : Next.js + CMS headless Prismic, dons Stripe (ponctuels & récurrents), SEO multilingue.",
+          "Plateforme complète développée de zéro pour une ONG de reforestation : Next.js + CMS headless Prismic, dons Stripe (ponctuels & récurrents), SEO multilingue.",
       },
       lime: {
         title: "LIME Search, recrutement finance",
         description:
-          "Plateforme de recrutement multilingue en Craft CMS. Composants Twig/PHP sur-mesure éditables par le client, SEO technique, maintenance et nouvelles features en continu.",
+          "Plateforme de recrutement multilingue en Craft CMS. Composants Twig/PHP sur-mesure éditables par le client, SEO technique, maintenance et nouvelles fonctionnalités en continu.",
       },
       bulbus: {
         title: "Bulbus, app mobile éducative",
         description:
-          "App cross-platform (Flutter) pour étudiants en herboristerie. 150+ plantes, examens chronométrés, achats in-app. Live sur iOS & Android, 37 utilisateurs payants.",
+          "App cross-platform (Flutter) pour étudiants en herboristerie. 150+ plantes, examens chronométrés, achats in-app. En ligne sur iOS et Android, 37 utilisateurs payants.",
       },
       sds: {
         title: "SDS Lingo, site multilingue",
         description:
-          "Site Next.js (EN/FR/CS) pour une société de traduction technique. i18n complet, formulaire de devis avec upload, SEO multilingue (hreflang) et Core Web Vitals optimisés.",
+          "Site Next.js (EN/FR/CS) pour une société de traduction technique. i18n complet, formulaire de devis avec envoi de fichiers, SEO multilingue (hreflang) et Core Web Vitals optimisés.",
       },
       c55: {
         title: "Club Fifty Five, agence créative",
         description:
-          "Site vitrine premium d'une agence de talents néerlandaise, en white-label. Widgets custom (marquee animé), Theme Builder, formulaires avancés, responsive sur 5 breakpoints.",
+          "Site vitrine premium d'une agence de talents néerlandaise, en marque blanche. Widgets sur-mesure (marquee animé), Theme Builder, formulaires avancés, responsive sur 5 breakpoints.",
       },
       pepstery: {
         title: "Pepstery, jeu en réalité augmentée",
@@ -246,13 +246,13 @@ export const translations = {
     about: {
       title: "À propos",
       paragraph1:
-        "Mon parcours a commencé dans le <strong class='font-semibold text-primary'>produit et l'entrepreneuriat</strong> (Station F, école de commerce). J'en ai gardé une <em class='italic'>mentalité de fondatrice</em> : je pars du besoin business, pas de la techno.",
+        "Mon parcours a commencé dans le <strong class='font-semibold text-primary'>produit et l'entrepreneuriat</strong> (Station F, école de commerce). J'en ai gardé une <em class='italic'>mentalité de fondatrice</em> : je pars du besoin métier, pas de la techno.",
       paragraph2:
-        "Aujourd'hui, je suis <strong class='font-semibold text-primary'>développeuse fullstack</strong>. J'ai shippé des produits réels en production qui servent de vrais utilisateurs dans <strong class='font-semibold text-accent'>6 pays</strong> : de Rootyne (plateforme santé avec IA Claude + Mistral) à Bulbus (app mobile, 37 utilisateurs payants).",
+        "Aujourd'hui, je suis <strong class='font-semibold text-primary'>développeuse fullstack</strong>. J'ai mis en production des produits utilisés par de vraies personnes dans <strong class='font-semibold text-accent'>6 pays</strong> : de Rootyne (plateforme santé avec IA Claude + Mistral) à Bulbus (app mobile, 37 utilisateurs payants).",
       paragraph3:
-        "Ma <strong class='font-semibold text-primary'>double compétence</strong> couvre le fullstack (Next.js, React, Node) <em class='italic'>et</em> le CMS (WordPress custom, Craft, headless), ce qui me permet de m'adapter à des projets très variés, du SaaS from scratch à la maintenance long terme.",
+        "Ma <strong class='font-semibold text-primary'>double compétence</strong> couvre le fullstack (Next.js, React, Node) <em class='italic'>et</em> le CMS (WordPress sur-mesure, Craft, headless), ce qui me permet de m'adapter à des projets très variés, de la création d'un SaaS à la maintenance long terme.",
       paragraph4:
-        "Je crois aux <strong class='font-semibold text-accent'>partenariats durables</strong> : communication claire, livraison fiable, et un vrai souci de l'impact business. <strong class='font-semibold text-primary'>Disponible pour de nouvelles collaborations</strong> en Europe.",
+        "Je crois aux <strong class='font-semibold text-accent'>partenariats durables</strong> : communication claire, livraison fiable, et un vrai souci de l'impact concret. <strong class='font-semibold text-primary'>Disponible pour de nouvelles collaborations</strong> en Europe.",
       personal:
         "Hors écran, je me forme à l'herboristerie (c'est de là qu'est née mon app Bulbus) et je teste en continu de nouveaux outils IA. J'aime construire des choses qui ont du sens.",
     },
@@ -294,7 +294,7 @@ export const translations = {
     hero: {
       greeting: "Hola, soy",
       name: "Adeline Lefebvre",
-      title: "Desarrolladora Fullstack, del sitio a medida a la app con IA",
+      title: "Desarrolladora fullstack, del sitio a medida a la app con IA",
       description:
         "De la necesidad de negocio a la puesta en producción, creo productos web que perduran. Base en producto (Station F) y doble competencia fullstack y CMS: apps Next.js con IA (Claude, Mistral), sitios a medida (WordPress, Craft CMS) y mantenimiento a largo plazo.",
       availableBadge: "Disponible para freelance",
@@ -307,7 +307,7 @@ export const translations = {
     },
     services: {
       title: "Lo que hago",
-      subtitle: "Tres formas de trabajar juntos, del desarrollo al largo plazo.",
+      subtitle: "Tres formas de trabajar juntos, de la creación al mantenimiento a largo plazo.",
       ai: {
         title: "Apps e integraciones IA",
         description:
@@ -322,9 +322,9 @@ export const translations = {
       cms: {
         title: "Sitios y CMS a medida",
         description:
-          "Sitios que van más allá de las plantillas: desarrollo custom, headless, multilingüe.",
+          "Sitios que van más allá de las plantillas: desarrollo a medida, headless, multilingüe.",
         items: [
-          "WordPress / Elementor Pro custom",
+          "WordPress / Elementor Pro a medida",
           "Craft CMS, Prismic (headless)",
           "Sitios multilingües y SEO técnico",
           "Integraciones de API",
@@ -351,7 +351,7 @@ export const translations = {
       rootyne: {
         title: "Rootyne, plataforma de salud con IA",
         description:
-          "Análisis personalizado de análisis de sangre. Pipeline de extracción con IA (Claude + Mistral) con capa de anonimización, dashboard de validación para biólogos e infraestructura HDS cifrada. Creada desde cero.",
+          "Interpretación personalizada de tus análisis de sangre. Pipeline de extracción con IA (Claude + Mistral) con capa de anonimización, dashboard de validación para biólogos e infraestructura HDS cifrada. Creada desde cero.",
       },
       desertLeaves: {
         title: "Desert Leaves, ONG ambiental",
@@ -366,7 +366,7 @@ export const translations = {
       bulbus: {
         title: "Bulbus, app móvil educativa",
         description:
-          "App multiplataforma (Flutter) para estudiantes de herboristería. 150+ plantas, exámenes cronometrados, compras in-app. En vivo en iOS y Android, 37 usuarios de pago.",
+          "App multiplataforma (Flutter) para estudiantes de herboristería. 150+ plantas, exámenes cronometrados, compras in-app. Disponible en iOS y Android, 37 usuarios de pago.",
       },
       sds: {
         title: "SDS Lingo, sitio multilingüe",
@@ -376,7 +376,7 @@ export const translations = {
       c55: {
         title: "Club Fifty Five, agencia creativa",
         description:
-          "Sitio de presentación premium de una agencia de talentos neerlandesa, en marca blanca. Widgets custom (marquee animado), Theme Builder, formularios avanzados, responsive en 5 breakpoints.",
+          "Sitio de presentación premium de una agencia de talentos neerlandesa, en marca blanca. Widgets a medida (marquee animado), Theme Builder, formularios avanzados, responsive en 5 breakpoints.",
       },
       pepstery: {
         title: "Pepstery, juego de realidad aumentada",
@@ -389,9 +389,9 @@ export const translations = {
       paragraph1:
         "Mi camino comenzó en el <strong class='font-semibold text-primary'>producto y el emprendimiento</strong> (Station F, escuela de negocios). Conservé esa <em class='italic'>mentalidad de fundadora</em>: parto de la necesidad de negocio, no de la tecnología.",
       paragraph2:
-        "Hoy soy <strong class='font-semibold text-primary'>desarrolladora fullstack</strong>. He lanzado productos reales en producción que sirven a usuarios reales en <strong class='font-semibold text-accent'>6 países</strong>: desde Rootyne (plataforma de salud con IA Claude + Mistral) hasta Bulbus (app móvil, 37 usuarios de pago).",
+        "Hoy soy <strong class='font-semibold text-primary'>desarrolladora fullstack</strong>. He llevado a producción productos usados por personas reales en <strong class='font-semibold text-accent'>6 países</strong>: desde Rootyne (plataforma de salud con IA Claude + Mistral) hasta Bulbus (app móvil, 37 usuarios de pago).",
       paragraph3:
-        "Mi <strong class='font-semibold text-primary'>doble competencia</strong> abarca el fullstack (Next.js, React, Node) <em class='italic'>y</em> el CMS (WordPress custom, Craft, headless), lo que me permite adaptarme a proyectos muy distintos, del SaaS desde cero al mantenimiento a largo plazo.",
+        "Mi <strong class='font-semibold text-primary'>doble competencia</strong> abarca el fullstack (Next.js, React, Node) <em class='italic'>y</em> el CMS (WordPress a medida, Craft, headless), lo que me permite adaptarme a proyectos muy distintos, de la creación de un SaaS al mantenimiento a largo plazo.",
       paragraph4:
         "Creo en las <strong class='font-semibold text-accent'>colaboraciones duraderas</strong>: comunicación clara, entrega fiable y un cuidado real por el impacto de negocio. <strong class='font-semibold text-primary'>Disponible para nuevas colaboraciones</strong> en Europa.",
       personal:
