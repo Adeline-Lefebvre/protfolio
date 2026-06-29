@@ -130,6 +130,12 @@ export const translations = {
           author: "Manon Duhem",
           role: "CSR Manager, Deloitte Luxembourg",
         },
+        {
+          quote:
+            "Amazing work and I would like to use this moment to express how happy and grateful we are to have you on board. We really can't do this without you and these tasks, how small sometimes they seem, are soooo important to solve.",
+          author: "Rosa",
+          role: "LIME Search (NL)",
+        },
       ],
     },
     contact: {
@@ -271,6 +277,12 @@ export const translations = {
           author: "Manon Duhem",
           role: "Responsable RSE, Deloitte Luxembourg",
         },
+        {
+          quote:
+            "Amazing work and I would like to use this moment to express how happy and grateful we are to have you on board. We really can't do this without you and these tasks, how small sometimes they seem, are soooo important to solve.",
+          author: "Rosa",
+          role: "LIME Search (NL)",
+        },
       ],
     },
     contact: {
@@ -411,6 +423,12 @@ export const translations = {
             "Su motivación y su implicación fueron muy apreciadas por nuestro equipo, al igual que su capacidad de reacción y su buena disposición. Adeline se adapta con facilidad a muchas situaciones. Recomiendo encarecidamente sus competencias en gestión de proyectos.",
           author: "Manon Duhem",
           role: "Responsable de RSC, Deloitte Luxembourg",
+        },
+        {
+          quote:
+            "Amazing work and I would like to use this moment to express how happy and grateful we are to have you on board. We really can't do this without you and these tasks, how small sometimes they seem, are soooo important to solve.",
+          author: "Rosa",
+          role: "LIME Search (NL)",
         },
       ],
     },

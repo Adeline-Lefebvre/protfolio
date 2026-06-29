@@ -23,7 +23,7 @@ export function Testimonial() {
       <h2 className="mb-8 text-3xl font-bold tracking-tight">
         {t.testimonial.title}
       </h2>
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-3">
         {t.testimonial.items.map((item) => (
           <Card key={item.author} className="relative flex flex-col p-8">
             <Quote
