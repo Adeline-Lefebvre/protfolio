@@ -569,7 +569,12 @@ export function LocalPage() {
                 </div>
               )}
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button asChild size="lg">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-background/30 bg-transparent text-background hover:bg-background/10 hover:text-background"
+                >
                   <a href={EMAIL} target="_blank" rel="noopener noreferrer">
                     <Mail className="mr-2 h-4 w-4" />
                     {t.cta.email}

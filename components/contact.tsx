@@ -41,7 +41,7 @@ export function Contact() {
             />
           )}
           <div className="flex flex-wrap gap-4">
-            <Button asChild>
+            <Button variant="outline" asChild>
               <a
                 href="https://calendly.com/adeline-lefebvre/15min"
                 target="_blank"
