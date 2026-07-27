@@ -10,6 +10,8 @@ import {
   ArrowUpRight,
   Mail,
   Phone,
+  Github,
+  Linkedin,
   MapPin,
   Building2,
   Sparkles,
@@ -103,8 +105,50 @@ export function LocalPage() {
           </div>
           <div className="flex items-center gap-2">
             <LanguageSelector />
-            <Button asChild size="sm">
-              <a href="#contact">{t.nav.cta}</a>
+            <Button variant="ghost" size="icon" asChild>
+              <a
+                href="https://github.com/Adeline-Lefebvre"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a
+                href="https://www.linkedin.com/in/adeline-lefebvre-600b46aa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="hidden sm:inline-flex"
+            >
+              <a href="mailto:adeline.lefe@gmail.com" aria-label="Email">
+                <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="hidden sm:inline-flex"
+            >
+              <a
+                href="https://calendly.com/adeline-lefebvre/15min"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Phone call"
+              >
+                <Phone className="h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
@@ -573,7 +617,7 @@ export function LocalPage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-background/30 bg-transparent text-background hover:bg-background/10 hover:text-background"
+                  className="border-background/30 bg-transparent text-background hover:bg-background hover:text-accent"
                 >
                   <a href={EMAIL} target="_blank" rel="noopener noreferrer">
                     <Mail className="mr-2 h-4 w-4" />
@@ -584,7 +628,7 @@ export function LocalPage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-background/30 bg-transparent text-background hover:bg-background/10 hover:text-background"
+                  className="border-background/30 bg-transparent text-background hover:bg-background hover:text-accent"
                 >
                   <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-4 w-4" />
