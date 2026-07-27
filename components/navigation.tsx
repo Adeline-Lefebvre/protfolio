@@ -12,6 +12,7 @@ export function Navigation() {
 
   const navLinks = [
     { href: "#services", label: t.nav.services },
+    { href: `/${language}/local`, label: t.nav.local },
     { href: "#projects", label: t.nav.projects },
     { href: "#about", label: t.nav.about },
     { href: "#contact", label: t.nav.contact },

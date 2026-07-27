@@ -8,6 +8,7 @@ export const translations = {
       services: "Services",
       projects: "Projects",
       contact: "Contact",
+      local: "Nonprofits & shops",
     },
     hero: {
       greeting: "Hi, I'm",
@@ -26,6 +27,7 @@ export const translations = {
     services: {
       title: "What I do",
       subtitle: "Three ways to work together, from build to long-term care.",
+      localOffer: "A dedicated offer for nonprofits & local shops",
       ai: {
         title: "AI apps & integrations",
         description:
@@ -155,6 +157,7 @@ export const translations = {
       services: "Offres",
       projects: "Projets",
       contact: "Contact",
+      local: "Assos & commerces",
     },
     hero: {
       greeting: "Bonjour, je suis",
@@ -173,6 +176,7 @@ export const translations = {
     services: {
       title: "Ce que je fais",
       subtitle: "Trois façons de travailler ensemble, de la création au suivi dans la durée.",
+      localOffer: "Une offre dédiée aux assos & commerces de proximité",
       ai: {
         title: "Apps & intégrations IA",
         description:
@@ -302,6 +306,7 @@ export const translations = {
       services: "Servicios",
       projects: "Proyectos",
       contact: "Contacto",
+      local: "Asociaciones y comercios",
     },
     hero: {
       greeting: "Hola, soy",
@@ -320,6 +325,7 @@ export const translations = {
     services: {
       title: "Lo que hago",
       subtitle: "Tres formas de trabajar juntos, de la creación al mantenimiento a largo plazo.",
+      localOffer: "Una oferta dedicada a asociaciones y comercios",
       ai: {
         title: "Apps e integraciones IA",
         description:
