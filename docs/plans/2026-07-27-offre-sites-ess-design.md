@@ -1,12 +1,32 @@
-# Offre « sites pour les assos et l'ESS » — design & stratégie
+# Offre « sites pour les acteurs engagés et de proximité » — design & stratégie
 
 *Note de brainstorming — 27 juillet 2026*
 
 Point de départ : après avoir adoré construire le site de **Pignon Libre**, l'idée
-d'en faire une offre récurrente pour les assos, collectifs et petits acteurs de
-l'ESS. Sites Next.js statiques + **Sveltia CMS** (open-source, gratuit à vie,
-éditable par un non-technicien). Ce document fige la réflexion ; la rédaction et
-le design de la page se feront dans une session dédiée.
+d'en faire une offre récurrente. Sites Next.js statiques + **Sveltia CMS**
+(open-source, gratuit à vie, éditable par un non-technicien). Ce document fige la
+réflexion ; la rédaction et le design de la page se feront dans une session dédiée.
+
+### Cible : l'ADN, pas le statut juridique
+La ligne de partage n'est **pas** « asso vs entreprise » mais l'**ADN** :
+
+> **Les petites structures engagées et de proximité** — assos, collectifs,
+> artisans, commerces locaux, acteurs de l'ESS et de l'économie du quotidien.
+
+À taille humaine, ancrées dans leur territoire, souvent porteuses de valeurs.
+Exemples validés : un **atelier de réparation de vélo** (économie circulaire,
+anti-gaspi — l'ADN même de Pignon Libre), un **traiteur qui fait ses plats maison
+chaque jour** (circuit court, artisanat). Peu importe qu'ils soient asso loi 1901
+ou micro-entreprise.
+
+**Ce qu'on n'ouvre PAS** : « toutes les petites entreprises » (dentiste, agence
+immo, consultant…). Ce serait tomber dans un marché saturé et banalisé où l'on se
+fait comparer au prix — et **perdre l'âme ESS**, qui est l'avantage défendable et
+le second rôle de l'offre (aimant à valeurs). On élargit **la définition, pas la
+porte**.
+
+Le pitch (§2) tient à l'identique pour tous : un atelier vélo ne veut pas plus
+payer une rente Wix à vie qu'une trésorière d'asso.
 
 ---
 
@@ -144,7 +164,7 @@ mettrait une distance là où le nom propre porte déjà l'histoire et les valeu
 Ne pas nommer = plus simple + aligné B.
 
 Titre de page suffisant :
-> **Des sites pour les assos et l'ESS — par Adeline Lefebvre**
+> **Des sites pour les acteurs engagés et de proximité — par Adeline Lefebvre**
 > *Rapides, à vous, sans abonnement.*
 
 Un nom redeviendra utile **seulement** en cas de passage en 3b (domaine dédié)
@@ -153,16 +173,20 @@ pour ce jour-là : **Belle Toile** (toile = site + voile, « prendre le bon vent
 Champ Libre, Colibri, Racines. À décider à ce moment-là, sans pression.
 
 ### URL : 3a maintenant → 3b plus tard (zéro regret)
-- **3a (maintenant)** : `adelinelefebvre.com/assos`. Coût 0 €, aucun engagement.
-- **3b (plus tard)** : acheter `belletoile.fr` (ou autre, ~12 €/an) et le faire
-  **pointer vers le même déploiement** (règle de rewrite). URL propre et
-  partageable, **toujours un seul site à maintenir**.
+Comme la cible est élargie (voir §1), la route **`/assos` est trop étroite** →
+préférer un chemin qui parle aux assos *et* aux commerces/artisans, type
+`/sites-locaux` ou `/proximite`.
+
+- **3a (maintenant)** : `adelinelefebvre.com/proximite` (ou `/sites-locaux`).
+  Coût 0 €, aucun engagement.
+- **3b (plus tard)** : acheter un domaine (~12 €/an) et le faire **pointer vers le
+  même déploiement** (règle de rewrite). URL propre et partageable, **toujours un
+  seul site à maintenir**.
 
 **Garde-fous techniques pour un switch indolore :**
-- **Liens internes en relatif** — jamais `adelinelefebvre.com/assos/...` codé en
-  dur, pour que la page marche aussi bien sous `/assos` qu'à la racine d'un
-  domaine dédié.
-- **Route `/assos` autonome** avec identité visuelle propre.
+- **Liens internes en relatif** — jamais l'URL absolue codée en dur, pour que la
+  page marche aussi bien sous son chemin qu'à la racine d'un domaine dédié.
+- **Route autonome** avec identité visuelle propre.
 
 ---
 
@@ -172,13 +196,16 @@ Ordre validé (à détailler en session B : message, ton, visuel de chaque secti
 
 1. **Hero** — la promesse en une phrase + CTA « Parlons de votre projet ».
    *Un beau site rapide pour votre asso, qui vous appartient, sans abonnement.*
-2. **Pour qui / le problème** — empathie : *« Vous êtes une asso, un collectif,
-   un petit commerce engagé. Pas 3 000 € pour une agence, ni envie d'un WordPress
-   usine à gaz. »*
+2. **Pour qui / le problème** — empathie, en nommant les deux publics : *« Vous
+   êtes une asso, un collectif, un artisan, un commerce de proximité. Pas 3 000 €
+   pour une agence, ni envie d'un WordPress usine à gaz. »*
 3. **Ce qui vous rend autonome** — les 3 promesses : **rapide** / **à vous** (pas
    de rente) / **hébergement gratuit à vie**. L'anti-Wix.
 4. **Ce que vous obtenez concrètement** — design sur-mesure, mobile, CMS Sveltia
-   (tout modifier soi-même), référencement de base.
+   (tout modifier soi-même), référencement de base. *Nuance commerces* : un
+   artisan/commerce voudra parfois du **local (fiche Google, avis, SEO de
+   proximité)** là où une asso s'en fiche → une phrase ou un petit module dédié,
+   rien de lourd.
 5. **Les tarifs** — 500 / 900 / modules + forfait tranquillité optionnel.
    Transparents.
 6. **Comment ça se passe** — process en 3-4 étapes. **Étape 1 = formulaire de
