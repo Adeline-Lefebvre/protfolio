@@ -153,6 +153,16 @@ export const translations = {
       linkedin: "LinkedIn",
       github: "GitHub",
       calendly: "Book a meeting",
+      form: {
+        name: "Your name",
+        email: "Your email",
+        message: "Your message",
+        send: "Send message",
+        sending: "Sending…",
+        success:
+          "Thanks, your message is on its way. I'll get back to you soon.",
+        error: "Something went wrong. Try again or email me directly.",
+      },
     },
   },
   fr: {
@@ -292,7 +302,7 @@ export const translations = {
         },
         {
           quote:
-            "Amazing work and I would like to use this moment to express how happy and grateful we are to have you on board. We really can't do this without you and these tasks, how small sometimes they seem, are soooo important to solve.",
+            "Un travail formidable, et je veux profiter de ce moment pour dire à quel point nous sommes heureux et reconnaissants de t'avoir dans l'équipe. On ne pourrait vraiment pas faire tout ça sans toi, et ces tâches, aussi petites qu'elles paraissent parfois, sont tellement importantes à régler.",
           author: "Rosa",
           role: "LIME Search (NL)",
         },
@@ -307,6 +317,15 @@ export const translations = {
       linkedin: "LinkedIn",
       github: "GitHub",
       calendly: "Prendre rendez-vous",
+      form: {
+        name: "Votre nom",
+        email: "Votre email",
+        message: "Votre message",
+        send: "Envoyer le message",
+        sending: "Envoi…",
+        success: "Merci, votre message est parti. Je vous réponds vite.",
+        error: "Un souci est survenu. Réessayez ou écrivez-moi directement.",
+      },
     },
   },
   es: {
@@ -446,7 +465,7 @@ export const translations = {
         },
         {
           quote:
-            "Amazing work and I would like to use this moment to express how happy and grateful we are to have you on board. We really can't do this without you and these tasks, how small sometimes they seem, are soooo important to solve.",
+            "Un trabajo increíble, y quiero aprovechar este momento para expresar lo felices y agradecidos que estamos de tenerte en el equipo. De verdad no podríamos hacer todo esto sin ti, y estas tareas, por pequeñas que a veces parezcan, son importantísimas de resolver.",
           author: "Rosa",
           role: "LIME Search (NL)",
         },
@@ -461,6 +480,15 @@ export const translations = {
       linkedin: "LinkedIn",
       github: "GitHub",
       calendly: "Reservar una reunión",
+      form: {
+        name: "Tu nombre",
+        email: "Tu email",
+        message: "Tu mensaje",
+        send: "Enviar mensaje",
+        sending: "Enviando…",
+        success: "Gracias, tu mensaje está en camino. Te respondo pronto.",
+        error: "Algo falló. Inténtalo de nuevo o escríbeme directamente.",
+      },
     },
   },
 };

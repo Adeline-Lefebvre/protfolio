@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Mail, Linkedin, Github, Phone, Download } from "lucide-react";
 import { Eyebrow } from "@/components/eyebrow";
+import { ContactForm } from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
@@ -10,6 +11,7 @@ import { getTranslations } from "@/lib/translations";
 export function Contact() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
 
   return (
     <section id="contact" className="mb-24 scroll-mt-20">
@@ -31,6 +33,13 @@ export function Contact() {
           <p className="text-lg leading-relaxed text-muted-foreground">
             {t.contact.description}
           </p>
+          {accessKey && (
+            <ContactForm
+              accessKey={accessKey}
+              labels={t.contact.form}
+              subject="Nouveau message depuis adelinelefebvre.com"
+            />
+          )}
           <div className="flex flex-wrap gap-4">
             <Button asChild>
               <a

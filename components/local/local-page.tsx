@@ -35,6 +35,7 @@ import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/local/reveal";
 import { TopoField, HandUnderline } from "@/components/local/topo";
 import { Eyebrow } from "@/components/eyebrow";
+import { ContactForm } from "@/components/contact-form";
 import { useLanguage } from "@/lib/language-context";
 import { getLocalContent } from "@/lib/local-content";
 
@@ -63,6 +64,7 @@ export function LocalPage() {
   const { language } = useLanguage();
   const t = getLocalContent(language);
   const homeHref = `/${language}`;
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
 
   const promises = [t.promises.fast, t.promises.yours, t.promises.noFees];
 
@@ -515,6 +517,30 @@ export function LocalPage() {
           </div>
         </section>
 
+        {/* Preuve sociale */}
+        <section className="py-20 md:py-28">
+          <div className="mx-auto max-w-3xl px-6 md:px-12 lg:px-16">
+            <Reveal>
+              <figure className={`${CARD} p-8`}>
+                <blockquote className="text-lg leading-relaxed text-foreground">
+                  “{t.proof.quote}”
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-base font-semibold text-accent-foreground">
+                    {t.proof.author.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-semibold">{t.proof.author}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {t.proof.role}
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </Reveal>
+          </div>
+        </section>
+
         {/* Contact / CTA final (bande vert sapin de clôture) */}
         <section
           id="contact"
@@ -533,6 +559,15 @@ export function LocalPage() {
               <p className="mt-3 max-w-2xl leading-relaxed text-background/70">
                 {t.cta.hesitant}
               </p>
+              {accessKey && (
+                <div className="mt-8 max-w-2xl rounded-2xl bg-background p-6 text-foreground">
+                  <ContactForm
+                    accessKey={accessKey}
+                    labels={t.cta.form}
+                    subject="Nouveau message depuis la page /local"
+                  />
+                </div>
+              )}
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild size="lg">
                   <a href={EMAIL} target="_blank" rel="noopener noreferrer">
