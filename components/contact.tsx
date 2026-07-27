@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Mail, Linkedin, Github, Phone, Download } from "lucide-react";
+import { Eyebrow } from "@/components/eyebrow";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
@@ -12,7 +13,8 @@ export function Contact() {
 
   return (
     <section id="contact" className="mb-24 scroll-mt-20">
-      <h2 className="mb-8 text-3xl font-bold tracking-tight">
+      <Eyebrow>{t.contact.eyebrow}</Eyebrow>
+      <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
         {t.contact.title}
       </h2>
       <Card className="p-8">

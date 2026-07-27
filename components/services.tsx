@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Sparkles, Layout, Wrench, Check, ArrowUpRight } from "lucide-react";
+import { Eyebrow } from "@/components/eyebrow";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 
@@ -17,7 +18,8 @@ export function Services() {
 
   return (
     <section id="services" className="mb-24 scroll-mt-20">
-      <h2 className="mb-2 text-3xl font-bold tracking-tight">
+      <Eyebrow>{t.services.eyebrow}</Eyebrow>
+      <h2 className="mb-2 text-3xl tracking-tight md:text-4xl">
         {t.services.title}
       </h2>
       <p className="mb-8 text-lg text-muted-foreground">
@@ -35,7 +37,7 @@ export function Services() {
               className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${
                 featured
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-accent"
+                  : "bg-accent/10 text-accent ring-1 ring-accent/15"
               }`}
             >
               <Icon className="h-5 w-5" />

@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Quote } from "lucide-react";
+import { Eyebrow } from "@/components/eyebrow";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 
@@ -20,30 +21,35 @@ export function Testimonial() {
 
   return (
     <section className="mb-24">
-      <h2 className="mb-8 text-3xl font-bold tracking-tight">
-        {t.testimonial.title}
-      </h2>
-      <div className="grid gap-6 md:grid-cols-3">
-        {t.testimonial.items.map((item) => (
-          <Card key={item.author} className="relative flex flex-col p-8">
-            <Quote
-              className="absolute right-6 top-6 h-8 w-8 text-primary/15"
-              aria-hidden="true"
-            />
-            <blockquote className="flex-1 text-lg leading-relaxed text-foreground">
-              “{item.quote}”
-            </blockquote>
-            <figcaption className="mt-6 flex items-center gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-base font-semibold text-accent-foreground">
-                {initials(item.author)}
-              </div>
-              <div>
-                <p className="font-semibold">{item.author}</p>
-                <p className="text-sm text-muted-foreground">{item.role}</p>
-              </div>
-            </figcaption>
-          </Card>
-        ))}
+      <div className="rounded-3xl bg-secondary/50 px-6 py-12 md:px-10 md:py-14">
+        <Eyebrow>{t.testimonial.eyebrow}</Eyebrow>
+        <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
+          {t.testimonial.title}
+        </h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          {t.testimonial.items.map((item) => (
+            <Card key={item.author} className="relative flex flex-col p-8">
+              <Quote
+                className="absolute right-6 top-6 h-8 w-8 text-amber/30"
+                aria-hidden="true"
+              />
+              <figure className="flex flex-1 flex-col">
+                <blockquote className="flex-1 text-lg leading-relaxed text-foreground">
+                  “{item.quote}”
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-base font-semibold text-accent-foreground">
+                    {initials(item.author)}
+                  </div>
+                  <div>
+                    <p className="font-semibold">{item.author}</p>
+                    <p className="text-sm text-muted-foreground">{item.role}</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

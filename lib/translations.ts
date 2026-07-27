@@ -25,6 +25,7 @@ export const translations = {
       label: "Trusted by",
     },
     services: {
+      eyebrow: "Services",
       title: "What I do",
       subtitle: "Three ways to work together, from build to long-term care.",
       localOffer: "A dedicated offer for nonprofits & local shops",
@@ -63,6 +64,7 @@ export const translations = {
       },
     },
     projects: {
+      eyebrow: "Work",
       title: "Featured projects",
       viewProject: "View project",
       moreTitle: "Other experiments",
@@ -105,6 +107,7 @@ export const translations = {
       },
     },
     about: {
+      eyebrow: "Background",
       title: "About",
       paragraph1:
         "My path started in <strong class='font-semibold text-primary'>product and entrepreneurship</strong> (Station F, business school). I kept that <em class='italic'>founder's mindset</em>: I start from the business need, not the tech.",
@@ -118,6 +121,7 @@ export const translations = {
         "Off-screen, I'm training in herbalism (that's where my app Bulbus came from) and constantly tinkering with new AI tools. I like building things that mean something.",
     },
     testimonial: {
+      eyebrow: "Kind words",
       title: "What people say",
       items: [
         {
@@ -141,6 +145,7 @@ export const translations = {
       ],
     },
     contact: {
+      eyebrow: "Contact",
       title: "Let's work together",
       description:
         "Available for one-off missions as well as long-term maintenance partnerships. An app, a custom website, an AI integration, or picking up an existing project? Let's talk.",
@@ -174,6 +179,7 @@ export const translations = {
       label: "Ils m'ont fait confiance",
     },
     services: {
+      eyebrow: "Offres",
       title: "Ce que je fais",
       subtitle: "Trois façons de travailler ensemble, de la création au suivi dans la durée.",
       localOffer: "Une offre dédiée aux assos & commerces de proximité",
@@ -212,6 +218,7 @@ export const translations = {
       },
     },
     projects: {
+      eyebrow: "Réalisations",
       title: "Projets phares",
       viewProject: "Voir le projet",
       moreTitle: "Autres expérimentations",
@@ -254,6 +261,7 @@ export const translations = {
       },
     },
     about: {
+      eyebrow: "Parcours",
       title: "À propos",
       paragraph1:
         "Mon parcours a commencé dans le <strong class='font-semibold text-primary'>produit et l'entrepreneuriat</strong> (Station F, école de commerce). J'en ai gardé une <em class='italic'>mentalité de fondatrice</em> : je pars du besoin métier, pas de la techno.",
@@ -267,6 +275,7 @@ export const translations = {
         "Hors écran, je me forme à l'herboristerie (c'est de là qu'est née mon app Bulbus) et je teste en continu de nouveaux outils IA. J'aime construire des choses qui ont du sens.",
     },
     testimonial: {
+      eyebrow: "Recommandations",
       title: "Ce qu'on dit de moi",
       items: [
         {
@@ -290,6 +299,7 @@ export const translations = {
       ],
     },
     contact: {
+      eyebrow: "Contact",
       title: "Travaillons ensemble",
       description:
         "Disponible pour des missions ponctuelles comme pour des partenariats de maintenance au long cours. Une app, un site sur-mesure, une intégration IA ou la reprise d'un projet existant ? Parlons-en.",
@@ -323,6 +333,7 @@ export const translations = {
       label: "Han confiado en mí",
     },
     services: {
+      eyebrow: "Servicios",
       title: "Lo que hago",
       subtitle: "Tres formas de trabajar juntos, de la creación al mantenimiento a largo plazo.",
       localOffer: "Una oferta dedicada a asociaciones y comercios",
@@ -361,6 +372,7 @@ export const translations = {
       },
     },
     projects: {
+      eyebrow: "Trabajos",
       title: "Proyectos destacados",
       viewProject: "Ver proyecto",
       moreTitle: "Otros experimentos",
@@ -403,6 +415,7 @@ export const translations = {
       },
     },
     about: {
+      eyebrow: "Trayectoria",
       title: "Sobre mí",
       paragraph1:
         "Mi camino comenzó en el <strong class='font-semibold text-primary'>producto y el emprendimiento</strong> (Station F, escuela de negocios). Conservé esa <em class='italic'>mentalidad de fundadora</em>: parto de la necesidad de negocio, no de la tecnología.",
@@ -416,6 +429,7 @@ export const translations = {
         "Fuera de la pantalla, me formo en herboristería (de ahí nació mi app Bulbus) y experimento sin parar con nuevas herramientas de IA. Me gusta construir cosas que tienen sentido.",
     },
     testimonial: {
+      eyebrow: "Recomendaciones",
       title: "Lo que dicen de mí",
       items: [
         {
@@ -439,6 +453,7 @@ export const translations = {
       ],
     },
     contact: {
+      eyebrow: "Contacto",
       title: "Trabajemos juntos",
       description:
         "Disponible tanto para misiones puntuales como para colaboraciones de mantenimiento a largo plazo. ¿Una app, un sitio a medida, una integración con IA o retomar un proyecto existente? Hablemos.",

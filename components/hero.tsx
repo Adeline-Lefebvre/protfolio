@@ -5,13 +5,19 @@ import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
+import { TopoField } from "@/components/local/topo";
 
 export function Hero() {
   const { language } = useLanguage();
   const t = getTranslations(language);
 
   return (
-    <section className="mb-24 pt-8 md:pt-12">
+    <section className="relative mb-24 overflow-hidden pt-8 md:pt-12">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -right-24 -top-16 h-[26rem] w-[26rem] rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute -left-20 top-1/3 h-72 w-72 rounded-full bg-accent/5 blur-3xl" />
+        <TopoField className="absolute -right-28 -top-10 h-[34rem] w-[34rem] text-accent/[0.05]" />
+      </div>
       <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
         <div className="w-full min-w-0 space-y-6 md:w-auto">
           <div className="space-y-2">

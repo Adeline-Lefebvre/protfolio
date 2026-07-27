@@ -11,6 +11,7 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef, useEffect, useState } from "react";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
+import { Eyebrow } from "@/components/eyebrow";
 
 function AdaptiveVideoPlayer({
   src,
@@ -154,7 +155,8 @@ export function Projects() {
 
   return (
     <section id="projects" className="mb-24 scroll-mt-20">
-      <h2 className="mb-8 text-3xl font-bold tracking-tight">
+      <Eyebrow>{t.projects.eyebrow}</Eyebrow>
+      <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
         {t.projects.title}
       </h2>
 

@@ -34,6 +34,7 @@ import { LanguageSelector } from "@/components/language-selector";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/local/reveal";
 import { TopoField, HandUnderline } from "@/components/local/topo";
+import { Eyebrow } from "@/components/eyebrow";
 import { useLanguage } from "@/lib/language-context";
 import { getLocalContent } from "@/lib/local-content";
 
@@ -57,27 +58,6 @@ const CARD_HOVER =
   "transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_1px_2px_rgba(42,42,40,0.05),0_26px_50px_-24px_rgba(47,74,60,0.26)]";
 const LINK_FOCUS =
   "rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
-
-function Eyebrow({
-  children,
-  tone = "accent",
-}: {
-  children: React.ReactNode;
-  tone?: "accent" | "amber";
-}) {
-  return (
-    <p
-      className={`mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] ${
-        tone === "amber" ? "text-amber" : "text-accent"
-      }`}
-    >
-      <span
-        className={`h-px w-6 ${tone === "amber" ? "bg-amber/60" : "bg-accent/50"}`}
-      />
-      {children}
-    </p>
-  );
-}
 
 export function LocalPage() {
   const { language } = useLanguage();
