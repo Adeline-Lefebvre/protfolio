@@ -28,6 +28,18 @@ porte**.
 Le pitch (§2) tient à l'identique pour tous : un atelier vélo ne veut pas plus
 payer une rente Wix à vie qu'une trésorière d'asso.
 
+**Géographie : profil international, pas franco-français.** Adeline vit en
+**Espagne** et a des **clients néerlandais** — l'offre ne doit pas se cadrer
+"freelance française pour assos françaises", ce serait contredire son vrai profil.
+Les valeurs voyagent (*economía social* en Espagne, *sociale/circulaire economie*
+aux Pays-Bas ; le pitch autonomie est universel). Le RGPD est **européen** (FR, ES,
+NL), donc la partie juridique reste cohérente partout.
+
+⚠️ **Garder le message basé valeurs, pas basé institutions françaises.** Les
+références **franco-françaises** (loi 1901, **HelloAsso**, France Bénévolat,
+domaine `.fr`) restent des *exemples locaux*, jamais le socle du pitch — sinon la
+version internationale casse. Prévoir des équivalents/formulations génériques.
+
 ---
 
 ## 1. La décision de fond : Version B, pas Version A
@@ -187,6 +199,22 @@ préférer un chemin qui parle aux assos *et* aux commerces/artisans, type
 - **Liens internes en relatif** — jamais l'URL absolue codée en dur, pour que la
   page marche aussi bien sous son chemin qu'à la racine d'un domaine dédié.
 - **Route autonome** avec identité visuelle propre.
+
+### Langues & i18n (déjà en place)
+Langues de travail d'Adeline (celles où elle peut *accompagner* un client de bout
+en bout) : **français, anglais, espagnol**. Clients néerlandais → gérés en
+**anglais**, donc **pas de version NL** nécessaire. Ce trio couvre son vrai
+périmètre (base FR, international EN, Espagne ES).
+
+Le portfolio est **déjà** internationalisé — la page réutilise l'i18n existant,
+**aucune plomberie à ajouter** :
+- Locales `en / fr / es`, défaut `en` — `lib/i18n-config.ts`.
+- Routage `app/[locale]/…` → URLs `/(en|fr|es)/proximite`. Le sélecteur de langue
+  existe déjà (`components/language-selector.tsx`).
+- Dictionnaire dans `lib/translations.ts`.
+- **Conséquence pour la session B** : rédiger le contenu **dans les 3 langues dès
+  le départ**, pas juste en FR. Ajouter une langue plus tard = ajouter des chaînes
+  au dictionnaire, pas reconstruire.
 
 ---
 
