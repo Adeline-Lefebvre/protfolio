@@ -270,7 +270,7 @@ export function LocalPage() {
               {/* Le site (mis en avant) */}
               <Reveal delay={90} className="h-full">
                 <div
-                  className={`${CARD} relative flex h-full flex-col p-6 ring-1 ring-accent/30 md:-translate-y-2 md:scale-[1.02]`}
+                  className={`${CARD} relative flex h-full flex-col p-6 ring-2 ring-accent/40`}
                 >
                   <span className="absolute -top-3 left-6 rounded-full bg-amber px-3 py-1 text-xs font-semibold text-amber-foreground">
                     {t.pricing.site.badge}
@@ -335,7 +335,7 @@ export function LocalPage() {
                     const Icon = SERENITY_ICONS[i];
                     return (
                       <div key={item} className="rounded-xl bg-secondary/40 p-4">
-                        <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent ring-1 ring-accent/15">
+                        <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-background">
                           <Icon className="h-5 w-5" />
                         </div>
                         <p className="text-sm leading-relaxed text-muted-foreground">

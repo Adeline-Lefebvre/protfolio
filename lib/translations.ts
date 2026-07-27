@@ -13,9 +13,9 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       name: "Adeline Lefebvre",
-      title: "Fullstack developer, from custom sites to AI apps",
+      title: "I build web products that last, from custom sites to AI apps.",
       description:
-        "From the business need to production, I build web products that last. Product background (Station F) and a dual fullstack & CMS skill set: Next.js apps with AI (Claude, Mistral), custom websites (WordPress, Craft CMS), and long-term maintenance.",
+        "From idea to production, I turn a business need into a fast, reliable product. A dual fullstack and CMS skill set, a product background (Station F), and real care for concrete impact.",
       availableBadge: "Available for freelance",
       ctaPrimary: "Let's talk about your project",
       ctaProjects: "See my work",
@@ -73,32 +73,32 @@ export const translations = {
       rootyne: {
         title: "Rootyne, AI health platform",
         description:
-          "Personalized blood-test analysis. AI extraction pipeline (Claude + Mistral) with an anonymization layer, a biologist review dashboard, and encrypted HDS-compliant infrastructure. Built from scratch.",
+          "Help anyone understand their blood test and adjust their diet. I built the platform from scratch: AI extraction pipeline (Claude + Mistral) with an anonymization layer, a biologist review dashboard, and encrypted HDS-compliant infrastructure.",
       },
       desertLeaves: {
         title: "Desert Leaves, environmental NGO",
         description:
-          "A complete platform built from scratch for a reforestation foundation: Next.js + headless Prismic CMS, Stripe donations (one-time & recurring), multilingual SEO.",
+          "Rally donations and volunteers to reforest arid land. A complete platform built from scratch: Next.js + headless Prismic CMS, Stripe donations (one-time & recurring), multilingual SEO.",
       },
       lime: {
         title: "LIME Search, finance recruitment",
         description:
-          "Multilingual recruitment platform in Craft CMS. Custom Twig/PHP components the client can edit, technical SEO, plus ongoing maintenance and new features.",
+          "Attract top finance talent, and let the client edit the site without a developer. Multilingual recruitment platform in Craft CMS: custom Twig/PHP components, technical SEO, ongoing maintenance.",
       },
       bulbus: {
         title: "Bulbus, educational mobile app",
         description:
-          "Cross-platform Flutter app for herbalism students. 150+ plants, timed mock exams, in-app purchases. Live on iOS & Android with 37 paying users.",
+          "Revise herbalism anywhere and pass the exams. Cross-platform Flutter app: 150+ plants, timed mock exams, in-app purchases. Live on iOS & Android with 37 paying users.",
       },
       sds: {
         title: "SDS Lingo, multilingual website",
         description:
-          "Next.js site (EN/FR/CS) for a technical translation company. Full i18n, a quote form with file upload, multilingual SEO (hreflang) and optimized Core Web Vitals.",
+          "Get a translation quote from a single form, in three languages. Next.js site (EN/FR/CS): full i18n, a quote form with file upload, multilingual SEO (hreflang), optimized Core Web Vitals.",
       },
       c55: {
         title: "Club Fifty Five, creative agency",
         description:
-          "Premium showcase site for a Dutch talent agency, delivered white-label. Custom widgets (animated marquee), Theme Builder, advanced forms, responsive across 5 breakpoints.",
+          "Give a talent agency a premium showcase, delivered white-label. Custom widgets (animated marquee), Theme Builder, advanced forms, responsive across 5 breakpoints.",
       },
       pepstery: {
         title: "Pepstery, augmented reality game",
@@ -177,9 +177,9 @@ export const translations = {
     hero: {
       greeting: "Bonjour, je suis",
       name: "Adeline Lefebvre",
-      title: "Développeuse fullstack, du site sur-mesure à l'app IA",
+      title: "Je conçois des produits web qui durent, du site sur-mesure à l'app IA.",
       description:
-        "Du besoin métier à la mise en production, je crée des produits web qui durent. Background produit (Station F) et double compétence fullstack & CMS : apps Next.js avec IA (Claude, Mistral), sites sur-mesure (WordPress, Craft CMS) et maintenance au long cours.",
+        "De l'idée à la mise en production, je transforme un besoin métier en produit fiable et rapide. Double compétence fullstack et CMS, background produit (Station F), et un vrai souci de l'impact concret.",
       availableBadge: "Disponible en freelance",
       ctaPrimary: "Discutons de votre projet",
       ctaProjects: "Voir mes projets",
@@ -237,32 +237,32 @@ export const translations = {
       rootyne: {
         title: "Rootyne, plateforme santé IA",
         description:
-          "Analyse de bilans sanguins personnalisée. Pipeline d'extraction IA (Claude + Mistral) avec couche d'anonymisation, dashboard biologiste de validation, infrastructure HDS chiffrée. Conçue de A à Z.",
+          "Aider chacun à comprendre ses analyses de sang et adapter son alimentation. J'ai conçu la plateforme de A à Z : pipeline d'extraction IA (Claude + Mistral) avec anonymisation, dashboard biologiste de validation, infrastructure HDS chiffrée.",
       },
       desertLeaves: {
         title: "Desert Leaves, fondation environnementale",
         description:
-          "Plateforme complète développée de zéro pour une ONG de reforestation : Next.js + CMS headless Prismic, dons Stripe (ponctuels & récurrents), SEO multilingue.",
+          "Mobiliser dons et bénévoles pour reboiser des zones arides. Plateforme complète développée de zéro : Next.js + CMS headless Prismic, dons Stripe (ponctuels & récurrents), SEO multilingue.",
       },
       lime: {
         title: "LIME Search, recrutement finance",
         description:
-          "Plateforme de recrutement multilingue en Craft CMS. Composants Twig/PHP sur-mesure éditables par le client, SEO technique, maintenance et nouvelles fonctionnalités en continu.",
+          "Attirer les meilleurs profils finance, et laisser le client éditer son site sans développeur. Plateforme de recrutement multilingue en Craft CMS : composants Twig/PHP sur-mesure, SEO technique, maintenance en continu.",
       },
       bulbus: {
         title: "Bulbus, app mobile éducative",
         description:
-          "App cross-platform (Flutter) pour étudiants en herboristerie. 150+ plantes, examens chronométrés, achats in-app. En ligne sur iOS et Android, 37 utilisateurs payants.",
+          "Réviser l'herboristerie partout et réussir ses examens. App cross-platform (Flutter) : 150+ plantes, examens chronométrés, achats in-app. En ligne sur iOS et Android, 37 utilisateurs payants.",
       },
       sds: {
         title: "SDS Lingo, site multilingue",
         description:
-          "Site Next.js (EN/FR/CS) pour une société de traduction technique. i18n complet, formulaire de devis avec envoi de fichiers, SEO multilingue (hreflang) et Core Web Vitals optimisés.",
+          "Obtenir un devis de traduction en un seul formulaire, en trois langues. Site Next.js (EN/FR/CS) : i18n complet, formulaire de devis avec envoi de fichiers, SEO multilingue (hreflang), Core Web Vitals optimisés.",
       },
       c55: {
         title: "Club Fifty Five, agence créative",
         description:
-          "Site vitrine premium d'une agence de talents néerlandaise, en marque blanche. Widgets sur-mesure (marquee animé), Theme Builder, formulaires avancés, responsive sur 5 breakpoints.",
+          "Donner une vitrine premium à une agence de talents, livrée en marque blanche. Widgets sur-mesure (marquee animé), Theme Builder, formulaires avancés, responsive sur 5 breakpoints.",
       },
       pepstery: {
         title: "Pepstery, jeu en réalité augmentée",
@@ -340,9 +340,9 @@ export const translations = {
     hero: {
       greeting: "Hola, soy",
       name: "Adeline Lefebvre",
-      title: "Desarrolladora fullstack, del sitio a medida a la app con IA",
+      title: "Creo productos web que perduran, del sitio a medida a la app con IA.",
       description:
-        "De la necesidad de negocio a la puesta en producción, creo productos web que perduran. Base en producto (Station F) y doble competencia fullstack y CMS: apps Next.js con IA (Claude, Mistral), sitios a medida (WordPress, Craft CMS) y mantenimiento a largo plazo.",
+        "De la idea a la producción, convierto una necesidad de negocio en un producto fiable y rápido. Doble competencia fullstack y CMS, base en producto (Station F), y un cuidado real por el impacto concreto.",
       availableBadge: "Disponible para freelance",
       ctaPrimary: "Hablemos de tu proyecto",
       ctaProjects: "Ver mis proyectos",
@@ -400,32 +400,32 @@ export const translations = {
       rootyne: {
         title: "Rootyne, plataforma de salud con IA",
         description:
-          "Interpretación personalizada de tus análisis de sangre. Pipeline de extracción con IA (Claude + Mistral) con capa de anonimización, dashboard de validación para biólogos e infraestructura HDS cifrada. Creada desde cero.",
+          "Ayudar a cualquiera a entender sus análisis de sangre y ajustar su alimentación. Creé la plataforma desde cero: pipeline de extracción con IA (Claude + Mistral) con anonimización, dashboard de validación para biólogos e infraestructura HDS cifrada.",
       },
       desertLeaves: {
         title: "Desert Leaves, ONG ambiental",
         description:
-          "Plataforma completa desarrollada desde cero para una fundación de reforestación: Next.js + CMS headless Prismic, donaciones Stripe (puntuales y recurrentes), SEO multilingüe.",
+          "Movilizar donaciones y voluntarios para reforestar zonas áridas. Plataforma completa desarrollada desde cero: Next.js + CMS headless Prismic, donaciones Stripe (puntuales y recurrentes), SEO multilingüe.",
       },
       lime: {
         title: "LIME Search, reclutamiento financiero",
         description:
-          "Plataforma de reclutamiento multilingüe en Craft CMS. Componentes Twig/PHP a medida editables por el cliente, SEO técnico, mantenimiento y nuevas funciones continuas.",
+          "Atraer a los mejores perfiles de finanzas, y dejar que el cliente edite su web sin un desarrollador. Plataforma de reclutamiento multilingüe en Craft CMS: componentes Twig/PHP a medida, SEO técnico, mantenimiento continuo.",
       },
       bulbus: {
         title: "Bulbus, app móvil educativa",
         description:
-          "App multiplataforma (Flutter) para estudiantes de herboristería. 150+ plantas, exámenes cronometrados, compras in-app. Disponible en iOS y Android, 37 usuarios de pago.",
+          "Repasar la herboristería en cualquier lugar y aprobar los exámenes. App multiplataforma (Flutter): 150+ plantas, exámenes cronometrados, compras in-app. Disponible en iOS y Android, 37 usuarios de pago.",
       },
       sds: {
         title: "SDS Lingo, sitio multilingüe",
         description:
-          "Sitio Next.js (EN/FR/CS) para una empresa de traducción técnica. i18n completo, formulario de presupuesto con subida de archivos, SEO multilingüe (hreflang) y Core Web Vitals optimizados.",
+          "Conseguir un presupuesto de traducción con un solo formulario, en tres idiomas. Sitio Next.js (EN/FR/CS): i18n completo, formulario de presupuesto con subida de archivos, SEO multilingüe (hreflang), Core Web Vitals optimizados.",
       },
       c55: {
         title: "Club Fifty Five, agencia creativa",
         description:
-          "Sitio de presentación premium de una agencia de talentos neerlandesa, en marca blanca. Widgets a medida (marquee animado), Theme Builder, formularios avanzados, responsive en 5 breakpoints.",
+          "Dar a una agencia de talentos una vitrina premium, entregada en marca blanca. Widgets a medida (marquee animado), Theme Builder, formularios avanzados, responsive en 5 breakpoints.",
       },
       pepstery: {
         title: "Pepstery, juego de realidad aumentada",

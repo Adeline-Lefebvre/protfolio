@@ -43,7 +43,7 @@ export function Hero() {
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t.hero.description}
           </p>
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap items-center gap-3 pt-2">
             <Button asChild size="lg">
               <a href="#contact">
                 {t.hero.ctaPrimary}
@@ -53,13 +53,15 @@ export function Hero() {
             <Button variant="outline" size="lg" asChild>
               <a href="#projects">{t.hero.ctaProjects}</a>
             </Button>
-            <Button variant="ghost" size="lg" asChild>
-              <a href="/CV.pdf" download>
-                <Download className="mr-2 h-4 w-4" />
-                {t.hero.downloadCV}
-              </a>
-            </Button>
           </div>
+          <a
+            href="/CV.pdf"
+            download
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Download className="h-4 w-4" />
+            {t.hero.downloadCV}
+          </a>
         </div>
         <div className="relative h-40 w-40 shrink-0 self-center md:h-56 md:w-56 md:self-auto">
           <div className="absolute -inset-0.5 rounded-full bg-linear-to-br from-primary/40 via-primary/20 to-accent/30 blur-[2px]" />
