@@ -185,15 +185,20 @@ pour ce jour-là : **Belle Toile** (toile = site + voile, « prendre le bon vent
 Champ Libre, Colibri, Racines. À décider à ce moment-là, sans pression.
 
 ### URL : 3a maintenant → 3b plus tard (zéro regret)
-Comme la cible est élargie (voir §1), la route **`/assos` est trop étroite** →
-préférer un chemin qui parle aux assos *et* aux commerces/artisans, type
-`/sites-locaux` ou `/proximite`.
+La cible est élargie (voir §1) *et* internationale (§4 langues) → le slug doit être
+**neutre et trilingue**, pas un mot français comme `/proximite`.
 
-- **3a (maintenant)** : `adelinelefebvre.com/proximite` (ou `/sites-locaux`).
-  Coût 0 €, aucun engagement.
+**Slug retenu : `/local`** — s'écrit et se comprend à l'identique en **FR / EN /
+ES**, et tombe pile sur le message (proximité, ancrage territorial). Un seul nom de
+dossier partagé par les 3 locales → aucune plomberie de slug localisé. URLs :
+`/fr/local`, `/en/local`, `/es/local`. (Alternatives : `/local-web`, `/nearby`.)
+
+- **3a (maintenant)** : `adelinelefebvre.com/<locale>/local`. Coût 0 €, aucun
+  engagement.
 - **3b (plus tard)** : acheter un domaine (~12 €/an) et le faire **pointer vers le
   même déploiement** (règle de rewrite). URL propre et partageable, **toujours un
-  seul site à maintenir**.
+  seul site à maintenir**. Le domaine portera alors l'identité → le slug devient
+  secondaire (ce choix n'est donc pas définitif).
 
 **Garde-fous techniques pour un switch indolore :**
 - **Liens internes en relatif** — jamais l'URL absolue codée en dur, pour que la
