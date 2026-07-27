@@ -21,7 +21,8 @@ export function Testimonial() {
 
   return (
     <section className="mb-24">
-      <div className="rounded-3xl bg-secondary/50 px-6 py-12 md:px-10 md:py-14">
+      <div className="mx-[calc(50%-50vw)] bg-secondary/50 py-14 md:py-20">
+        <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
         <Eyebrow>{t.testimonial.eyebrow}</Eyebrow>
         <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
           {t.testimonial.title}
@@ -49,6 +50,7 @@ export function Testimonial() {
               </figure>
             </Card>
           ))}
+        </div>
         </div>
       </div>
     </section>
