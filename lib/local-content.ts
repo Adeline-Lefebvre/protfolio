@@ -66,14 +66,12 @@ export const localContent = {
     includes: {
       title: "Ce que comprend votre site",
       items: [
-        "Un design sur mesure, à votre image. Pas un template vu partout.",
+        "Un design sur mesure, à votre image.",
         "Un site impeccable sur mobile, tablette et ordinateur.",
         "Un espace simple pour tout modifier vous-même : textes, photos, actualités. Sans savoir coder.",
         "Un blog et des actualités inclus, pour publier vos nouvelles quand vous voulez.",
         "Les bases du référencement, pour qu'on vous trouve sur Google.",
       ],
-      businessNote:
-        "Pour les commerces, je peux aussi soigner votre visibilité locale (fiche Google, avis).",
     },
     pricing: {
       title: "Des tarifs clairs, affichés",
@@ -94,11 +92,12 @@ export const localContent = {
         "Agenda d'événements : à partir de 250 €",
       ],
       solidarity:
-        "Une toute petite structure avec un budget serré ? Parlons-en, je fais un geste.",
+        "Une toute petite structure avec un budget serré ? Parlons-en, on trouvera une solution.",
       serenity: {
         title: "Envie d'être serein ?",
+        optional: "Optionnel",
         intro:
-          "Vous gérez votre contenu vous-même, en toute autonomie. Le forfait Sérénité (150 € par an, optionnel) s'occupe du reste :",
+          "Aucun frais récurrent n'est obligatoire. Mais si vous préférez ne penser à rien, le forfait Sérénité (150 € par an, entièrement optionnel) s'occupe de tout :",
         items: [
           "Votre nom de domaine, renouvelé sans que vous y pensiez.",
           "Votre site maintenu en ligne, à jour et sécurisé.",
@@ -136,6 +135,7 @@ export const localContent = {
       items: [
         {
           name: "Desert Leaves",
+          image: "/dl-1.jpg",
           meta: "ONG de reforestation (Espagne)",
           text: "Un site bilingue pour présenter leurs projets, mobiliser des dons et des bénévoles. Rapide, clair, à leur image.",
           href: "https://www.desertleaves.org/en",
@@ -143,6 +143,7 @@ export const localContent = {
         },
         {
           name: "Pignon Libre",
+          image: "/pignon-libre.png",
           meta: "Atelier vélo associatif",
           text: "Un site simple pour présenter l'atelier, les permanences et les actualités, que l'équipe met à jour elle-même.",
           href: "https://pignon-libre.vercel.app/",
@@ -154,8 +155,8 @@ export const localContent = {
       title: "Qui je suis",
       paragraphs: [
         "Je m'appelle Adeline, développeuse web. Je travaille à distance, avec des clients en France, en Espagne, aux Pays-Bas et ailleurs en Europe.",
-        "L'économie sociale et solidaire me tient à cœur depuis des années. Je crois au potentiel de l'économie circulaire et d'une économie plus responsable, et je suis convaincue que les projets à impact local sont les premiers acteurs du changement. C'est pour ça que j'aime construire des sites pour des structures qui font quelque chose d'utile : associations, artisans, commerces de proximité. Des projets à taille humaine, où je connais les gens pour qui je travaille.",
-        "Mon approche tient en une idée : un site beau et rapide, que vous possédez vraiment, sans vous enfermer dans un abonnement ou une technologie que personne ne maîtrise chez vous.",
+        "<strong class='font-semibold text-accent'>L'économie sociale et solidaire</strong> me tient à cœur depuis des années. Je crois au potentiel de l'économie circulaire et d'une économie plus responsable, et je suis convaincue que <strong class='font-semibold text-foreground'>les projets à impact local sont les premiers acteurs du changement</strong>. C'est pour ça que j'aime construire des sites pour des structures qui font quelque chose d'utile : associations, artisans, commerces de proximité. Des projets à taille humaine, où je connais les gens pour qui je travaille.",
+        "Mon approche tient en une idée : un site beau et rapide, <strong class='font-semibold text-primary'>que vous possédez vraiment</strong>, sans vous enfermer dans un abonnement ou une technologie que personne ne maîtrise chez vous.",
       ],
       link: "En savoir plus sur mon travail",
     },
@@ -259,14 +260,12 @@ export const localContent = {
     includes: {
       title: "What your website includes",
       items: [
-        "A custom design, true to who you are. Not a template seen everywhere.",
+        "A custom design, true to who you are.",
         "A site that looks great on mobile, tablet and desktop.",
         "A simple dashboard to edit everything yourself: text, photos, news. No coding needed.",
         "A blog and news section included, to post your updates whenever you like.",
         "The basics of SEO, so people find you on Google.",
       ],
-      businessNote:
-        "For local businesses, I can also boost your local visibility (Google listing, reviews).",
     },
     pricing: {
       title: "Clear, upfront pricing",
@@ -290,8 +289,9 @@ export const localContent = {
         "A very small group on a tight budget? Let's talk, we'll work something out.",
       serenity: {
         title: "Want peace of mind?",
+        optional: "Optional",
         intro:
-          "You manage your content yourself, completely on your own. The optional Serenity plan (€150 per year) takes care of the rest:",
+          "No recurring cost is mandatory. But if you'd rather not think about any of it, the fully optional Serenity plan (€150 per year) takes care of everything:",
         items: [
           "Your domain name, renewed without you thinking about it.",
           "Your site kept online, up to date and secure.",
@@ -329,6 +329,7 @@ export const localContent = {
       items: [
         {
           name: "Desert Leaves",
+          image: "/dl-1.jpg",
           meta: "Reforestation NGO (Spain)",
           text: "A bilingual site to showcase their projects and rally donations and volunteers. Fast, clear, true to them.",
           href: "https://www.desertleaves.org/en",
@@ -336,6 +337,7 @@ export const localContent = {
         },
         {
           name: "Pignon Libre",
+          image: "/pignon-libre.png",
           meta: "Community bike workshop",
           text: "A simple site for the workshop, its opening hours and news, that the team updates itself.",
           href: "https://pignon-libre.vercel.app/",
@@ -347,8 +349,8 @@ export const localContent = {
       title: "About me",
       paragraphs: [
         "My name is Adeline, a web developer. I work remotely, with clients in France, Spain, the Netherlands and elsewhere in Europe.",
-        "The social and solidarity economy has mattered to me for years. I believe in the potential of the circular economy and a more responsible way of doing business, and I'm convinced that projects with local impact are the first drivers of change. That's why I love building sites for organisations doing something useful: nonprofits, makers, local businesses. Human-scale projects, where I know the people I work for.",
-        "My approach comes down to one idea: a beautiful, fast website that you truly own, without locking you into a subscription or a technology no one on your team understands.",
+        "<strong class='font-semibold text-accent'>The social and solidarity economy</strong> has mattered to me for years. I believe in the potential of the circular economy and a more responsible way of doing business, and I'm convinced that <strong class='font-semibold text-foreground'>projects with local impact are the first drivers of change</strong>. That's why I love building sites for organisations doing something useful: nonprofits, makers, local businesses. Human-scale projects, where I know the people I work for.",
+        "My approach comes down to one idea: a beautiful, fast website that <strong class='font-semibold text-primary'>you truly own</strong>, without locking you into a subscription or a technology no one on your team understands.",
       ],
       link: "More about my work",
     },
@@ -452,14 +454,12 @@ export const localContent = {
     includes: {
       title: "Lo que incluye tu web",
       items: [
-        "Un diseño a medida, con tu identidad. No una plantilla vista en todas partes.",
+        "Un diseño a medida, con tu identidad.",
         "Una web impecable en móvil, tablet y ordenador.",
         "Un espacio sencillo para modificarlo todo tú: textos, fotos, noticias. Sin saber programar.",
         "Un blog y noticias incluidos, para publicar tus novedades cuando quieras.",
         "Las bases del posicionamiento (SEO), para que te encuentren en Google.",
       ],
-      businessNote:
-        "Para los comercios, también puedo cuidar tu visibilidad local (ficha de Google, reseñas).",
     },
     pricing: {
       title: "Precios claros, a la vista",
@@ -483,8 +483,9 @@ export const localContent = {
         "¿Una estructura muy pequeña con un presupuesto ajustado? Hablémoslo, algo podremos hacer.",
       serenity: {
         title: "¿Quieres tranquilidad?",
+        optional: "Opcional",
         intro:
-          "Gestionas tu contenido tú, con total autonomía. El plan Tranquilidad (150 € al año, opcional) se ocupa del resto:",
+          "No hay ningún gasto recurrente obligatorio. Pero si prefieres no pensar en nada, el plan Tranquilidad (150 € al año, totalmente opcional) se ocupa de todo:",
         items: [
           "Tu nombre de dominio, renovado sin que tengas que pensar en ello.",
           "Tu web mantenida en línea, actualizada y segura.",
@@ -522,6 +523,7 @@ export const localContent = {
       items: [
         {
           name: "Desert Leaves",
+          image: "/dl-1.jpg",
           meta: "ONG de reforestación (España)",
           text: "Una web bilingüe para presentar sus proyectos y movilizar donaciones y voluntarios. Rápida, clara, fiel a su identidad.",
           href: "https://www.desertleaves.org/en",
@@ -529,6 +531,7 @@ export const localContent = {
         },
         {
           name: "Pignon Libre",
+          image: "/pignon-libre.png",
           meta: "Taller de bicicletas comunitario",
           text: "Una web sencilla para presentar el taller, sus horarios y sus noticias, que el equipo actualiza por sí mismo.",
           href: "https://pignon-libre.vercel.app/",
@@ -540,8 +543,8 @@ export const localContent = {
       title: "Quién soy",
       paragraphs: [
         "Me llamo Adeline, desarrolladora web. Trabajo en remoto, con clientes en Francia, España, los Países Bajos y otros lugares de Europa.",
-        "La economía social y solidaria me importa desde hace años. Creo en el potencial de la economía circular y de una manera de hacer las cosas más responsable, y estoy convencida de que los proyectos con impacto local son los primeros motores del cambio. Por eso me gusta crear webs para estructuras que hacen algo útil: asociaciones, artesanos, comercios de barrio. Proyectos a escala humana, donde conozco a las personas para las que trabajo.",
-        "Mi enfoque se resume en una idea: una web bonita y rápida, que sea de verdad tuya, sin encerrarte en una suscripción o en una tecnología que nadie domina en tu equipo.",
+        "<strong class='font-semibold text-accent'>La economía social y solidaria</strong> me importa desde hace años. Creo en el potencial de la economía circular y de una manera de hacer las cosas más responsable, y estoy convencida de que <strong class='font-semibold text-foreground'>los proyectos con impacto local son los primeros motores del cambio</strong>. Por eso me gusta crear webs para estructuras que hacen algo útil: asociaciones, artesanos, comercios de barrio. Proyectos a escala humana, donde conozco a las personas para las que trabajo.",
+        "Mi enfoque se resume en una idea: una web bonita y rápida, <strong class='font-semibold text-primary'>que sea de verdad tuya</strong>, sin encerrarte en una suscripción o en una tecnología que nadie domina en tu equipo.",
       ],
       link: "Más sobre mi trabajo",
     },
@@ -583,7 +586,7 @@ export const localContent = {
       call: "Reservar una llamada",
     },
   },
-} as const;
+};
 
 export function getLocalContent(lang: Language) {
   return localContent[lang];

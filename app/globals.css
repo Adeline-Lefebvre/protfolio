@@ -112,4 +112,9 @@
   b {
     @apply font-bold;
   }
+  /* Tailwind v4 met les boutons en cursor:default ; on rétablit le pointer. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
 }

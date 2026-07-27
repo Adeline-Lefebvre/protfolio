@@ -228,9 +228,6 @@ export function LocalPage() {
                   ))}
                 </ul>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">
-                {t.includes.businessNote}
-              </p>
             </Reveal>
           </div>
         </section>
@@ -312,9 +309,14 @@ export function LocalPage() {
             <Reveal>
               <div className={`${CARD} mt-8 p-6 md:p-8`}>
                 <div className="h-1 w-12 rounded-full bg-accent" />
-                <h3 className="mt-4 text-xl font-semibold">
-                  {t.pricing.serenity.title}
-                </h3>
+                <div className="mt-4 flex flex-wrap items-center gap-3">
+                  <h3 className="text-xl font-semibold">
+                    {t.pricing.serenity.title}
+                  </h3>
+                  <span className="rounded-full bg-secondary px-3 py-0.5 text-xs font-medium text-muted-foreground">
+                    {t.pricing.serenity.optional}
+                  </span>
+                </div>
                 <p className="mt-3 max-w-prose leading-relaxed text-muted-foreground">
                   {t.pricing.serenity.intro}
                 </p>
@@ -386,17 +388,29 @@ export function LocalPage() {
                   <div
                     className={`${CARD} ${CARD_HOVER} group flex h-full flex-col p-6`}
                   >
-                    <div className="mb-5 overflow-hidden rounded-xl border border-border/60 bg-linear-to-br from-accent/12 to-primary/10">
-                      <div className="flex items-center gap-1.5 border-b border-border/50 bg-background/60 px-3 py-2">
+                    <div className="mb-5 overflow-hidden rounded-xl border border-border/60">
+                      <div className="flex items-center gap-1.5 border-b border-border/50 bg-background/80 px-3 py-2">
                         <span className="h-2.5 w-2.5 rounded-full bg-primary/40" />
                         <span className="h-2.5 w-2.5 rounded-full bg-amber/50" />
                         <span className="h-2.5 w-2.5 rounded-full bg-accent/40" />
                       </div>
-                      <div className="flex h-32 items-center justify-center px-4">
-                        <span className="text-center font-display text-2xl font-semibold text-accent/70">
-                          {item.name}
-                        </span>
-                      </div>
+                      {item.image ? (
+                        <div className="relative h-44 w-full">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            fill
+                            sizes="(min-width: 768px) 40rem, 100vw"
+                            className="object-cover object-top"
+                          />
+                        </div>
+                      ) : (
+                        <div className="flex h-44 items-center justify-center bg-linear-to-br from-accent/12 to-primary/10 px-4">
+                          <span className="text-center font-display text-2xl font-semibold text-accent/70">
+                            {item.name}
+                          </span>
+                        </div>
+                      )}
                     </div>
                     <h3 className="text-xl font-semibold">{item.name}</h3>
                     <p className="mt-1 text-sm font-medium text-accent">
@@ -447,9 +461,8 @@ export function LocalPage() {
                     <p
                       key={paragraph.slice(0, 24)}
                       className="max-w-prose text-lg leading-relaxed text-foreground/75"
-                    >
-                      {paragraph}
-                    </p>
+                      dangerouslySetInnerHTML={{ __html: paragraph }}
+                    />
                   ))}
                   <a
                     href={homeHref}
