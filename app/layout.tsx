@@ -65,6 +65,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body className={`font-sans antialiased`}>
+        <noscript>
+          <style>{`.reveal-anim{opacity:1 !important;transform:none !important}`}</style>
+        </noscript>
         <HtmlLang />
         <StructuredData />
         {children}

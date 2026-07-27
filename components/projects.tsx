@@ -10,6 +10,7 @@ import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef, useEffect, useState } from "react";
+import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 
 function AdaptiveVideoPlayer({
   src,
@@ -25,6 +26,7 @@ function AdaptiveVideoPlayer({
   const [aspectRatio, setAspectRatio] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+  const reducedMotion = usePrefersReducedMotion();
 
   // Lazy load videos when they come into view
   useEffect(() => {
@@ -80,10 +82,11 @@ function AdaptiveVideoPlayer({
         <video
           ref={videoRef}
           src={src}
-          autoPlay
+          autoPlay={!reducedMotion}
           loop
           muted
           playsInline
+          controls={reducedMotion}
           preload="metadata"
           aria-label={`Demo video for ${title}`}
           className="h-full w-full object-contain"
@@ -96,6 +99,7 @@ function AdaptiveVideoPlayer({
 export function Projects() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const reducedMotion = usePrefersReducedMotion();
 
   const projects = [
     {
@@ -173,12 +177,16 @@ export function Projects() {
                   <div className="relative mx-auto w-full aspect-16/8 overflow-hidden rounded-xl bg-slate-800 shadow-2xl">
                     <Carousel
                       className="w-full h-full"
-                      plugins={[
-                        Autoplay({
-                          delay: 3000,
-                          stopOnInteraction: false,
-                        }) as any,
-                      ]}
+                      plugins={
+                        reducedMotion
+                          ? []
+                          : [
+                              Autoplay({
+                                delay: 3000,
+                                stopOnInteraction: true,
+                              }) as any,
+                            ]
+                      }
                       opts={{
                         loop: true,
                       }}

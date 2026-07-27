@@ -14,7 +14,6 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <main
-        role="main"
         aria-label="Portfolio content"
         className="mx-auto max-w-6xl px-6 py-8 md:px-12 lg:px-16"
       >

@@ -19,7 +19,7 @@ export function Reveal({
     <div
       ref={ref}
       style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
-      className={`transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:translate-y-0 ${
+      className={`reveal-anim transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       } ${className}`}
     >

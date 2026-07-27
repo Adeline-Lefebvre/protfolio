@@ -8,8 +8,8 @@ export function AnimatedSection({ children }: { children: React.ReactNode }) {
   return (
     <div
       ref={ref}
-      className={`transition-opacity duration-500 ease-out ${
-        isVisible ? "opacity-100" : "opacity-0"
+      className={`reveal-anim transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       }`}
     >
       {children}

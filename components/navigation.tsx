@@ -1,6 +1,7 @@
 "use client";
 
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Menu, X } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LanguageSelector } from "./language-selector";
 import { useLanguage } from "@/lib/language-context";
@@ -9,6 +10,7 @@ import { getTranslations } from "@/lib/translations";
 export function Navigation() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [open, setOpen] = useState(false);
 
   const navLinks = [
     { href: "#services", label: t.nav.services },
@@ -92,8 +94,43 @@ export function Navigation() {
               <Phone className="h-5 w-5" />
             </a>
           </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="lg:hidden"
+            aria-label="Menu"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
         </div>
       </div>
+      {open && (
+        <div
+          id="mobile-menu"
+          className="border-t border-border/40 bg-background px-6 py-4 md:px-12 lg:hidden"
+        >
+          <div className="flex flex-col gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary/50 hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button asChild size="sm" className="mt-2">
+              <a href="#contact" onClick={() => setOpen(false)}>
+                {t.nav.contact}
+              </a>
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

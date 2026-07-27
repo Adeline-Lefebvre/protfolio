@@ -387,7 +387,7 @@ export function LocalPage() {
               {t.process.steps.map((step, i) => (
                 <Reveal key={step.title} delay={i * 80} className="h-full">
                   <div className={`${CARD} flex h-full gap-5 p-6`}>
-                    <span className="font-display text-4xl font-semibold leading-none text-amber">
+                    <span className="font-display text-4xl font-semibold leading-none text-primary">
                       {i + 1}
                     </span>
                     <div className="min-w-0">
