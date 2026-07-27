@@ -52,13 +52,24 @@ Différence réelle vs la concurrence — c'est *tout* l'argumentaire :
 
 - **Wix / Squarespace** : 13-29 €/mois **pour toujours**. Le jour où on arrête de
   payer, **le site disparaît**. On ne possède rien : c'est une location.
-- **Ce modèle** : site statique, hébergé **réellement gratuitement** (Cloudflare
-  Pages / Netlify free tier — conçu pour ça). Nom de domaine ~12 €/**an** payé en
-  direct **à leur nom**. Le site **leur appartient** (repo Git + contenu Sveltia).
-  On arrête de travailler ensemble ? Le site continue de tourner, gratuitement.
+- **Ce modèle** : site statique, hébergé **sans frais dans un usage normal**
+  (Cloudflare Pages / Netlify free tier — conçu pour ça). Nom de domaine
+  ~12 €/**an** payé en direct **à leur nom**. Le **contenu et le domaine leur
+  appartiennent sans condition** (repo Git + contenu Sveltia). On arrête de
+  travailler ensemble ? Le site continue de tourner.
 
 Valeurs portées : autonomie, pas de rente, pas de dépendance. Aucun Wix ne peut
 le dire.
+
+> ⚠️ **Deux sur-promesses à ne PAS formuler telles quelles** (voir §7) :
+> - **« Gratuit à vie »** — faux : le free tier des hébergeurs et les quotas de
+>   formulaires (Netlify Forms = 100/mois) peuvent changer ou sauter au pire
+>   moment (event à 300 inscrits). Dire *« sans frais d'hébergement dans un usage
+>   normal, hébergeur tiers dont les conditions peuvent évoluer »*.
+> - **« Le site vous appartient »** (au sens autonomie totale) — demi-fiction pour
+>   un non-technicien qui ne sait ni build, ni déployer, ni migrer un repo Git.
+>   Séparer honnêtement : *contenu + domaine = à vous sans condition* (ça suffit
+>   déjà à battre Wix) vs *infra technique = à vous, mais évolutions par un dev*.
 
 ---
 
@@ -97,9 +108,16 @@ et très rassurant pour une asso.
 Pas d'abonnement mensuel « à vie » (ce que ce public fuit — engagement flou,
 mauvaise visibilité budgétaire). À la place :
 
-> **Forfait tranquillité — ~150 €/an, renouvelable, résiliable.** Mises à jour,
-> petites modifs, réponses aux questions. Payé une fois l'an → colle au cycle
-> budgétaire des assos (subventions, AG).
+> **Forfait tranquillité — ~150 €/an, renouvelable, résiliable.** Payé une fois
+> l'an → colle au cycle budgétaire des assos (subventions, AG).
+
+⚠️ **À borner impérativement** (150 €/an ≈ 2 h au TJM → une seule montée de
+version qui casse le build rend l'année déficitaire, + risque d'anti-sélection :
+les plus demandeuses le prennent). Définir noir sur blanc :
+- **Inclus** : jusqu'à **X modifs de contenu/an** + réponses aux questions sous
+  Y jours ouvrés.
+- **Hors forfait, devisé à part** : montées de version, mises à jour techniques/
+  sécurité, évolutions de fonctionnalités.
 
 - Celles qui veulent gérer seules : **rien**, elles sont autonomes.
 - Celles qui veulent : forfait annuel **ou** modifs facturées à l'acte.
@@ -173,10 +191,68 @@ Ordre validé (à détailler en session B : message, ton, visuel de chaque secti
 
 ---
 
+## 6bis. Risques & garde-fous (issus d'une review adversariale)
+
+La note gagne la bataille du *positionnement* mais doit combler des trous
+d'*exécution et de risque*. Rien ne condamne le projet — ce sont des garde-fous.
+
+### 🔴 À régler AVANT de vendre le 1er site
+- **Juridique / responsabilité** : en micro-entreprise = responsabilité
+  illimitée sur les biens propres. Rédiger **CGV + contrat type** (périmètre,
+  **acompte 30-40 % à la commande**, garantie bugs bornée ex. 30 j après
+  livraison, exclusion de responsabilité sur les hébergeurs tiers, contenu du
+  forfait annuel). Souscrire une **RC Pro** (~100-200 €/an) — non négociable dès
+  qu'on manipule inscriptions / données d'adhérents.
+- **RGPD** : dès qu'il y a un formulaire (inscription, annuaire), il y a
+  traitement de données. Un site statique n'a pas de backend → les données
+  passent par un **tiers** (préférer un service hébergé UE). Livrer avec chaque
+  site : **mentions légales + politique de confidentialité** ; clause précisant
+  que **l'asso est responsable de traitement**.
+- **Reformuler les 2 sur-promesses** (voir encadré §2) : « gratuit à vie » et
+  « le site vous appartient ».
+
+### 🟠 À cadrer avant de dépasser 3-4 sites
+- **Forfait 150 €/an** : le borner (voir §3) sinon déficitaire sur les plus
+  demandeurs.
+- **Dépendance à Sveltia** (projet open-source quasi mono-mainteneur) = risque
+  systémique sur tout le parc. Identifier un **plan B CMS** (Decap, Tina) et ne
+  jamais promettre au client une pérennité que l'upstream ne garantit pas.
+- **Auth & accès Sveltia** : trancher l'archi — compte GitHub du client (vraie
+  autonomie, onboarding lourd) vs auth via infra perso (simple, mais casse la
+  promesse de propriété). **Runbook accès** : ajouter/retirer un éditeur quand le
+  bureau de l'asso tourne (turnover associatif énorme → support récurrent garanti).
+- **Procédure de sortie / passation** (transfert repo + hébergeur + domaine +
+  export contenu), documentée une fois en Loom. C'est ce qui *prouve* le pitch
+  anti-otage.
+
+### 🟡 Frictions & cohérence
+- **Délai « 10 j »** incompatible avec des missions premium en parallèle →
+  remplacer par « selon disponibilité, planning annoncé à la commande ».
+- **Module inscriptions/billetterie** : un site statique ne le fait pas nativement.
+  S'appuyer sur **HelloAsso** (standard associatif français, gratuit pour l'asso)
+  plutôt que de facturer une usine à gaz fragile. Repositionner en « intégration
+  propre de HelloAsso ».
+- **Domaine « à leur nom »** : risque d'expiration au turnover (mail du bénévole
+  mort). Consigne écrite : registrar recommandé, **renouvellement auto activé**,
+  contact = **adresse générique de l'asso**, moi en contact technique secondaire.
+- **Trésorerie** : les assos paient sur décision de bureau/CA, souvent en retard.
+  L'acompte à la commande (déjà dans les CGV ci-dessus) couvre ce risque.
+
+### Ajout au test de marché
+Sur les 5 premiers sites, **mesurer le coût de support réel post-livraison**
+(heures de SAV non facturé sur 6 mois). C'est *ça* qui dira si B est soutenable,
+pas seulement le fait d'arriver à en vendre 5.
+
+---
+
 ## 6. Prochaines étapes
 
 - [ ] **Terminer Pignon Libre**, puis l'ajouter au portfolio comme étude de cas
       (sert aussi de preuve/référence pour cette offre).
+- [ ] **Bloquants juridiques/risque (§6bis)** : CGV + contrat type, RC Pro,
+      templates mentions légales + politique de confidentialité, reformulation des
+      2 sur-promesses. À faire **avant la 1re vente**.
+- [ ] **Trancher l'archi d'auth Sveltia** + identifier le plan B CMS (Decap/Tina).
 - [ ] **Session B** : rédiger le message de chaque section + direction visuelle.
 - [ ] **Construire la route `/assos`** (3a), liens relatifs.
 - [ ] **Productiser légèrement** : formulaire de collecte de contenu obligatoire
