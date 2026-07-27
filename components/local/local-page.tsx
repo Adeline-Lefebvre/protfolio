@@ -11,6 +11,17 @@ import {
   Mail,
   Phone,
   MapPin,
+  Building2,
+  Sparkles,
+  PiggyBank,
+  Palette,
+  Smartphone,
+  SquarePen,
+  Newspaper,
+  Search,
+  Globe,
+  ShieldCheck,
+  LifeBuoy,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,6 +41,15 @@ const EMAIL = "mailto:adeline.lefe@gmail.com";
 const CALENDLY = "https://calendly.com/adeline-lefebvre/15min";
 
 const PROMISE_ICONS = [Zap, KeyRound, Leaf] as const;
+const FORWHO_ICONS = [Building2, Sparkles, PiggyBank, KeyRound] as const;
+const INCLUDES_ICONS = [
+  Palette,
+  Smartphone,
+  SquarePen,
+  Newspaper,
+  Search,
+] as const;
+const SERENITY_ICONS = [Globe, ShieldCheck, LifeBuoy] as const;
 
 const CARD =
   "rounded-2xl border border-border/70 bg-card shadow-[0_1px_2px_rgba(42,42,40,0.04),0_18px_36px_-24px_rgba(47,74,60,0.16)]";
@@ -156,20 +176,26 @@ export function LocalPage() {
               <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
                 {t.forWho.title}
               </h2>
-              <div className={`${CARD} p-6 md:p-8`}>
-                <ul className="grid gap-4 sm:grid-cols-2">
-                  {t.forWho.items.map((item) => (
-                    <li key={item} className="flex min-w-0 items-start gap-3">
-                      <Check
-                        className="mt-1 h-5 w-5 shrink-0 text-primary"
-                        aria-hidden="true"
-                      />
-                      <span className="text-lg leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </Reveal>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {t.forWho.items.map((item, i) => {
+                const Icon = FORWHO_ICONS[i];
+                return (
+                  <Reveal key={item} delay={i * 70} className="h-full">
+                    <div
+                      className={`${CARD} ${CARD_HOVER} flex h-full items-start gap-4 p-5`}
+                    >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/15">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <span className="min-w-0 text-lg leading-relaxed">
+                        {item}
+                      </span>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </div>
           </div>
         </section>
 
@@ -215,20 +241,22 @@ export function LocalPage() {
               <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
                 {t.includes.title}
               </h2>
-              <div className={`${CARD} p-6 md:p-8`}>
-                <ul className="grid gap-4 sm:grid-cols-2">
-                  {t.includes.items.map((item) => (
-                    <li key={item} className="flex min-w-0 items-start gap-3">
-                      <Check
-                        className="mt-0.5 h-5 w-5 shrink-0 text-primary"
-                        aria-hidden="true"
-                      />
-                      <span className="leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </Reveal>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {t.includes.items.map((item, i) => {
+                const Icon = INCLUDES_ICONS[i];
+                return (
+                  <Reveal key={item} delay={i * 70} className="h-full">
+                    <div className={`${CARD} ${CARD_HOVER} flex h-full gap-4 p-5`}>
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/15">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <span className="min-w-0 leading-relaxed">{item}</span>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </div>
           </div>
         </section>
 
@@ -320,17 +348,21 @@ export function LocalPage() {
                 <p className="mt-3 max-w-prose leading-relaxed text-muted-foreground">
                   {t.pricing.serenity.intro}
                 </p>
-                <ul className="mt-4 space-y-2">
-                  {t.pricing.serenity.items.map((item) => (
-                    <li key={item} className="flex min-w-0 items-start gap-2">
-                      <Check
-                        className="mt-0.5 h-4 w-4 shrink-0 text-primary"
-                        aria-hidden="true"
-                      />
-                      <span className="leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="mt-5 grid gap-4 sm:grid-cols-3">
+                  {t.pricing.serenity.items.map((item, i) => {
+                    const Icon = SERENITY_ICONS[i];
+                    return (
+                      <div key={item} className="rounded-xl bg-secondary/40 p-4">
+                        <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent ring-1 ring-accent/15">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {item}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
                 <p className="mt-4 max-w-prose leading-relaxed text-muted-foreground">
                   {t.pricing.serenity.outro}
                 </p>
@@ -523,7 +555,7 @@ export function LocalPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild size="lg">
-                  <a href={EMAIL}>
+                  <a href={EMAIL} target="_blank" rel="noopener noreferrer">
                     <Mail className="mr-2 h-4 w-4" />
                     {t.cta.email}
                   </a>
@@ -542,7 +574,7 @@ export function LocalPage() {
               </div>
               <p className="mt-8 flex items-center gap-2 text-sm text-background/60">
                 <MapPin className="h-4 w-4" />
-                France · España · Nederland
+                {t.cta.location}
               </p>
             </Reveal>
           </div>

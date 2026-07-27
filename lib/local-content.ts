@@ -143,7 +143,7 @@ export const localContent = {
         },
         {
           name: "Pignon Libre",
-          image: "/pignon-libre.png",
+          image: "/pignon-libre.webp",
           meta: "Atelier vélo associatif",
           text: "Un site simple pour présenter l'atelier, les permanences et les actualités, que l'équipe met à jour elle-même.",
           href: "https://pignon-libre.vercel.app/",
@@ -196,6 +196,7 @@ export const localContent = {
         "Pas encore sûr de votre budget ou de ce qu'il vous faut ? Écrivez-moi quand même, je vous oriente avec plaisir.",
       email: "Me contacter",
       call: "Prendre rendez-vous",
+      location: "À distance, en Europe et au-delà",
     },
   },
 
@@ -337,7 +338,7 @@ export const localContent = {
         },
         {
           name: "Pignon Libre",
-          image: "/pignon-libre.png",
+          image: "/pignon-libre.webp",
           meta: "Community bike workshop",
           text: "A simple site for the workshop, its opening hours and news, that the team updates itself.",
           href: "https://pignon-libre.vercel.app/",
@@ -390,6 +391,7 @@ export const localContent = {
         "Not sure about your budget or what you need yet? Write to me anyway, I'm happy to point you in the right direction.",
       email: "Get in touch",
       call: "Book a call",
+      location: "Remote, across Europe and beyond",
     },
   },
 
@@ -531,7 +533,7 @@ export const localContent = {
         },
         {
           name: "Pignon Libre",
-          image: "/pignon-libre.png",
+          image: "/pignon-libre.webp",
           meta: "Taller de bicicletas comunitario",
           text: "Una web sencilla para presentar el taller, sus horarios y sus noticias, que el equipo actualiza por sí mismo.",
           href: "https://pignon-libre.vercel.app/",
@@ -584,6 +586,7 @@ export const localContent = {
         "¿Todavía no tienes claro tu presupuesto o lo que necesitas? Escríbeme igualmente, te oriento con mucho gusto.",
       email: "Contactar",
       call: "Reservar una llamada",
+      location: "En remoto, por Europa y más allá",
     },
   },
 };
