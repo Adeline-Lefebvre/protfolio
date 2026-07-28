@@ -40,22 +40,23 @@ function PageTabs({
   localLabel: string;
   onLocal: boolean;
 }) {
-  const tab = "rounded-full px-3 py-1.5 text-sm font-medium transition-colors";
+  const tab =
+    "px-4 py-2 text-sm font-medium outline-none transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring";
   const activeCls = "bg-primary text-primary-foreground";
   const idleCls = "text-muted-foreground hover:text-foreground";
   return (
-    <div className="fixed left-6 top-6 z-50 flex rounded-full border border-border/50 bg-background/70 p-1 backdrop-blur">
+    <div className="fixed left-6 top-6 z-50 flex overflow-hidden rounded-full border border-border/50 bg-background/70 backdrop-blur">
       <a
         href={homeHref}
         aria-current={!onLocal ? "page" : undefined}
-        className={`${tab} ${!onLocal ? activeCls : idleCls} ${FOCUS}`}
+        className={`${tab} ${!onLocal ? activeCls : idleCls}`}
       >
         Portfolio
       </a>
       <a
         href={localHref}
         aria-current={onLocal ? "page" : undefined}
-        className={`${tab} ${onLocal ? activeCls : idleCls} ${FOCUS}`}
+        className={`${tab} ${onLocal ? activeCls : idleCls}`}
       >
         {localLabel}
       </a>
