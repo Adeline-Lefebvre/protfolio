@@ -68,7 +68,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
   return (
     <nav
       aria-label="Sections"
-      className="fixed left-6 top-1/2 z-40 hidden -translate-y-1/2 2xl:block"
+      className="fixed left-5 top-1/2 z-40 hidden -translate-y-1/2 xl:block"
     >
       <ul className="flex flex-col gap-4">
         {sections.map((s) => {
@@ -107,7 +107,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
 
 function SocialDock() {
   return (
-    <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 2xl:flex">
+    <div className="fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 xl:flex">
       <div className="flex flex-col items-center gap-1 rounded-full border border-border/50 bg-background/70 p-2 backdrop-blur">
         {SOCIALS.map(({ href, label, Icon }) => (
           <a
@@ -131,7 +131,7 @@ function SocialDock() {
 function MobileMenu({ sections }: { sections: Section[] }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed right-6 top-6 z-50 2xl:hidden">
+    <div className="fixed right-6 top-6 z-50 xl:hidden">
       <div className="flex items-center gap-1 rounded-full border border-border/50 bg-background/70 p-1 backdrop-blur">
         <LanguageSelector />
         <Button

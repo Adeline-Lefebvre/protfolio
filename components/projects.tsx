@@ -75,8 +75,7 @@ function AdaptiveVideoPlayer({
     return (
       <div
         ref={containerRef}
-        className="relative h-full overflow-hidden bg-slate-900"
-        style={{ aspectRatio: (aspectRatio ?? 9 / 16).toString() }}
+        className="relative h-full w-full overflow-hidden bg-slate-900"
       >
         {(isLoading || !isVisible) && (
           <div className="absolute inset-0 animate-pulse bg-slate-800" />
@@ -198,7 +197,11 @@ export function Projects() {
             key={project.title}
             className={`flex ${project.layout === "mobile" ? "flex-row" : "flex-col"} gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5`}
           >
-            <div className={project.layout === "mobile" ? "shrink-0" : ""}>
+            <div
+              className={
+                project.layout === "mobile" ? "w-36 shrink-0 sm:w-44" : ""
+              }
+            >
               {project.video &&
                 (project.layout === "mobile" ? (
                   <AdaptiveVideoPlayer
@@ -296,7 +299,7 @@ export function Projects() {
         </h3>
         <div className="grid gap-6 md:grid-cols-2">
           <Card className="flex flex-row gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-            <div className="shrink-0">
+            <div className="w-36 shrink-0 sm:w-44">
               <AdaptiveVideoPlayer
                 src="pepstery.webm"
                 title={t.projects.pepstery.title}
