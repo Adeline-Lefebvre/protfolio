@@ -10,8 +10,6 @@ import {
   ArrowUpRight,
   Mail,
   Phone,
-  Github,
-  Linkedin,
   MapPin,
   Building2,
   Sparkles,
@@ -32,8 +30,8 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { LanguageSelector } from "@/components/language-selector";
 import { Footer } from "@/components/footer";
+import { LocalNav } from "@/components/nav/site-nav";
 import { Reveal } from "@/components/local/reveal";
 import { TopoField, HandUnderline } from "@/components/local/topo";
 import { Eyebrow } from "@/components/eyebrow";
@@ -81,91 +79,11 @@ export function LocalPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-12 lg:px-16">
-          <div className="flex items-center gap-8">
-            <a
-              href="#top"
-              className={`shrink-0 whitespace-nowrap text-lg font-semibold tracking-tight ${LINK_FOCUS}`}
-            >
-              Adeline Lefebvre
-            </a>
-            <div className="hidden items-center gap-1 lg:flex">
-              <a
-                href="#pricing"
-                className={`px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground ${LINK_FOCUS}`}
-              >
-                {t.nav.pricing}
-              </a>
-              <a
-                href="#work"
-                className={`px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground ${LINK_FOCUS}`}
-              >
-                {t.nav.work}
-              </a>
-              <a
-                href={homeHref}
-                className={`px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground ${LINK_FOCUS}`}
-              >
-                {t.nav.home}
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <LanguageSelector />
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://github.com/Adeline-Lefebvre"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://www.linkedin.com/in/adeline-lefebvre-600b46aa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              asChild
-              className="hidden sm:inline-flex"
-            >
-              <a href="mailto:adeline.lefe@gmail.com" aria-label="Email">
-                <Mail className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              asChild
-              className="hidden sm:inline-flex"
-            >
-              <a
-                href="https://calendly.com/adeline-lefebvre/15min"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Phone call"
-              >
-                <Phone className="h-5 w-5" />
-              </a>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <LocalNav />
 
       <main id="top">
         {/* Hero */}
-        <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28">
+        <section className="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-28">
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
             <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
             <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
@@ -204,7 +122,10 @@ export function LocalPage() {
         </section>
 
         {/* Pour qui */}
-        <section className="bg-secondary/50 py-20 md:py-28">
+        <section
+          id="forwho"
+          className="scroll-mt-24 bg-secondary/50 py-20 md:py-28"
+        >
           <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.forWho}</Eyebrow>

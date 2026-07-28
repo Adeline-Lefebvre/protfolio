@@ -5,17 +5,17 @@ import { Projects } from "@/components/projects";
 import { About } from "@/components/about";
 import { Testimonial } from "@/components/testimonial";
 import { Contact } from "@/components/contact";
-import { Navigation } from "@/components/navigation";
+import { HomeNav } from "@/components/nav/site-nav";
 import { AnimatedSection } from "@/components/animated-section";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navigation />
+      <HomeNav />
       <main
         aria-label="Portfolio content"
-        className="mx-auto max-w-6xl px-6 pt-8 md:px-12 lg:px-16"
+        className="mx-auto max-w-6xl px-6 pt-20 md:px-12 lg:px-16"
       >
         <Hero />
         <AnimatedSection>
