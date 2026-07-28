@@ -135,6 +135,7 @@ function SocialDock() {
 
 function MobileMenu({ sections }: { sections: Section[] }) {
   const [open, setOpen] = useState(false);
+  const contact = sections.find((s) => s.id === "contact");
   return (
     <div className="fixed right-6 top-6 z-50 2xl:hidden">
       <div className="flex items-center gap-1 rounded-full border border-border/50 bg-background/70 p-1 backdrop-blur">
@@ -152,6 +153,15 @@ function MobileMenu({ sections }: { sections: Section[] }) {
       </div>
       {open && (
         <div className="mt-2 w-56 rounded-2xl border border-border/50 bg-background/95 p-3 shadow-lg backdrop-blur">
+          {contact && (
+            <a
+              href={`#${contact.id}`}
+              onClick={() => setOpen(false)}
+              className="mb-3 block rounded-full bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground"
+            >
+              {contact.label}
+            </a>
+          )}
           <ul className="flex flex-col">
             {sections.map((s) => (
               <li key={s.id}>
@@ -244,6 +254,7 @@ export function LocalNav() {
     { id: "pricing", label: c.eyebrows.pricing },
     { id: "work", label: c.eyebrows.work },
     { id: "testimonials", label: t.testimonial.eyebrow },
+    { id: "faq", label: c.eyebrows.faq },
     { id: "contact", label: c.eyebrows.contact },
   ];
   return (

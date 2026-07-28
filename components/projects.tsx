@@ -343,6 +343,12 @@ export function Projects() {
           </div>
         </div>
       </div>
+
+      <div className="mt-16 flex justify-center">
+        <Button asChild size="lg">
+          <a href="#contact">{t.nav.contact}</a>
+        </Button>
+      </div>
     </section>
   );
 }

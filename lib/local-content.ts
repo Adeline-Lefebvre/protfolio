@@ -69,7 +69,7 @@ export const localContent = {
         "Un design sur mesure, à votre image.",
         "Un site impeccable sur mobile, tablette et ordinateur.",
         "Un espace simple pour tout modifier vous-même : textes, photos, actualités. Sans savoir coder.",
-        "Un blog, des actualités et un agenda d'événements inclus, pour partager vos nouvelles et vos dates.",
+        "Un blog, des actualités et un agenda d'événements (dès la formule Le site), pour partager vos nouvelles et vos dates.",
         "Les bases du référencement, pour qu'on vous trouve sur Google.",
       ],
     },
@@ -188,6 +188,14 @@ export const localContent = {
           q: "Est-ce que je peux vendre ou prendre des inscriptions en ligne ?",
           a: "Oui. Selon vos besoins, j'intègre une solution simple et fiable, par exemple pour les dons, la billetterie ou les inscriptions. On choisit ensemble ce qui vous convient.",
         },
+        {
+          q: "Et mes données, celles de mes adhérents ou de mes clients ?",
+          a: "Votre site est livré avec ses mentions légales et une politique de confidentialité conformes au RGPD. Les données restent les vôtres, hébergées en Europe. Dès qu'il y a un formulaire ou un espace adhérents, on cadre ensemble ce qui est collecté, et pourquoi.",
+        },
+        {
+          q: "Comment on démarre, côté paiement ?",
+          a: "Un devis clair, sans surprise, puis un acompte de 30 % pour lancer le travail, le solde à la mise en ligne. Pas d'abonnement caché : vous payez le site une fois, il est à vous.",
+        },
       ],
     },
     cta: {
@@ -280,7 +288,7 @@ export const localContent = {
         "A custom design, true to who you are.",
         "A site that looks great on mobile, tablet and desktop.",
         "A simple dashboard to edit everything yourself: text, photos, news. No coding needed.",
-        "A blog, news and an events calendar included, to share your updates and your dates.",
+        "A blog, news and an events calendar (from The website plan), to share your updates and your dates.",
         "The basics of SEO, so people find you on Google.",
       ],
     },
@@ -399,6 +407,14 @@ export const localContent = {
           q: "Can I sell or take registrations online?",
           a: "Yes. Depending on your needs, I integrate a simple, reliable solution, for example for donations, ticketing or registrations. We choose together what suits you.",
         },
+        {
+          q: "What about my data, and my members' or customers' data?",
+          a: "Your site ships with its legal notice and a privacy policy, GDPR-compliant. The data stays yours, hosted in Europe. As soon as there's a form or a members area, we scope together what's collected, and why.",
+        },
+        {
+          q: "How do we get started, payment-wise?",
+          a: "A clear quote, no surprises, then a 30% deposit to kick off the work, the balance on go-live. No hidden subscription: you pay for the site once, and it's yours.",
+        },
       ],
     },
     cta: {
@@ -492,7 +508,7 @@ export const localContent = {
         "Un diseño a medida, con tu identidad.",
         "Una web impecable en móvil, tablet y ordenador.",
         "Un espacio sencillo para modificarlo todo tú: textos, fotos, noticias. Sin saber programar.",
-        "Un blog, noticias y una agenda de eventos incluidos, para compartir tus novedades y tus fechas.",
+        "Un blog, noticias y una agenda de eventos (desde el plan La web), para compartir tus novedades y tus fechas.",
         "Las bases del posicionamiento (SEO), para que te encuentren en Google.",
       ],
     },
@@ -610,6 +626,14 @@ export const localContent = {
         {
           q: "¿Puedo vender o gestionar inscripciones en línea?",
           a: "Sí. Según tus necesidades, integro una solución sencilla y fiable, por ejemplo para donaciones, venta de entradas o inscripciones. Elegimos juntos lo que mejor te convenga.",
+        },
+        {
+          q: "¿Y mis datos, o los de mis socios o clientes?",
+          a: "Tu web se entrega con su aviso legal y una política de privacidad conformes al RGPD. Los datos siguen siendo tuyos, alojados en Europa. En cuanto hay un formulario o un área de socios, definimos juntos qué se recoge, y para qué.",
+        },
+        {
+          q: "¿Cómo empezamos, en cuanto al pago?",
+          a: "Un presupuesto claro, sin sorpresas, y luego un anticipo del 30 % para arrancar, el resto al publicar. Sin suscripción oculta: pagas la web una vez y es tuya.",
         },
       ],
     },

@@ -296,9 +296,12 @@ export function LocalPage() {
             </div>
 
             <div className="mt-6 flex justify-center">
-              <p className="rounded-full bg-accent/10 px-4 py-2 text-center text-sm text-accent">
+              <a
+                href="#contact"
+                className="rounded-full bg-accent/10 px-4 py-2 text-center text-sm text-accent transition-colors hover:bg-accent/20"
+              >
                 {t.pricing.solidarity}
-              </p>
+              </a>
             </div>
 
             {/* Forfait Sérénité */}
@@ -341,6 +344,12 @@ export function LocalPage() {
                 </p>
               </div>
             </Reveal>
+
+            <div className="mt-12 flex justify-center">
+              <Button asChild size="lg">
+                <a href="#contact">{t.nav.cta}</a>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -520,7 +529,7 @@ export function LocalPage() {
               <h2 className="mb-6 text-3xl tracking-tight text-background md:text-4xl">
                 {t.cta.title}
               </h2>
-              <p className="max-w-2xl text-lg leading-relaxed text-background/80">
+              <p className="max-w-2xl text-lg leading-relaxed text-background/90">
                 {t.cta.text}
               </p>
               <p className="mt-3 max-w-2xl leading-relaxed text-background/90">
