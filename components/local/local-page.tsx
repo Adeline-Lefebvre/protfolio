@@ -209,7 +209,7 @@ export function LocalPage() {
                 return (
                   <Reveal key={item} delay={i * 70} className="h-full">
                     <div
-                      className={`${CARD} ${CARD_HOVER} flex h-full items-start gap-4 p-5`}
+                      className={`${CARD} ${CARD_HOVER} flex h-full items-center gap-4 p-5`}
                     >
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/15">
                         <Icon className="h-5 w-5" />
