@@ -90,8 +90,7 @@ export const localContent = {
       modules: [
         "Petites annonces ou catalogue : à partir de 300 €",
         "Billetterie, inscriptions ou dons en ligne : à partir de 250 €",
-        "Galerie ou réalisations (photos, avant-après) : à partir de 150 €",
-        "Espace adhérents (documents privés) : sur devis",
+        "Espace adhérents : sur devis",
       ],
       solidarity:
         "Une toute petite structure avec un budget serré ? Parlons-en, on trouvera une solution.",
@@ -302,8 +301,7 @@ export const localContent = {
       modules: [
         "Listings or catalogue: from €300",
         "Ticketing, registrations or online donations: from €250",
-        "Gallery or past work (photos, before/after): from €150",
-        "Members area (private documents): on request",
+        "Members area: on request",
       ],
       solidarity:
         "A very small group on a tight budget? Let's talk, we'll work something out.",
@@ -515,8 +513,7 @@ export const localContent = {
       modules: [
         "Anuncios clasificados o catálogo: desde 300 €",
         "Venta de entradas, inscripciones o donaciones en línea: desde 250 €",
-        "Galería o trabajos realizados (fotos, antes/después): desde 150 €",
-        "Área de socios (documentos privados): a consultar",
+        "Área de socios: a consultar",
       ],
       solidarity:
         "¿Una estructura muy pequeña con un presupuesto ajustado? Hablémoslo, algo podremos hacer.",
