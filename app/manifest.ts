@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "A. Lefebvre",
     description:
       "Freelance fullstack developer: Next.js apps with AI, custom WordPress & Craft CMS sites, and long-term maintenance.",
-    start_url: "/",
+    start_url: "/en",
     display: "standalone",
     background_color: "#fbf7f0",
     theme_color: "#d97757",

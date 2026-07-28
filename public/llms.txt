@@ -1,0 +1,23 @@
+# Adeline Lefebvre
+
+> Développeuse web fullstack freelance (FR/EN/ES), basée en Espagne et disponible en remote partout en Europe. Spécialisée Next.js/React et intégration d'IA (Claude, Mistral), plus sites sur-mesure WordPress et Craft CMS. Freelance fullstack web developer. Desarrolladora web fullstack freelance.
+
+## Services
+- Applications web Next.js / React sur-mesure
+- Intégration d'IA (Claude API, Mistral)
+- Sites vitrines et sur-mesure (WordPress, Craft CMS, headless CMS)
+- Sites web pour associations, artisans et commerces de proximité (offre "local", dès 500 €)
+- Maintenance, référencement et sites multilingues (FR/EN/ES)
+
+## Pages
+- [Portfolio (EN)](https://adelinelefebvre.com/en): freelance fullstack web developer, projects and services
+- [Portfolio (FR)](https://adelinelefebvre.com/fr): développeuse web fullstack freelance, projets et services
+- [Portfolio (ES)](https://adelinelefebvre.com/es): desarrolladora web fullstack freelance, proyectos y servicios
+- [Sites de proximité (FR)](https://adelinelefebvre.com/fr/local): sites pour associations, artisans et commerces, dès 500 €
+- [Websites for local organisations (EN)](https://adelinelefebvre.com/en/local): affordable websites for nonprofits and small local businesses
+- [Diseño web para asociaciones y comercios (ES)](https://adelinelefebvre.com/es/local): webs para asociaciones, autónomos y comercios locales
+
+## Contact
+- Email: adeline.lefe@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/adeline-lefebvre-600b46aa/)
+- [GitHub](https://github.com/Adeline-Lefebvre)
