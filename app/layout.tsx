@@ -1,10 +1,8 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { Inter, Fraunces } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-import { StructuredData } from "@/components/structured-data";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,19 +55,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+// Le layout racine reste statique (SSG) : <html>/<body> obligatoires ici.
+// La locale n'est pas connue à ce niveau (segment enfant [locale]), donc le
+// `lang` est ajusté côté client depuis [locale]/layout. Les hreflang portent
+// le signal de langue pour les moteurs.
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = (await headers()).get("x-locale") ?? "en";
   return (
-    <html lang={locale} className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body className={`font-sans antialiased`}>
         <noscript>
           <style>{`.reveal-anim{opacity:1 !important;transform:none !important}`}</style>
         </noscript>
-        <StructuredData />
         {children}
         <Analytics />
       </body>

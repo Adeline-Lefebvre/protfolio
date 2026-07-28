@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { LanguageProvider } from "@/lib/language-context";
 import { getMetadata } from "@/lib/metadata";
+import { StructuredData } from "@/components/structured-data";
 import type { Language } from "@/lib/translations";
 
 export async function generateStaticParams() {
@@ -77,5 +78,16 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  return <LanguageProvider initialLocale={locale as Locale}>{children}</LanguageProvider>;
+  return (
+    <LanguageProvider initialLocale={locale as Locale}>
+      {/* Ajuste <html lang> côté client (le layout racine reste statique). */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang=${JSON.stringify(locale)}`,
+        }}
+      />
+      <StructuredData locale={locale as Language} />
+      {children}
+    </LanguageProvider>
+  );
 }

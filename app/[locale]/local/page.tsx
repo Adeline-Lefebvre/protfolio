@@ -5,6 +5,14 @@ import { getLocalContent } from "@/lib/local-content";
 import type { Language } from "@/lib/translations";
 import { LocalPage } from "@/components/local/local-page";
 
+const BASE = "https://adelinelefebvre.com";
+
+const SERVICE_TYPE: Record<Language, string> = {
+  fr: "Création de site web pour associations, artisans et commerces",
+  en: "Website design for nonprofits, craftspeople and local shops",
+  es: "Diseño web para asociaciones, autónomos y comercios locales",
+};
+
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
 }
@@ -47,7 +55,7 @@ export async function generateMetadata({
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: "Adeline Lefebvre",
+          alt: meta.title,
         },
       ],
     },
@@ -71,5 +79,55 @@ export default async function LocalRoute({
     notFound();
   }
 
-  return <LocalPage />;
+  const c = getLocalContent(locale as Language);
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: locale,
+    mainEntity: c.faq.items.map((it) => ({
+      "@type": "Question",
+      name: it.q,
+      acceptedAnswer: { "@type": "Answer", text: it.a },
+    })),
+  };
+
+  const serviceLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: SERVICE_TYPE[locale as Language],
+    provider: { "@id": `${BASE}/#person` },
+    areaServed: [{ "@type": "Place", name: "Europe" }],
+    url: `${BASE}/${locale}/local`,
+    offers: [
+      {
+        "@type": "Offer",
+        name: c.pricing.essential.name,
+        price: "500",
+        priceCurrency: "EUR",
+        description: c.pricing.essential.text,
+      },
+      {
+        "@type": "Offer",
+        name: c.pricing.site.name,
+        price: "900",
+        priceCurrency: "EUR",
+        description: c.pricing.site.text,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+      />
+      <LocalPage />
+    </>
+  );
 }
