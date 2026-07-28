@@ -37,7 +37,7 @@ export function Services() {
               className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${
                 featured
                   ? "bg-primary text-primary-foreground"
-                  : "bg-accent/10 text-accent ring-1 ring-accent/15"
+                  : "bg-accent text-background"
               }`}
             >
               <Icon className="h-5 w-5" />

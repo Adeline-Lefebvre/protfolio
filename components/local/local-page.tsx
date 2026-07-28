@@ -54,6 +54,11 @@ const INCLUDES_ICONS = [
   Search,
 ] as const;
 const SERENITY_ICONS = [Globe, ShieldCheck, LifeBuoy] as const;
+const CHIP_COLORS = [
+  "bg-accent text-background",
+  "bg-primary text-primary-foreground",
+  "bg-amber text-amber-foreground",
+] as const;
 
 const CARD =
   "rounded-2xl border border-border/70 bg-card shadow-[0_1px_2px_rgba(42,42,40,0.04),0_18px_36px_-24px_rgba(47,74,60,0.16)]";
@@ -172,7 +177,7 @@ export function LocalPage() {
                 {t.hero.titlePre}
                 <span className="relative inline-block">
                   <em className="font-normal italic">{t.hero.titleEm}</em>
-                  <HandUnderline className="absolute -bottom-2 left-0 h-2.5 w-full text-amber" />
+                  <HandUnderline className="draw-underline absolute -bottom-2 left-0 h-2.5 w-full text-amber" />
                 </span>
                 {t.hero.titlePost}
               </h1>
@@ -211,7 +216,9 @@ export function LocalPage() {
                     <div
                       className={`${CARD} ${CARD_HOVER} flex h-full items-center gap-4 p-5`}
                     >
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/15">
+                      <div
+                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${CHIP_COLORS[i % 3]}`}
+                      >
                         <Icon className="h-5 w-5" />
                       </div>
                       <span className="min-w-0 text-lg leading-relaxed">
@@ -226,7 +233,7 @@ export function LocalPage() {
         </section>
 
         {/* Ce qui change avec moi (bande vert sapin) */}
-        <section className="relative overflow-hidden bg-accent py-20 text-background md:py-28">
+        <section className="relative overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28">
           <TopoField className="pointer-events-none absolute -left-24 top-0 h-[42rem] w-[42rem] text-background/[0.05]" />
           <TopoField className="pointer-events-none absolute -right-32 bottom-0 h-[38rem] w-[38rem] text-background/[0.04]" />
           <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
@@ -276,7 +283,9 @@ export function LocalPage() {
                     <div
                       className={`${CARD} ${CARD_HOVER} flex h-full items-center gap-4 p-5`}
                     >
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/15">
+                      <div
+                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${CHIP_COLORS[i % 3]}`}
+                      >
                         <Icon className="h-5 w-5" />
                       </div>
                       <span className="min-w-0 leading-relaxed">{item}</span>
@@ -590,7 +599,7 @@ export function LocalPage() {
         {/* Contact / CTA final (bande vert sapin de clôture) */}
         <section
           id="contact"
-          className="relative scroll-mt-20 overflow-hidden bg-accent py-20 text-background md:py-28"
+          className="relative scroll-mt-20 overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28"
         >
           <TopoField className="pointer-events-none absolute -right-28 -top-12 h-[42rem] w-[42rem] text-background/[0.05]" />
           <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">

@@ -31,7 +31,7 @@ export function Testimonial() {
           {t.testimonial.items.map((item) => (
             <Card key={item.author} className="relative flex flex-col p-8">
               <Quote
-                className="absolute right-6 top-6 h-8 w-8 text-amber/30"
+                className="absolute right-6 top-6 h-10 w-10 text-amber/50"
                 aria-hidden="true"
               />
               <figure className="flex flex-1 flex-col">

@@ -69,6 +69,7 @@ export function HandUnderline({ className }: { className?: string }) {
         stroke="currentColor"
         strokeWidth="3.5"
         strokeLinecap="round"
+        pathLength={1}
       />
     </svg>
   );
