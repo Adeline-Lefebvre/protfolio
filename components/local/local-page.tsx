@@ -195,7 +195,7 @@ export function LocalPage() {
         </section>
 
         {/* Pour qui */}
-        <section className="py-20 md:py-28">
+        <section className="bg-secondary/50 py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.forWho}</Eyebrow>
@@ -259,8 +259,8 @@ export function LocalPage() {
           </div>
         </section>
 
-        {/* Ce que comprend votre site (bande sable) */}
-        <section className="bg-secondary/50 py-20 md:py-28">
+        {/* Ce que comprend votre site */}
+        <section className="py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.includes}</Eyebrow>
@@ -273,7 +273,9 @@ export function LocalPage() {
                 const Icon = INCLUDES_ICONS[i];
                 return (
                   <Reveal key={item} delay={i * 70} className="h-full">
-                    <div className={`${CARD} ${CARD_HOVER} flex h-full gap-4 p-5`}>
+                    <div
+                      className={`${CARD} ${CARD_HOVER} flex h-full items-center gap-4 p-5`}
+                    >
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/15">
                         <Icon className="h-5 w-5" />
                       </div>
@@ -287,7 +289,7 @@ export function LocalPage() {
         </section>
 
         {/* Tarifs */}
-        <section id="pricing" className="scroll-mt-20 py-20 md:py-28">
+        <section id="pricing" className="scroll-mt-20 bg-secondary/50 py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.pricing}</Eyebrow>
@@ -536,7 +538,7 @@ export function LocalPage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 md:py-28">
+        <section className="bg-secondary/50 py-20 md:py-28">
           <div className="mx-auto max-w-3xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.faq}</Eyebrow>

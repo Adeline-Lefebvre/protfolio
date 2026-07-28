@@ -1,29 +1,5 @@
-// Motif signature : arbre fractal (branches récursives). Évoque la croissance,
-// les racines, la nature. SVG décoratif, hérite la couleur via currentColor.
-// Déterministe (pas de hasard) pour éviter tout décalage d'hydratation.
-type Segment = [number, number, number, number, number];
-
-function buildBranches(): Segment[] {
-  const segments: Segment[] = [];
-  const grow = (
-    x: number,
-    y: number,
-    angle: number,
-    length: number,
-    depth: number
-  ) => {
-    if (depth === 0 || length < 3) return;
-    const x2 = x + Math.cos(angle) * length;
-    const y2 = y + Math.sin(angle) * length;
-    segments.push([x, y, x2, y2, depth]);
-    grow(x2, y2, angle - 0.42, length * 0.75, depth - 1);
-    grow(x2, y2, angle + 0.58, length * 0.68, depth - 1);
-  };
-  grow(200, 384, -Math.PI / 2, 98, 7);
-  return segments;
-}
-
-const BRANCHES = buildBranches();
+// Motif signature "courbes de niveau" (carte de territoire / cernes du bois).
+// SVG décoratifs, hérite la couleur via currentColor. Purement ornemental.
 
 export function TopoField({ className }: { className?: string }) {
   return (
@@ -31,20 +7,26 @@ export function TopoField({ className }: { className?: string }) {
       viewBox="0 0 400 400"
       fill="none"
       aria-hidden="true"
+      preserveAspectRatio="xMidYMid slice"
       className={className}
     >
-      {BRANCHES.map(([x1, y1, x2, y2, depth], i) => (
-        <line
-          key={i}
-          x1={x1}
-          y1={y1}
-          x2={x2}
-          y2={y2}
-          stroke="currentColor"
-          strokeWidth={Math.max(0.4, depth * 0.4)}
-          strokeLinecap="round"
-        />
-      ))}
+      {Array.from({ length: 9 }).map((_, i) => {
+        const r = 20 + i * 22;
+        const cx = 200 + (i % 2 === 0 ? 0 : 12);
+        const cy = 200 - i * 3;
+        const ry = r * (0.72 + (i % 3) * 0.05);
+        return (
+          <ellipse
+            key={i}
+            cx={cx}
+            cy={cy}
+            rx={r}
+            ry={ry}
+            stroke="currentColor"
+            strokeWidth="1.1"
+          />
+        );
+      })}
     </svg>
   );
 }
