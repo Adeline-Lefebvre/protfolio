@@ -13,10 +13,10 @@ export function Hero() {
 
   return (
     <section className="relative mb-24 pt-8 md:pt-12">
-      <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2 overflow-hidden">
-        <div className="absolute -right-24 -top-16 h-[26rem] w-[26rem] rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute -left-20 top-1/3 h-72 w-72 rounded-full bg-accent/5 blur-3xl" />
-        <TopoField className="absolute -right-28 -top-10 h-[34rem] w-[34rem] text-accent/[0.05]" />
+      <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2">
+        <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
+        <TopoField className="absolute -right-28 -top-16 h-[40rem] w-[40rem] text-accent/[0.07]" />
       </div>
       <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
         <div className="w-full min-w-0 space-y-6 md:w-auto">
