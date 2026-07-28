@@ -81,10 +81,10 @@ function SectionRail({ sections }: { sections: Section[] }) {
                 className={`group flex items-center gap-3 ${FOCUS}`}
               >
                 <span
-                  className={`h-0.5 rounded-full transition-all duration-300 ${
+                  className={`w-0.5 rounded-full transition-all duration-300 ${
                     isActive
-                      ? "w-8 bg-primary"
-                      : "w-4 bg-border group-hover:w-6 group-hover:bg-muted-foreground"
+                      ? "h-8 bg-primary"
+                      : "h-4 bg-border group-hover:h-6 group-hover:bg-muted-foreground"
                   }`}
                 />
                 <span
