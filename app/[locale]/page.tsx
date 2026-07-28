@@ -15,7 +15,7 @@ export default function Home() {
       <Navigation />
       <main
         aria-label="Portfolio content"
-        className="mx-auto max-w-6xl px-6 py-8 md:px-12 lg:px-16"
+        className="mx-auto max-w-6xl px-6 pt-8 md:px-12 lg:px-16"
       >
         <Hero />
         <AnimatedSection>

@@ -18,7 +18,7 @@ export function Contact() {
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
 
   return (
-    <section id="contact" className="mb-24 scroll-mt-20">
+    <section id="contact" className="scroll-mt-20">
       <div className="relative mx-[calc(50%-50vw)] overflow-hidden bg-accent py-16 text-background md:py-24">
         <TopoField className="pointer-events-none absolute -right-28 -top-12 h-[42rem] w-[42rem] text-background/[0.05]" />
         <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
