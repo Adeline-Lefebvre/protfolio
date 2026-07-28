@@ -8,7 +8,7 @@ export const localContent = {
   fr: {
     meta: {
       title:
-        "Des sites pour les acteurs engagés et de proximité — Adeline Lefebvre",
+        "Des sites pour les acteurs engagés et de proximité · Adeline Lefebvre",
       description:
         "Des sites web rapides et beaux, sans abonnement, pour les associations, artisans et commerces de proximité. Le site vous appartient, l'hébergement est gratuit.",
     },
@@ -44,7 +44,7 @@ export const localContent = {
       items: [
         "Vous portez une association, un atelier, un commerce de proximité.",
         "Vous voulez un site simple, beau et crédible, sans y passer vos soirées.",
-        "Vous n'avez pas 3 000 € pour une agence, et pas envie d'un abonnement à vie.",
+        "Vous n'avez pas 3 000 € pour une agence, et pas envie d'un abonnement à vie.",
         "Vous voulez un site à vous, pas loué à une plateforme.",
       ],
     },
@@ -59,7 +59,7 @@ export const localContent = {
         text: "Le contenu et le nom de domaine vous appartiennent. Vous modifiez tout vous-même, quand vous voulez. Aucun abonnement, aucune dépendance.",
       },
       noFees: {
-        title: "Sans frais qui courent",
+        title: "Sans frais récurrents",
         text: "L'hébergement est gratuit dans un usage normal. Pas de facture mensuelle, pas de mauvaise surprise. Si vous arrêtez de travailler avec moi, le site continue de tourner.",
       },
     },
@@ -77,19 +77,19 @@ export const localContent = {
       title: "Des tarifs clairs, affichés",
       essential: {
         name: "Essentiel",
-        price: "500 €",
+        price: "500 €",
         text: "Une belle page unique. Tout ce qu'il faut pour exister en ligne, proprement.",
       },
       site: {
         name: "Le site",
-        price: "900 €",
+        price: "900 €",
         badge: "Le plus courant",
         text: "Plusieurs pages, avec blog, actualités et agenda d'événements inclus. Le choix le plus courant.",
       },
       modulesTitle: "Modules, selon vos besoins",
       modules: [
-        "Petites annonces ou catalogue : à partir de 300 €",
-        "Billetterie, inscriptions ou dons en ligne : à partir de 250 €",
+        "Petites annonces ou catalogue : à partir de 300 €",
+        "Billetterie, inscriptions ou dons en ligne : à partir de 250 €",
         "Espace adhérents : sur devis",
       ],
       solidarity:
@@ -98,7 +98,7 @@ export const localContent = {
         title: "Envie d'être serein ?",
         optional: "Optionnel",
         intro:
-          "Aucun frais récurrent n'est obligatoire. Mais si vous préférez ne penser à rien, le forfait Sérénité (150 € par an, entièrement optionnel) s'occupe de tout :",
+          "Aucun frais récurrent n'est obligatoire. Mais si vous préférez ne penser à rien, le forfait Sérénité (150 € par an, entièrement optionnel) s'occupe de tout :",
         items: [
           "Votre nom de domaine, renouvelé sans que vous y pensiez.",
           "Votre site maintenu en ligne, à jour et sécurisé.",
@@ -174,7 +174,7 @@ export const localContent = {
         },
         {
           q: "L'hébergement est vraiment gratuit ?",
-          a: "Oui, dans un usage normal. Les sites que je construis sont légers et s'hébergent sans frais sur des plateformes prévues pour ça. Reste le nom de domaine (environ 12 € par an), que vous payez en direct, à votre nom.",
+          a: "Oui, dans un usage normal. Les sites que je construis sont légers et s'hébergent sans frais sur des plateformes prévues pour ça. Reste le nom de domaine (environ 12 € par an), que vous payez en direct, à votre nom.",
         },
         {
           q: "Je ne suis pas à l'aise avec la technique, c'est un problème ?",
@@ -219,7 +219,7 @@ export const localContent = {
   en: {
     meta: {
       title:
-        "Websites for engaged, local organisations — Adeline Lefebvre",
+        "Websites for purpose-driven, local organisations · Adeline Lefebvre",
       description:
         "Fast, beautiful websites with no subscription, for nonprofits, makers and local businesses. The site is yours, hosting is free.",
     },
@@ -431,7 +431,7 @@ export const localContent = {
   es: {
     meta: {
       title:
-        "Webs para estructuras comprometidas y de barrio — Adeline Lefebvre",
+        "Webs para estructuras comprometidas y de barrio · Adeline Lefebvre",
       description:
         "Webs rápidas y bonitas, sin suscripción, para asociaciones, artesanos y comercios de barrio. La web es tuya, el alojamiento es gratuito.",
     },
@@ -459,7 +459,7 @@ export const localContent = {
       process: "El proceso",
       work: "Trabajos",
       about: "Sobre mí",
-      faq: "Bueno saber",
+      faq: "Conviene saber",
       contact: "Contacto",
     },
     forWho: {
@@ -467,7 +467,7 @@ export const localContent = {
       items: [
         "Llevas una asociación, un taller, un comercio de barrio.",
         "Quieres una web sencilla, bonita y creíble, sin dedicarle todas tus tardes.",
-        "No tienes 3.000 € para una agencia, y no quieres una suscripción de por vida.",
+        "No tienes 3.000 € para una agencia, y no quieres una suscripción de por vida.",
         "Quieres una web tuya, no alquilada a una plataforma.",
       ],
     },
@@ -500,19 +500,19 @@ export const localContent = {
       title: "Precios claros, a la vista",
       essential: {
         name: "Esencial",
-        price: "500 €",
+        price: "500 €",
         text: "Una sola página bonita. Todo lo necesario para existir en internet, con buen acabado.",
       },
       site: {
         name: "La web",
-        price: "900 €",
+        price: "900 €",
         badge: "La más habitual",
         text: "Varias páginas, con blog, noticias y agenda de eventos incluidos. La opción más habitual.",
       },
       modulesTitle: "Módulos, según tus necesidades",
       modules: [
-        "Anuncios clasificados o catálogo: desde 300 €",
-        "Venta de entradas, inscripciones o donaciones en línea: desde 250 €",
+        "Anuncios clasificados o catálogo: desde 300 €",
+        "Venta de entradas, inscripciones o donaciones en línea: desde 250 €",
         "Área de socios: a consultar",
       ],
       solidarity:
@@ -521,7 +521,7 @@ export const localContent = {
         title: "¿Quieres tranquilidad?",
         optional: "Opcional",
         intro:
-          "No hay ningún gasto recurrente obligatorio. Pero si prefieres no pensar en nada, el plan Tranquilidad (150 € al año, totalmente opcional) se ocupa de todo:",
+          "No hay ningún gasto recurrente obligatorio. Pero si prefieres no pensar en nada, el plan Tranquilidad (150 € al año, totalmente opcional) se ocupa de todo:",
         items: [
           "Tu nombre de dominio, renovado sin que tengas que pensar en ello.",
           "Tu web mantenida en línea, actualizada y segura.",
@@ -597,7 +597,7 @@ export const localContent = {
         },
         {
           q: "¿El alojamiento es de verdad gratuito?",
-          a: "Sí, en un uso normal. Las webs que construyo son ligeras y se alojan sin coste en plataformas pensadas para ello. Queda solo el nombre de dominio (unos 12 € al año), que pagas directamente, a tu nombre.",
+          a: "Sí, en un uso normal. Las webs que construyo son ligeras y se alojan sin coste en plataformas pensadas para ello. Queda solo el nombre de dominio (unos 12 € al año), que pagas directamente, a tu nombre.",
         },
         {
           q: "No me manejo bien con la tecnología, ¿es un problema?",

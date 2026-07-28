@@ -7,9 +7,9 @@ import { useLanguage } from "@/lib/language-context"
 import { cn } from "@/lib/utils"
 
 const languages = [
-  { code: "en" as const, name: "English", flag: "🇬🇧" },
-  { code: "fr" as const, name: "Français", flag: "🇫🇷" },
-  { code: "es" as const, name: "Español", flag: "🇪🇸" },
+  { code: "en" as const, name: "English" },
+  { code: "fr" as const, name: "Français" },
+  { code: "es" as const, name: "Español" },
 ]
 
 export function LanguageSelector({
@@ -42,7 +42,9 @@ export function LanguageSelector({
       <DropdownMenuContent align={align} side={side}>
         {languages.map((lang) => (
           <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="flex cursor-pointer items-center gap-2">
-            <span>{lang.flag}</span>
+            <span className="w-6 text-xs font-semibold text-muted-foreground">
+              {lang.code.toUpperCase()}
+            </span>
             <span>{lang.name}</span>
             {language === lang.code && <span className="ml-auto">✓</span>}
           </DropdownMenuItem>

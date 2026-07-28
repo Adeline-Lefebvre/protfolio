@@ -140,7 +140,7 @@ export const translations = {
           quote:
             "Amazing work and I would like to use this moment to express how happy and grateful we are to have you on board. We really can't do this without you and these tasks, how small sometimes they seem, are soooo important to solve.",
           author: "Rosa",
-          role: "LIME Search (NL)",
+          role: "LIME Search",
         },
       ],
     },
@@ -240,7 +240,7 @@ export const translations = {
           "Aider chacun à comprendre ses analyses de sang et adapter son alimentation. J'ai conçu la plateforme de A à Z : pipeline d'extraction IA (Claude + Mistral) avec anonymisation, dashboard biologiste de validation, infrastructure HDS chiffrée.",
       },
       desertLeaves: {
-        title: "Desert Leaves, fondation environnementale",
+        title: "Desert Leaves, ONG environnementale",
         description:
           "Mobiliser dons et bénévoles pour reboiser des zones arides. Plateforme complète développée de zéro : Next.js + CMS headless Prismic, dons Stripe (ponctuels & récurrents), SEO multilingue.",
       },
@@ -304,7 +304,7 @@ export const translations = {
           quote:
             "Un travail formidable, et je veux profiter de ce moment pour dire à quel point nous sommes heureux et reconnaissants de t'avoir dans l'équipe. On ne pourrait vraiment pas faire tout ça sans toi, et ces tâches, aussi petites qu'elles paraissent parfois, sont tellement importantes à régler.",
           author: "Rosa",
-          role: "LIME Search (NL)",
+          role: "LIME Search",
         },
       ],
     },
@@ -467,7 +467,7 @@ export const translations = {
           quote:
             "Un trabajo increíble, y quiero aprovechar este momento para expresar lo felices y agradecidos que estamos de tenerte en el equipo. De verdad no podríamos hacer todo esto sin ti, y estas tareas, por pequeñas que a veces parezcan, son importantísimas de resolver.",
           author: "Rosa",
-          role: "LIME Search (NL)",
+          role: "LIME Search",
         },
       ],
     },
