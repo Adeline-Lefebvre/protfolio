@@ -1,6 +1,6 @@
 import type { Language } from "./translations";
 
-// Contenu de la page /local (offre sites pour les acteurs engagés et de proximité).
+// Contenu de la page /local (offre sites pour les structures engagées et de proximité).
 // Trilingue FR / EN / ES. Corrections de relecture native intégrées.
 // Style : sobre, direct, humain, sans tiret cadratin. Registre : vous (FR) / tú (ES).
 
@@ -8,9 +8,9 @@ export const localContent = {
   fr: {
     meta: {
       title:
-        "Des sites pour les acteurs engagés et de proximité · Adeline Lefebvre",
+        "Des sites pour les structures engagées et de proximité · Adeline Lefebvre",
       description:
-        "Des sites web rapides et beaux, sans abonnement, pour les associations, artisans et commerces de proximité. Le site vous appartient, l'hébergement est gratuit.",
+        "Des sites web rapides et beaux, sans abonnement, pour les associations, l'artisanat et les commerces de proximité. Le site vous appartient, l'hébergement est gratuit.",
     },
     nav: {
       home: "Portfolio",
@@ -24,7 +24,7 @@ export const localContent = {
       titleEm: "vraiment",
       titlePost: ".",
       subtitle:
-        "Beau, rapide, sans abonnement. Pensé pour les assos, artisans et commerces qui font vivre le local.",
+        "Beau, rapide, sans abonnement. Pensé pour les assos, l'artisanat et les commerces qui font vivre le local.",
       cta: "Parlons de votre projet",
       ctaSecondary: "Voir les réalisations",
     },
@@ -90,7 +90,7 @@ export const localContent = {
       modules: [
         "Petites annonces ou catalogue : à partir de 300 €",
         "Billetterie, inscriptions ou dons en ligne : à partir de 250 €",
-        "Espace adhérents : sur devis",
+        "Espace membres : sur devis",
       ],
       solidarity:
         "Une toute petite structure avec un budget serré ? Parlons-en, on trouvera une solution.",
@@ -155,8 +155,8 @@ export const localContent = {
     about: {
       title: "Qui je suis",
       paragraphs: [
-        "Je m'appelle Adeline, développeuse web. Je travaille à distance, avec des clients en France, en Espagne, aux Pays-Bas et ailleurs en Europe.",
-        "<strong class='font-semibold text-accent'>L'économie sociale et solidaire</strong> me tient à cœur depuis des années. Je crois au potentiel de l'économie circulaire et d'une économie plus responsable, et je suis convaincue que <strong class='font-semibold text-foreground'>les projets à impact local sont les premiers acteurs du changement</strong>. C'est pour ça que j'aime construire des sites pour des structures qui font quelque chose d'utile : associations, artisans, commerces de proximité. Des projets à taille humaine, où je connais les gens pour qui je travaille.",
+        "Je m'appelle Adeline, développeuse web. Je travaille à distance, avec une clientèle en France, en Espagne, aux Pays-Bas et ailleurs en Europe.",
+        "<strong class='font-semibold text-accent'>L'économie sociale et solidaire</strong> me tient à cœur depuis des années. Je crois au potentiel de l'économie circulaire et d'une économie plus responsable, et je suis convaincue que <strong class='font-semibold text-foreground'>les projets à impact local sont les premiers moteurs du changement</strong>. C'est pour ça que j'aime construire des sites pour des structures qui font quelque chose d'utile : associations, artisanat, commerces de proximité. Des projets à taille humaine, où je connais les gens pour qui je travaille.",
         "Mon approche tient en une idée : un site beau et rapide, <strong class='font-semibold text-primary'>que vous possédez vraiment</strong>, sans vous enfermer dans un abonnement ou une technologie que personne ne maîtrise chez vous.",
       ],
       link: "En savoir plus sur mon travail",
@@ -189,8 +189,8 @@ export const localContent = {
           a: "Oui. Selon vos besoins, j'intègre une solution simple et fiable, par exemple pour les dons, la billetterie ou les inscriptions. On choisit ensemble ce qui vous convient.",
         },
         {
-          q: "Et mes données, celles de mes adhérents ou de mes clients ?",
-          a: "Votre site est livré avec ses mentions légales et une politique de confidentialité conformes au RGPD. Les données restent les vôtres, hébergées en Europe. Dès qu'il y a un formulaire ou un espace adhérents, on cadre ensemble ce qui est collecté, et pourquoi.",
+          q: "Et mes données, celles de mes membres ou de ma clientèle ?",
+          a: "Votre site est livré avec ses mentions légales et une politique de confidentialité conformes au RGPD. Les données restent les vôtres, hébergées en Europe. Dès qu'il y a un formulaire ou un espace membres, on cadre ensemble ce qui est collecté, et pourquoi.",
         },
         {
           q: "Comment on démarre, côté paiement ?",
@@ -449,7 +449,7 @@ export const localContent = {
       title:
         "Webs para estructuras comprometidas y de barrio · Adeline Lefebvre",
       description:
-        "Webs rápidas y bonitas, sin suscripción, para asociaciones, artesanos y comercios de barrio. La web es tuya, el alojamiento es gratuito.",
+        "Webs rápidas y bonitas, sin suscripción, para asociaciones, artesanía y comercios de barrio. La web es tuya, el alojamiento es gratuito.",
     },
     nav: {
       home: "Portfolio",
@@ -463,7 +463,7 @@ export const localContent = {
       titleEm: "de verdad",
       titlePost: " tuya.",
       subtitle:
-        "Bonita, rápida, sin suscripción. Pensada para las asociaciones, artesanos y comercios que dan vida a lo local.",
+        "Bonita, rápida, sin suscripción. Pensada para las asociaciones, la artesanía y los comercios que dan vida a lo local.",
       cta: "Hablemos de tu proyecto",
       ctaSecondary: "Ver los trabajos",
     },
@@ -529,7 +529,7 @@ export const localContent = {
       modules: [
         "Anuncios clasificados o catálogo: desde 300 €",
         "Venta de entradas, inscripciones o donaciones en línea: desde 250 €",
-        "Área de socios: a consultar",
+        "Área de miembros: a consultar",
       ],
       solidarity:
         "¿Una estructura muy pequeña con un presupuesto ajustado? Hablémoslo, algo podremos hacer.",
@@ -577,7 +577,7 @@ export const localContent = {
           name: "Desert Leaves",
           image: "/dl-1.jpg",
           meta: "ONG de reforestación (España)",
-          text: "Una web bilingüe para presentar sus proyectos y movilizar donaciones y voluntarios. Rápida, clara, fiel a su identidad.",
+          text: "Una web bilingüe para presentar sus proyectos y movilizar donaciones y voluntariado. Rápida, clara, fiel a su identidad.",
           href: "https://www.desertleaves.org/en",
           cta: "Ver la web",
         },
@@ -594,8 +594,8 @@ export const localContent = {
     about: {
       title: "Quién soy",
       paragraphs: [
-        "Me llamo Adeline, desarrolladora web. Trabajo en remoto, con clientes en Francia, España, los Países Bajos y otros lugares de Europa.",
-        "<strong class='font-semibold text-accent'>La economía social y solidaria</strong> me importa desde hace años. Creo en el potencial de la economía circular y de una manera de hacer las cosas más responsable, y estoy convencida de que <strong class='font-semibold text-foreground'>los proyectos con impacto local son los primeros motores del cambio</strong>. Por eso me gusta crear webs para estructuras que hacen algo útil: asociaciones, artesanos, comercios de barrio. Proyectos a escala humana, donde conozco a las personas para las que trabajo.",
+        "Me llamo Adeline, desarrolladora web. Trabajo en remoto, con una clientela en Francia, España, los Países Bajos y otros lugares de Europa.",
+        "<strong class='font-semibold text-accent'>La economía social y solidaria</strong> me importa desde hace años. Creo en el potencial de la economía circular y de una manera de hacer las cosas más responsable, y estoy convencida de que <strong class='font-semibold text-foreground'>los proyectos con impacto local son los primeros motores del cambio</strong>. Por eso me gusta crear webs para estructuras que hacen algo útil: asociaciones, artesanía, comercios de barrio. Proyectos a escala humana, donde conozco a las personas para las que trabajo.",
         "Mi enfoque se resume en una idea: una web bonita y rápida, <strong class='font-semibold text-primary'>que sea de verdad tuya</strong>, sin encerrarte en una suscripción o en una tecnología que nadie domina en tu equipo.",
       ],
       link: "Más sobre mi trabajo",
@@ -628,8 +628,8 @@ export const localContent = {
           a: "Sí. Según tus necesidades, integro una solución sencilla y fiable, por ejemplo para donaciones, venta de entradas o inscripciones. Elegimos juntos lo que mejor te convenga.",
         },
         {
-          q: "¿Y mis datos, o los de mis socios o clientes?",
-          a: "Tu web se entrega con su aviso legal y una política de privacidad conformes al RGPD. Los datos siguen siendo tuyos, alojados en Europa. En cuanto hay un formulario o un área de socios, definimos juntos qué se recoge, y para qué.",
+          q: "¿Y mis datos, o los de mis miembros o de mi clientela?",
+          a: "Tu web se entrega con su aviso legal y una política de privacidad conformes al RGPD. Los datos siguen siendo tuyos, alojados en Europa. En cuanto hay un formulario o un área de miembros, definimos juntos qué se recoge, y para qué.",
         },
         {
           q: "¿Cómo empezamos, en cuanto al pago?",

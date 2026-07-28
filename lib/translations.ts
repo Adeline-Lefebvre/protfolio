@@ -247,12 +247,12 @@ export const translations = {
       lime: {
         title: "LIME Search, recrutement finance",
         description:
-          "Attirer les meilleurs profils finance, et laisser le client éditer son site sans développeur. Plateforme de recrutement multilingue en Craft CMS : composants Twig/PHP sur-mesure, SEO technique, maintenance en continu.",
+          "Attirer les meilleurs profils finance, et laisser l'équipe éditer le site en autonomie. Plateforme de recrutement multilingue en Craft CMS : composants Twig/PHP sur-mesure, SEO technique, maintenance en continu.",
       },
       bulbus: {
         title: "Bulbus, app mobile éducative",
         description:
-          "Réviser l'herboristerie partout et réussir ses examens. App cross-platform (Flutter) : 150+ plantes, examens chronométrés, achats in-app. En ligne sur iOS et Android, 37 utilisateurs payants.",
+          "Réviser l'herboristerie partout et réussir ses examens. App cross-platform (Flutter) : 150+ plantes, examens chronométrés, achats in-app. En ligne sur iOS et Android, 37 comptes payants.",
       },
       sds: {
         title: "SDS Lingo, site multilingue",
@@ -276,7 +276,7 @@ export const translations = {
       paragraph1:
         "Mon parcours a commencé dans le <strong class='font-semibold text-primary'>produit et l'entrepreneuriat</strong> (Station F, école de commerce). J'en ai gardé une <em class='italic'>mentalité de fondatrice</em> : je pars du besoin métier, pas de la techno.",
       paragraph2:
-        "Aujourd'hui, je suis <strong class='font-semibold text-primary'>développeuse fullstack</strong>. J'ai mis en production des produits utilisés par de vraies personnes dans <strong class='font-semibold text-accent'>6 pays</strong> : de Rootyne (plateforme santé avec IA Claude + Mistral) à Bulbus (app mobile, 37 utilisateurs payants).",
+        "Aujourd'hui, je suis <strong class='font-semibold text-primary'>développeuse fullstack</strong>. J'ai mis en production des produits utilisés par de vraies personnes dans <strong class='font-semibold text-accent'>6 pays</strong> : de Rootyne (plateforme santé avec IA Claude + Mistral) à Bulbus (app mobile, 37 comptes payants).",
       paragraph3:
         "Ma <strong class='font-semibold text-primary'>double compétence</strong> couvre le fullstack (Next.js, React, Node) <em class='italic'>et</em> le CMS (WordPress sur-mesure, Craft, headless), ce qui me permet de m'adapter à des projets très variés, de la création d'un SaaS à la maintenance long terme.",
       paragraph4:
@@ -410,12 +410,12 @@ export const translations = {
       lime: {
         title: "LIME Search, reclutamiento financiero",
         description:
-          "Atraer a los mejores perfiles de finanzas, y dejar que el cliente edite su web sin un desarrollador. Plataforma de reclutamiento multilingüe en Craft CMS: componentes Twig/PHP a medida, SEO técnico, mantenimiento continuo.",
+          "Atraer a los mejores perfiles de finanzas, y dejar que el equipo edite la web de forma autónoma. Plataforma de reclutamiento multilingüe en Craft CMS: componentes Twig/PHP a medida, SEO técnico, mantenimiento continuo.",
       },
       bulbus: {
         title: "Bulbus, app móvil educativa",
         description:
-          "Repasar la herboristería en cualquier lugar y aprobar los exámenes. App multiplataforma (Flutter): 150+ plantas, exámenes cronometrados, compras in-app. Disponible en iOS y Android, 37 usuarios de pago.",
+          "Repasar la herboristería en cualquier lugar y aprobar los exámenes. App multiplataforma (Flutter): 150+ plantas, exámenes cronometrados, compras in-app. Disponible en iOS y Android, 37 cuentas de pago.",
       },
       sds: {
         title: "SDS Lingo, sitio multilingüe",
@@ -439,7 +439,7 @@ export const translations = {
       paragraph1:
         "Mi camino comenzó en el <strong class='font-semibold text-primary'>producto y el emprendimiento</strong> (Station F, escuela de negocios). Conservé esa <em class='italic'>mentalidad de fundadora</em>: parto de la necesidad de negocio, no de la tecnología.",
       paragraph2:
-        "Hoy soy <strong class='font-semibold text-primary'>desarrolladora fullstack</strong>. He llevado a producción productos usados por personas reales en <strong class='font-semibold text-accent'>6 países</strong>: desde Rootyne (plataforma de salud con IA Claude + Mistral) hasta Bulbus (app móvil, 37 usuarios de pago).",
+        "Hoy soy <strong class='font-semibold text-primary'>desarrolladora fullstack</strong>. He llevado a producción productos usados por personas reales en <strong class='font-semibold text-accent'>6 países</strong>: desde Rootyne (plataforma de salud con IA Claude + Mistral) hasta Bulbus (app móvil, 37 cuentas de pago).",
       paragraph3:
         "Mi <strong class='font-semibold text-primary'>doble competencia</strong> abarca el fullstack (Next.js, React, Node) <em class='italic'>y</em> el CMS (WordPress a medida, Craft, headless), lo que me permite adaptarme a proyectos muy distintos, de la creación de un SaaS al mantenimiento a largo plazo.",
       paragraph4:
