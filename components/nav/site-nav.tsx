@@ -69,7 +69,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
   return (
     <nav
       aria-label="Sections"
-      className="fixed left-5 top-1/2 z-40 hidden -translate-y-1/2 xl:block"
+      className="fixed left-6 top-24 z-40 hidden xl:block"
     >
       <ul className="flex flex-col gap-4">
         {sections.map((s) => {
