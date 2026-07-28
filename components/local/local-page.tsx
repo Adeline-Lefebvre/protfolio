@@ -90,7 +90,7 @@ export function LocalPage() {
             <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
             <TopoField className="absolute -right-28 -top-16 h-[40rem] w-[40rem] text-accent/[0.07]" />
           </div>
-          <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <div className="max-w-3xl">
               <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
                 <Leaf className="h-4 w-4" />
@@ -127,7 +127,7 @@ export function LocalPage() {
           id="forwho"
           className="scroll-mt-24 bg-secondary/50 py-20 md:py-28"
         >
-          <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.forWho}</Eyebrow>
               <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
@@ -165,7 +165,7 @@ export function LocalPage() {
         >
           <TopoField className="pointer-events-none absolute -left-24 top-0 h-[42rem] w-[42rem] text-background/[0.05]" />
           <TopoField className="pointer-events-none absolute -right-32 bottom-0 h-[38rem] w-[38rem] text-background/[0.04]" />
-          <div className="relative mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow tone="amber">{t.eyebrows.promises}</Eyebrow>
               <h2 className="mb-10 text-3xl tracking-tight text-background md:text-4xl">
@@ -199,7 +199,7 @@ export function LocalPage() {
 
         {/* Ce que comprend votre site */}
         <section id="includes" className="scroll-mt-24 py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.includes}</Eyebrow>
               <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
@@ -230,7 +230,7 @@ export function LocalPage() {
 
         {/* Tarifs */}
         <section id="pricing" className="scroll-mt-20 bg-secondary/50 py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.pricing}</Eyebrow>
               <h2 className="mb-10 text-3xl tracking-tight md:text-4xl">
@@ -346,7 +346,7 @@ export function LocalPage() {
 
         {/* Comment ça se passe */}
         <section id="process" className="scroll-mt-24 py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.process}</Eyebrow>
               <h2 className="mb-10 text-3xl tracking-tight md:text-4xl">
@@ -377,7 +377,7 @@ export function LocalPage() {
 
         {/* Réalisations (bande sable) */}
         <section id="work" className="scroll-mt-20 bg-secondary/50 py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.work}</Eyebrow>
               <h2 className="mb-10 text-3xl tracking-tight md:text-4xl">
@@ -439,7 +439,7 @@ export function LocalPage() {
 
         {/* Qui je suis */}
         <section id="about" className="scroll-mt-24 py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.about}</Eyebrow>
               <h2 className="mb-10 text-3xl tracking-tight md:text-4xl">
@@ -514,7 +514,7 @@ export function LocalPage() {
           className="relative scroll-mt-20 overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28"
         >
           <TopoField className="pointer-events-none absolute -right-28 -top-12 h-[42rem] w-[42rem] text-background/[0.05]" />
-          <div className="relative mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+          <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow tone="amber">{t.eyebrows.contact}</Eyebrow>
               <h2 className="mb-6 text-3xl tracking-tight text-background md:text-4xl">

@@ -21,7 +21,7 @@ export function Contact() {
     <section id="contact" className="scroll-mt-20">
       <div className="relative mx-[calc(50%-50vw)] overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-16 text-background md:py-24">
         <TopoField className="pointer-events-none absolute -right-28 -top-12 h-[42rem] w-[42rem] text-background/[0.05]" />
-        <div className="relative mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+        <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
           <Eyebrow tone="amber">{t.contact.eyebrow}</Eyebrow>
           <h2 className="mb-4 text-3xl tracking-tight text-background md:text-4xl">
             {t.contact.title}

@@ -22,7 +22,7 @@ export function Testimonial() {
   return (
     <section id="testimonials" className="scroll-mt-24">
       <div className="mx-[calc(50%-50vw)] bg-secondary/50 py-14 md:py-20">
-        <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+        <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
         <Eyebrow>{t.testimonial.eyebrow}</Eyebrow>
         <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
           {t.testimonial.title}
