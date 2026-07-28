@@ -159,7 +159,10 @@ export function LocalPage() {
         </section>
 
         {/* Ce qui change avec moi (bande vert sapin) */}
-        <section className="relative overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28">
+        <section
+          id="promises"
+          className="relative scroll-mt-24 overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28"
+        >
           <TopoField className="pointer-events-none absolute -left-24 top-0 h-[42rem] w-[42rem] text-background/[0.05]" />
           <TopoField className="pointer-events-none absolute -right-32 bottom-0 h-[38rem] w-[38rem] text-background/[0.04]" />
           <div className="relative mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
@@ -195,7 +198,7 @@ export function LocalPage() {
         </section>
 
         {/* Ce que comprend votre site */}
-        <section className="py-20 md:py-28">
+        <section id="includes" className="scroll-mt-24 py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.includes}</Eyebrow>
@@ -342,7 +345,7 @@ export function LocalPage() {
         </section>
 
         {/* Comment ça se passe */}
-        <section className="py-20 md:py-28">
+        <section id="process" className="scroll-mt-24 py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.process}</Eyebrow>
@@ -435,7 +438,7 @@ export function LocalPage() {
         </section>
 
         {/* Qui je suis */}
-        <section className="py-20 md:py-28">
+        <section id="about" className="scroll-mt-24 py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.about}</Eyebrow>
@@ -477,7 +480,7 @@ export function LocalPage() {
         </section>
 
         {/* FAQ */}
-        <section className="bg-secondary/50 py-20 md:py-28">
+        <section id="faq" className="scroll-mt-24 bg-secondary/50 py-20 md:py-28">
           <div className="mx-auto max-w-3xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.faq}</Eyebrow>

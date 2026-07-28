@@ -236,8 +236,14 @@ export function LocalNav() {
   const c = getLocalContent(language);
   const sections: Section[] = [
     { id: "forwho", label: c.eyebrows.forWho },
+    { id: "promises", label: c.eyebrows.promises },
+    { id: "includes", label: c.eyebrows.includes },
     { id: "pricing", label: c.eyebrows.pricing },
+    { id: "process", label: c.eyebrows.process },
     { id: "work", label: c.eyebrows.work },
+    { id: "about", label: c.eyebrows.about },
+    { id: "faq", label: c.eyebrows.faq },
+    { id: "testimonials", label: t.testimonial.eyebrow },
     { id: "contact", label: c.eyebrows.contact },
   ];
   return (
