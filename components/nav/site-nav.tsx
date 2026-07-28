@@ -107,8 +107,8 @@ function SectionRail({ sections }: { sections: Section[] }) {
 
 function SocialDock() {
   return (
-    <div className="fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 xl:flex">
-      <div className="flex flex-col items-center gap-1 rounded-full border border-border/50 bg-background/70 p-2 backdrop-blur">
+    <div className="fixed right-6 top-6 z-40 hidden xl:flex">
+      <div className="flex flex-col items-center gap-1.5 rounded-full border border-border/50 bg-background/70 p-2 backdrop-blur">
         {SOCIALS.map(({ href, label, Icon }) => (
           <a
             key={label}
@@ -116,7 +116,7 @@ function SocialDock() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className={`flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground ${FOCUS}`}
+            className={`flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground ${FOCUS}`}
           >
             <Icon className="h-5 w-5" />
           </a>

@@ -22,7 +22,7 @@ export function LanguageSelector() {
           variant="ghost"
           size="icon"
           aria-label="Select language"
-          className="cursor-pointer rounded-full focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="size-10 cursor-pointer rounded-full focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           <Languages className="h-5 w-5" />
         </Button>
