@@ -89,9 +89,8 @@ export const localContent = {
       modulesTitle: "Modules, selon vos besoins",
       modules: [
         "Petites annonces ou catalogue : à partir de 300 €",
-        "Billetterie ou inscriptions en ligne : à partir de 250 €",
+        "Billetterie, inscriptions ou dons en ligne : à partir de 250 €",
         "Galerie ou réalisations (photos, avant-après) : à partir de 150 €",
-        "Dons en ligne : à partir de 100 €",
         "Espace adhérents (documents privés) : sur devis",
       ],
       solidarity:
@@ -302,9 +301,8 @@ export const localContent = {
       modulesTitle: "Modules, depending on your needs",
       modules: [
         "Listings or catalogue: from €300",
-        "Online ticketing or registrations: from €250",
+        "Ticketing, registrations or online donations: from €250",
         "Gallery or past work (photos, before/after): from €150",
-        "Online donations: from €100",
         "Members area (private documents): on request",
       ],
       solidarity:
@@ -516,9 +514,8 @@ export const localContent = {
       modulesTitle: "Módulos, según tus necesidades",
       modules: [
         "Anuncios clasificados o catálogo: desde 300 €",
-        "Venta de entradas o inscripciones en línea: desde 250 €",
+        "Venta de entradas, inscripciones o donaciones en línea: desde 250 €",
         "Galería o trabajos realizados (fotos, antes/después): desde 150 €",
-        "Donaciones en línea: desde 100 €",
         "Área de socios (documentos privados): a consultar",
       ],
       solidarity:
