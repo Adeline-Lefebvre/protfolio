@@ -71,7 +71,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
       aria-label="Sections"
       className="fixed left-6 top-24 z-40 hidden xl:block"
     >
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col gap-4 rounded-2xl border border-border/40 bg-background/80 p-4 backdrop-blur">
         {sections.map((s) => {
           const isActive = active === s.id;
           return (
@@ -109,7 +109,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
 function SocialDock() {
   return (
     <div className="fixed bottom-6 right-6 z-40 hidden xl:flex">
-      <div className="flex flex-col items-center gap-1.5 rounded-full border border-white/10 bg-foreground/85 p-2 text-white shadow-lg backdrop-blur">
+      <div className="flex flex-col items-center gap-1.5 rounded-full border border-white/10 bg-accent/85 p-2 text-white shadow-lg backdrop-blur">
         {SOCIALS.map(({ href, label, Icon }) => (
           <a
             key={label}
