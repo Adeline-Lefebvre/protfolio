@@ -17,10 +17,12 @@ function AdaptiveVideoPlayer({
   src,
   layout,
   title,
+  fill,
 }: {
   src: string;
   layout?: string;
   title: string;
+  fill?: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -66,6 +68,36 @@ function AdaptiveVideoPlayer({
     return () =>
       video.removeEventListener("loadedmetadata", handleLoadedMetadata);
   }, [isVisible]);
+
+  // Mode "fill" : la video remplit son conteneur et en touche les bords
+  // (utilise pour les visuels verticaux places a cote du texte).
+  if (fill) {
+    return (
+      <div
+        ref={containerRef}
+        className="relative h-full overflow-hidden bg-slate-900"
+        style={{ aspectRatio: (aspectRatio ?? 9 / 16).toString() }}
+      >
+        {(isLoading || !isVisible) && (
+          <div className="absolute inset-0 animate-pulse bg-slate-800" />
+        )}
+        {isVisible && (
+          <video
+            ref={videoRef}
+            src={src}
+            autoPlay={!reducedMotion}
+            loop
+            muted
+            playsInline
+            controls={reducedMotion}
+            preload="metadata"
+            aria-label={`Demo video for ${title}`}
+            className="h-full w-full object-contain"
+          />
+        )}
+      </div>
+    );
+  }
 
   return (
     <div
@@ -162,17 +194,27 @@ export function Projects() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.title} className="flex flex-col gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-            <div>
-              {project.video && (
-                <div className="flex justify-center">
+          <Card
+            key={project.title}
+            className={`flex ${project.layout === "mobile" ? "flex-row" : "flex-col"} gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5`}
+          >
+            <div className={project.layout === "mobile" ? "shrink-0" : ""}>
+              {project.video &&
+                (project.layout === "mobile" ? (
                   <AdaptiveVideoPlayer
                     src={project.video}
-                    layout={project.layout}
                     title={project.title}
+                    fill
                   />
-                </div>
-              )}
+                ) : (
+                  <div className="flex justify-center">
+                    <AdaptiveVideoPlayer
+                      src={project.video}
+                      layout={project.layout}
+                      title={project.title}
+                    />
+                  </div>
+                ))}
 
               {project.images && (
                 <div>
@@ -253,12 +295,12 @@ export function Projects() {
           {t.projects.moreTitle}
         </h3>
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-            <div className="px-4 pt-4 flex justify-center">
+          <Card className="flex flex-row gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
+            <div className="shrink-0">
               <AdaptiveVideoPlayer
                 src="pepstery.webm"
-                layout="mobile"
                 title={t.projects.pepstery.title}
+                fill
               />
             </div>
             <div className="flex flex-1 flex-col p-6">

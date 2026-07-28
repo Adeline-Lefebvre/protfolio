@@ -31,6 +31,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { Footer } from "@/components/footer";
+import { Testimonial } from "@/components/testimonial";
 import { LocalNav } from "@/components/nav/site-nav";
 import { Reveal } from "@/components/local/reveal";
 import { TopoField, HandUnderline } from "@/components/local/topo";
@@ -501,29 +502,8 @@ export function LocalPage() {
           </div>
         </section>
 
-        {/* Preuve sociale */}
-        <section className="py-20 md:py-28">
-          <div className="mx-auto max-w-3xl px-6 md:px-12 lg:px-16">
-            <Reveal>
-              <figure className={`${CARD} p-8`}>
-                <blockquote className="text-lg leading-relaxed text-foreground">
-                  “{t.proof.quote}”
-                </blockquote>
-                <figcaption className="mt-6 flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-base font-semibold text-accent-foreground">
-                    {t.proof.author.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-semibold">{t.proof.author}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {t.proof.role}
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-            </Reveal>
-          </div>
-        </section>
+        {/* Recommandations (meme section que la home) */}
+        <Testimonial />
 
         {/* Contact / CTA final (bande vert sapin de clôture) */}
         <section
