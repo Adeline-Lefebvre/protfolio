@@ -8,7 +8,7 @@ export const localContent = {
   fr: {
     meta: {
       title:
-        "Des sites pour les structures engagées et de proximité · Adeline Lefebvre",
+        "Création de site internet pour association, artisan et commerce · dès 500 € · Adeline Lefebvre",
       description:
         "Des sites web rapides et beaux, sans abonnement, pour les associations, l'artisanat et les commerces de proximité. Le site vous appartient, l'hébergement est gratuit.",
     },
@@ -20,7 +20,7 @@ export const localContent = {
     },
     hero: {
       eyebrow: "Sites web · économie locale",
-      titlePre: "Un site qui vous appartient ",
+      titlePre: "Un site web pour votre association ou votre commerce, qui vous appartient ",
       titleEm: "vraiment",
       titlePost: ".",
       subtitle:
@@ -74,7 +74,7 @@ export const localContent = {
       ],
     },
     pricing: {
-      title: "Des tarifs clairs, affichés",
+      title: "Tarifs clairs pour votre site web",
       essential: {
         name: "Essentiel",
         price: "500 €",
@@ -227,7 +227,7 @@ export const localContent = {
   en: {
     meta: {
       title:
-        "Websites for purpose-driven, local organisations · Adeline Lefebvre",
+        "Website design for nonprofits, craftspeople & local shops · from €500 · Adeline Lefebvre",
       description:
         "Fast, beautiful websites with no subscription, for nonprofits, makers and local businesses. The site is yours, hosting is free.",
     },
@@ -239,7 +239,7 @@ export const localContent = {
     },
     hero: {
       eyebrow: "Web design · local economy",
-      titlePre: "A website that's ",
+      titlePre: "A website for your nonprofit or local business, ",
       titleEm: "truly",
       titlePost: " yours.",
       subtitle:
@@ -293,7 +293,7 @@ export const localContent = {
       ],
     },
     pricing: {
-      title: "Clear, upfront pricing",
+      title: "Clear website pricing",
       essential: {
         name: "Essential",
         price: "€500",
@@ -447,7 +447,7 @@ export const localContent = {
   es: {
     meta: {
       title:
-        "Webs para estructuras comprometidas y de barrio · Adeline Lefebvre",
+        "Diseño web para asociaciones, autónomos y comercios · desde 500 € · Adeline Lefebvre",
       description:
         "Webs rápidas y bonitas, sin suscripción, para asociaciones, artesanía y comercios de barrio. La web es tuya, el alojamiento es gratuito.",
     },
@@ -459,7 +459,7 @@ export const localContent = {
     },
     hero: {
       eyebrow: "Diseño web · economía local",
-      titlePre: "Una web que es ",
+      titlePre: "Una web para tu asociación o comercio, ",
       titleEm: "de verdad",
       titlePost: " tuya.",
       subtitle:
@@ -513,7 +513,7 @@ export const localContent = {
       ],
     },
     pricing: {
-      title: "Precios claros, a la vista",
+      title: "Precios claros de diseño web",
       essential: {
         name: "Esencial",
         price: "500 €",

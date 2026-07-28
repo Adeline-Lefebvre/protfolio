@@ -13,7 +13,7 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       name: "Adeline Lefebvre",
-      title: "I build web products that last, from custom sites to AI apps.",
+      title: "Freelance fullstack web developer. I build web products that last, from custom sites to AI apps.",
       description:
         "From idea to production, I turn a business need into a fast, reliable product. A dual fullstack and CMS skill set, a product background (Station F), and real care for concrete impact.",
       availableBadge: "Available for freelance",
@@ -26,7 +26,7 @@ export const translations = {
     },
     services: {
       eyebrow: "Services",
-      title: "What I do",
+      title: "My freelance web development services",
       subtitle: "Three ways to work together, from build to long-term care.",
       localOffer: "A dedicated offer for nonprofits & local shops",
       ai: {
@@ -177,7 +177,7 @@ export const translations = {
     hero: {
       greeting: "Bonjour, je suis",
       name: "Adeline Lefebvre",
-      title: "Je conçois des produits web qui durent, du site sur-mesure à l'app IA.",
+      title: "Développeuse web fullstack freelance. Je conçois des produits web qui durent, du site sur-mesure à l'app IA.",
       description:
         "De l'idée à la mise en production, je transforme un besoin métier en produit fiable et rapide. Double compétence fullstack et CMS, background produit (Station F), et un vrai souci de l'impact concret.",
       availableBadge: "Disponible en freelance",
@@ -190,7 +190,7 @@ export const translations = {
     },
     services: {
       eyebrow: "Offres",
-      title: "Ce que je fais",
+      title: "Mes services de développement web freelance",
       subtitle: "Trois façons de travailler ensemble, de la création au suivi dans la durée.",
       localOffer: "Une offre dédiée aux assos & commerces de proximité",
       ai: {
@@ -340,7 +340,7 @@ export const translations = {
     hero: {
       greeting: "Hola, soy",
       name: "Adeline Lefebvre",
-      title: "Creo productos web que perduran, del sitio a medida a la app con IA.",
+      title: "Desarrolladora web fullstack freelance. Creo productos web que perduran, del sitio a medida a la app con IA.",
       description:
         "De la idea a la producción, convierto una necesidad de negocio en un producto fiable y rápido. Doble competencia fullstack y CMS, base en producto (Station F), y un cuidado real por el impacto concreto.",
       availableBadge: "Disponible para freelance",
@@ -353,7 +353,7 @@ export const translations = {
     },
     services: {
       eyebrow: "Servicios",
-      title: "Lo que hago",
+      title: "Mis servicios de desarrollo web freelance",
       subtitle: "Tres formas de trabajar juntos, de la creación al mantenimiento a largo plazo.",
       localOffer: "Una oferta dedicada a asociaciones y comercios",
       ai: {
