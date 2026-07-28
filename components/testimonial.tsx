@@ -20,7 +20,7 @@ export function Testimonial() {
   const t = getTranslations(language);
 
   return (
-    <section className="mb-24">
+    <section>
       <div className="mx-[calc(50%-50vw)] bg-secondary/50 py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
         <Eyebrow>{t.testimonial.eyebrow}</Eyebrow>

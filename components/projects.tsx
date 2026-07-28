@@ -71,8 +71,8 @@ function AdaptiveVideoPlayer({
     <div
       ref={containerRef}
       className={`
-        relative mx-auto overflow-hidden bg-slate-900 shadow-2xl
-        ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125 rounded-xl"}
+        relative mx-auto overflow-hidden bg-slate-900
+        ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125"}
       `}
       style={aspectRatio ? { aspectRatio: aspectRatio.toString() } : { minHeight: layout === "mobile" ? "400px" : "250px" }}
     >
@@ -162,10 +162,10 @@ export function Projects() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.title} className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
+          <Card key={project.title} className="flex flex-col gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
             <div>
               {project.video && (
-                <div className="px-4 pt-4 flex justify-center">
+                <div className="flex justify-center">
                   <AdaptiveVideoPlayer
                     src={project.video}
                     layout={project.layout}
@@ -175,8 +175,8 @@ export function Projects() {
               )}
 
               {project.images && (
-                <div className="px-4 pt-4">
-                  <div className="relative mx-auto w-full aspect-16/8 overflow-hidden rounded-xl bg-slate-800 shadow-2xl">
+                <div>
+                  <div className="relative aspect-16/8 w-full overflow-hidden bg-slate-800">
                     <Carousel
                       className="w-full h-full"
                       plugins={

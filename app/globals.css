@@ -22,6 +22,7 @@
   --coral: #e0714f; /* Corail/argile vif - touches "sel" */
   --accent-deep: #22382c; /* Sapin profond - degrades verts */
   --accent-bright: #3c6b52; /* Sapin clair sature - degrades verts */
+  --amber-deep: #cf7f22; /* Miel profond - pastille (icone blanche lisible) */
   --destructive: #c0492b;
   --destructive-foreground: #ffffff;
   --border: #e8dfcd; /* Bordure chaude */
@@ -67,6 +68,7 @@
   --color-coral: var(--coral);
   --color-accent-deep: var(--accent-deep);
   --color-accent-bright: var(--accent-bright);
+  --color-amber-deep: var(--amber-deep);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);

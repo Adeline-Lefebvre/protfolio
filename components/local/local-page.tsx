@@ -55,9 +55,11 @@ const INCLUDES_ICONS = [
 ] as const;
 const SERENITY_ICONS = [Globe, ShieldCheck, LifeBuoy] as const;
 const CHIP_COLORS = [
-  "bg-accent text-background",
-  "bg-primary text-primary-foreground",
-  "bg-amber text-amber-foreground",
+  "bg-primary",
+  "bg-accent",
+  "bg-coral",
+  "bg-amber-deep",
+  "bg-accent-bright",
 ] as const;
 
 const CARD =
@@ -217,7 +219,7 @@ export function LocalPage() {
                       className={`${CARD} ${CARD_HOVER} flex h-full items-center gap-4 p-5`}
                     >
                       <div
-                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${CHIP_COLORS[i % 3]}`}
+                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white ${CHIP_COLORS[i % CHIP_COLORS.length]}`}
                       >
                         <Icon className="h-5 w-5" />
                       </div>
@@ -284,7 +286,7 @@ export function LocalPage() {
                       className={`${CARD} ${CARD_HOVER} flex h-full items-center gap-4 p-5`}
                     >
                       <div
-                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${CHIP_COLORS[i % 3]}`}
+                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white ${CHIP_COLORS[i % CHIP_COLORS.length]}`}
                       >
                         <Icon className="h-5 w-5" />
                       </div>
@@ -390,7 +392,9 @@ export function LocalPage() {
                     const Icon = SERENITY_ICONS[i];
                     return (
                       <div key={item} className="rounded-xl bg-secondary/40 p-4">
-                        <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-background">
+                        <div
+                          className={`mb-3 flex h-10 w-10 items-center justify-center rounded-lg text-white ${CHIP_COLORS[i % CHIP_COLORS.length]}`}
+                        >
                           <Icon className="h-5 w-5" />
                         </div>
                         <p className="text-sm leading-relaxed text-muted-foreground">
