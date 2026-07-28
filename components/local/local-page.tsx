@@ -61,6 +61,8 @@ const CHIP_COLORS = [
   "bg-amber-deep",
   "bg-accent-bright",
 ] as const;
+// Sur la bande verte, on n'utilise que des teintes chaudes qui ressortent.
+const WARM_CHIPS = ["bg-primary", "bg-coral", "bg-amber-deep"] as const;
 
 const CARD =
   "rounded-2xl border border-border/70 bg-card shadow-[0_1px_2px_rgba(42,42,40,0.04),0_18px_36px_-24px_rgba(47,74,60,0.16)]";
@@ -251,7 +253,9 @@ export function LocalPage() {
                 return (
                   <Reveal key={promise.title} delay={i * 90}>
                     <div className="h-full rounded-2xl border border-background/15 bg-background/[0.06] p-6">
-                      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-background/10 text-background ring-1 ring-background/20">
+                      <div
+                        className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl text-white ${WARM_CHIPS[i % WARM_CHIPS.length]}`}
+                      >
                         <Icon className="h-5 w-5" />
                       </div>
                       <h3 className="mb-2 text-xl font-semibold">
