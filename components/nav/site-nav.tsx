@@ -109,7 +109,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
 function SocialDock() {
   return (
     <div className="fixed bottom-6 right-6 z-40 hidden xl:flex">
-      <div className="flex flex-col items-center gap-1.5 rounded-full border border-foreground/15 bg-foreground p-2 text-white shadow-lg">
+      <div className="flex flex-col items-center gap-1.5 rounded-full border border-white/10 bg-foreground/85 p-2 text-white shadow-lg backdrop-blur">
         {SOCIALS.map(({ href, label, Icon }) => (
           <a
             key={label}
