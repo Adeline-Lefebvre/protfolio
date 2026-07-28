@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Sun } from "lucide-react";
+import { Eyebrow } from "@/components/eyebrow";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 
@@ -10,8 +11,9 @@ export function About() {
   const t = getTranslations(language);
 
   return (
-    <section id="about" className="mb-24 scroll-mt-20">
-      <h2 className="mb-8 text-3xl font-bold tracking-tight">
+    <section id="about" className="mb-24 scroll-mt-24">
+      <Eyebrow>{t.about.eyebrow}</Eyebrow>
+      <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
         {t.about.title}
       </h2>
       <Card className="p-8">
@@ -23,7 +25,7 @@ export function About() {
         </div>
         <div className="mt-8 flex items-start gap-3 border-t border-border pt-6">
           <Sun
-            className="mt-1 h-5 w-5 shrink-0 text-primary"
+            className="mt-1 h-5 w-5 shrink-0 text-amber"
             aria-hidden="true"
           />
           <p className="text-lg italic leading-relaxed text-muted-foreground">

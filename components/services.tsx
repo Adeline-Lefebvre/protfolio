@@ -1,7 +1,8 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Sparkles, Layout, Wrench, Check } from "lucide-react";
+import { Sparkles, Layout, Wrench, Check, ArrowUpRight } from "lucide-react";
+import { Eyebrow } from "@/components/eyebrow";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 
@@ -16,8 +17,9 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="mb-24 scroll-mt-20">
-      <h2 className="mb-2 text-3xl font-bold tracking-tight">
+    <section id="services" className="mb-24 scroll-mt-24">
+      <Eyebrow>{t.services.eyebrow}</Eyebrow>
+      <h2 className="mb-2 text-3xl tracking-tight md:text-4xl">
         {t.services.title}
       </h2>
       <p className="mb-8 text-lg text-muted-foreground">
@@ -35,7 +37,7 @@ export function Services() {
               className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${
                 featured
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-accent"
+                  : "bg-accent text-background"
               }`}
             >
               <Icon className="h-5 w-5" />
@@ -57,6 +59,15 @@ export function Services() {
             </ul>
           </Card>
         ))}
+      </div>
+      <div className="mt-8">
+        <a
+          href={`/${language}/local`}
+          className="inline-flex items-center gap-1 text-sm font-medium text-accent transition-colors hover:text-accent/80"
+        >
+          {t.services.localOffer}
+          <ArrowUpRight className="h-4 w-4" />
+        </a>
       </div>
     </section>
   );

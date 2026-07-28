@@ -9,13 +9,13 @@ export function Footer() {
         <p className="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} Adeline Lefebvre
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-1">
           <a
             href="https://github.com/Adeline-Lefebvre"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="flex h-11 w-11 items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
           >
             <Github className="h-4 w-4" />
           </a>
@@ -24,14 +24,14 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="flex h-11 w-11 items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
           >
             <Linkedin className="h-4 w-4" />
           </a>
           <a
             href="mailto:adeline.lefe@gmail.com"
             aria-label="Email"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="flex h-11 w-11 items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
           >
             <Mail className="h-4 w-4" />
           </a>

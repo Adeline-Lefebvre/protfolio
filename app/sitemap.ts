@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://adelinelefebvre.com";
   const lastModified = new Date();
 
-  return i18n.locales.map((locale) => ({
+  const home = i18n.locales.map((locale) => ({
     url: `${baseUrl}/${locale}`,
     lastModified,
     changeFrequency: "monthly" as const,
@@ -16,4 +16,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ),
     },
   }));
+
+  const local = i18n.locales.map((locale) => ({
+    url: `${baseUrl}/${locale}/local`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+    alternates: {
+      languages: Object.fromEntries(
+        i18n.locales.map((l) => [l, `${baseUrl}/${l}/local`])
+      ),
+    },
+  }));
+
+  return [...home, ...local];
 }

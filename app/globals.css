@@ -19,6 +19,10 @@
   --accent-foreground: #ffffff;
   --amber: #e8a03d; /* Ambre - badges & highlights */
   --amber-foreground: #2a2a28;
+  --coral: #e0714f; /* Corail/argile vif - touches "sel" */
+  --accent-deep: #22382c; /* Sapin profond - degrades verts */
+  --accent-bright: #3c6b52; /* Sapin clair sature - degrades verts */
+  --amber-deep: #cf7f22; /* Miel profond - pastille (icone blanche lisible) */
   --destructive: #c0492b;
   --destructive-foreground: #ffffff;
   --border: #e8dfcd; /* Bordure chaude */
@@ -61,6 +65,10 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-amber: var(--amber);
   --color-amber-foreground: var(--amber-foreground);
+  --color-coral: var(--coral);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-bright: var(--accent-bright);
+  --color-amber-deep: var(--amber-deep);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -89,6 +97,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
     overflow-x: hidden;
@@ -111,5 +122,40 @@
   strong,
   b {
     @apply font-bold;
+  }
+  /* Tailwind v4 met les boutons en cursor:default ; on rétablit le pointer. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Soulignement manuscrit qui se trace (signature). Neutralise en reduced-motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .draw-underline path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: draw-underline 0.8s ease-out 0.45s forwards;
+  }
+  @keyframes draw-underline {
+    to {
+      stroke-dashoffset: 0;
+    }
   }
 }

@@ -10,21 +10,26 @@ import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef, useEffect, useState } from "react";
+import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
+import { Eyebrow } from "@/components/eyebrow";
 
 function AdaptiveVideoPlayer({
   src,
   layout,
   title,
+  fill,
 }: {
   src: string;
   layout?: string;
   title: string;
+  fill?: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [aspectRatio, setAspectRatio] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+  const reducedMotion = usePrefersReducedMotion();
 
   // Lazy load videos when they come into view
   useEffect(() => {
@@ -64,26 +69,56 @@ function AdaptiveVideoPlayer({
       video.removeEventListener("loadedmetadata", handleLoadedMetadata);
   }, [isVisible]);
 
+  // Mode "fill" : la video remplit son conteneur et en touche les bords
+  // (utilise pour les visuels verticaux places a cote du texte).
+  if (fill) {
+    return (
+      <div
+        ref={containerRef}
+        className="relative h-full w-full overflow-hidden bg-accent-deep"
+      >
+        {(isLoading || !isVisible) && (
+          <div className="absolute inset-0 animate-pulse bg-accent-deep" />
+        )}
+        {isVisible && (
+          <video
+            ref={videoRef}
+            src={src}
+            autoPlay={!reducedMotion}
+            loop
+            muted
+            playsInline
+            controls
+            preload="metadata"
+            aria-label={`Demo video for ${title}`}
+            className="h-full w-full object-contain"
+          />
+        )}
+      </div>
+    );
+  }
+
   return (
     <div
       ref={containerRef}
       className={`
-        relative mx-auto overflow-hidden bg-slate-900 shadow-2xl
-        ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125 rounded-xl"}
+        relative mx-auto overflow-hidden bg-accent-deep
+        ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125"}
       `}
       style={aspectRatio ? { aspectRatio: aspectRatio.toString() } : { minHeight: layout === "mobile" ? "400px" : "250px" }}
     >
       {(isLoading || !isVisible) && (
-        <div className="absolute inset-0 animate-pulse bg-slate-800" />
+        <div className="absolute inset-0 animate-pulse bg-accent-deep" />
       )}
       {isVisible && (
         <video
           ref={videoRef}
           src={src}
-          autoPlay
+          autoPlay={!reducedMotion}
           loop
           muted
           playsInline
+          controls
           preload="metadata"
           aria-label={`Demo video for ${title}`}
           className="h-full w-full object-contain"
@@ -96,6 +131,7 @@ function AdaptiveVideoPlayer({
 export function Projects() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const reducedMotion = usePrefersReducedMotion();
 
   const projects = [
     {
@@ -149,36 +185,55 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="mb-24 scroll-mt-20">
-      <h2 className="mb-8 text-3xl font-bold tracking-tight">
+    <section id="projects" className="mb-24 scroll-mt-24">
+      <Eyebrow>{t.projects.eyebrow}</Eyebrow>
+      <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
         {t.projects.title}
       </h2>
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.title} className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-            <div>
-              {project.video && (
-                <div className="px-4 pt-4 flex justify-center">
+          <Card
+            key={project.title}
+            className={`flex ${project.layout === "mobile" ? "flex-row" : "flex-col"} gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5`}
+          >
+            <div
+              className={
+                project.layout === "mobile" ? "w-28 shrink-0 sm:w-44" : ""
+              }
+            >
+              {project.video &&
+                (project.layout === "mobile" ? (
                   <AdaptiveVideoPlayer
                     src={project.video}
-                    layout={project.layout}
                     title={project.title}
+                    fill
                   />
-                </div>
-              )}
+                ) : (
+                  <div className="flex justify-center">
+                    <AdaptiveVideoPlayer
+                      src={project.video}
+                      layout={project.layout}
+                      title={project.title}
+                    />
+                  </div>
+                ))}
 
               {project.images && (
-                <div className="px-4 pt-4">
-                  <div className="relative mx-auto w-full aspect-16/8 overflow-hidden rounded-xl bg-slate-800 shadow-2xl">
+                <div>
+                  <div className="relative aspect-16/8 w-full overflow-hidden bg-accent-deep">
                     <Carousel
                       className="w-full h-full"
-                      plugins={[
-                        Autoplay({
-                          delay: 3000,
-                          stopOnInteraction: false,
-                        }) as any,
-                      ]}
+                      plugins={
+                        reducedMotion
+                          ? []
+                          : [
+                              Autoplay({
+                                delay: 3000,
+                                stopOnInteraction: true,
+                              }) as any,
+                            ]
+                      }
                       opts={{
                         loop: true,
                       }}
@@ -186,7 +241,7 @@ export function Projects() {
                       <CarouselContent>
                         {project.images.map((img, index) => (
                           <CarouselItem key={index}>
-                            <div className="relative aspect-16/10">
+                            <div className="relative aspect-16/8">
                               <Image
                                 src={img}
                                 alt={`${project.title} - Screenshot ${index + 1}`}
@@ -243,12 +298,12 @@ export function Projects() {
           {t.projects.moreTitle}
         </h3>
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-            <div className="px-4 pt-4 flex justify-center">
+          <Card className="flex flex-row gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
+            <div className="w-28 shrink-0 sm:w-44">
               <AdaptiveVideoPlayer
                 src="pepstery.webm"
-                layout="mobile"
                 title={t.projects.pepstery.title}
+                fill
               />
             </div>
             <div className="flex flex-1 flex-col p-6">
@@ -287,6 +342,12 @@ export function Projects() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="mt-16 flex justify-center">
+        <Button asChild size="lg">
+          <a href="#contact">{t.nav.contact}</a>
+        </Button>
       </div>
     </section>
   );

@@ -5,22 +5,28 @@ import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
+import { TopoField } from "@/components/local/topo";
 
 export function Hero() {
   const { language } = useLanguage();
   const t = getTranslations(language);
 
   return (
-    <section className="mb-24 pt-8 md:pt-12">
+    <section className="relative mb-24 pt-8 md:pt-12">
+      <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2">
+        <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
+        <TopoField className="absolute -right-28 -top-16 h-[40rem] w-[40rem] text-accent/[0.07]" />
+      </div>
       <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
         <div className="w-full min-w-0 space-y-6 md:w-auto">
           <div className="space-y-2">
             <div className="mb-4 flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-bright opacity-60" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent-bright" />
               </span>
-              <span className="text-sm font-medium text-green-600 dark:text-green-400">
+              <span className="text-sm font-medium text-accent">
                 {t.hero.availableBadge}
               </span>
             </div>
@@ -37,7 +43,7 @@ export function Hero() {
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t.hero.description}
           </p>
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap items-center gap-3 pt-2">
             <Button asChild size="lg">
               <a href="#contact">
                 {t.hero.ctaPrimary}
@@ -47,13 +53,15 @@ export function Hero() {
             <Button variant="outline" size="lg" asChild>
               <a href="#projects">{t.hero.ctaProjects}</a>
             </Button>
-            <Button variant="ghost" size="lg" asChild>
-              <a href="/CV.pdf" download>
-                <Download className="mr-2 h-4 w-4" />
-                {t.hero.downloadCV}
-              </a>
-            </Button>
           </div>
+          <a
+            href="/CV.pdf"
+            download
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Download className="h-4 w-4" />
+            {t.hero.downloadCV}
+          </a>
         </div>
         <div className="relative h-40 w-40 shrink-0 self-center md:h-56 md:w-56 md:self-auto">
           <div className="absolute -inset-0.5 rounded-full bg-linear-to-br from-primary/40 via-primary/20 to-accent/30 blur-[2px]" />
