@@ -126,7 +126,7 @@ function SocialDock() {
         <LanguageSelector
           side="left"
           align="end"
-          className="text-white/80 hover:bg-background/15 hover:text-white"
+          className="text-white/80 hover:bg-background/15 hover:text-white focus-visible:ring-0 focus-visible:ring-offset-0"
         />
       </div>
     </div>

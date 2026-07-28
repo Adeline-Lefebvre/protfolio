@@ -41,7 +41,7 @@ export function LanguageSelector({
       </DropdownMenuTrigger>
       <DropdownMenuContent align={align} side={side}>
         {languages.map((lang) => (
-          <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="flex cursor-pointer items-center gap-2 focus:bg-secondary">
+          <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="flex cursor-pointer items-center gap-2">
             <span>{lang.flag}</span>
             <span>{lang.name}</span>
             {language === lang.code && <span className="ml-auto">✓</span>}
