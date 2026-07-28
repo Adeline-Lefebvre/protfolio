@@ -123,7 +123,11 @@ function SocialDock() {
           </a>
         ))}
         <div className="my-1 h-px w-5 bg-white/25" />
-        <LanguageSelector className="text-white/80 hover:bg-background/15 hover:text-white" />
+        <LanguageSelector
+          side="left"
+          align="end"
+          className="text-white/80 hover:bg-background/15 hover:text-white"
+        />
       </div>
     </div>
   );

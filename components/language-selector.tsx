@@ -12,7 +12,15 @@ const languages = [
   { code: "es" as const, name: "Español", flag: "🇪🇸" },
 ]
 
-export function LanguageSelector({ className }: { className?: string }) {
+export function LanguageSelector({
+  className,
+  side = "bottom",
+  align = "end",
+}: {
+  className?: string
+  side?: "top" | "bottom" | "left" | "right"
+  align?: "start" | "center" | "end"
+}) {
   const { language, setLanguage } = useLanguage()
   const currentLang = languages.find((lang) => lang.code === language)
 
@@ -31,9 +39,9 @@ export function LanguageSelector({ className }: { className?: string }) {
           <Languages className="h-5 w-5" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align={align} side={side}>
         {languages.map((lang) => (
-          <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="flex items-center gap-2">
+          <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="flex cursor-pointer items-center gap-2 focus:bg-secondary">
             <span>{lang.flag}</span>
             <span>{lang.name}</span>
             {language === lang.code && <span className="ml-auto">✓</span>}
