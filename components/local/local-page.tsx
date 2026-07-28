@@ -56,11 +56,11 @@ const CHIP_COLORS = [
   "bg-primary",
   "bg-accent",
   "bg-coral",
-  "bg-amber-deep",
+  "bg-[#cf7f22]",
   "bg-accent-bright",
 ] as const;
 // Sur la bande verte, on n'utilise que des teintes chaudes qui ressortent.
-const WARM_CHIPS = ["bg-primary", "bg-coral", "bg-amber-deep"] as const;
+const WARM_CHIPS = ["bg-primary", "bg-coral", "bg-[#cf7f22]"] as const;
 
 const CARD =
   "rounded-2xl border border-border/70 bg-card shadow-[0_1px_2px_rgba(42,42,40,0.04),0_18px_36px_-24px_rgba(47,74,60,0.16)]";
