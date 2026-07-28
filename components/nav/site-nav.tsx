@@ -109,7 +109,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
 function SocialDock() {
   return (
     <div className="fixed bottom-6 right-6 z-40 hidden xl:flex">
-      <div className="flex flex-col items-center gap-1.5 rounded-full border border-foreground/15 bg-foreground p-2 text-background shadow-lg">
+      <div className="flex flex-col items-center gap-1.5 rounded-full border border-foreground/15 bg-foreground p-2 text-white shadow-lg">
         {SOCIALS.map(({ href, label, Icon }) => (
           <a
             key={label}
@@ -117,13 +117,13 @@ function SocialDock() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className={`flex h-10 w-10 items-center justify-center rounded-full text-background/80 transition-colors hover:bg-background/15 hover:text-background ${FOCUS}`}
+            className={`flex h-9 w-9 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-background/15 hover:text-white ${FOCUS}`}
           >
             <Icon className="h-5 w-5" />
           </a>
         ))}
-        <div className="my-1 h-px w-5 bg-background/25" />
-        <LanguageSelector />
+        <div className="my-1 h-px w-5 bg-white/25" />
+        <LanguageSelector className="text-white/80 hover:bg-background/15 hover:text-white" />
       </div>
     </div>
   );
