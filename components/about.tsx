@@ -11,7 +11,7 @@ export function About() {
   const t = getTranslations(language);
 
   return (
-    <section id="about" className="mb-24 scroll-mt-20">
+    <section id="about" className="mb-24 scroll-mt-24">
       <Eyebrow>{t.about.eyebrow}</Eyebrow>
       <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
         {t.about.title}

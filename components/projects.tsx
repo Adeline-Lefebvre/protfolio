@@ -75,10 +75,10 @@ function AdaptiveVideoPlayer({
     return (
       <div
         ref={containerRef}
-        className="relative h-full w-full overflow-hidden bg-slate-900"
+        className="relative h-full w-full overflow-hidden bg-accent-deep"
       >
         {(isLoading || !isVisible) && (
-          <div className="absolute inset-0 animate-pulse bg-slate-800" />
+          <div className="absolute inset-0 animate-pulse bg-accent-deep" />
         )}
         {isVisible && (
           <video
@@ -88,7 +88,7 @@ function AdaptiveVideoPlayer({
             loop
             muted
             playsInline
-            controls={reducedMotion}
+            controls
             preload="metadata"
             aria-label={`Demo video for ${title}`}
             className="h-full w-full object-contain"
@@ -102,13 +102,13 @@ function AdaptiveVideoPlayer({
     <div
       ref={containerRef}
       className={`
-        relative mx-auto overflow-hidden bg-slate-900
+        relative mx-auto overflow-hidden bg-accent-deep
         ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125"}
       `}
       style={aspectRatio ? { aspectRatio: aspectRatio.toString() } : { minHeight: layout === "mobile" ? "400px" : "250px" }}
     >
       {(isLoading || !isVisible) && (
-        <div className="absolute inset-0 animate-pulse bg-slate-800" />
+        <div className="absolute inset-0 animate-pulse bg-accent-deep" />
       )}
       {isVisible && (
         <video
@@ -118,7 +118,7 @@ function AdaptiveVideoPlayer({
           loop
           muted
           playsInline
-          controls={reducedMotion}
+          controls
           preload="metadata"
           aria-label={`Demo video for ${title}`}
           className="h-full w-full object-contain"
@@ -185,7 +185,7 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="mb-24 scroll-mt-20">
+    <section id="projects" className="mb-24 scroll-mt-24">
       <Eyebrow>{t.projects.eyebrow}</Eyebrow>
       <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
         {t.projects.title}
@@ -199,7 +199,7 @@ export function Projects() {
           >
             <div
               className={
-                project.layout === "mobile" ? "w-36 shrink-0 sm:w-44" : ""
+                project.layout === "mobile" ? "w-28 shrink-0 sm:w-44" : ""
               }
             >
               {project.video &&
@@ -221,7 +221,7 @@ export function Projects() {
 
               {project.images && (
                 <div>
-                  <div className="relative aspect-16/8 w-full overflow-hidden bg-slate-800">
+                  <div className="relative aspect-16/8 w-full overflow-hidden bg-accent-deep">
                     <Carousel
                       className="w-full h-full"
                       plugins={
@@ -241,7 +241,7 @@ export function Projects() {
                       <CarouselContent>
                         {project.images.map((img, index) => (
                           <CarouselItem key={index}>
-                            <div className="relative aspect-16/10">
+                            <div className="relative aspect-16/8">
                               <Image
                                 src={img}
                                 alt={`${project.title} - Screenshot ${index + 1}`}
@@ -299,7 +299,7 @@ export function Projects() {
         </h3>
         <div className="grid gap-6 md:grid-cols-2">
           <Card className="flex flex-row gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-            <div className="w-36 shrink-0 sm:w-44">
+            <div className="w-28 shrink-0 sm:w-44">
               <AdaptiveVideoPlayer
                 src="pepstery.webm"
                 title={t.projects.pepstery.title}

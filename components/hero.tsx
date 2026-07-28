@@ -23,10 +23,10 @@ export function Hero() {
           <div className="space-y-2">
             <div className="mb-4 flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-bright opacity-60" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent-bright" />
               </span>
-              <span className="text-sm font-medium text-green-700">
+              <span className="text-sm font-medium text-accent">
                 {t.hero.availableBadge}
               </span>
             </div>

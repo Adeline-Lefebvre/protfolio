@@ -35,7 +35,7 @@ export function Testimonial() {
                 aria-hidden="true"
               />
               <figure className="flex flex-1 flex-col">
-                <blockquote className="flex-1 text-lg leading-relaxed text-foreground">
+                <blockquote className="flex-1 pr-10 text-lg leading-relaxed text-foreground">
                   “{item.quote}”
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-4">

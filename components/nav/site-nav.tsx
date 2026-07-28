@@ -69,7 +69,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
   return (
     <nav
       aria-label="Sections"
-      className="fixed left-6 top-24 z-40 hidden xl:block"
+      className="fixed left-6 top-24 z-40 hidden 2xl:block"
     >
       <ul className="flex flex-col gap-4 rounded-2xl border border-border/40 bg-background/80 p-4 backdrop-blur">
         {sections.map((s) => {
@@ -78,7 +78,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
             <li key={s.id}>
               <a
                 href={`#${s.id}`}
-                aria-current={isActive ? "true" : undefined}
+                aria-current={isActive ? "location" : undefined}
                 className={`group flex items-center gap-3 ${FOCUS}`}
               >
                 <span
@@ -108,7 +108,7 @@ function SectionRail({ sections }: { sections: Section[] }) {
 
 function SocialDock() {
   return (
-    <div className="fixed bottom-6 right-6 z-40 hidden xl:flex">
+    <div className="fixed bottom-6 right-6 z-40 hidden 2xl:flex">
       <div className="flex flex-col items-center gap-1.5 rounded-full border border-white/10 bg-accent/85 p-2 text-white shadow-lg backdrop-blur">
         {SOCIALS.map(({ href, label, Icon }) => (
           <a
@@ -136,7 +136,7 @@ function SocialDock() {
 function MobileMenu({ sections }: { sections: Section[] }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed right-6 top-6 z-50 xl:hidden">
+    <div className="fixed right-6 top-6 z-50 2xl:hidden">
       <div className="flex items-center gap-1 rounded-full border border-border/50 bg-background/70 p-1 backdrop-blur">
         <LanguageSelector />
         <Button

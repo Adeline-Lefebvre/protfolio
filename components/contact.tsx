@@ -18,7 +18,7 @@ export function Contact() {
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
 
   return (
-    <section id="contact" className="scroll-mt-20">
+    <section id="contact" className="scroll-mt-24">
       <div className="relative mx-[calc(50%-50vw)] overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-16 text-background md:py-24">
         <TopoField className="pointer-events-none absolute -right-28 -top-12 h-[42rem] w-[42rem] text-background/[0.05]" />
         <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
@@ -35,7 +35,7 @@ export function Contact() {
               {t.hero.availableBadge}
             </span>
           </div>
-          <p className="max-w-2xl text-lg leading-relaxed text-background/80">
+          <p className="max-w-2xl text-lg leading-relaxed text-background/90">
             {t.contact.description}
           </p>
           {accessKey && (

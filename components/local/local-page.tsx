@@ -229,7 +229,7 @@ export function LocalPage() {
         </section>
 
         {/* Tarifs */}
-        <section id="pricing" className="scroll-mt-20 bg-secondary/50 py-20 md:py-28">
+        <section id="pricing" className="scroll-mt-24 bg-secondary/50 py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.pricing}</Eyebrow>
@@ -376,7 +376,7 @@ export function LocalPage() {
         </section>
 
         {/* Réalisations (bande sable) */}
-        <section id="work" className="scroll-mt-20 bg-secondary/50 py-20 md:py-28">
+        <section id="work" className="scroll-mt-24 bg-secondary/50 py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow>{t.eyebrows.work}</Eyebrow>
@@ -511,7 +511,7 @@ export function LocalPage() {
         {/* Contact / CTA final (bande vert sapin de clôture) */}
         <section
           id="contact"
-          className="relative scroll-mt-20 overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28"
+          className="relative scroll-mt-24 overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28"
         >
           <TopoField className="pointer-events-none absolute -right-28 -top-12 h-[42rem] w-[42rem] text-background/[0.05]" />
           <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
@@ -523,7 +523,7 @@ export function LocalPage() {
               <p className="max-w-2xl text-lg leading-relaxed text-background/80">
                 {t.cta.text}
               </p>
-              <p className="mt-3 max-w-2xl leading-relaxed text-background/70">
+              <p className="mt-3 max-w-2xl leading-relaxed text-background/90">
                 {t.cta.hesitant}
               </p>
               {accessKey && (
@@ -559,7 +559,7 @@ export function LocalPage() {
                   </a>
                 </Button>
               </div>
-              <p className="mt-8 flex items-center gap-2 text-sm text-background/60">
+              <p className="mt-8 flex items-center gap-2 text-sm text-background/85">
                 <MapPin className="h-4 w-4" />
                 {t.cta.location}
               </p>

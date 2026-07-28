@@ -58,7 +58,11 @@ export function ContactForm({
 
   if (status === "success") {
     return (
-      <p className="rounded-xl bg-accent/10 px-4 py-3 text-sm font-medium text-accent">
+      <p
+        role="status"
+        aria-live="polite"
+        className="rounded-xl bg-accent/10 px-4 py-3 text-sm font-medium text-accent"
+      >
         {labels.success}
       </p>
     );
@@ -110,9 +114,9 @@ export function ContactForm({
           <Send className="mr-2 h-4 w-4" />
           {status === "sending" ? labels.sending : labels.send}
         </Button>
-        {status === "error" && (
-          <span className="text-sm text-destructive">{labels.error}</span>
-        )}
+        <span role="status" aria-live="polite" className="text-sm text-destructive">
+          {status === "error" ? labels.error : ""}
+        </span>
       </div>
     </form>
   );

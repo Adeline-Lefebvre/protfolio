@@ -10,7 +10,13 @@ export function proxy(request: NextRequest) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return;
+  // Expose the active locale to Server Components (root layout sets <html lang>)
+  if (pathnameHasLocale) {
+    const locale = pathname.split("/")[1];
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-locale", locale);
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  }
 
   // Redirect if there is no locale
   const locale = getLocale(request);
