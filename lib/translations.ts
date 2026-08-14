@@ -15,7 +15,7 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Freelance fullstack web developer. I build web products that last, from custom sites to AI apps.",
       description:
-        "From idea to production, I turn a business need into a fast, reliable product. A dual fullstack and CMS skill set, a product background (Station F), and real care for concrete impact.",
+        "From idea to production, I turn a business need into a reliable, high-performing product. A dual fullstack and CMS skill set, a product background (Station F), and products running in production across 6 countries.",
       availableBadge: "Available for freelance",
       ctaPrimary: "Let's talk about your project",
       ctaProjects: "See my work",
@@ -179,7 +179,7 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Développeuse web fullstack freelance. Je conçois des produits web qui durent, du site sur-mesure à l'app IA.",
       description:
-        "De l'idée à la mise en production, je transforme un besoin métier en produit fiable et rapide. Double compétence fullstack et CMS, background produit (Station F), et un vrai souci de l'impact concret.",
+        "De l'idée à la mise en production, je transforme un besoin métier en produit fiable et performant. Double compétence fullstack et CMS, background produit (Station F), et des produits en production utilisés dans 6 pays.",
       availableBadge: "Disponible en freelance",
       ctaPrimary: "Discutons de votre projet",
       ctaProjects: "Voir mes projets",
@@ -342,7 +342,7 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Desarrolladora web fullstack freelance. Creo productos web que perduran, del sitio a medida a la app con IA.",
       description:
-        "De la idea a la producción, convierto una necesidad de negocio en un producto fiable y rápido. Doble competencia fullstack y CMS, base en producto (Station F), y un cuidado real por el impacto concreto.",
+        "De la idea a la producción, convierto una necesidad de negocio en un producto fiable y de alto rendimiento. Doble competencia fullstack y CMS, base en producto (Station F), y productos en producción usados en 6 países.",
       availableBadge: "Disponible para freelance",
       ctaPrimary: "Hablemos de tu proyecto",
       ctaProjects: "Ver mis proyectos",
