@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Github, Linkedin, Mail, Phone, Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowLeft, Github, Linkedin, Mail, Phone, Menu, X } from "lucide-react";
 import { LanguageSelector } from "@/components/language-selector";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/language-context";
@@ -29,38 +29,21 @@ const SOCIALS = [
 const FOCUS =
   "rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
-function PageTabs({
-  homeHref,
-  localHref,
-  localLabel,
-  onLocal,
-}: {
-  homeHref: string;
-  localHref: string;
-  localLabel: string;
-  onLocal: boolean;
-}) {
-  const tab =
-    "px-4 py-2 text-sm font-medium outline-none transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring";
-  const activeCls = "bg-primary text-primary-foreground";
-  const idleCls = "text-muted-foreground hover:text-foreground";
+// Retour vers le portfolio, affiché uniquement depuis /local. L'ancien contrôle
+// segmenté à deux onglets a été retiré : /local se diffuse par lien direct, la
+// home la référence déjà dans la section Offres, et les deux pastilles fixes
+// finissaient par se chevaucher sur petit écran (le libellé espagnol dépassait
+// sous le sélecteur de langue dès 430px).
+function BackToPortfolio({ href, label }: { href: string; label: string }) {
   return (
-    <div className="fixed left-6 top-6 z-50 flex overflow-hidden rounded-full border border-border/50 bg-background/70 backdrop-blur">
-      <a
-        href={homeHref}
-        aria-current={!onLocal ? "page" : undefined}
-        className={`${tab} ${!onLocal ? activeCls : idleCls}`}
-      >
-        Portfolio
-      </a>
-      <a
-        href={localHref}
-        aria-current={onLocal ? "page" : undefined}
-        className={`${tab} ${onLocal ? activeCls : idleCls}`}
-      >
-        {localLabel}
-      </a>
-    </div>
+    <a
+      href={href}
+      aria-label={label}
+      className={`fixed left-4 top-4 z-50 flex min-h-11 items-center gap-1.5 rounded-full border border-border/50 bg-background/70 px-4 text-sm font-medium text-muted-foreground backdrop-blur transition-colors outline-none active:bg-secondary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:left-6 md:top-6 md:min-h-9 md:hover:text-foreground`}
+    >
+      <ArrowLeft className="h-4 w-4 shrink-0" aria-hidden="true" />
+      Portfolio
+    </a>
   );
 }
 
@@ -133,42 +116,120 @@ function SocialDock() {
   );
 }
 
-function MobileMenu({ sections }: { sections: Section[] }) {
+function MobileMenu({
+  sections,
+  menuLabel,
+}: {
+  sections: Section[];
+  menuLabel: string;
+}) {
   const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const contact = sections.find((s) => s.id === "contact");
+
+  useEffect(() => {
+    if (!open) return;
+    const container = containerRef.current;
+
+    // Le focus entre dans le panneau à l'ouverture, ce qui rend le cycle de
+    // tabulation ci-dessous utile, et revient sur le bouton à la fermeture.
+    panelRef.current?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        triggerRef.current?.focus();
+        return;
+      }
+      if (e.key !== "Tab" || !container) return;
+      const focusables = container.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled])'
+      );
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    // Un appui hors du bloc ferme le menu. pointerdown couvre aussi le début
+    // d'un geste de scroll, donc le panneau ne reste pas flotter au-dessus
+    // d'une page qui défile.
+    const onPointerDown = (e: PointerEvent) => {
+      if (!container?.contains(e.target as Node)) setOpen(false);
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("pointerdown", onPointerDown);
+
+    // Verrouillage du scroll. La compensation de largeur évite le saut de mise
+    // en page là où une scrollbar occupe de la place (sans effet sur mobile,
+    // où elle est en superposition).
+    const scrollbar = window.innerWidth - document.documentElement.clientWidth;
+    const prevOverflow = document.body.style.overflow;
+    const prevPaddingRight = document.body.style.paddingRight;
+    document.body.style.overflow = "hidden";
+    if (scrollbar > 0) document.body.style.paddingRight = `${scrollbar}px`;
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.body.style.overflow = prevOverflow;
+      document.body.style.paddingRight = prevPaddingRight;
+    };
+  }, [open]);
+
   return (
-    <div className="fixed right-6 top-6 z-50 2xl:hidden">
+    <nav
+      ref={containerRef}
+      aria-label={menuLabel}
+      className="fixed right-4 top-4 z-50 2xl:hidden md:right-6 md:top-6"
+    >
       <div className="flex items-center gap-1 rounded-full border border-border/50 bg-background/70 p-1 backdrop-blur">
         <LanguageSelector />
         <Button
+          ref={triggerRef}
           variant="ghost"
           size="icon"
           className="rounded-full"
-          aria-label="Menu"
+          aria-label={menuLabel}
           aria-expanded={open}
+          aria-controls="mobile-menu-panel"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
       </div>
       {open && (
-        <div className="mt-2 w-56 rounded-2xl border border-border/50 bg-background/95 p-3 shadow-lg backdrop-blur">
+        <div
+          ref={panelRef}
+          id="mobile-menu-panel"
+          tabIndex={-1}
+          className="mt-2 max-h-[calc(100svh-5.5rem)] w-56 overflow-y-auto overscroll-contain rounded-2xl border border-border/50 bg-background/95 p-3 shadow-lg outline-none backdrop-blur"
+        >
           {contact && (
             <a
               href={`#${contact.id}`}
               onClick={() => setOpen(false)}
-              className="mb-3 block rounded-full bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground"
+              className="mb-3 flex min-h-11 items-center justify-center rounded-full bg-primary px-4 text-center text-sm font-semibold text-primary-foreground transition-opacity active:opacity-80"
             >
               {contact.label}
             </a>
           )}
-          <ul className="flex flex-col">
+          <ul className="flex flex-col gap-1">
             {sections.map((s) => (
               <li key={s.id}>
                 <a
                   href={`#${s.id}`}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary/50 hover:text-foreground"
+                  className="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-muted-foreground transition-colors active:bg-secondary active:text-foreground md:hover:bg-secondary/50 md:hover:text-foreground"
                 >
                   {s.label}
                 </a>
@@ -176,7 +237,7 @@ function MobileMenu({ sections }: { sections: Section[] }) {
             ))}
           </ul>
           <div className="my-2 h-px bg-border" />
-          <div className="flex justify-around px-1">
+          <div className="flex justify-between">
             {SOCIALS.map(({ href, label, Icon }) => (
               <a
                 key={label}
@@ -184,7 +245,7 @@ function MobileMenu({ sections }: { sections: Section[] }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                className="flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-colors active:bg-secondary active:text-foreground md:hover:bg-secondary md:hover:text-foreground"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -192,34 +253,25 @@ function MobileMenu({ sections }: { sections: Section[] }) {
           </div>
         </div>
       )}
-    </div>
+    </nav>
   );
 }
 
 function SiteNavShell({
   sections,
-  onLocal,
-  localLabel,
-  homeHref,
-  localHref,
+  menuLabel,
+  back,
 }: {
   sections: Section[];
-  onLocal: boolean;
-  localLabel: string;
-  homeHref: string;
-  localHref: string;
+  menuLabel: string;
+  back?: { href: string; label: string };
 }) {
   return (
     <>
-      <PageTabs
-        homeHref={homeHref}
-        localHref={localHref}
-        localLabel={localLabel}
-        onLocal={onLocal}
-      />
+      {back && <BackToPortfolio href={back.href} label={back.label} />}
       <SectionRail sections={sections} />
       <SocialDock />
-      <MobileMenu sections={sections} />
+      <MobileMenu sections={sections} menuLabel={menuLabel} />
     </>
   );
 }
@@ -234,15 +286,7 @@ export function HomeNav() {
     { id: "testimonials", label: t.testimonial.eyebrow },
     { id: "contact", label: t.nav.contact },
   ];
-  return (
-    <SiteNavShell
-      sections={sections}
-      onLocal={false}
-      localLabel={t.nav.local}
-      homeHref={`/${language}`}
-      localHref={`/${language}/local`}
-    />
-  );
+  return <SiteNavShell sections={sections} menuLabel={t.nav.menu} />;
 }
 
 export function LocalNav() {
@@ -260,10 +304,8 @@ export function LocalNav() {
   return (
     <SiteNavShell
       sections={sections}
-      onLocal={true}
-      localLabel={t.nav.local}
-      homeHref={`/${language}`}
-      localHref={`/${language}/local`}
+      menuLabel={t.nav.menu}
+      back={{ href: `/${language}`, label: t.nav.backToPortfolio }}
     />
   );
 }

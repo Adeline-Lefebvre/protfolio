@@ -41,7 +41,9 @@ export function LanguageSelector({
       </DropdownMenuTrigger>
       <DropdownMenuContent align={align} side={side}>
         {languages.map((lang) => (
-          <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="flex cursor-pointer items-center gap-2">
+          // min-h-11 sur mobile : les trois langues sont jointives, et une
+          // erreur de visée déclenche une navigation vers une autre locale.
+          <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="flex min-h-11 cursor-pointer items-center gap-2 py-2.5 md:min-h-0 md:py-1.5">
             <span className="w-6 text-xs font-semibold text-muted-foreground">
               {lang.code.toUpperCase()}
             </span>

@@ -9,6 +9,8 @@ export const translations = {
       projects: "Projects",
       contact: "Contact",
       local: "Nonprofits & shops",
+      menu: "Menu",
+      backToPortfolio: "Back to portfolio",
     },
     hero: {
       greeting: "Hi, I'm",
@@ -173,6 +175,8 @@ export const translations = {
       projects: "Projets",
       contact: "Contact",
       local: "Assos & commerces",
+      menu: "Menu",
+      backToPortfolio: "Retour au portfolio",
     },
     hero: {
       greeting: "Bonjour, je suis",
@@ -336,6 +340,8 @@ export const translations = {
       projects: "Proyectos",
       contact: "Contacto",
       local: "Asociaciones y comercios",
+      menu: "Menú",
+      backToPortfolio: "Volver al portafolio",
     },
     hero: {
       greeting: "Hola, soy",
