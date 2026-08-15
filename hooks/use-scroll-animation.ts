@@ -4,7 +4,13 @@ import { useEffect, useRef, useState } from "react";
 
 export function useScrollAnimation(threshold = 0) {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  // `null` = pas encore évalué côté client. Dans cet état on rend le contenu
+  // visible, pour que le HTML statique ne parte jamais en opacity-0 : sinon
+  // toute la page sous le hero reste blanche entre le premier rendu et
+  // l'hydratation, ce qui se compte en secondes sur un mobile en réseau lent.
+  // C'est l'observer qui décide ensuite de masquer, et il ne masque que ce qui
+  // est déjà hors écran : la transition d'entrée reste donc invisible.
+  const [isVisible, setIsVisible] = useState<boolean | null>(null);
 
   useEffect(() => {
     const element = ref.current;
@@ -21,6 +27,10 @@ export function useScrollAnimation(threshold = 0) {
         if (entry.isIntersecting) {
           setIsVisible(true);
           observer.unobserve(element);
+        } else {
+          // Première évaluation : la section est hors écran, on l'arme pour
+          // l'animation. Les sections déjà à l'écran ne passent jamais ici.
+          setIsVisible(false);
         }
       },
       // Positive bottom margin: reveal ~200px BEFORE the section enters the
@@ -32,5 +42,5 @@ export function useScrollAnimation(threshold = 0) {
     return () => observer.disconnect();
   }, [threshold]);
 
-  return { ref, isVisible };
+  return { ref, isVisible: isVisible ?? true };
 }

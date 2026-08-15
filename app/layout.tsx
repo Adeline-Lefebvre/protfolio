@@ -1,5 +1,5 @@
 import type React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -17,6 +17,15 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   display: "swap",
 });
+
+// Le zoom reste volontairement autorisé (pas de maximumScale). colorScheme
+// annonce un site clair uniquement : sans lui, un téléphone en mode sombre
+// applique son rendu natif aux champs du formulaire (placeholder gris clair
+// sur fond blanc forcé). themeColor teinte la barre d'adresse sur Android.
+export const viewport: Viewport = {
+  colorScheme: "light",
+  themeColor: "#fbf7f0",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://adelinelefebvre.com"),

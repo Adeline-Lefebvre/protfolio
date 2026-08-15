@@ -1,8 +1,18 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Le thème est volontairement clair uniquement. Par défaut, Tailwind v4 fait
+   retomber `dark:` sur prefers-color-scheme : les variantes dark héritées de
+   shadcn s'activaient donc sur tout téléphone en mode sombre, sans palette
+   sombre pour les servir (boutons outline avec un fond beige parasite, entre
+   autres). On rattache la variante à une classe `.dark` qui n'existe nulle
+   part : les `dark:` deviennent inertes tant qu'un thème sombre n'est pas
+   réellement introduit. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   /* Solar Theme - "Terracotta Rootyne" (light only) */
+  color-scheme: light; /* Formulaires et scrollbars natifs en clair */
   --background: #fbf7f0; /* Crème cassé - fond principal */
   --foreground: #2a2a28; /* Encre douce - texte principal */
   --card: #ffffff; /* Cartes blanches */
