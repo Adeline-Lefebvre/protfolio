@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 
@@ -29,6 +29,15 @@ export function ContactForm({
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
+  const statusRef = useRef<HTMLParagraphElement>(null);
+
+  // Le formulaire reste monte apres l'envoi. Il etait auparavant remplace par
+  // le message de succes, ce qui faisait retomber le focus sur <body> : au
+  // clavier, on repartait du haut du document. On deplace le focus sur le
+  // message a la place.
+  useEffect(() => {
+    if (status === "success") statusRef.current?.focus();
+  }, [status]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -56,53 +65,63 @@ export function ContactForm({
     }
   }
 
-  if (status === "success") {
-    return (
-      <p
-        role="status"
-        aria-live="polite"
-        className="rounded-xl bg-accent/10 px-4 py-3 text-sm font-medium text-accent"
-      >
-        {labels.success}
-      </p>
-    );
-  }
-
   // text-base (16px) obligatoire sur mobile : en dessous, Safari iOS zoome la
   // page au focus du champ et ne dézoome jamais au blur. On revient à 14px à
   // partir de md, où le problème ne se pose pas.
   const inputClass =
     "w-full rounded-xl border border-border bg-card px-4 py-2.5 text-base text-foreground outline-none transition-shadow focus-visible:ring-2 focus-visible:ring-ring md:text-sm";
+  const labelClass = "block text-sm font-medium text-foreground";
 
+  // La validation reste native. Safari iOS bloque bien la soumission, met le
+  // focus sur le premier champ invalide, le fait défiler à l'écran et affiche
+  // une bulle, et ce depuis iOS 10.3. Passer en validation JS ferait perdre la
+  // localisation automatique des messages dans les trois langues.
   return (
-    <form onSubmit={onSubmit} className="space-y-3">
-      <div className="grid gap-3 sm:grid-cols-2">
-        <input
-          name="name"
+    <form onSubmit={onSubmit} className="space-y-4">
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="space-y-1.5">
+          <label htmlFor="cf-name" className={labelClass}>
+            {labels.name}
+          </label>
+          <input
+            id="cf-name"
+            name="name"
+            required
+            autoComplete="name"
+            autoCapitalize="words"
+            enterKeyHint="next"
+            className={inputClass}
+          />
+        </div>
+        <div className="space-y-1.5">
+          <label htmlFor="cf-email" className={labelClass}>
+            {labels.email}
+          </label>
+          <input
+            id="cf-email"
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+            enterKeyHint="next"
+            className={inputClass}
+          />
+        </div>
+      </div>
+      <div className="space-y-1.5">
+        <label htmlFor="cf-message" className={labelClass}>
+          {labels.message}
+        </label>
+        {/* Pas d'enterKeyHint ici : dans un textarea la touche insère un saut
+            de ligne, un libellé "envoyer" mentirait sur son effet. */}
+        <textarea
+          id="cf-message"
+          name="message"
           required
-          autoComplete="name"
-          aria-label={labels.name}
-          placeholder={labels.name}
-          className={inputClass}
-        />
-        <input
-          name="email"
-          type="email"
-          required
-          autoComplete="email"
-          aria-label={labels.email}
-          placeholder={labels.email}
+          rows={4}
           className={inputClass}
         />
       </div>
-      <textarea
-        name="message"
-        required
-        rows={4}
-        aria-label={labels.message}
-        placeholder={labels.message}
-        className={inputClass}
-      />
       {/* Honeypot anti-spam (Web3Forms) */}
       <input
         type="checkbox"
@@ -113,14 +132,36 @@ export function ContactForm({
         autoComplete="off"
       />
       <div className="flex flex-wrap items-center gap-3">
-        <Button type="submit" disabled={status === "sending"}>
+        <Button
+          type="submit"
+          disabled={status === "sending"}
+          aria-busy={status === "sending"}
+        >
           <Send className="mr-2 h-4 w-4" />
           {status === "sending" ? labels.sending : labels.send}
         </Button>
-        <span role="status" aria-live="polite" className="text-sm text-destructive">
-          {status === "error" ? labels.error : ""}
-        </span>
       </div>
+      {/* Région live toujours présente dans le DOM : montée en même temps que
+          son contenu, elle n'est pas annoncée de façon fiable. */}
+      <p
+        ref={statusRef}
+        tabIndex={-1}
+        role="status"
+        aria-live="polite"
+        className={
+          status === "success"
+            ? "rounded-xl bg-accent/10 px-4 py-3 text-sm font-medium text-accent outline-none"
+            : status === "error"
+              ? "text-sm text-destructive outline-none"
+              : "sr-only"
+        }
+      >
+        {status === "success"
+          ? labels.success
+          : status === "error"
+            ? labels.error
+            : ""}
+      </p>
     </form>
   );
 }
