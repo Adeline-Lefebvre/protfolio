@@ -20,20 +20,25 @@ export function TrustBar() {
   const t = getTranslations(language);
 
   return (
-    <section className="mb-24">
+    <section className="mb-16 md:mb-24">
       <p className="mb-8 text-center text-sm font-medium uppercase tracking-wider text-muted-foreground">
         {t.trust.label}
       </p>
-      <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+      {/* Les tailles sont en dur par logo, donc une media query ne peut pas les
+          atteindre : on passe par une variable, mise a 0.78 sous md. A taille
+          pleine, LIME fait a lui seul 158px sur les 272 disponibles a 320px, et
+          aucun logo ne pouvait l'accompagner : la barre s'etirait sur six rangs
+          d'un seul logo. Reduire le gap seul n'y suffisait pas. */}
+      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-5 [--logo-scale:0.78] md:gap-x-10 md:gap-y-6 md:[--logo-scale:1]">
         {logos.map((logo) => (
           <span
             key={logo.name}
             role="img"
             aria-label={logo.name}
-            className="block bg-muted-foreground/60 transition-colors duration-200 hover:bg-foreground"
+            className="block max-w-full bg-muted-foreground/60 transition-colors duration-200 hover:bg-foreground"
             style={{
-              height: logo.h,
-              width: logo.ratio * logo.h,
+              height: `calc(${logo.h}px * var(--logo-scale))`,
+              width: `calc(${logo.ratio * logo.h}px * var(--logo-scale))`,
               maskImage: `url(${logo.src})`,
               WebkitMaskImage: `url(${logo.src})`,
               maskSize: "contain",
@@ -45,7 +50,9 @@ export function TrustBar() {
             }}
           />
         ))}
-        <span className="text-lg font-semibold tracking-tight text-muted-foreground/70 transition-colors duration-200 hover:text-foreground">
+        {/* Logo typographique : il ne suit pas la variable d'echelle, on le
+            reduit d'un cran pour rester proportionne aux autres. */}
+        <span className="text-base font-semibold tracking-tight text-muted-foreground/70 transition-colors duration-200 hover:text-foreground md:text-lg">
           SDS&nbsp;Lingo
         </span>
       </div>

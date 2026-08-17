@@ -316,7 +316,7 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="mb-24 scroll-mt-24">
+    <section id="projects" className="mb-16 scroll-mt-24 md:mb-24">
       <Eyebrow>{t.projects.eyebrow}</Eyebrow>
       <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
         {t.projects.title}

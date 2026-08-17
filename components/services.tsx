@@ -17,7 +17,7 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="mb-24 scroll-mt-24">
+    <section id="services" className="mb-16 scroll-mt-24 md:mb-24">
       <Eyebrow>{t.services.eyebrow}</Eyebrow>
       <h2 className="mb-2 text-3xl tracking-tight md:text-4xl">
         {t.services.title}
