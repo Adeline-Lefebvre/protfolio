@@ -88,7 +88,10 @@ export function LocalPage() {
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
             <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
             <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
-            <TopoField className="absolute -right-28 -top-16 h-[40rem] w-[40rem] text-accent/[0.07]" />
+            {/* 40rem dans un ecran de 320 ne laissait voir que des arcs qui
+                traversent le titre : le motif concentrique n'etait plus
+                reconnaissable. Reduit pour tenir dans l'ecran en mobile. */}
+            <TopoField className="absolute -right-8 -top-6 h-76 w-76 text-accent/[0.07] md:-right-28 md:-top-16 md:h-160 md:w-160" />
           </div>
           <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <div className="max-w-3xl">

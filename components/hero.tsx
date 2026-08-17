@@ -19,10 +19,16 @@ export function Hero() {
           absorber le debordement, et la barre fixe ancree a right-4 se
           retrouvait hors de l'ecran. Le wrapper equivalent de /local avait
           deja ce overflow-hidden, pas celui-ci. */}
-      <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2 overflow-hidden">
-        <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
-        <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
-        <TopoField className="absolute -right-28 -top-16 h-[40rem] w-[40rem] text-accent/[0.07]" />
+      <div className="pointer-events-none absolute -inset-y-32 left-1/2 -z-10 w-screen -translate-x-1/2 overflow-hidden">
+        {/* Le clip est repousse de 8rem au-dessus et en dessous, et cette
+            couche interne restitue exactement la boite de la section : sans
+            elle, la coupe tombait sur le halo et dessinait une ligne
+            horizontale nette en haut du hero. */}
+        <div className="absolute inset-x-0 inset-y-32">
+          <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
+          <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
+          <TopoField className="absolute -right-8 -top-6 h-76 w-76 text-accent/[0.07] md:-right-28 md:-top-16 md:h-160 md:w-160" />
+        </div>
       </div>
       <div className="flex flex-col-reverse gap-6 md:flex-row md:items-center md:justify-between md:gap-8">
         <div className="w-full min-w-0 space-y-6 md:w-auto">
