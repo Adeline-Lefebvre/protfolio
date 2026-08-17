@@ -12,13 +12,13 @@ export function Hero() {
   const t = getTranslations(language);
 
   return (
-    <section className="relative mb-24 pt-8 md:pt-12">
+    <section className="relative mb-16 pt-4 md:mb-24 md:pt-12">
       <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2">
         <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
         <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
         <TopoField className="absolute -right-28 -top-16 h-[40rem] w-[40rem] text-accent/[0.07]" />
       </div>
-      <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-col-reverse gap-6 md:flex-row md:items-center md:justify-between md:gap-8">
         <div className="w-full min-w-0 space-y-6 md:w-auto">
           <div className="space-y-2">
             <div className="mb-4 flex items-center gap-2">
@@ -35,7 +35,7 @@ export function Hero() {
               <span className="block text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
                 {t.hero.name}
               </span>
-              <span className="mt-4 block font-sans text-2xl font-medium text-muted-foreground md:text-3xl">
+              <span className="mt-3 block font-sans text-xl font-medium leading-snug text-muted-foreground sm:text-2xl md:mt-4 md:text-3xl">
                 {t.hero.title}
               </span>
             </h1>
@@ -63,14 +63,14 @@ export function Hero() {
             {t.hero.downloadCV}
           </a>
         </div>
-        <div className="relative h-40 w-40 shrink-0 self-center md:h-56 md:w-56 md:self-auto">
+        <div className="relative h-28 w-28 shrink-0 self-center sm:h-40 sm:w-40 md:h-56 md:w-56 md:self-auto">
           <div className="absolute -inset-0.5 rounded-full bg-linear-to-br from-primary/40 via-primary/20 to-accent/30 blur-[2px]" />
           <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-primary/20">
             <Image
               src="/profile-photo.jpg"
               alt="Adeline Lefebvre, Fullstack Software Engineer"
               fill
-              sizes="(min-width: 768px) 224px, 160px"
+              sizes="(min-width: 768px) 224px, (min-width: 640px) 160px, 112px"
               className="object-cover"
               priority
             />

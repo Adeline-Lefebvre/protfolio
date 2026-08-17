@@ -16,7 +16,7 @@ export function About() {
       <h2 className="mb-8 text-3xl tracking-tight md:text-4xl">
         {t.about.title}
       </h2>
-      <Card className="p-8">
+      <Card className="p-5 sm:p-8">
         <div className="space-y-6 text-lg leading-relaxed text-foreground/80">
           <div dangerouslySetInnerHTML={{ __html: t.about.paragraph1 }} />
           <div dangerouslySetInnerHTML={{ __html: t.about.paragraph2 }} />

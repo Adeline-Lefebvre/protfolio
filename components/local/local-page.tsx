@@ -79,12 +79,12 @@ export function LocalPage() {
   const promises = [t.promises.fast, t.promises.yours, t.promises.noFees];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-dvh">
       <LocalNav />
 
       <main id="top">
         {/* Hero */}
-        <section className="relative overflow-hidden pt-24 pb-28 md:pt-36 md:pb-36">
+        <section className="relative overflow-hidden pt-24 pb-16 md:pt-36 md:pb-36">
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
             <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
             <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
@@ -96,18 +96,27 @@ export function LocalPage() {
                 <Leaf className="h-4 w-4" />
                 {t.hero.eyebrow}
               </p>
-              <h1 className="text-balance text-4xl tracking-tight sm:text-5xl md:text-6xl">
+              {/* leading explicite : la taille en clamp ne vient pas avec une
+                  hauteur de ligne, et l'ancrage du soulignement en depend. */}
+              <h1 className="text-balance text-[clamp(1.75rem,6vw+0.5rem,2.25rem)] leading-[1.2] tracking-tight sm:text-[3rem] md:text-[3.75rem]">
                 {t.hero.titlePre}
                 <span className="relative inline-block">
                   <em className="font-normal italic">{t.hero.titleEm}</em>
-                  <HandUnderline className="draw-underline absolute -bottom-2 left-0 h-2.5 w-full text-amber" />
+                  {/* Ancre en em sous la ligne de base, et non a une distance
+                      fixe sous la boite de ligne : le trait reste a la meme
+                      distance optique du texte a toutes les tailles, et surtout
+                      il ne sort jamais de sa propre ligne. En anglais et en
+                      espagnol le mot souligne est suivi d'un autre mot, donc il
+                      retombait sur les hampes de la ligne d'en dessous des que
+                      le titre passait a plusieurs lignes. */}
+                  <HandUnderline className="draw-underline absolute left-0 top-[0.95em] h-[0.22em] w-full text-amber" />
                 </span>
                 {t.hero.titlePost}
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/70 md:text-xl">
                 {t.hero.subtitle}
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
                 <Button asChild size="lg">
                   <a href="#contact">
                     {t.hero.cta}
