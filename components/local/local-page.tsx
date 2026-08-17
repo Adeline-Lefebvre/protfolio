@@ -32,7 +32,7 @@ import {
 } from "@/components/ui/accordion";
 import { Footer } from "@/components/footer";
 import { Testimonial } from "@/components/testimonial";
-import { LocalNav } from "@/components/nav/site-nav";
+import { LocalNav } from "@/components/nav/local-nav";
 import { Reveal } from "@/components/local/reveal";
 import { TopoField, HandUnderline } from "@/components/local/topo";
 import { Eyebrow } from "@/components/eyebrow";

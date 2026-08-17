@@ -6,10 +6,9 @@ import { LanguageSelector } from "@/components/language-selector";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
-import { getLocalContent } from "@/lib/local-content";
 import { useActiveSection } from "@/hooks/use-active-section";
 
-type Section = { id: string; label: string };
+export type Section = { id: string; label: string };
 
 const SOCIALS = [
   { href: "https://github.com/Adeline-Lefebvre", label: "GitHub", Icon: Github },
@@ -257,7 +256,7 @@ function MobileMenu({
   );
 }
 
-function SiteNavShell({
+export function SiteNavShell({
   sections,
   menuLabel,
   back,
@@ -289,23 +288,7 @@ export function HomeNav() {
   return <SiteNavShell sections={sections} menuLabel={t.nav.menu} />;
 }
 
-export function LocalNav() {
-  const { language } = useLanguage();
-  const t = getTranslations(language);
-  const c = getLocalContent(language);
-  const sections: Section[] = [
-    { id: "forwho", label: c.eyebrows.forWho },
-    { id: "pricing", label: c.eyebrows.pricing },
-    { id: "work", label: c.eyebrows.work },
-    { id: "testimonials", label: t.testimonial.eyebrow },
-    { id: "faq", label: c.eyebrows.faq },
-    { id: "contact", label: c.eyebrows.contact },
-  ];
-  return (
-    <SiteNavShell
-      sections={sections}
-      menuLabel={t.nav.menu}
-      back={{ href: `/${language}`, label: t.nav.backToPortfolio }}
-    />
-  );
-}
+// LocalNav vit dans son propre module (./local-nav) : tant qu'elle etait ici,
+// importer HomeNav depuis la home tirait aussi getLocalContent, et le contenu
+// complet de /local dans les trois langues se retrouvait dans le bundle d'une
+// page qui ne l'affiche jamais.
