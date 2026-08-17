@@ -88,7 +88,6 @@ function AdaptiveVideoPlayer({
             loop
             muted
             playsInline
-            controls
             preload="metadata"
             aria-label={`Demo video for ${title}`}
             className="h-full w-full object-contain"
@@ -199,7 +198,10 @@ export function Projects() {
           >
             <div
               className={
-                project.layout === "mobile" ? "w-28 shrink-0 sm:w-44" : ""
+                // Proportionnel plutot que 112px figes : a 320px la colonne de
+                // texte tombait a 112px et le bouton, en whitespace-nowrap
+                // shrink-0, depassait de la carte et se faisait clipper.
+                project.layout === "mobile" ? "w-1/3 max-w-44 shrink-0" : ""
               }
             >
               {project.video &&
@@ -259,7 +261,7 @@ export function Projects() {
               )}
             </div>
 
-            <div className="flex flex-1 flex-col p-6">
+            <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-6">
               <div className="mb-4">
                 <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -299,14 +301,14 @@ export function Projects() {
         </h3>
         <div className="grid gap-6 md:grid-cols-2">
           <Card className="flex flex-row gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-            <div className="w-28 shrink-0 sm:w-44">
+            <div className="w-1/3 max-w-44 shrink-0">
               <AdaptiveVideoPlayer
                 src="pepstery.webm"
                 title={t.projects.pepstery.title}
                 fill
               />
             </div>
-            <div className="flex flex-1 flex-col p-6">
+            <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-6">
               <h4 className="mb-2 text-lg font-semibold">
                 {t.projects.pepstery.title}
               </h4>

@@ -143,6 +143,14 @@
     outline-offset: 2px;
     border-radius: var(--radius-sm);
   }
+  /* Chrome Android dessine au tap un rectangle gris qui deborde des coins
+     arrondis. On le neutralise : les etats active: prennent le relais et
+     epousent la forme reelle de la cible. */
+  a,
+  button,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

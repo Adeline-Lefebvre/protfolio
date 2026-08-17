@@ -298,7 +298,7 @@ export function LocalPage() {
             <div className="mt-6 flex justify-center">
               <a
                 href="#contact"
-                className="rounded-full bg-accent/10 px-4 py-2 text-center text-sm text-accent transition-colors hover:bg-accent/20"
+                className="flex min-h-11 items-center rounded-full bg-accent/10 px-4 text-center text-sm text-accent transition-colors active:bg-accent/25 hover:bg-accent/20"
               >
                 {t.pricing.solidarity}
               </a>
@@ -434,7 +434,7 @@ export function LocalPage() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80 ${LINK_FOCUS}`}
+                      className={`-mx-2 mt-3 inline-flex min-h-11 items-center gap-1 rounded-md px-2 text-sm font-medium text-primary transition-colors active:bg-secondary hover:text-primary/80 ${LINK_FOCUS}`}
                     >
                       {item.cta}
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -477,7 +477,7 @@ export function LocalPage() {
                   ))}
                   <a
                     href={homeHref}
-                    className={`inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80 ${LINK_FOCUS}`}
+                    className={`-mx-2 inline-flex min-h-11 items-center gap-1 rounded-md px-2 text-sm font-medium text-primary transition-colors active:bg-secondary hover:text-primary/80 ${LINK_FOCUS}`}
                   >
                     {t.about.link}
                     <ArrowUpRight className="h-4 w-4" />

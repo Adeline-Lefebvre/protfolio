@@ -57,7 +57,7 @@ export function Hero() {
           <a
             href="/CV.pdf"
             download
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="-mx-2 inline-flex min-h-11 items-center gap-1.5 rounded-md px-2 text-sm font-medium text-muted-foreground transition-colors active:bg-secondary hover:text-foreground"
           >
             <Download className="h-4 w-4" />
             {t.hero.downloadCV}

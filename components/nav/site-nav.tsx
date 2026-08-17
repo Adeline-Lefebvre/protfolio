@@ -39,7 +39,7 @@ function BackToPortfolio({ href, label }: { href: string; label: string }) {
     <a
       href={href}
       aria-label={label}
-      className={`fixed left-4 top-4 z-50 flex min-h-11 items-center gap-1.5 rounded-full border border-border/50 bg-background/70 px-4 text-sm font-medium text-muted-foreground backdrop-blur transition-colors outline-none active:bg-secondary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:left-6 md:top-6 md:min-h-9 md:hover:text-foreground`}
+      className={`fixed left-4 top-4 z-50 flex min-h-11 items-center gap-1.5 rounded-full border border-border/50 bg-background/70 px-4 text-sm font-medium text-muted-foreground backdrop-blur transition-colors outline-none active:bg-secondary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:left-6 md:top-6 md:min-h-9 hover:text-foreground`}
     >
       <ArrowLeft className="h-4 w-4 shrink-0" aria-hidden="true" />
       Portfolio
@@ -229,7 +229,7 @@ function MobileMenu({
                 <a
                   href={`#${s.id}`}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-muted-foreground transition-colors active:bg-secondary active:text-foreground md:hover:bg-secondary/50 md:hover:text-foreground"
+                  className="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-muted-foreground transition-colors active:bg-secondary active:text-foreground hover:bg-secondary/50 hover:text-foreground"
                 >
                   {s.label}
                 </a>
@@ -245,7 +245,7 @@ function MobileMenu({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-colors active:bg-secondary active:text-foreground md:hover:bg-secondary md:hover:text-foreground"
+                className="flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-colors active:bg-secondary active:text-foreground hover:bg-secondary hover:text-foreground"
               >
                 <Icon className="h-4 w-4" />
               </a>

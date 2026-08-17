@@ -63,7 +63,7 @@ export function Services() {
       <div className="mt-8">
         <a
           href={`/${language}/local`}
-          className="inline-flex items-center gap-1 text-sm font-medium text-accent transition-colors hover:text-accent/80"
+          className="-mx-2 inline-flex min-h-11 items-center gap-1 rounded-md px-2 text-sm font-medium text-accent transition-colors active:bg-secondary hover:text-accent/80"
         >
           {t.services.localOffer}
           <ArrowUpRight className="h-4 w-4" />
