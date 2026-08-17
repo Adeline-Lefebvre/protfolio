@@ -4,7 +4,7 @@ import { i18n, type Locale } from "@/lib/i18n-config";
 import { LanguageProvider } from "@/lib/language-context";
 import { getMetadata } from "@/lib/metadata";
 import { StructuredData } from "@/components/structured-data";
-import type { Language } from "@/lib/translations";
+import { getTranslations, type Language } from "@/lib/translations";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
@@ -87,6 +87,16 @@ export default async function LocaleLayout({
         }}
       />
       <StructuredData locale={locale as Language} />
+      {/* Premier element focusable de la page. Avec une nav fixe et un rail de
+          sections, la navigation clavier ou vocale traversait tous les liens
+          avant d'atteindre le contenu. Rendu cote serveur pour etre traduit
+          des le HTML statique. */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-100 focus:rounded-md focus:bg-primary focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-primary-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+      >
+        {getTranslations(locale as Language).nav.skipToContent}
+      </a>
       {children}
     </LanguageProvider>
   );

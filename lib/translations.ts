@@ -11,6 +11,7 @@ export const translations = {
       local: "Nonprofits & shops",
       menu: "Menu",
       backToPortfolio: "Back to portfolio",
+      skipToContent: "Skip to content",
     },
     hero: {
       greeting: "Hi, I'm",
@@ -178,6 +179,7 @@ export const translations = {
       local: "Assos & commerces",
       menu: "Menu",
       backToPortfolio: "Retour au portfolio",
+      skipToContent: "Aller au contenu",
     },
     hero: {
       greeting: "Bonjour, je suis",
@@ -344,6 +346,7 @@ export const translations = {
       local: "Asociaciones y comercios",
       menu: "Menú",
       backToPortfolio: "Volver al portafolio",
+      skipToContent: "Ir al contenido",
     },
     hero: {
       greeting: "Hola, soy",

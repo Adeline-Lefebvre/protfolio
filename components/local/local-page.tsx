@@ -82,7 +82,7 @@ export function LocalPage() {
     <div className="min-h-dvh">
       <LocalNav />
 
-      <main id="top">
+      <main id="main" tabIndex={-1} className="outline-none">
         {/* Hero */}
         <section className="relative overflow-hidden pt-24 pb-16 md:pt-36 md:pb-36">
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">

@@ -13,9 +13,12 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <HomeNav />
+      {/* tabIndex -1 : sans lui, l'ancre du lien d'evitement fait defiler mais
+          ne deplace pas le focus, qui repart du haut au Tab suivant. */}
       <main
-        aria-label="Portfolio content"
-        className="mx-auto max-w-6xl px-6 pt-20 md:px-12 lg:px-16"
+        id="main"
+        tabIndex={-1}
+        className="mx-auto max-w-6xl px-6 pt-20 outline-none md:px-12 lg:px-16"
       >
         <Hero />
         <AnimatedSection>
