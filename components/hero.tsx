@@ -13,7 +13,13 @@ export function Hero() {
 
   return (
     <section className="relative mb-16 pt-4 md:mb-24 md:pt-12">
-      <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2">
+      {/* overflow-hidden indispensable : le TopoField est en -right-28 pour
+          40rem de large, donc son bord droit tombait a 100vw + 112px. Sur
+          mobile, Chrome elargit alors le viewport de mise en page a 432px pour
+          absorber le debordement, et la barre fixe ancree a right-4 se
+          retrouvait hors de l'ecran. Le wrapper equivalent de /local avait
+          deja ce overflow-hidden, pas celui-ci. */}
+      <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2 overflow-hidden">
         <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
         <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
         <TopoField className="absolute -right-28 -top-16 h-[40rem] w-[40rem] text-accent/[0.07]" />

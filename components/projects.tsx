@@ -85,10 +85,18 @@ function AdaptiveVideoPlayer({
     return (
       <div
         ref={containerRef}
-        className="relative h-full w-full overflow-hidden bg-accent-deep"
+        className="relative w-full overflow-hidden bg-secondary"
+        // La colonne s'etirait sur toute la hauteur de la carte alors que la
+        // video garde ses proportions : tout le reste etait du fond, soit un
+        // grand aplat vert sur un tiers de la carte. On lui donne le ratio de
+        // la video, le parent est en self-start, et il ne reste plus de fond
+        // visible une fois la video chargee.
+        style={{
+          aspectRatio: aspectRatio ? aspectRatio.toString() : "9 / 19",
+        }}
       >
         {(isLoading || !isVisible) && (
-          <div className="absolute inset-0 animate-pulse bg-accent-deep" />
+          <div className="absolute inset-0 animate-pulse bg-secondary" />
         )}
         {isVisible && (
           <video
@@ -114,7 +122,7 @@ function AdaptiveVideoPlayer({
     <div
       ref={containerRef}
       className={`
-        relative mx-auto overflow-hidden bg-accent-deep
+        relative mx-auto overflow-hidden bg-secondary
         ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125"}
       `}
       // Toujours un ratio, jamais une hauteur mini : le ternaire precedent
@@ -129,7 +137,7 @@ function AdaptiveVideoPlayer({
       }}
     >
       {(isLoading || !isVisible) && (
-        <div className="absolute inset-0 animate-pulse bg-accent-deep" />
+        <div className="absolute inset-0 animate-pulse bg-secondary" />
       )}
       {isVisible && (
         <video
@@ -196,7 +204,7 @@ function ProjectCarousel({
   return (
     <div>
       <div
-        className={`relative ${SHOT_RATIO} w-full overflow-hidden bg-accent-deep`}
+        className={`relative ${SHOT_RATIO} w-full overflow-hidden bg-secondary`}
       >
         <Carousel
           className="h-full w-full"
@@ -325,7 +333,7 @@ export function Projects() {
                 // Proportionnel plutot que 112px figes : a 320px la colonne de
                 // texte tombait a 112px et le bouton, en whitespace-nowrap
                 // shrink-0, depassait de la carte et se faisait clipper.
-                project.layout === "mobile" ? "w-1/3 max-w-44 shrink-0" : ""
+                project.layout === "mobile" ? "w-1/3 max-w-44 shrink-0 self-start" : ""
               }
             >
               {project.video &&
@@ -395,7 +403,7 @@ export function Projects() {
         </h3>
         <div className="grid gap-6 md:grid-cols-2">
           <Card className="flex flex-row gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-            <div className="w-1/3 max-w-44 shrink-0">
+            <div className="w-1/3 max-w-44 shrink-0 self-start">
               <AdaptiveVideoPlayer
                 src="pepstery"
                 title={t.projects.pepstery.title}
