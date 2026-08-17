@@ -31,7 +31,10 @@ function AdaptiveVideoPlayer({
   const [isVisible, setIsVisible] = useState(false);
   const reducedMotion = usePrefersReducedMotion();
 
-  // Lazy load videos when they come into view
+  // Montage differe a l'approche du viewport, puis mise en pause des que la
+  // video en sort. L'observer restait auparavant deconnecte apres le premier
+  // passage : les quatre demos tournaient en boucle en permanence une fois
+  // depassees, pour rien, en consommant batterie et CPU.
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -40,7 +43,9 @@ function AdaptiveVideoPlayer({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+          if (!reducedMotion) videoRef.current?.play().catch(() => {});
+        } else {
+          videoRef.current?.pause();
         }
       },
       { rootMargin: "100px" }
@@ -48,7 +53,7 @@ function AdaptiveVideoPlayer({
 
     observer.observe(container);
     return () => observer.disconnect();
-  }, []);
+  }, [reducedMotion]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -83,7 +88,7 @@ function AdaptiveVideoPlayer({
         {isVisible && (
           <video
             ref={videoRef}
-            src={src}
+            poster={`/${src}-poster.jpg`}
             autoPlay={!reducedMotion}
             loop
             muted
@@ -91,7 +96,10 @@ function AdaptiveVideoPlayer({
             preload="metadata"
             aria-label={`Demo video for ${title}`}
             className="h-full w-full object-contain"
-          />
+          >
+            <source src={`/${src}.webm`} type="video/webm" />
+            <source src={`/${src}.mp4`} type="video/mp4" />
+          </video>
         )}
       </div>
     );
@@ -104,7 +112,16 @@ function AdaptiveVideoPlayer({
         relative mx-auto overflow-hidden bg-accent-deep
         ${layout === "mobile" ? "max-w-75 max-h-150 rounded-3xl" : "w-full max-h-125"}
       `}
-      style={aspectRatio ? { aspectRatio: aspectRatio.toString() } : { minHeight: layout === "mobile" ? "400px" : "250px" }}
+      // Toujours un ratio, jamais une hauteur mini : le ternaire precedent
+      // remplaçait 250px par le ratio mesure des l'arrivee des metadonnees, ce
+      // qui faisait sauter la page d'environ 97px sous le doigt.
+      style={{
+        aspectRatio: aspectRatio
+          ? aspectRatio.toString()
+          : layout === "mobile"
+            ? "9 / 19"
+            : "16 / 9",
+      }}
     >
       {(isLoading || !isVisible) && (
         <div className="absolute inset-0 animate-pulse bg-accent-deep" />
@@ -112,7 +129,7 @@ function AdaptiveVideoPlayer({
       {isVisible && (
         <video
           ref={videoRef}
-          src={src}
+          poster={`/${src}-poster.jpg`}
           autoPlay={!reducedMotion}
           loop
           muted
@@ -121,7 +138,10 @@ function AdaptiveVideoPlayer({
           preload="metadata"
           aria-label={`Demo video for ${title}`}
           className="h-full w-full object-contain"
-        />
+        >
+          <source src={`/${src}.webm`} type="video/webm" />
+          <source src={`/${src}.mp4`} type="video/mp4" />
+        </video>
       )}
     </div>
   );
@@ -156,14 +176,14 @@ export function Projects() {
       title: t.projects.lime.title,
       description: t.projects.lime.description,
       tags: ["Craft CMS", "PHP", "Twig", "SEO"],
-      video: "lime.webm",
+      video: "lime",
       link: "https://limesearch.nl",
     },
     {
       title: t.projects.bulbus.title,
       description: t.projects.bulbus.description,
       tags: ["Flutter", "Node.js", "MongoDB", "IAP"],
-      video: "bulbus.webm",
+      video: "bulbus",
       layout: "mobile",
       link: "https://bulbus-app.com",
     },
@@ -178,7 +198,7 @@ export function Projects() {
       title: t.projects.c55.title,
       description: t.projects.c55.description,
       tags: ["WordPress", "Elementor Pro", "Custom JS", "CSS"],
-      video: "c55.webm",
+      video: "c55",
       link: "https://clubfiftyfive.co",
     },
   ];
@@ -303,7 +323,7 @@ export function Projects() {
           <Card className="flex flex-row gap-0 overflow-hidden py-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
             <div className="w-1/3 max-w-44 shrink-0">
               <AdaptiveVideoPlayer
-                src="pepstery.webm"
+                src="pepstery"
                 title={t.projects.pepstery.title}
                 fill
               />
