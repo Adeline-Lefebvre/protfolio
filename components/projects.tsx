@@ -7,9 +7,14 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useMemo, useState } from "react";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { Eyebrow } from "@/components/eyebrow";
 
@@ -147,6 +152,105 @@ function AdaptiveVideoPlayer({
   );
 }
 
+// Ratio des captures de sites : elles font toutes entre 1.82 et 1.88, alors
+// que le conteneur etait en aspect-16/8, soit 2.0. L'ecart produisait des
+// bandes vert fonce sur les cotes, en object-contain.
+const SHOT_RATIO = "aspect-[16/8.7]";
+
+function ProjectCarousel({
+  images,
+  title,
+  slideLabel,
+  reducedMotion,
+}: {
+  images: string[];
+  title: string;
+  slideLabel: string;
+  reducedMotion: boolean;
+}) {
+  const [api, setApi] = useState<CarouselApi>();
+  const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    const onSelect = () => setSelected(api.selectedScrollSnap());
+    onSelect();
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
+  // Memoise : le tableau etait recree a chaque rendu, ce qui faisait
+  // reinitialiser embla sans raison.
+  // Le cast est necessaire tant qu'embla-carousel-autoplay et le coeur tire
+  // par embla-carousel-react ne partagent pas la meme version de types.
+  const plugins = useMemo(
+    () =>
+      reducedMotion
+        ? []
+        : [Autoplay({ delay: 3000, stopOnInteraction: true }) as any],
+    [reducedMotion]
+  );
+
+  return (
+    <div>
+      <div
+        className={`relative ${SHOT_RATIO} w-full overflow-hidden bg-accent-deep`}
+      >
+        <Carousel
+          className="h-full w-full"
+          plugins={plugins}
+          opts={{ loop: true }}
+          setApi={setApi}
+        >
+          {/* ml-0 / pl-0 : la gouttiere de 16px d'embla decalait la hauteur
+              de la diapositive de celle du conteneur, ce qui laissait un
+              liseré vert de 8px sous chaque visuel. */}
+          <CarouselContent className="ml-0">
+            {images.map((img, index) => (
+              <CarouselItem key={img} className="pl-0">
+                <div className={`relative ${SHOT_RATIO}`}>
+                  <Image
+                    src={img}
+                    alt={`${title} - ${index + 1}`}
+                    fill
+                    sizes="(min-width: 768px) 50vw, calc(100vw - 3rem)"
+                    className="object-contain object-top"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
+      {/* Sans pastilles, rien n'indiquait que les visuels etaient balayables,
+          et l'autoplay s'arretait au premier contact sans moyen de reprendre :
+          4 visuels sur 5 restaient invisibles. */}
+      {images.length > 1 && (
+        <div role="group" aria-label={title} className="flex justify-center">
+          {images.map((img, index) => (
+            <button
+              key={img}
+              type="button"
+              onClick={() => api?.scrollTo(index)}
+              aria-label={`${slideLabel} ${index + 1}`}
+              aria-current={index === selected}
+              className="flex h-11 w-11 items-center justify-center"
+            >
+              <span
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  index === selected ? "w-5 bg-primary" : "w-1.5 bg-border"
+                }`}
+              />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function Projects() {
   const { language } = useLanguage();
   const t = getTranslations(language);
@@ -242,42 +346,12 @@ export function Projects() {
                 ))}
 
               {project.images && (
-                <div>
-                  <div className="relative aspect-16/8 w-full overflow-hidden bg-accent-deep">
-                    <Carousel
-                      className="w-full h-full"
-                      plugins={
-                        reducedMotion
-                          ? []
-                          : [
-                              Autoplay({
-                                delay: 3000,
-                                stopOnInteraction: true,
-                              }) as any,
-                            ]
-                      }
-                      opts={{
-                        loop: true,
-                      }}
-                    >
-                      <CarouselContent>
-                        {project.images.map((img, index) => (
-                          <CarouselItem key={index}>
-                            <div className="relative aspect-16/8">
-                              <Image
-                                src={img}
-                                alt={`${project.title} - Screenshot ${index + 1}`}
-                                fill
-                                sizes="(min-width: 768px) 50vw, 100vw"
-                                className="object-contain object-top"
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                    </Carousel>
-                  </div>
-                </div>
+                <ProjectCarousel
+                  images={project.images}
+                  title={project.title}
+                  slideLabel={t.projects.viewSlide}
+                  reducedMotion={reducedMotion}
+                />
               )}
             </div>
 

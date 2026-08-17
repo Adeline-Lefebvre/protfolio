@@ -69,6 +69,7 @@ export const translations = {
       eyebrow: "Work",
       title: "Featured projects",
       viewProject: "View project",
+      viewSlide: "Go to image",
       moreTitle: "Other experiments",
       cubynNote:
         "Before freelancing: Software Engineer at Cubyn (80+ microservices, Kubernetes/GCP) and Klox (React/Node SaaS platform).",
@@ -235,6 +236,7 @@ export const translations = {
       eyebrow: "Réalisations",
       title: "Projets phares",
       viewProject: "Voir le projet",
+      viewSlide: "Aller au visuel",
       moreTitle: "Autres expérimentations",
       cubynNote:
         "Avant le freelance : Software Engineer chez Cubyn (architecture 80+ microservices, Kubernetes/GCP) et Klox (plateforme SaaS React/Node).",
@@ -400,6 +402,7 @@ export const translations = {
       eyebrow: "Trabajos",
       title: "Proyectos destacados",
       viewProject: "Ver proyecto",
+      viewSlide: "Ir a la imagen",
       moreTitle: "Otros experimentos",
       cubynNote:
         "Antes del freelance: Software Engineer en Cubyn (arquitectura de 80+ microservicios, Kubernetes/GCP) y Klox (plataforma SaaS React/Node).",
