@@ -9,10 +9,12 @@ import { getTranslations } from "@/lib/translations";
 const logos = [
   { name: "LIME Search", src: "/logo-lime.png", ratio: 8.78, h: 18 },
   { name: "Desert Leaves", src: "/logo-desertleaves.png", ratio: 2.0, h: 56 },
-  { name: "Lipology Clinic", src: "/LipologyClinic_Logo.webp", ratio: 6.9, h: 20 },
+  { name: "Velec Systems", src: "/logo-velec.png", ratio: 4.97, h: 30 },
+  { name: "Rootyne", src: "/logo-rootyne.png", ratio: 3.57, h: 30 },
   { name: "Lemon", src: "/lemon_logo.png", ratio: 5.94, h: 22 },
+  // Seule l'agence figure ici, pas ses clients finaux : ce sont ses clients a
+  // elle, et les projets realises pour elle la creditent sur leur fiche.
   { name: "Code Create", src: "/logo-codecreate.png", ratio: 1.88, h: 40 },
-  { name: "Club Fifty Five", src: "/logo-clubfiftyfive.svg", ratio: 0.86, h: 46 },
 ];
 
 export function TrustBar() {

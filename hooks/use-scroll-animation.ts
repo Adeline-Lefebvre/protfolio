@@ -2,7 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function useScrollAnimation(threshold = 0) {
+export function useScrollAnimation(
+  threshold = 0,
+  // Marge basse positive par defaut : la section est revelee ~200px AVANT
+  // d'entrer a l'ecran, donc deja en place quand on la voit. Passer "0px" pour
+  // une revelation visible (bandes projets).
+  rootMargin = "0px 0px 200px 0px"
+) {
   const ref = useRef<HTMLDivElement>(null);
   // `null` = pas encore évalué côté client. Dans cet état on rend le contenu
   // visible, pour que le HTML statique ne parte jamais en opacity-0 : sinon
@@ -33,14 +39,12 @@ export function useScrollAnimation(threshold = 0) {
           setIsVisible(false);
         }
       },
-      // Positive bottom margin: reveal ~200px BEFORE the section enters the
-      // viewport, so it's already faded in by the time the user sees it.
-      { threshold, rootMargin: "0px 0px 200px 0px" }
+      { threshold, rootMargin }
     );
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, rootMargin]);
 
   return { ref, isVisible: isVisible ?? true };
 }

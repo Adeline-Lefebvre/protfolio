@@ -279,10 +279,10 @@ export function HomeNav() {
   const { language } = useLanguage();
   const t = getTranslations(language);
   const sections: Section[] = [
-    { id: "services", label: t.nav.services },
     { id: "projects", label: t.nav.projects },
-    { id: "about", label: t.nav.about },
+    { id: "services", label: t.nav.services },
     { id: "testimonials", label: t.testimonial.eyebrow },
+    { id: "about", label: t.nav.about },
     { id: "contact", label: t.nav.contact },
   ];
   return <SiteNavShell sections={sections} menuLabel={t.nav.menu} />;

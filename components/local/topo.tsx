@@ -1,35 +1,5 @@
-// Motif signature "courbes de niveau" (carte de territoire / cernes du bois).
+// Motifs signature (ligne de relief, soulignement manuscrit).
 // SVG décoratifs, hérite la couleur via currentColor. Purement ornemental.
-
-export function TopoField({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 400 400"
-      fill="none"
-      aria-hidden="true"
-      preserveAspectRatio="xMidYMid slice"
-      className={className}
-    >
-      {Array.from({ length: 9 }).map((_, i) => {
-        const r = 20 + i * 22;
-        const cx = 200 + (i % 2 === 0 ? 0 : 12);
-        const cy = 200 - i * 3;
-        const ry = r * (0.72 + (i % 3) * 0.05);
-        return (
-          <ellipse
-            key={i}
-            cx={cx}
-            cy={cy}
-            rx={r}
-            ry={ry}
-            stroke="currentColor"
-            strokeWidth="1.1"
-          />
-        );
-      })}
-    </svg>
-  );
-}
 
 export function TopoDivider({ className }: { className?: string }) {
   return (

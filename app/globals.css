@@ -177,3 +177,40 @@
     }
   }
 }
+
+/* Tuile de la mosaique projets. Par defaut (mobile, tactile) : l'image puis le
+   detail en dessous, toujours visible. Avec une souris sur grand ecran : le
+   detail devient un voile qui monte au survol ou au focus clavier. La condition
+   porte sur le survol reel et pas seulement sur la largeur, sinon une tablette
+   en paysage ne pourrait jamais afficher le detail. */
+.project-tile__media {
+  aspect-ratio: 16 / 10;
+}
+.project-tile__heading {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .project-tile {
+    height: 27rem;
+  }
+  .project-tile__media {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: auto;
+  }
+  .project-tile__detail {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    transform: translateY(101%);
+    transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .project-tile__heading {
+    display: block;
+  }
+  .project-tile:hover .project-tile__detail,
+  .project-tile:focus .project-tile__detail,
+  .project-tile:focus-within .project-tile__detail {
+    transform: none;
+  }
+}

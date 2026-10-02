@@ -69,40 +69,170 @@ export const translations = {
     projects: {
       eyebrow: "Work",
       title: "Featured projects",
-      viewProject: "View project",
-      viewSlide: "Go to image",
-      moreTitle: "Other experiments",
-      cubynNote:
-        "Before freelancing: Software Engineer at Cubyn (80+ microservices, Kubernetes/GCP) and Klox (React/Node SaaS platform).",
-      rootyne: {
-        title: "Rootyne, AI health platform",
-        description:
-          "Help anyone understand their blood test and adjust their diet. I built the platform from scratch: AI extraction pipeline (Claude + Mistral) with an anonymization layer, a biologist review dashboard, and encrypted HDS-compliant infrastructure.",
-      },
-      desertLeaves: {
-        title: "Desert Leaves, environmental NGO",
-        description:
-          "Rally donations and volunteers to reforest arid land. A complete platform built from scratch: Next.js + headless Prismic CMS, Stripe donations (one-time & recurring), multilingual SEO.",
-      },
-      lime: {
-        title: "LIME Search, finance recruitment",
-        description:
-          "Attract top finance talent, and let the client edit the site without a developer. Multilingual recruitment platform in Craft CMS: custom Twig/PHP components, technical SEO, ongoing maintenance.",
-      },
-      bulbus: {
-        title: "Bulbus, educational mobile app",
-        description:
-          "Revise herbalism anywhere and pass the exams. Cross-platform Flutter app: 150+ plants, timed mock exams, in-app purchases. Live on iOS & Android with 37 paying users.",
-      },
-      c55: {
-        title: "Club Fifty Five, creative agency",
-        description:
-          "Give a talent agency a premium showcase, delivered white-label. Custom widgets (animated marquee), Theme Builder, advanced forms, responsive across 5 breakpoints.",
-      },
-      pepstery: {
-        title: "Pepstery, augmented reality game",
-        description:
-          "Marker-based AR game built during a tech residency: 3D character generation, real-time interactions (Pusher), non-linear storytelling (A-Frame, MindAR).",
+      intro: "Each one started with a business problem. Here is what I delivered.",
+      moreTitle: "More projects",
+      moreIntro: "Agency builds, a large migration, a mobile app and volunteer work.",
+      viewSite: "View site",
+      creditLabel: "Design and project lead:",
+      fictionalData: "Screen recorded with fictional data.",
+      shareCardAlt: "Share card generated for a vacancy, shown in a chat preview",
+      pepsteryNote: "Also: Pepstery, a marker-based augmented reality game built during a tech residency.",
+      cubynNote: "Before freelancing: Software Engineer at Cubyn (80+ microservices, Kubernetes/GCP) and Klox (React/Node SaaS platform).",
+      items: {
+        rootyne: {
+          name: "Rootyne",
+          kicker: "AI health platform",
+          title: "Understand your blood test and adjust your diet",
+          summary: "A platform built from scratch: people upload their blood test, an AI pipeline extracts the values, and a clinical biologist reviews every report before it reaches them.",
+          facts: [
+            {
+              value: "Claude + Mistral",
+              label: "extraction pipeline, behind an anonymization layer",
+            },
+            {
+              value: "HDS",
+              label: "encrypted infrastructure, compliant with French health data hosting",
+            },
+            {
+              value: "Human review",
+              label: "a dedicated dashboard where the biologist validates each report",
+            },
+          ],
+          role: "Founder and developer: product, development and production.",
+        },
+        inc: {
+          name: "IN CULTURE",
+          anonName: "Cultural collaborations agency",
+          kicker: "Cultural collaborations agency",
+          title: "A brand site the agency runs on its own",
+          summary: "Four pages and 23 case pages, developed solo from the validated design to launch: a cursor-driven infinite carousel, audio that keeps playing across pages, and a CMS for every text, image and case.",
+          facts: [
+            {
+              value: "23",
+              label: "case pages the team edits in Sanity, live within seconds",
+            },
+            {
+              value: "0",
+              label: "animation library: CSS and requestAnimationFrame only",
+            },
+            {
+              value: "Light / dark",
+              label: "two themes, responsive from mobile to 1920 px",
+            },
+          ],
+          role: "Development: Adeline Lefebvre, solo from design file to launch.",
+        },
+        desertLeaves: {
+          name: "Desert Leaves",
+          kicker: "Environmental NGO",
+          title: "Rally donations and volunteers, in four languages",
+          summary: "A complete platform built from scratch: Next.js, headless Prismic CMS, one-time and recurring Stripe donations. Content is translated automatically the minute it is published, and the team corrects it in a simple Google Sheet.",
+          facts: [
+            {
+              value: "4 languages",
+              label: "Spanish, English, French and Dutch, with localized URLs",
+            },
+            {
+              value: "€0",
+              label: "per month for translation: no subscription, no API key, no server",
+            },
+            {
+              value: "69 tests",
+              label: "automated, and translations proofread twice before launch",
+            },
+          ],
+          role: "Development of the platform from scratch, then its internationalization.",
+        },
+        lime: {
+          name: "LIME Search",
+          kicker: "Finance recruitment agency",
+          title: "Interim vacancies shared privately, invisible to Google",
+          summary: "On the Craft CMS site I maintain, interim assignments circulate by direct link in a private WhatsApp group. They never appear in lists, in the sitemap or in search results.",
+          facts: [
+            {
+              value: "1 link",
+              label: "per vacancy, short and shareable, with a branded preview card generated automatically",
+            },
+            {
+              value: "0 re-entry",
+              label: "applications and CVs land directly in OTYS, the system the recruitment team already uses",
+            },
+            {
+              value: "7 days",
+              label: "then CVs held on the server are deleted automatically (GDPR)",
+            },
+          ],
+          role: "Custom Craft plugin work on the OTYS integration, build from the agency's mockup, ongoing maintenance of the site.",
+        },
+        velec: {
+          name: "Velec Systems",
+          kicker: "Food industry manufacturer",
+          title: "Launch a trilingual redesign that is fast, responsive and properly indexed",
+          summary: "Performance optimization of an Elementor Pro and WPML build, responsive adaptation, technical SEO fixes across a WordPress multisite, then post-launch stabilization with the client's SEO agency.",
+          facts: [
+            {
+              value: "89",
+              label: "PageSpeed score on desktop, on a very dense home page",
+            },
+            {
+              value: "47 pages",
+              label: "adapted for tablet and mobile",
+            },
+            {
+              value: "384 URLs",
+              label: "discovered by Google once the sitemaps were fixed, up from 261",
+            },
+          ],
+          role: "Successive fixed-price missions since August 2026, with a written report at every step.",
+        },
+        revier: {
+          name: "Revier Therapeutics",
+          anonName: "Cardiometabolic biotech",
+          kicker: "Biotech one-pager",
+          summary: "A precise, scientific showcase designed to attract funding and partnerships, built pixel-perfect from the agency's mockup.",
+          points: [
+            "Two-state header that inverts over the hero, then pins on scroll",
+            "Clinical pipeline chart, scroll progress indicator and program popups, custom-coded",
+          ],
+        },
+        lipology: {
+          name: "Lipology Clinic",
+          anonName: "Dutch medical clinic",
+          kicker: "Medical clinic, migration in progress",
+          summary: "Move a 400-page clinic site to a new mobile-first design without losing content.",
+          points: [
+            "Around 125 treatment pages migrated so far, template by template",
+            "FAQ structured data, anchor navigation, metadata and medical compliance fixes",
+          ],
+        },
+        c55: {
+          name: "Club Fifty Five",
+          anonName: "Creative talent agency",
+          kicker: "Creative talent agency",
+          summary: "A premium showcase for a talent agency, built with WordPress and Elementor Pro.",
+          points: [
+            "Custom widgets, including an animated marquee",
+            "Theme Builder, advanced forms, responsive across 5 breakpoints",
+          ],
+        },
+        bulbus: {
+          name: "Bulbus",
+          kicker: "Mobile app, my own product",
+          summary: "Revise herbalism anywhere and pass the plant recognition exams.",
+          points: [
+            "150+ plants, timed mock exams, in-app purchases",
+            "Live on iOS and Android, 37 paying users",
+          ],
+        },
+        shifters: {
+          name: "The Shifters",
+          kicker: "Climate nonprofit, volunteer work",
+          summary: "Volunteer developer on the internal tools team of a 20,000-member climate association.",
+          points: [
+            "Fixed a login redirect that was losing deep links, covered by 11 tests",
+            "Features and fixes across several services, with code review on every merge request",
+          ],
+        },
       },
     },
     about: {
@@ -232,40 +362,170 @@ export const translations = {
     projects: {
       eyebrow: "Réalisations",
       title: "Projets phares",
-      viewProject: "Voir le projet",
-      viewSlide: "Aller au visuel",
-      moreTitle: "Autres expérimentations",
-      cubynNote:
-        "Avant le freelance : Software Engineer chez Cubyn (architecture 80+ microservices, Kubernetes/GCP) et Klox (plateforme SaaS React/Node).",
-      rootyne: {
-        title: "Rootyne, plateforme santé IA",
-        description:
-          "Aider chacun à comprendre ses analyses de sang et adapter son alimentation. J'ai conçu la plateforme de A à Z : pipeline d'extraction IA (Claude + Mistral) avec anonymisation, dashboard biologiste de validation, infrastructure HDS chiffrée.",
-      },
-      desertLeaves: {
-        title: "Desert Leaves, ONG environnementale",
-        description:
-          "Mobiliser dons et bénévoles pour reboiser des zones arides. Plateforme complète développée de zéro : Next.js + CMS headless Prismic, dons Stripe (ponctuels & récurrents), SEO multilingue.",
-      },
-      lime: {
-        title: "LIME Search, recrutement finance",
-        description:
-          "Attirer les meilleurs profils finance, et laisser l'équipe éditer le site en autonomie. Plateforme de recrutement multilingue en Craft CMS : composants Twig/PHP sur-mesure, SEO technique, maintenance en continu.",
-      },
-      bulbus: {
-        title: "Bulbus, app mobile éducative",
-        description:
-          "Réviser l'herboristerie partout et réussir ses examens. App cross-platform (Flutter) : 150+ plantes, examens chronométrés, achats in-app. En ligne sur iOS et Android, 37 comptes payants.",
-      },
-      c55: {
-        title: "Club Fifty Five, agence créative",
-        description:
-          "Donner une vitrine premium à une agence de talents, livrée en marque blanche. Widgets sur-mesure (marquee animé), Theme Builder, formulaires avancés, responsive sur 5 breakpoints.",
-      },
-      pepstery: {
-        title: "Pepstery, jeu en réalité augmentée",
-        description:
-          "Jeu AR par marqueurs développé en résidence tech : génération de personnages 3D, interactions temps réel (Pusher), narration non-linéaire (A-Frame, MindAR).",
+      intro: "À chaque fois, un besoin métier au départ. Voici ce que j'ai livré.",
+      moreTitle: "Autres projets",
+      moreIntro: "Des intégrations pour une agence, une grande migration, une app mobile et du bénévolat.",
+      viewSite: "Voir le site",
+      creditLabel: "Design et direction de projet :",
+      fictionalData: "Capture réalisée avec des données fictives.",
+      shareCardAlt: "Carte de partage générée pour une offre, affichée dans un aperçu de conversation",
+      pepsteryNote: "Aussi : Pepstery, un jeu en réalité augmentée par marqueurs, développé en résidence tech.",
+      cubynNote: "Avant le freelance : Software Engineer chez Cubyn (architecture 80+ microservices, Kubernetes/GCP) et Klox (plateforme SaaS React/Node).",
+      items: {
+        rootyne: {
+          name: "Rootyne",
+          kicker: "Plateforme santé IA",
+          title: "Comprendre sa prise de sang et adapter son alimentation",
+          summary: "Une plateforme conçue de zéro : on dépose son bilan sanguin, un pipeline IA en extrait les valeurs, et une biologiste médicale relit chaque compte rendu avant qu'il soit remis.",
+          facts: [
+            {
+              value: "Claude + Mistral",
+              label: "pipeline d'extraction, derrière une couche d'anonymisation",
+            },
+            {
+              value: "HDS",
+              label: "infrastructure chiffrée, conforme à l'hébergement de données de santé",
+            },
+            {
+              value: "Relecture humaine",
+              label: "un tableau de bord dédié où la biologiste valide chaque compte rendu",
+            },
+          ],
+          role: "Fondatrice et développeuse : produit, développement et mise en production.",
+        },
+        inc: {
+          name: "IN CULTURE",
+          anonName: "Agence de collaborations culturelles",
+          kicker: "Agence de collaborations culturelles",
+          title: "Un site de marque que l'agence fait vivre en autonomie",
+          summary: "Quatre pages et 23 pages projet, développées seule de la maquette validée à la mise en ligne : carrousel infini piloté au curseur, lecture audio qui se poursuit d'une page à l'autre, et un CMS pour chaque texte, image et projet.",
+          facts: [
+            {
+              value: "23",
+              label: "pages projet que l'équipe édite dans Sanity, en ligne en quelques secondes",
+            },
+            {
+              value: "0",
+              label: "bibliothèque d'animation : uniquement CSS et requestAnimationFrame",
+            },
+            {
+              value: "Clair / sombre",
+              label: "deux thèmes, responsive du mobile au 1920 px",
+            },
+          ],
+          role: "Développement : Adeline Lefebvre, seule de la maquette à la mise en ligne.",
+        },
+        desertLeaves: {
+          name: "Desert Leaves",
+          kicker: "ONG environnementale",
+          title: "Mobiliser dons et bénévoles, en quatre langues",
+          summary: "Une plateforme complète développée de zéro : Next.js, CMS headless Prismic, dons Stripe ponctuels et récurrents. Le contenu est traduit automatiquement dès sa publication, et l'équipe le corrige dans un simple Google Sheet.",
+          facts: [
+            {
+              value: "4 langues",
+              label: "espagnol, anglais, français et néerlandais, avec des URL localisées",
+            },
+            {
+              value: "0 €",
+              label: "par mois pour la traduction : ni abonnement, ni clé d'API, ni serveur",
+            },
+            {
+              value: "69 tests",
+              label: "automatiques, et des traductions relues deux fois avant la mise en ligne",
+            },
+          ],
+          role: "Développement de la plateforme de zéro, puis son internationalisation.",
+        },
+        lime: {
+          name: "LIME Search",
+          kicker: "Cabinet de recrutement finance",
+          title: "Des offres d'intérim partagées en privé, invisibles de Google",
+          summary: "Sur le site Craft CMS que je maintiens, les missions d'intérim circulent par lien direct dans un groupe WhatsApp privé. Elles n'apparaissent ni dans les listes, ni dans le sitemap, ni dans les résultats de recherche.",
+          facts: [
+            {
+              value: "1 lien",
+              label: "court par offre, avec une carte d'aperçu générée aux couleurs de l'agence",
+            },
+            {
+              value: "0 ressaisie",
+              label: "candidatures et CV arrivent directement dans OTYS, l'outil de l'équipe de recrutement",
+            },
+            {
+              value: "7 jours",
+              label: "puis les CV en transit sur le serveur sont supprimés automatiquement (RGPD)",
+            },
+          ],
+          role: "Développement du plugin Craft sur l'intégration OTYS, intégration de la maquette de l'agence, maintenance du site en continu.",
+        },
+        velec: {
+          name: "Velec Systems",
+          kicker: "Industriel agroalimentaire",
+          title: "Mettre en ligne une refonte trilingue rapide, responsive et bien indexée",
+          summary: "Optimisation des performances d'un site Elementor Pro et WPML, adaptation responsive, corrections SEO techniques sur un multisite WordPress, puis stabilisation après la mise en production avec l'agence SEO du client.",
+          facts: [
+            {
+              value: "89",
+              label: "de score PageSpeed sur ordinateur, sur une page d'accueil très dense",
+            },
+            {
+              value: "47 pages",
+              label: "adaptées pour tablette et mobile",
+            },
+            {
+              value: "384 URL",
+              label: "découvertes par Google une fois les sitemaps corrigés, contre 261",
+            },
+          ],
+          role: "Missions successives au forfait depuis août 2026, avec un compte rendu écrit à chaque étape.",
+        },
+        revier: {
+          name: "Revier Therapeutics",
+          anonName: "Biotech cardiométabolique",
+          kicker: "Biotech, site d'une page",
+          summary: "Une vitrine scientifique et précise, pensée pour attirer financements et partenariats, intégrée au pixel près depuis la maquette de l'agence.",
+          points: [
+            "En-tête à deux états, qui s'inverse sur le hero puis se fixe au défilement",
+            "Pipeline clinique, indicateur de progression et popups par programme, codés sur mesure",
+          ],
+        },
+        lipology: {
+          name: "Lipology Clinic",
+          anonName: "Clinique médicale néerlandaise",
+          kicker: "Clinique médicale, migration en cours",
+          summary: "Faire passer un site de 400 pages vers un nouveau design pensé pour le mobile, sans perdre de contenu.",
+          points: [
+            "Environ 125 pages de traitement migrées à ce jour, template par template",
+            "Données structurées FAQ, navigation par ancres, métadonnées et corrections de conformité médicale",
+          ],
+        },
+        c55: {
+          name: "Club Fifty Five",
+          anonName: "Agence de talents créatifs",
+          kicker: "Agence de talents créatifs",
+          summary: "Une vitrine premium pour une agence de talents, intégrée sous WordPress et Elementor Pro.",
+          points: [
+            "Widgets sur mesure, dont un bandeau défilant animé",
+            "Theme Builder, formulaires avancés, responsive sur 5 points de rupture",
+          ],
+        },
+        bulbus: {
+          name: "Bulbus",
+          kicker: "App mobile, produit personnel",
+          summary: "Réviser l'herboristerie partout et réussir ses examens de reconnaissance de plantes.",
+          points: [
+            "Plus de 150 plantes, examens chronométrés, achats intégrés",
+            "En ligne sur iOS et Android, 37 comptes payants",
+          ],
+        },
+        shifters: {
+          name: "The Shifters",
+          kicker: "Association pour le climat, bénévolat",
+          summary: "Développeuse bénévole dans l'équipe outils internes d'une association de 20 000 membres.",
+          points: [
+            "Correction d'une redirection après connexion qui perdait les liens profonds, couverte par 11 tests",
+            "Fonctionnalités et correctifs sur plusieurs services, avec revue de code à chaque merge request",
+          ],
+        },
       },
     },
     about: {
@@ -394,40 +654,170 @@ export const translations = {
     projects: {
       eyebrow: "Trabajos",
       title: "Proyectos destacados",
-      viewProject: "Ver proyecto",
-      viewSlide: "Ir a la imagen",
-      moreTitle: "Otros experimentos",
-      cubynNote:
-        "Antes del freelance: Software Engineer en Cubyn (arquitectura de 80+ microservicios, Kubernetes/GCP) y Klox (plataforma SaaS React/Node).",
-      rootyne: {
-        title: "Rootyne, plataforma de salud con IA",
-        description:
-          "Ayudar a cualquiera a entender sus análisis de sangre y ajustar su alimentación. Creé la plataforma desde cero: pipeline de extracción con IA (Claude + Mistral) con anonimización, dashboard de validación para biólogos e infraestructura HDS cifrada.",
-      },
-      desertLeaves: {
-        title: "Desert Leaves, ONG ambiental",
-        description:
-          "Movilizar donaciones y voluntarios para reforestar zonas áridas. Plataforma completa desarrollada desde cero: Next.js + CMS headless Prismic, donaciones Stripe (puntuales y recurrentes), SEO multilingüe.",
-      },
-      lime: {
-        title: "LIME Search, reclutamiento financiero",
-        description:
-          "Atraer a los mejores perfiles de finanzas, y dejar que el equipo edite la web de forma autónoma. Plataforma de reclutamiento multilingüe en Craft CMS: componentes Twig/PHP a medida, SEO técnico, mantenimiento continuo.",
-      },
-      bulbus: {
-        title: "Bulbus, app móvil educativa",
-        description:
-          "Repasar la herboristería en cualquier lugar y aprobar los exámenes. App multiplataforma (Flutter): 150+ plantas, exámenes cronometrados, compras in-app. Disponible en iOS y Android, 37 cuentas de pago.",
-      },
-      c55: {
-        title: "Club Fifty Five, agencia creativa",
-        description:
-          "Dar a una agencia de talentos una vitrina premium, entregada en marca blanca. Widgets a medida (marquee animado), Theme Builder, formularios avanzados, responsive en 5 breakpoints.",
-      },
-      pepstery: {
-        title: "Pepstery, juego de realidad aumentada",
-        description:
-          "Juego de RA por marcadores desarrollado en una residencia tech: generación de personajes 3D, interacciones en tiempo real (Pusher), narrativa no lineal (A-Frame, MindAR).",
+      intro: "En cada caso, una necesidad de negocio como punto de partida. Esto es lo que entregué.",
+      moreTitle: "Más proyectos",
+      moreIntro: "Desarrollos para una agencia, una gran migración, una app móvil y voluntariado.",
+      viewSite: "Ver el sitio",
+      creditLabel: "Diseño y dirección de proyecto:",
+      fictionalData: "Captura realizada con datos ficticios.",
+      shareCardAlt: "Tarjeta para compartir generada para una oferta, mostrada en una vista previa de conversación",
+      pepsteryNote: "También: Pepstery, un juego de realidad aumentada por marcadores, desarrollado en una residencia tech.",
+      cubynNote: "Antes del freelance: Software Engineer en Cubyn (arquitectura de 80+ microservicios, Kubernetes/GCP) y Klox (plataforma SaaS React/Node).",
+      items: {
+        rootyne: {
+          name: "Rootyne",
+          kicker: "Plataforma de salud con IA",
+          title: "Entender tu análisis de sangre y ajustar tu alimentación",
+          summary: "Una plataforma creada desde cero: se sube el análisis de sangre, un pipeline de IA extrae los valores y una bióloga clínica revisa cada informe antes de entregarlo.",
+          facts: [
+            {
+              value: "Claude + Mistral",
+              label: "pipeline de extracción, tras una capa de anonimización",
+            },
+            {
+              value: "HDS",
+              label: "infraestructura cifrada, conforme al alojamiento de datos de salud en Francia",
+            },
+            {
+              value: "Revisión humana",
+              label: "un panel dedicado donde la bióloga valida cada informe",
+            },
+          ],
+          role: "Fundadora y desarrolladora: producto, desarrollo y puesta en producción.",
+        },
+        inc: {
+          name: "IN CULTURE",
+          anonName: "Agencia de colaboraciones culturales",
+          kicker: "Agencia de colaboraciones culturales",
+          title: "Un sitio de marca que la agencia gestiona de forma autónoma",
+          summary: "Cuatro páginas y 23 páginas de proyecto, desarrolladas en solitario desde el diseño validado hasta la publicación: carrusel infinito guiado por el cursor, audio que sigue sonando entre páginas y un CMS para cada texto, imagen y proyecto.",
+          facts: [
+            {
+              value: "23",
+              label: "páginas de proyecto que el equipo edita en Sanity, en línea en segundos",
+            },
+            {
+              value: "0",
+              label: "librerías de animación: solo CSS y requestAnimationFrame",
+            },
+            {
+              value: "Claro / oscuro",
+              label: "dos temas, responsive del móvil a 1920 px",
+            },
+          ],
+          role: "Desarrollo: Adeline Lefebvre, en solitario del diseño a la publicación.",
+        },
+        desertLeaves: {
+          name: "Desert Leaves",
+          kicker: "ONG ambiental",
+          title: "Movilizar donaciones y voluntariado, en cuatro idiomas",
+          summary: "Una plataforma completa creada desde cero: Next.js, CMS headless Prismic, donaciones Stripe puntuales y recurrentes. El contenido se traduce automáticamente en cuanto se publica, y el equipo lo corrige en una simple hoja de Google Sheets.",
+          facts: [
+            {
+              value: "4 idiomas",
+              label: "español, inglés, francés y neerlandés, con URL localizadas",
+            },
+            {
+              value: "0 €",
+              label: "al mes por la traducción: sin suscripción, sin clave de API, sin servidor",
+            },
+            {
+              value: "69 tests",
+              label: "automáticos, y traducciones revisadas dos veces antes de publicar",
+            },
+          ],
+          role: "Desarrollo de la plataforma desde cero, y después su internacionalización.",
+        },
+        lime: {
+          name: "LIME Search",
+          kicker: "Agencia de selección en finanzas",
+          title: "Ofertas de interim compartidas en privado, invisibles para Google",
+          summary: "En el sitio Craft CMS que mantengo, las misiones de interim circulan por enlace directo en un grupo privado de WhatsApp. No aparecen ni en los listados, ni en el sitemap, ni en los resultados de búsqueda.",
+          facts: [
+            {
+              value: "1 enlace",
+              label: "corto por oferta, con una tarjeta de vista previa generada con los colores de la agencia",
+            },
+            {
+              value: "0 reintroducción",
+              label: "candidaturas y CV llegan directamente a OTYS, la herramienta del equipo de selección",
+            },
+            {
+              value: "7 días",
+              label: "y los CV en tránsito en el servidor se eliminan automáticamente (RGPD)",
+            },
+          ],
+          role: "Desarrollo del plugin de Craft sobre la integración con OTYS, maquetación a partir del diseño de la agencia, mantenimiento continuo del sitio.",
+        },
+        velec: {
+          name: "Velec Systems",
+          kicker: "Fabricante industrial agroalimentario",
+          title: "Lanzar un rediseño trilingüe rápido, responsive y bien indexado",
+          summary: "Optimización del rendimiento de un sitio Elementor Pro y WPML, adaptación responsive, correcciones de SEO técnico en un multisitio WordPress y estabilización tras el lanzamiento junto a la agencia SEO del cliente.",
+          facts: [
+            {
+              value: "89",
+              label: "de puntuación PageSpeed en escritorio, en una página de inicio muy densa",
+            },
+            {
+              value: "47 páginas",
+              label: "adaptadas para tableta y móvil",
+            },
+            {
+              value: "384 URL",
+              label: "descubiertas por Google tras corregir los sitemaps, frente a 261",
+            },
+          ],
+          role: "Misiones sucesivas a precio cerrado desde agosto de 2026, con un informe escrito en cada etapa.",
+        },
+        revier: {
+          name: "Revier Therapeutics",
+          anonName: "Biotecnológica cardiometabólica",
+          kicker: "Biotecnología, sitio de una página",
+          summary: "Un escaparate científico y preciso, pensado para atraer financiación y alianzas, maquetado al píxel a partir del diseño de la agencia.",
+          points: [
+            "Cabecera de dos estados, que se invierte sobre el hero y luego se fija al hacer scroll",
+            "Pipeline clínico, indicador de progreso y popups por programa, programados a medida",
+          ],
+        },
+        lipology: {
+          name: "Lipology Clinic",
+          anonName: "Clínica médica neerlandesa",
+          kicker: "Clínica médica, migración en curso",
+          summary: "Trasladar un sitio de 400 páginas a un nuevo diseño pensado para móvil, sin perder contenido.",
+          points: [
+            "Unas 125 páginas de tratamiento migradas hasta la fecha, plantilla a plantilla",
+            "Datos estructurados de FAQ, navegación por anclas, metadatos y correcciones de conformidad médica",
+          ],
+        },
+        c55: {
+          name: "Club Fifty Five",
+          anonName: "Agencia de talento creativo",
+          kicker: "Agencia de talento creativo",
+          summary: "Un escaparate premium para una agencia de talento, creado con WordPress y Elementor Pro.",
+          points: [
+            "Widgets a medida, entre ellos una marquesina animada",
+            "Theme Builder, formularios avanzados, responsive en 5 puntos de ruptura",
+          ],
+        },
+        bulbus: {
+          name: "Bulbus",
+          kicker: "App móvil, producto propio",
+          summary: "Repasar la herboristería en cualquier lugar y aprobar los exámenes de reconocimiento de plantas.",
+          points: [
+            "Más de 150 plantas, exámenes cronometrados, compras integradas",
+            "Disponible en iOS y Android, 37 cuentas de pago",
+          ],
+        },
+        shifters: {
+          name: "The Shifters",
+          kicker: "Asociación por el clima, voluntariado",
+          summary: "Desarrolladora voluntaria en el equipo de herramientas internas de una asociación de 20 000 miembros.",
+          points: [
+            "Corrección de una redirección tras el inicio de sesión que perdía los enlaces profundos, cubierta por 11 tests",
+            "Funciones y correcciones en varios servicios, con revisión de código en cada merge request",
+          ],
+        },
       },
     },
     about: {

@@ -34,7 +34,7 @@ import { Footer } from "@/components/footer";
 import { Testimonial } from "@/components/testimonial";
 import { LocalNav } from "@/components/nav/local-nav";
 import { Reveal } from "@/components/local/reveal";
-import { TopoField, HandUnderline } from "@/components/local/topo";
+import { HandUnderline } from "@/components/local/topo";
 import { Eyebrow } from "@/components/eyebrow";
 import { ContactForm } from "@/components/contact-form";
 import { useLanguage } from "@/lib/language-context";
@@ -85,14 +85,13 @@ export function LocalPage() {
       <main id="main" tabIndex={-1} className="outline-none">
         {/* Hero */}
         <section className="relative overflow-hidden pt-24 pb-16 md:pt-36 md:pb-36">
-          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
-            <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
-            {/* 40rem dans un ecran de 320 ne laissait voir que des arcs qui
-                traversent le titre : le motif concentrique n'etait plus
-                reconnaissable. Reduit pour tenir dans l'ecran en mobile. */}
-            <TopoField className="absolute -right-8 -top-6 h-76 w-76 text-accent/[0.07] md:-right-28 md:-top-16 md:h-160 md:w-160" />
-          </div>
+          {/* Aplat sable aux bords nets, comme sur l'accueil. Seulement a
+              partir de xl : en dessous, la colonne de texte (max-w-3xl)
+              passerait dessus. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-[26%] bg-secondary xl:block"
+          />
           <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <div className="max-w-3xl">
               <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
@@ -175,8 +174,6 @@ export function LocalPage() {
           id="promises"
           className="relative scroll-mt-24 overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28"
         >
-          <TopoField className="pointer-events-none absolute -left-24 top-0 h-[42rem] w-[42rem] text-background/[0.05]" />
-          <TopoField className="pointer-events-none absolute -right-32 bottom-0 h-[38rem] w-[38rem] text-background/[0.04]" />
           <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow tone="amber">{t.eyebrows.promises}</Eyebrow>
@@ -534,7 +531,6 @@ export function LocalPage() {
           id="contact"
           className="relative scroll-mt-24 overflow-hidden bg-linear-to-br from-accent-deep via-accent to-accent-bright py-20 text-background md:py-28"
         >
-          <TopoField className="pointer-events-none absolute -right-28 -top-12 h-[42rem] w-[42rem] text-background/[0.05]" />
           <div className="relative mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
             <Reveal>
               <Eyebrow tone="amber">{t.eyebrows.contact}</Eyebrow>
