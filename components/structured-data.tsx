@@ -9,26 +9,26 @@ const LOCALIZED: Record<
   en: {
     jobTitle: "Freelance Fullstack Web Developer",
     description:
-      "Adeline Lefebvre is a freelance fullstack web developer (French, English, Spanish), based in Spain and working remotely across Europe. Specialised in Next.js and React, AI integration (Claude, Mistral), and custom WordPress and Craft CMS sites.",
+      "Adeline Lefebvre is a freelance fullstack web developer (French, English, Spanish), based in France and working remotely across Europe. Specialised in Next.js and React, AI integration (Claude, Mistral), and custom WordPress and Craft CMS sites.",
     lang: "English",
   },
   fr: {
     jobTitle: "Développeuse web fullstack freelance",
     description:
-      "Adeline Lefebvre est développeuse web fullstack freelance (français, anglais, espagnol), basée en Espagne et disponible en remote partout en Europe. Spécialisée Next.js et React, intégration d'IA (Claude, Mistral) et sites sur-mesure WordPress et Craft CMS.",
+      "Adeline Lefebvre est développeuse web fullstack freelance (français, anglais, espagnol), basée en France et disponible en remote partout en Europe. Spécialisée Next.js et React, intégration d'IA (Claude, Mistral) et sites sur-mesure WordPress et Craft CMS.",
     lang: "French",
   },
   es: {
     jobTitle: "Desarrolladora web fullstack freelance",
     description:
-      "Adeline Lefebvre es desarrolladora web fullstack freelance (francés, inglés, español), residente en España y disponible en remoto por toda Europa. Especializada en Next.js y React, integración de IA (Claude, Mistral) y sitios a medida en WordPress y Craft CMS.",
+      "Adeline Lefebvre es desarrolladora web fullstack freelance (francés, inglés, español), con base en Francia y disponible en remoto por toda Europa. Especializada en Next.js y React, integración de IA (Claude, Mistral) y sitios a medida en WordPress y Craft CMS.",
     lang: "Spanish",
   },
 };
 
 // Graphe d'entité (Person + WebSite) rendu sur toutes les pages, localisé par
 // langue. @id stable pour que les autres nœuds (FAQPage/Service sur /local)
-// puissent référencer la personne. Base = Espagne, zone de service = Europe.
+// puissent référencer la personne. Base = France, zone de service = Europe.
 export function StructuredData({ locale = "en" }: { locale?: Language }) {
   const t = LOCALIZED[locale] ?? LOCALIZED.en;
 
@@ -50,7 +50,7 @@ export function StructuredData({ locale = "en" }: { locale?: Language }) {
         ],
         address: {
           "@type": "PostalAddress",
-          addressCountry: "ES",
+          addressCountry: "FR",
         },
         knowsLanguage: ["French", "English", "Spanish"],
         areaServed: [

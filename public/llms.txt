@@ -1,6 +1,6 @@
 # Adeline Lefebvre
 
-> Développeuse web fullstack freelance (FR/EN/ES), basée en Espagne et disponible en remote partout en Europe. Spécialisée Next.js/React et intégration d'IA (Claude, Mistral), plus sites sur-mesure WordPress et Craft CMS. Freelance fullstack web developer. Desarrolladora web fullstack freelance.
+> Développeuse web fullstack freelance (FR/EN/ES), basée en France et disponible en remote partout en Europe. Spécialisée Next.js/React et intégration d'IA (Claude, Mistral), plus sites sur-mesure WordPress et Craft CMS. Freelance fullstack web developer. Desarrolladora web fullstack freelance.
 
 ## Services
 - Applications web Next.js / React sur-mesure

@@ -1,11 +1,11 @@
 # Stratégie SEO & GEO — adelinelefebvre.com
 
 Synthèse des 4 audits (technique, contenu/mots-clés, GEO/LLM, off-page) du 28/07/2026.
-Base : Espagne, service partout en Europe. Deux offres : dev freelance (international) + sites de proximité (Europe francophone/hispanophone/anglophone).
+Base : France (mis à jour le 2 octobre 2026, auparavant Espagne), service partout en Europe. Deux offres : dev freelance (international) + sites de proximité (Europe francophone/hispanophone/anglophone).
 
 ## 1. Déjà fait dans le repo (commits du 28/07)
 - Rendu statique restauré (régression `headers()` annulée), les 6 URLs repassent en SSG.
-- Schema localisé : Person (base Espagne, `knowsLanguage`, `areaServed` Europe, `contactPoint`, `@id`) + WebSite.
+- Schema localisé : Person (base France, `knowsLanguage`, `areaServed` Europe, `contactPoint`, `@id`) + WebSite.
 - `/local` : JSON-LD FAQPage + Service/Offer (500/900 €).
 - robots.txt AI-friendly (GPTBot, ClaudeBot, PerplexityBot… autorisés ; Bytespider bloqué).
 - hreflang unifiés (en/fr/es + x-default) sitemap ⇄ pages.
@@ -30,7 +30,7 @@ Base : Espagne, service partout en Europe. Deux offres : dev freelance (internat
 
 ### Autorité (meilleur ratio effort/impact)
 - **Backlinks « réalisé par »** depuis les sites clients (Desert Leaves, Pignon Libre, LIME Search, Rootyne) : footer ou mentions légales, ancre « Site réalisé par Adeline Lefebvre » → adelinelefebvre.com. Leur envoyer le snippet HTML prêt.
-- LinkedIn FR/EN optimisé (titre « Développeuse Fullstack Freelance Next.js/IA · FR/EN/ES · Espagne », section Sélection avec liens, URL propre) + 3-5 recommandations clients.
+- LinkedIn FR/EN optimisé (titre « Développeuse Fullstack Freelance Next.js/IA · FR/EN/ES · France », section Sélection avec liens, URL propre) + 3-5 recommandations clients.
 - Malt (priorité France), puis Codeur/Freework. International : Contra (gratuit, bien indexé).
 - Google Business Profile en **Service Area Business** (adresse masquée, zone d'intervention déclarée). Ne jamais déclarer d'adresse fausse.
 - Ajouter chaque nouveau profil au `sameAs` du schema (`components/structured-data.tsx`).

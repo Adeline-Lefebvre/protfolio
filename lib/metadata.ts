@@ -4,7 +4,7 @@ export const siteMetadata = {
   en: {
     title: "Adeline Lefebvre | Freelance Fullstack Developer (Next.js, AI, WordPress)",
     description:
-      "Adeline Lefebvre, freelance fullstack web developer (FR/EN/ES) based in Spain. Next.js, React and AI integration (Claude, Mistral), remote across Europe.",
+      "Adeline Lefebvre, freelance fullstack web developer (FR/EN/ES) based in France. Next.js, React and AI integration (Claude, Mistral), remote across Europe.",
     keywords: [
       "Adeline Lefebvre",
       "Freelance Fullstack Developer",
@@ -25,7 +25,7 @@ export const siteMetadata = {
   fr: {
     title: "Adeline Lefebvre | Développeuse Fullstack Freelance (Next.js, IA, WordPress)",
     description:
-      "Adeline Lefebvre, développeuse web fullstack freelance (FR/EN/ES) basée en Espagne. Next.js, React et intégration IA (Claude, Mistral), en remote en Europe.",
+      "Adeline Lefebvre, développeuse web fullstack freelance (FR/EN/ES) basée en France. Next.js, React et intégration IA (Claude, Mistral), en remote en Europe.",
     keywords: [
       "Adeline Lefebvre",
       "Développeuse Fullstack Freelance",
@@ -46,7 +46,7 @@ export const siteMetadata = {
   es: {
     title: "Adeline Lefebvre | Desarrolladora Fullstack Freelance (Next.js, IA, WordPress)",
     description:
-      "Adeline Lefebvre, desarrolladora web fullstack freelance (FR/EN/ES) desde España. Next.js, React e integración de IA (Claude, Mistral), en remoto por Europa.",
+      "Adeline Lefebvre, desarrolladora web fullstack freelance (FR/EN/ES) con base en Francia. Next.js, React e integración de IA (Claude, Mistral), en remoto por Europa.",
     keywords: [
       "Adeline Lefebvre",
       "Desarrolladora Fullstack Freelance",
