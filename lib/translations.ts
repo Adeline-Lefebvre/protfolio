@@ -18,9 +18,10 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Freelance fullstack web developer. I build web products that last, from custom sites to AI apps.",
       description:
-        "From idea to production, I turn a business need into a reliable, high-performing product. A dual fullstack and CMS skill set, a product background (Station F), and products running in production across 6 countries.",
+        "You have a product to launch, a site that needs to evolve, or an idea to test with AI. I start from your need, build it, ship it, and stay available afterwards. One point of contact, from the first call to production.",
       availableBadge: "Available for freelance",
       ctaPrimary: "Let's talk about your project",
+      ctaCall: "Book a 15-min call",
       ctaProjects: "See my work",
       downloadCV: "Download CV",
     },
@@ -29,47 +30,51 @@ export const translations = {
     },
     services: {
       eyebrow: "Services",
-      title: "My freelance web development services",
-      subtitle: "Three ways to work together, from build to long-term care.",
+      title: "Three ways to work together",
+      subtitle: "My freelance web development services, from a first product to long-term care.",
       localOffer: "A dedicated offer for nonprofits & local shops",
+      proofLabel: "Example:",
       ai: {
-        title: "AI apps & integrations",
-        description:
-          "Fullstack Next.js apps with AI built in: extraction pipelines, dashboards, automations.",
+        title: "Launch a product or an AI app",
+        description: "You have an idea or a business need. I design and build the complete application, all the way to production.",
         items: [
-          "Next.js / TypeScript",
-          "Claude API, Mistral, OpenAI",
-          "Dashboards & data pipelines",
-          "Stripe payments, auth",
+          "A custom application, from the interface to the database",
+          "AI where it is useful: document extraction, automations, assistants",
+          "Online payment, user accounts and an admin area",
+          "Tested, documented code that your team can take over",
         ],
+        proof: "Rootyne",
+        stack: "Next.js · TypeScript · Claude · Mistral · Stripe",
       },
       cms: {
-        title: "Custom sites & CMS",
-        description:
-          "Websites that go beyond templates: custom development, headless, multilingual.",
+        title: "Build or redesign a custom site",
+        description: "A site that looks like you, and that your team updates without a developer.",
         items: [
-          "Custom WordPress / Elementor Pro",
-          "Craft CMS, Prismic (headless)",
-          "Multilingual sites & technical SEO",
-          "API integrations",
+          "A faithful build of your design, or your agency's",
+          "A simple editing space for your texts, images and pages",
+          "Several languages and careful technical SEO",
+          "Connected to your tools: CRM, recruitment, payment, newsletter",
         ],
+        proof: "IN CULTURE",
+        stack: "Next.js · Sanity · Prismic · WordPress · Craft CMS",
       },
       maintenance: {
-        title: "Maintenance & evolution",
-        description:
-          "A long-term partnership: I keep your site alive and evolving, reliably.",
+        title: "Improve an existing site",
+        description: "I take your site as it is and keep it moving forward over time.",
         items: [
-          "WordPress / Craft / Next.js upkeep",
-          "New features & optimizations",
-          "Performance & SEO",
-          "Direct support, clear communication",
+          "New features, delivered in small steps",
+          "Performance, mobile adaptation and technical SEO",
+          "Fixes and updates that do not break what works",
+          "One point of contact and a written report at every step",
         ],
+        proof: "Velec Systems",
+        stack: "WordPress · Craft CMS · Next.js",
       },
     },
     projects: {
       eyebrow: "Work",
       title: "Featured projects",
-      intro: "Each one started with a business problem. Here is what I delivered.",
+      intro: "A concrete need to start with, a live product at the end.",
       moreTitle: "More projects",
       moreIntro: "Agency builds, a large migration, a mobile app and volunteer work.",
       viewSite: "View site",
@@ -82,7 +87,7 @@ export const translations = {
         rootyne: {
           name: "Rootyne",
           kicker: "AI health platform",
-          title: "Understand your blood test and adjust your diet",
+          title: "Blood test results people can finally understand",
           summary: "A platform built from scratch: people upload their blood test, an AI pipeline extracts the values, and a clinical biologist reviews every report before it reaches them.",
           facts: [
             {
@@ -104,7 +109,7 @@ export const translations = {
           name: "IN CULTURE",
           anonName: "Cultural collaborations agency",
           kicker: "Cultural collaborations agency",
-          title: "A brand site the agency runs on its own",
+          title: "A site true to the brand, updated by the agency itself",
           summary: "Four pages and 23 case pages, developed solo from the validated design to launch: a cursor-driven infinite carousel, audio that keeps playing across pages, and a CMS for every text, image and case.",
           facts: [
             {
@@ -125,7 +130,7 @@ export const translations = {
         desertLeaves: {
           name: "Desert Leaves",
           kicker: "Environmental NGO",
-          title: "Rally donations and volunteers, in four languages",
+          title: "A donation and volunteering platform in four languages",
           summary: "A complete platform built from scratch: Next.js, headless Prismic CMS, one-time and recurring Stripe donations. Content is translated automatically the minute it is published, and the team corrects it in a simple Google Sheet.",
           facts: [
             {
@@ -146,7 +151,7 @@ export const translations = {
         lime: {
           name: "LIME Search",
           kicker: "Finance recruitment agency",
-          title: "Interim vacancies shared privately, invisible to Google",
+          title: "Confidential interim vacancies, shared with a single link",
           summary: "On the Craft CMS site I maintain, interim assignments circulate by direct link in a private WhatsApp group. They never appear in lists, in the sitemap or in search results.",
           facts: [
             {
@@ -167,7 +172,7 @@ export const translations = {
         velec: {
           name: "Velec Systems",
           kicker: "Food industry manufacturer",
-          title: "Launch a trilingual redesign that is fast, responsive and properly indexed",
+          title: "An industrial site that is faster, mobile-ready and properly indexed",
           summary: "Performance optimization of an Elementor Pro and WPML build, responsive adaptation, technical SEO fixes across a WordPress multisite, then post-launch stabilization with the client's SEO agency.",
           facts: [
             {
@@ -235,6 +240,24 @@ export const translations = {
         },
       },
     },
+    process: {
+      eyebrow: "Method",
+      title: "How it works",
+      steps: [
+        {
+          title: "We talk",
+          text: "A 15-minute call, no commitment. You describe your need, I tell you what is feasible, and what is not.",
+        },
+        {
+          title: "A clear quote",
+          text: "A written scope and a price announced in advance, step by step. You know what you pay for and what you get.",
+        },
+        {
+          title: "Delivery in steps",
+          text: "You see the project move forward, with a written report at every step. After launch, I stay available to keep it evolving.",
+        },
+      ],
+    },
     about: {
       eyebrow: "Background",
       title: "About",
@@ -255,6 +278,12 @@ export const translations = {
       items: [
         {
           quote:
+            "Amazing work and I would like to use this moment to express how happy and grateful we are to have you on board. We really can't do this without you and these tasks, how small sometimes they seem, are soooo important to solve.",
+          author: "Rosa",
+          role: "LIME Search",
+        },
+        {
+          quote:
             "I've seen Adeline's work and I recommend her without hesitation. She's a serious, autonomous developer with a great technical vision. You can trust her to deliver your SaaS or web projects!",
           author: "Romain Quellec",
           role: "CTO, former manager of Adeline",
@@ -264,12 +293,6 @@ export const translations = {
             "Her motivation and her commitment were greatly appreciated by our team, as were her responsiveness and her positive attitude. Adeline adapts easily to many situations. I highly recommend her project-management skills.",
           author: "Manon Duhem",
           role: "CSR Manager, Deloitte Luxembourg",
-        },
-        {
-          quote:
-            "Amazing work and I would like to use this moment to express how happy and grateful we are to have you on board. We really can't do this without you and these tasks, how small sometimes they seem, are soooo important to solve.",
-          author: "Rosa",
-          role: "LIME Search",
         },
       ],
     },
@@ -311,9 +334,10 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Développeuse web fullstack freelance. Je conçois des produits web qui durent, du site sur-mesure à l'app IA.",
       description:
-        "De l'idée à la mise en production, je transforme un besoin métier en produit fiable et performant. Double compétence fullstack et CMS, background produit (Station F), et des produits en production utilisés dans 6 pays.",
+        "Vous avez un produit à lancer, un site à faire évoluer ou une idée à tester avec l'IA. Je pars de votre besoin, je construis, je mets en ligne, et je reste disponible ensuite. Une seule interlocutrice, du premier échange à la production.",
       availableBadge: "Disponible en freelance",
       ctaPrimary: "Discutons de votre projet",
+      ctaCall: "Réserver un appel de 15 min",
       ctaProjects: "Voir mes projets",
       downloadCV: "Télécharger mon CV",
     },
@@ -322,41 +346,45 @@ export const translations = {
     },
     services: {
       eyebrow: "Offres",
-      title: "Mes services de développement web freelance",
-      subtitle: "Trois façons de travailler ensemble, de la création au suivi dans la durée.",
+      title: "Trois façons de travailler ensemble",
+      subtitle: "Mes services de développement web freelance, du premier produit au suivi dans la durée.",
       localOffer: "Une offre dédiée aux assos & commerces de proximité",
+      proofLabel: "Exemple :",
       ai: {
-        title: "Apps & intégrations IA",
-        description:
-          "Applications fullstack Next.js avec IA intégrée : pipelines d'extraction, dashboards, automatisations.",
+        title: "Lancer un produit ou une app IA",
+        description: "Vous avez une idée ou un besoin métier. Je conçois et développe l'application complète, jusqu'à la mise en production.",
         items: [
-          "Next.js / TypeScript",
-          "Claude API, Mistral, OpenAI",
-          "Dashboards & pipelines de données",
-          "Paiements Stripe, authentification",
+          "Une application sur mesure, de l'interface à la base de données",
+          "De l'IA là où elle est utile : extraction de documents, automatisations, assistants",
+          "Paiement en ligne, comptes et espace d'administration",
+          "Un code testé et documenté, que votre équipe peut reprendre",
         ],
+        proof: "Rootyne",
+        stack: "Next.js · TypeScript · Claude · Mistral · Stripe",
       },
       cms: {
-        title: "Sites & CMS sur-mesure",
-        description:
-          "Des sites qui vont au-delà des thèmes : développement sur-mesure, headless, multilingue.",
+        title: "Créer ou refondre un site sur mesure",
+        description: "Un site à votre image, que votre équipe met à jour sans développeur.",
         items: [
-          "WordPress / Elementor Pro sur-mesure",
-          "Craft CMS, Prismic (headless)",
-          "Sites multilingues & SEO technique",
-          "Intégrations API",
+          "L'intégration fidèle de votre maquette, ou de celle de votre agence",
+          "Un espace d'édition simple pour vos textes, images et pages",
+          "Plusieurs langues et un référencement technique soigné",
+          "La connexion à vos outils : CRM, recrutement, paiement, newsletter",
         ],
+        proof: "IN CULTURE",
+        stack: "Next.js · Sanity · Prismic · WordPress · Craft CMS",
       },
       maintenance: {
-        title: "Maintenance & évolutions",
-        description:
-          "Un partenariat long terme : je fais vivre et évoluer votre site, en toute fiabilité.",
+        title: "Faire évoluer un site existant",
+        description: "Je reprends votre site tel qu'il est et je le fais avancer dans la durée.",
         items: [
-          "Maintenance WordPress / Craft / Next.js",
-          "Nouvelles fonctionnalités & optimisations",
-          "Performance & SEO",
-          "Support direct, communication claire",
+          "De nouvelles fonctionnalités, livrées par petites étapes",
+          "Performance, adaptation mobile et référencement technique",
+          "Des corrections et mises à jour qui ne cassent pas l'existant",
+          "Une seule interlocutrice et un compte rendu écrit à chaque étape",
         ],
+        proof: "Velec Systems",
+        stack: "WordPress · Craft CMS · Next.js",
       },
     },
     projects: {
@@ -528,6 +556,24 @@ export const translations = {
         },
       },
     },
+    process: {
+      eyebrow: "Méthode",
+      title: "Comment ça se passe",
+      steps: [
+        {
+          title: "On échange",
+          text: "Un appel de 15 minutes, sans engagement. Vous me décrivez votre besoin, je vous dis ce qui est faisable, et ce qui ne l'est pas.",
+        },
+        {
+          title: "Un devis clair",
+          text: "Un périmètre écrit et un prix annoncé à l'avance, étape par étape. Vous savez ce que vous payez et ce que vous recevez.",
+        },
+        {
+          title: "Des livraisons par étapes",
+          text: "Vous voyez le projet avancer, avec un compte rendu écrit à chaque étape. Après la mise en ligne, je reste disponible pour le faire évoluer.",
+        },
+      ],
+    },
     about: {
       eyebrow: "Parcours",
       title: "À propos",
@@ -548,6 +594,12 @@ export const translations = {
       items: [
         {
           quote:
+            "Un travail formidable, et je veux profiter de ce moment pour dire à quel point nous sommes heureux et reconnaissants de t'avoir dans l'équipe. On ne pourrait vraiment pas faire tout ça sans toi, et ces tâches, aussi petites qu'elles paraissent parfois, sont tellement importantes à régler.",
+          author: "Rosa",
+          role: "LIME Search",
+        },
+        {
+          quote:
             "J'ai eu l'occasion de voir le travail d'Adeline et je la recommande les yeux fermés. C'est une développeuse sérieuse, autonome et dotée d'une super vision technique. Vous pouvez lui faire confiance pour mener à bien vos projets SaaS ou web !",
           author: "Romain Quellec",
           role: "Directeur technique, ancien manager d'Adeline",
@@ -557,12 +609,6 @@ export const translations = {
             "Sa motivation et son implication ont été très appréciées par notre équipe, tout comme sa réactivité et sa bonne volonté. Adeline s'adapte facilement à de nombreuses situations. Je recommande vivement ses compétences en gestion de projets.",
           author: "Manon Duhem",
           role: "Responsable RSE, Deloitte Luxembourg",
-        },
-        {
-          quote:
-            "Un travail formidable, et je veux profiter de ce moment pour dire à quel point nous sommes heureux et reconnaissants de t'avoir dans l'équipe. On ne pourrait vraiment pas faire tout ça sans toi, et ces tâches, aussi petites qu'elles paraissent parfois, sont tellement importantes à régler.",
-          author: "Rosa",
-          role: "LIME Search",
         },
       ],
     },
@@ -603,9 +649,10 @@ export const translations = {
       name: "Adeline Lefebvre",
       title: "Desarrolladora web fullstack freelance. Creo productos web que perduran, del sitio a medida a la app con IA.",
       description:
-        "De la idea a la producción, convierto una necesidad de negocio en un producto fiable y de alto rendimiento. Doble competencia fullstack y CMS, base en producto (Station F), y productos en producción usados en 6 países.",
+        "Tienes un producto que lanzar, un sitio que hacer evolucionar o una idea que probar con IA. Parto de tu necesidad, lo construyo, lo pongo en producción y sigo disponible después. Una sola interlocutora, del primer contacto a la producción.",
       availableBadge: "Disponible para freelance",
       ctaPrimary: "Hablemos de tu proyecto",
+      ctaCall: "Reservar una llamada de 15 min",
       ctaProjects: "Ver mis proyectos",
       downloadCV: "Descargar CV",
     },
@@ -614,47 +661,51 @@ export const translations = {
     },
     services: {
       eyebrow: "Servicios",
-      title: "Mis servicios de desarrollo web freelance",
-      subtitle: "Tres formas de trabajar juntos, de la creación al mantenimiento a largo plazo.",
+      title: "Tres formas de trabajar juntos",
+      subtitle: "Mis servicios de desarrollo web freelance, del primer producto al acompañamiento a largo plazo.",
       localOffer: "Una oferta dedicada a asociaciones y comercios",
+      proofLabel: "Ejemplo:",
       ai: {
-        title: "Apps e integraciones IA",
-        description:
-          "Aplicaciones fullstack Next.js con IA integrada: pipelines de extracción, dashboards, automatizaciones.",
+        title: "Lanzar un producto o una app con IA",
+        description: "Tienes una idea o una necesidad de negocio. Diseño y desarrollo la aplicación completa, hasta la puesta en producción.",
         items: [
-          "Next.js / TypeScript",
-          "Claude API, Mistral, OpenAI",
-          "Dashboards y pipelines de datos",
-          "Pagos Stripe, autenticación",
+          "Una aplicación a medida, de la interfaz a la base de datos",
+          "IA donde aporta valor: extracción de documentos, automatizaciones, asistentes",
+          "Pago en línea, cuentas y área de administración",
+          "Un código probado y documentado, que tu equipo puede retomar",
         ],
+        proof: "Rootyne",
+        stack: "Next.js · TypeScript · Claude · Mistral · Stripe",
       },
       cms: {
-        title: "Sitios y CMS a medida",
-        description:
-          "Sitios que van más allá de las plantillas: desarrollo a medida, headless, multilingüe.",
+        title: "Crear o rediseñar un sitio a medida",
+        description: "Un sitio con tu identidad, que tu equipo actualiza sin depender de desarrollo.",
         items: [
-          "WordPress / Elementor Pro a medida",
-          "Craft CMS, Prismic (headless)",
-          "Sitios multilingües y SEO técnico",
-          "Integraciones de API",
+          "La maquetación fiel de tu diseño, o del de tu agencia",
+          "Un espacio de edición sencillo para textos, imágenes y páginas",
+          "Varios idiomas y un SEO técnico cuidado",
+          "La conexión con tus herramientas: CRM, selección, pago, newsletter",
         ],
+        proof: "IN CULTURE",
+        stack: "Next.js · Sanity · Prismic · WordPress · Craft CMS",
       },
       maintenance: {
-        title: "Mantenimiento y evolución",
-        description:
-          "Una colaboración a largo plazo: mantengo tu sitio vivo y en evolución, con fiabilidad.",
+        title: "Hacer evolucionar un sitio existente",
+        description: "Retomo tu sitio tal como está y lo hago avanzar a largo plazo.",
         items: [
-          "Mantenimiento WordPress / Craft / Next.js",
-          "Nuevas funciones y optimizaciones",
-          "Rendimiento y SEO",
-          "Soporte directo, comunicación clara",
+          "Nuevas funciones, entregadas en pequeños pasos",
+          "Rendimiento, adaptación móvil y SEO técnico",
+          "Correcciones y actualizaciones que no rompen lo que funciona",
+          "Una sola interlocutora y un informe escrito en cada etapa",
         ],
+        proof: "Velec Systems",
+        stack: "WordPress · Craft CMS · Next.js",
       },
     },
     projects: {
       eyebrow: "Trabajos",
       title: "Proyectos destacados",
-      intro: "En cada caso, una necesidad de negocio como punto de partida. Esto es lo que entregué.",
+      intro: "Una necesidad concreta al principio, un producto en línea al final.",
       moreTitle: "Más proyectos",
       moreIntro: "Desarrollos para una agencia, una gran migración, una app móvil y voluntariado.",
       viewSite: "Ver el sitio",
@@ -667,7 +718,7 @@ export const translations = {
         rootyne: {
           name: "Rootyne",
           kicker: "Plataforma de salud con IA",
-          title: "Entender tu análisis de sangre y ajustar tu alimentación",
+          title: "Análisis de sangre por fin comprensibles",
           summary: "Una plataforma creada desde cero: se sube el análisis de sangre, un pipeline de IA extrae los valores y una bióloga clínica revisa cada informe antes de entregarlo.",
           facts: [
             {
@@ -689,7 +740,7 @@ export const translations = {
           name: "IN CULTURE",
           anonName: "Agencia de colaboraciones culturales",
           kicker: "Agencia de colaboraciones culturales",
-          title: "Un sitio de marca que la agencia gestiona de forma autónoma",
+          title: "Un sitio fiel a la marca, que la agencia actualiza por sí misma",
           summary: "Cuatro páginas y 23 páginas de proyecto, desarrolladas en solitario desde el diseño validado hasta la publicación: carrusel infinito guiado por el cursor, audio que sigue sonando entre páginas y un CMS para cada texto, imagen y proyecto.",
           facts: [
             {
@@ -710,7 +761,7 @@ export const translations = {
         desertLeaves: {
           name: "Desert Leaves",
           kicker: "ONG ambiental",
-          title: "Movilizar donaciones y voluntariado, en cuatro idiomas",
+          title: "Una plataforma de donaciones y voluntariado en cuatro idiomas",
           summary: "Una plataforma completa creada desde cero: Next.js, CMS headless Prismic, donaciones Stripe puntuales y recurrentes. El contenido se traduce automáticamente en cuanto se publica, y el equipo lo corrige en una simple hoja de Google Sheets.",
           facts: [
             {
@@ -731,7 +782,7 @@ export const translations = {
         lime: {
           name: "LIME Search",
           kicker: "Agencia de selección en finanzas",
-          title: "Ofertas de interim compartidas en privado, invisibles para Google",
+          title: "Ofertas de interim confidenciales, compartidas con un simple enlace",
           summary: "En el sitio Craft CMS que mantengo, las misiones de interim circulan por enlace directo en un grupo privado de WhatsApp. No aparecen ni en los listados, ni en el sitemap, ni en los resultados de búsqueda.",
           facts: [
             {
@@ -752,7 +803,7 @@ export const translations = {
         velec: {
           name: "Velec Systems",
           kicker: "Fabricante industrial agroalimentario",
-          title: "Lanzar un rediseño trilingüe rápido, responsive y bien indexado",
+          title: "Un sitio industrial más rápido, adaptado al móvil y bien indexado",
           summary: "Optimización del rendimiento de un sitio Elementor Pro y WPML, adaptación responsive, correcciones de SEO técnico en un multisitio WordPress y estabilización tras el lanzamiento junto a la agencia SEO del cliente.",
           facts: [
             {
@@ -820,6 +871,24 @@ export const translations = {
         },
       },
     },
+    process: {
+      eyebrow: "Método",
+      title: "Cómo funciona",
+      steps: [
+        {
+          title: "Hablamos",
+          text: "Una llamada de 15 minutos, sin compromiso. Me cuentas tu necesidad y te digo qué es viable, y qué no.",
+        },
+        {
+          title: "Un presupuesto claro",
+          text: "Un alcance por escrito y un precio anunciado de antemano, etapa por etapa. Sabes lo que pagas y lo que recibes.",
+        },
+        {
+          title: "Entregas por etapas",
+          text: "Ves avanzar el proyecto, con un informe escrito en cada etapa. Tras el lanzamiento, sigo disponible para hacerlo evolucionar.",
+        },
+      ],
+    },
     about: {
       eyebrow: "Trayectoria",
       title: "Sobre mí",
@@ -840,6 +909,12 @@ export const translations = {
       items: [
         {
           quote:
+            "Un trabajo increíble, y quiero aprovechar este momento para expresar lo felices y agradecidos que estamos de tenerte en el equipo. De verdad no podríamos hacer todo esto sin ti, y estas tareas, por pequeñas que a veces parezcan, son importantísimas de resolver.",
+          author: "Rosa",
+          role: "LIME Search",
+        },
+        {
+          quote:
             "He podido ver el trabajo de Adeline y la recomiendo con los ojos cerrados. Es una desarrolladora seria, autónoma y con una gran visión técnica. ¡Puedes confiar en ella para llevar a buen puerto tus proyectos SaaS o web!",
           author: "Romain Quellec",
           role: "Director técnico, exmanager de Adeline",
@@ -849,12 +924,6 @@ export const translations = {
             "Su motivación y su implicación fueron muy apreciadas por nuestro equipo, al igual que su capacidad de reacción y su buena disposición. Adeline se adapta con facilidad a muchas situaciones. Recomiendo encarecidamente sus competencias en gestión de proyectos.",
           author: "Manon Duhem",
           role: "Responsable de RSC, Deloitte Luxembourg",
-        },
-        {
-          quote:
-            "Un trabajo increíble, y quiero aprovechar este momento para expresar lo felices y agradecidos que estamos de tenerte en el equipo. De verdad no podríamos hacer todo esto sin ti, y estas tareas, por pequeñas que a veces parezcan, son importantísimas de resolver.",
-          author: "Rosa",
-          role: "LIME Search",
         },
       ],
     },

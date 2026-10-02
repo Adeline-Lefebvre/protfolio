@@ -1,7 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Sparkles, Layout, Wrench, Check, ArrowUpRight } from "lucide-react";
+import { Sparkles, Layout, Wrench, Check, ArrowUpRight, ArrowRight } from "lucide-react";
 import { Eyebrow } from "@/components/eyebrow";
 import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
@@ -10,10 +10,11 @@ export function Services() {
   const { language } = useLanguage();
   const t = getTranslations(language);
 
+  // Chaque offre renvoie au projet qui la prouve (ancre de sa bande).
   const offers = [
-    { icon: Sparkles, data: t.services.ai, featured: true },
-    { icon: Layout, data: t.services.cms, featured: false },
-    { icon: Wrench, data: t.services.maintenance, featured: false },
+    { icon: Sparkles, data: t.services.ai, proofId: "rootyne", featured: true },
+    { icon: Layout, data: t.services.cms, proofId: "inc", featured: false },
+    { icon: Wrench, data: t.services.maintenance, proofId: "velec", featured: false },
   ];
 
   return (
@@ -26,7 +27,7 @@ export function Services() {
         {t.services.subtitle}
       </p>
       <div className="grid gap-6 md:grid-cols-3">
-        {offers.map(({ icon: Icon, data, featured }) => (
+        {offers.map(({ icon: Icon, data, proofId, featured }) => (
           <Card
             key={data.title}
             className={`flex flex-col p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 ${
@@ -46,7 +47,7 @@ export function Services() {
             <p className="mb-5 text-muted-foreground leading-relaxed">
               {data.description}
             </p>
-            <ul className="mt-auto space-y-2">
+            <ul className="space-y-2">
               {data.items.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm">
                   <Check
@@ -57,6 +58,18 @@ export function Services() {
                 </li>
               ))}
             </ul>
+            <div className="mt-auto pt-5">
+              <a
+                href={`#project-${proofId}`}
+                className="-mx-2 inline-flex min-h-11 items-center gap-1.5 rounded-md px-2 text-sm font-semibold text-accent transition-colors active:bg-secondary hover:text-accent/80"
+              >
+                {t.services.proofLabel} {data.proof}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <p className="border-t border-border pt-3 text-xs leading-relaxed text-muted-foreground md:min-h-13">
+                {data.stack}
+              </p>
+            </div>
           </Card>
         ))}
       </div>

@@ -103,11 +103,12 @@ export function FeaturedProject({
   return (
     <article
       ref={ref}
+      id={`project-${project.id}`}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
       onFocus={() => setActive(true)}
       onBlur={() => setActive(false)}
-      className={`group/band grid lg:min-h-[min(80vh,46rem)] lg:grid-cols-5 ${
+      className={`group/band grid scroll-mt-6 lg:min-h-[min(80vh,46rem)] lg:grid-cols-5 ${
         flip ? "bg-secondary" : "bg-background"
       }`}
     >

@@ -1,6 +1,7 @@
 import { Hero } from "@/components/hero";
 import { TrustBar } from "@/components/trust-bar";
 import { Services } from "@/components/services";
+import { Process } from "@/components/process";
 import { Projects } from "@/components/projects/projects";
 import { About } from "@/components/about";
 import { Testimonial } from "@/components/testimonial";
@@ -30,6 +31,9 @@ export default function Home() {
         <Container>
           <AnimatedSection>
             <Services />
+          </AnimatedSection>
+          <AnimatedSection>
+            <Process />
           </AnimatedSection>
           <AnimatedSection>
             <Testimonial />

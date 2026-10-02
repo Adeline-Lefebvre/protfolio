@@ -36,6 +36,22 @@ export function Contact() {
           <p className="max-w-2xl text-lg leading-relaxed text-background/90">
             {t.contact.description}
           </p>
+          <div className="mt-6">
+            <Button
+              asChild
+              size="lg"
+              className="bg-background text-accent hover:bg-background/90"
+            >
+              <a
+                href="https://calendly.com/adeline-lefebvre/15min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+                {t.hero.ctaCall}
+              </a>
+            </Button>
+          </div>
           {accessKey && (
             <div className="mt-8 max-w-2xl rounded-2xl bg-background p-6 text-foreground">
               <ContactForm
@@ -46,16 +62,6 @@ export function Contact() {
             </div>
           )}
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild variant="outline" className={OUTLINE}>
-              <a
-                href="https://calendly.com/adeline-lefebvre/15min"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Phone className="mr-2 h-4 w-4" />
-                {t.contact.calendly}
-              </a>
-            </Button>
             <Button asChild variant="outline" className={OUTLINE}>
               <a
                 href="mailto:adeline.lefe@gmail.com"

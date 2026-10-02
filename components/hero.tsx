@@ -5,7 +5,9 @@ import { useLanguage } from "@/lib/language-context";
 import { getTranslations } from "@/lib/translations";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/container";
-import { Download, ArrowRight } from "lucide-react";
+import { Download, Phone } from "lucide-react";
+
+const CALENDLY = "https://calendly.com/adeline-lefebvre/15min";
 
 export function Hero() {
   const { language } = useLanguage();
@@ -45,9 +47,9 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <Button asChild size="lg">
-                <a href="#contact">
-                  {t.hero.ctaPrimary}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                  <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+                  {t.hero.ctaCall}
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
