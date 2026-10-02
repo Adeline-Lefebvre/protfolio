@@ -62,6 +62,7 @@ export function Projects() {
             copy={t.items[project.id]}
             labels={labels}
             flip={index % 2 === 1}
+            index={index}
           />
         ))}
       </div>

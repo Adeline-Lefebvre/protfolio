@@ -86,16 +86,16 @@ export const translations = {
           summary: "A platform built from scratch: people upload their blood test, an AI pipeline extracts the values, and a clinical biologist reviews every report before it reaches them.",
           facts: [
             {
-              value: "Claude + Mistral",
-              label: "extraction pipeline, behind an anonymization layer",
+              value: "Full product",
+              label: "from blood test upload to online payment, designed and shipped solo",
             },
             {
-              value: "HDS",
-              label: "encrypted infrastructure, compliant with French health data hosting",
+              value: "Protected data",
+              label: "anonymized before any AI processing, encrypted, on HDS-compliant health data hosting",
             },
             {
-              value: "Human review",
-              label: "a dedicated dashboard where the biologist validates each report",
+              value: "AI under control",
+              label: "a clinical biologist reviews and validates every report before it is sent",
             },
           ],
           role: "Founder and developer: product, development and production.",
@@ -108,16 +108,16 @@ export const translations = {
           summary: "Four pages and 23 case pages, developed solo from the validated design to launch: a cursor-driven infinite carousel, audio that keeps playing across pages, and a CMS for every text, image and case.",
           facts: [
             {
-              value: "23",
-              label: "case pages the team edits in Sanity, live within seconds",
+              value: "Full autonomy",
+              label: "the team edits every text, image and case itself, live within seconds",
             },
             {
-              value: "0",
-              label: "animation library: CSS and requestAnimationFrame only",
+              value: "Made to measure",
+              label: "brand-specific interactions hand-coded from the design, with no theme or template",
             },
             {
-              value: "Light / dark",
-              label: "two themes, responsive from mobile to 1920 px",
+              value: "0 downtime",
+              label: "launch and domain switch without interrupting the agency's email",
             },
           ],
           role: "Development: Adeline Lefebvre, solo from design file to launch.",
@@ -130,15 +130,15 @@ export const translations = {
           facts: [
             {
               value: "4 languages",
-              label: "Spanish, English, French and Dutch, with localized URLs",
+              label: "Spanish, English, French and Dutch, translated one to two minutes after each publication",
             },
             {
               value: "€0",
               label: "per month for translation: no subscription, no API key, no server",
             },
             {
-              value: "69 tests",
-              label: "automated, and translations proofread twice before launch",
+              value: "< 1 minute",
+              label: "for a correction made by the team in the spreadsheet to appear on the site",
             },
           ],
           role: "Development of the platform from scratch, then its internationalization.",
@@ -158,8 +158,8 @@ export const translations = {
               label: "applications and CVs land directly in OTYS, the system the recruitment team already uses",
             },
             {
-              value: "7 days",
-              label: "then CVs held on the server are deleted automatically (GDPR)",
+              value: "GDPR",
+              label: "CVs held on the server are deleted automatically after 7 days",
             },
           ],
           role: "Custom Craft plugin work on the OTYS integration, build from the agency's mockup, ongoing maintenance of the site.",
@@ -362,7 +362,7 @@ export const translations = {
     projects: {
       eyebrow: "Réalisations",
       title: "Projets phares",
-      intro: "À chaque fois, un besoin métier au départ. Voici ce que j'ai livré.",
+      intro: "Un besoin concret au départ, un produit en ligne à l'arrivée.",
       moreTitle: "Autres projets",
       moreIntro: "Des intégrations pour une agence, une grande migration, une app mobile et du bénévolat.",
       viewSite: "Voir le site",
@@ -375,20 +375,20 @@ export const translations = {
         rootyne: {
           name: "Rootyne",
           kicker: "Plateforme santé IA",
-          title: "Comprendre sa prise de sang et adapter son alimentation",
-          summary: "Une plateforme conçue de zéro : on dépose son bilan sanguin, un pipeline IA en extrait les valeurs, et une biologiste médicale relit chaque compte rendu avant qu'il soit remis.",
+          title: "Des analyses de sang enfin compréhensibles",
+          summary: "Une plateforme conçue de zéro : on dépose son bilan sanguin, l'IA en extrait les valeurs, et une biologiste médicale relit chaque compte rendu, avec des conseils alimentaires adaptés.",
           facts: [
             {
-              value: "Claude + Mistral",
-              label: "pipeline d'extraction, derrière une couche d'anonymisation",
+              value: "Produit complet",
+              label: "du dépôt du bilan au paiement en ligne, conçu et mis en production seule",
             },
             {
-              value: "HDS",
-              label: "infrastructure chiffrée, conforme à l'hébergement de données de santé",
+              value: "Données protégées",
+              label: "anonymisation avant tout traitement par l'IA, chiffrement et infrastructure conforme HDS pour les données de santé",
             },
             {
-              value: "Relecture humaine",
-              label: "un tableau de bord dédié où la biologiste valide chaque compte rendu",
+              value: "IA sous contrôle",
+              label: "une biologiste médicale relit et valide chaque compte rendu avant envoi",
             },
           ],
           role: "Fondatrice et développeuse : produit, développement et mise en production.",
@@ -397,20 +397,20 @@ export const translations = {
           name: "IN CULTURE",
           anonName: "Agence de collaborations culturelles",
           kicker: "Agence de collaborations culturelles",
-          title: "Un site de marque que l'agence fait vivre en autonomie",
+          title: "Un site à l'image de la marque, que l'agence met à jour seule",
           summary: "Quatre pages et 23 pages projet, développées seule de la maquette validée à la mise en ligne : carrousel infini piloté au curseur, lecture audio qui se poursuit d'une page à l'autre, et un CMS pour chaque texte, image et projet.",
           facts: [
             {
-              value: "23",
-              label: "pages projet que l'équipe édite dans Sanity, en ligne en quelques secondes",
+              value: "Autonomie totale",
+              label: "l'équipe modifie elle-même textes, images et projets, en ligne en quelques secondes",
             },
             {
-              value: "0",
-              label: "bibliothèque d'animation : uniquement CSS et requestAnimationFrame",
+              value: "Sur mesure",
+              label: "des interactions propres à la marque, codées à la main à partir de la maquette, sans thème ni template",
             },
             {
-              value: "Clair / sombre",
-              label: "deux thèmes, responsive du mobile au 1920 px",
+              value: "0 interruption",
+              label: "mise en ligne et bascule du domaine sans couper la messagerie de l'agence",
             },
           ],
           role: "Développement : Adeline Lefebvre, seule de la maquette à la mise en ligne.",
@@ -418,20 +418,20 @@ export const translations = {
         desertLeaves: {
           name: "Desert Leaves",
           kicker: "ONG environnementale",
-          title: "Mobiliser dons et bénévoles, en quatre langues",
+          title: "Une plateforme de dons et de bénévolat en quatre langues",
           summary: "Une plateforme complète développée de zéro : Next.js, CMS headless Prismic, dons Stripe ponctuels et récurrents. Le contenu est traduit automatiquement dès sa publication, et l'équipe le corrige dans un simple Google Sheet.",
           facts: [
             {
               value: "4 langues",
-              label: "espagnol, anglais, français et néerlandais, avec des URL localisées",
+              label: "espagnol, anglais, français et néerlandais, traduites une à deux minutes après chaque publication",
             },
             {
               value: "0 €",
               label: "par mois pour la traduction : ni abonnement, ni clé d'API, ni serveur",
             },
             {
-              value: "69 tests",
-              label: "automatiques, et des traductions relues deux fois avant la mise en ligne",
+              value: "< 1 minute",
+              label: "pour qu'une correction faite par l'équipe dans le tableur apparaisse sur le site",
             },
           ],
           role: "Développement de la plateforme de zéro, puis son internationalisation.",
@@ -439,7 +439,7 @@ export const translations = {
         lime: {
           name: "LIME Search",
           kicker: "Cabinet de recrutement finance",
-          title: "Des offres d'intérim partagées en privé, invisibles de Google",
+          title: "Des offres d'intérim confidentielles, partagées par simple lien",
           summary: "Sur le site Craft CMS que je maintiens, les missions d'intérim circulent par lien direct dans un groupe WhatsApp privé. Elles n'apparaissent ni dans les listes, ni dans le sitemap, ni dans les résultats de recherche.",
           facts: [
             {
@@ -451,8 +451,8 @@ export const translations = {
               label: "candidatures et CV arrivent directement dans OTYS, l'outil de l'équipe de recrutement",
             },
             {
-              value: "7 jours",
-              label: "puis les CV en transit sur le serveur sont supprimés automatiquement (RGPD)",
+              value: "RGPD",
+              label: "les CV en transit sur le serveur sont supprimés automatiquement après 7 jours",
             },
           ],
           role: "Développement du plugin Craft sur l'intégration OTYS, intégration de la maquette de l'agence, maintenance du site en continu.",
@@ -460,7 +460,7 @@ export const translations = {
         velec: {
           name: "Velec Systems",
           kicker: "Industriel agroalimentaire",
-          title: "Mettre en ligne une refonte trilingue rapide, responsive et bien indexée",
+          title: "Un site industriel plus rapide, adapté au mobile et bien indexé",
           summary: "Optimisation des performances d'un site Elementor Pro et WPML, adaptation responsive, corrections SEO techniques sur un multisite WordPress, puis stabilisation après la mise en production avec l'agence SEO du client.",
           facts: [
             {
@@ -671,16 +671,16 @@ export const translations = {
           summary: "Una plataforma creada desde cero: se sube el análisis de sangre, un pipeline de IA extrae los valores y una bióloga clínica revisa cada informe antes de entregarlo.",
           facts: [
             {
-              value: "Claude + Mistral",
-              label: "pipeline de extracción, tras una capa de anonimización",
+              value: "Producto completo",
+              label: "de la subida del análisis al pago en línea, diseñado y puesto en producción en solitario",
             },
             {
-              value: "HDS",
-              label: "infraestructura cifrada, conforme al alojamiento de datos de salud en Francia",
+              value: "Datos protegidos",
+              label: "anonimización antes de cualquier tratamiento por IA, cifrado e infraestructura conforme a HDS para datos de salud",
             },
             {
-              value: "Revisión humana",
-              label: "un panel dedicado donde la bióloga valida cada informe",
+              value: "IA bajo control",
+              label: "una bióloga clínica revisa y valida cada informe antes de enviarlo",
             },
           ],
           role: "Fundadora y desarrolladora: producto, desarrollo y puesta en producción.",
@@ -693,16 +693,16 @@ export const translations = {
           summary: "Cuatro páginas y 23 páginas de proyecto, desarrolladas en solitario desde el diseño validado hasta la publicación: carrusel infinito guiado por el cursor, audio que sigue sonando entre páginas y un CMS para cada texto, imagen y proyecto.",
           facts: [
             {
-              value: "23",
-              label: "páginas de proyecto que el equipo edita en Sanity, en línea en segundos",
+              value: "Autonomía total",
+              label: "el equipo edita por sí mismo textos, imágenes y proyectos, en línea en segundos",
             },
             {
-              value: "0",
-              label: "librerías de animación: solo CSS y requestAnimationFrame",
+              value: "A medida",
+              label: "interacciones propias de la marca, programadas a mano a partir del diseño, sin tema ni plantilla",
             },
             {
-              value: "Claro / oscuro",
-              label: "dos temas, responsive del móvil a 1920 px",
+              value: "0 interrupciones",
+              label: "lanzamiento y cambio de dominio sin cortar el correo de la agencia",
             },
           ],
           role: "Desarrollo: Adeline Lefebvre, en solitario del diseño a la publicación.",
@@ -715,15 +715,15 @@ export const translations = {
           facts: [
             {
               value: "4 idiomas",
-              label: "español, inglés, francés y neerlandés, con URL localizadas",
+              label: "español, inglés, francés y neerlandés, traducidos uno o dos minutos después de cada publicación",
             },
             {
               value: "0 €",
               label: "al mes por la traducción: sin suscripción, sin clave de API, sin servidor",
             },
             {
-              value: "69 tests",
-              label: "automáticos, y traducciones revisadas dos veces antes de publicar",
+              value: "< 1 minuto",
+              label: "para que una corrección del equipo en la hoja de cálculo aparezca en el sitio",
             },
           ],
           role: "Desarrollo de la plataforma desde cero, y después su internacionalización.",
@@ -743,8 +743,8 @@ export const translations = {
               label: "candidaturas y CV llegan directamente a OTYS, la herramienta del equipo de selección",
             },
             {
-              value: "7 días",
-              label: "y los CV en tránsito en el servidor se eliminan automáticamente (RGPD)",
+              value: "RGPD",
+              label: "los CV en tránsito en el servidor se eliminan automáticamente a los 7 días",
             },
           ],
           role: "Desarrollo del plugin de Craft sobre la integración con OTYS, maquetación a partir del diseño de la agencia, mantenimiento continuo del sitio.",

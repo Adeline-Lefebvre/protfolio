@@ -39,12 +39,15 @@ export function FeaturedProject({
   copy,
   labels,
   flip,
+  index,
   priority,
 }: {
   project: FeaturedProjectData;
   copy: FeaturedCopy;
   labels: ProjectLabels;
   flip: boolean;
+  // Rang du projet (0, 1, 2...), affiche en repere "01", "02" devant le sur-titre.
+  index: number;
   priority?: boolean;
 }) {
   const [active, setActive] = useState(false);
@@ -105,7 +108,7 @@ export function FeaturedProject({
       onFocus={() => setActive(true)}
       onBlur={() => setActive(false)}
       className={`group/band grid lg:min-h-[min(80vh,46rem)] lg:grid-cols-5 ${
-        flip ? "bg-secondary/60" : "bg-background"
+        flip ? "bg-secondary" : "bg-background"
       }`}
     >
       <div
@@ -149,7 +152,11 @@ export function FeaturedProject({
             isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          <p className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            <span className="font-display text-lg leading-none tracking-normal text-foreground">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <span aria-hidden="true" className="h-px w-6 shrink-0 bg-accent/50" />
             {copy.kicker}
           </p>
           <p className={`mb-2 text-sm font-semibold ${TERRA_TEXT}`}>{name}</p>
