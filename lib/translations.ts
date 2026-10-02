@@ -94,11 +94,6 @@ export const translations = {
         description:
           "Revise herbalism anywhere and pass the exams. Cross-platform Flutter app: 150+ plants, timed mock exams, in-app purchases. Live on iOS & Android with 37 paying users.",
       },
-      sds: {
-        title: "SDS Lingo, multilingual website",
-        description:
-          "Get a translation quote from a single form, in three languages. Next.js site (EN/FR/CS): full i18n, a quote form with file upload, multilingual SEO (hreflang), optimized Core Web Vitals.",
-      },
       c55: {
         title: "Club Fifty Five, creative agency",
         description:
@@ -262,11 +257,6 @@ export const translations = {
         description:
           "Réviser l'herboristerie partout et réussir ses examens. App cross-platform (Flutter) : 150+ plantes, examens chronométrés, achats in-app. En ligne sur iOS et Android, 37 comptes payants.",
       },
-      sds: {
-        title: "SDS Lingo, site multilingue",
-        description:
-          "Obtenir un devis de traduction en un seul formulaire, en trois langues. Site Next.js (EN/FR/CS) : i18n complet, formulaire de devis avec envoi de fichiers, SEO multilingue (hreflang), Core Web Vitals optimisés.",
-      },
       c55: {
         title: "Club Fifty Five, agence créative",
         description:
@@ -428,11 +418,6 @@ export const translations = {
         title: "Bulbus, app móvil educativa",
         description:
           "Repasar la herboristería en cualquier lugar y aprobar los exámenes. App multiplataforma (Flutter): 150+ plantas, exámenes cronometrados, compras in-app. Disponible en iOS y Android, 37 cuentas de pago.",
-      },
-      sds: {
-        title: "SDS Lingo, sitio multilingüe",
-        description:
-          "Conseguir un presupuesto de traducción con un solo formulario, en tres idiomas. Sitio Next.js (EN/FR/CS): i18n completo, formulario de presupuesto con subida de archivos, SEO multilingüe (hreflang), Core Web Vitals optimizados.",
       },
       c55: {
         title: "Club Fifty Five, agencia creativa",

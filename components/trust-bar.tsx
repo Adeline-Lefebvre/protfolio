@@ -50,11 +50,6 @@ export function TrustBar() {
             }}
           />
         ))}
-        {/* Logo typographique : il ne suit pas la variable d'echelle, on le
-            reduit d'un cran pour rester proportionne aux autres. */}
-        <span className="text-base font-semibold tracking-tight text-muted-foreground/70 transition-colors duration-200 hover:text-foreground md:text-lg">
-          SDS&nbsp;Lingo
-        </span>
       </div>
     </section>
   );

@@ -300,13 +300,6 @@ export function Projects() {
       link: "https://bulbus-app.com",
     },
     {
-      title: t.projects.sds.title,
-      description: t.projects.sds.description,
-      tags: ["Next.js", "next-intl", "Tailwind CSS", "SEO"],
-      images: ["/sds.jpg"],
-      link: "https://www.sds-lingo.cz",
-    },
-    {
       title: t.projects.c55.title,
       description: t.projects.c55.description,
       tags: ["WordPress", "Elementor Pro", "Custom JS", "CSS"],
