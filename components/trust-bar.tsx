@@ -10,7 +10,6 @@ const logos = [
   { name: "LIME Search", src: "/logo-lime.png", ratio: 8.78, h: 18 },
   { name: "Desert Leaves", src: "/logo-desertleaves.png", ratio: 2.0, h: 56 },
   { name: "Velec Systems", src: "/logo-velec.png", ratio: 4.97, h: 30 },
-  { name: "Rootyne", src: "/logo-rootyne.png", ratio: 3.57, h: 30 },
   { name: "Lemon", src: "/lemon_logo.png", ratio: 5.94, h: 22 },
   // Seule l'agence figure ici, pas ses clients finaux : ce sont ses clients a
   // elle, et les projets realises pour elle la creditent sur leur fiche.
